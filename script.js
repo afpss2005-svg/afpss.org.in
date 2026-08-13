@@ -87,4 +87,28 @@ setInterval(() => {
 
     slides[current].classList.add("active");
 
-},4000);
+},4000);/* ================= MOBILE MENU ================= */
+
+const menuToggle = document.getElementById("menu-toggle");
+const nav = document.querySelector("nav");
+
+if (menuToggle && nav) {
+
+    menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+
+        if (menuToggle.innerHTML.trim() === "☰") {
+            menuToggle.innerHTML = "✕";
+        } else {
+            menuToggle.innerHTML = "☰";
+        }
+    });
+
+    document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("active");
+            menuToggle.innerHTML = "☰";
+        });
+    });
+
+}
