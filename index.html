@@ -600,49 +600,52 @@ Nutrition and Infrastructure Development.
 
 </section>
 
-<!-- ================= NEWS ================= -->
+<!-- ================= MEDIA COVERAGE ================= -->
 
-<section id="news" class="news">
+<section class="media-section" id="media">
 
-<div class="container">
+    <div class="container">
 
-<div class="section-title">
+        <div class="section-title">
+            <h2>📰 Media Coverage</h2>
+            <p>AFPSS featured in newspapers and media</p>
+        </div>
 
-<h2>📰 News & Media</h2>
+        <div class="media-grid">
 
-</div>
+            <!-- Media 1 -->
+            <div class="media-card">
+                <img src="news1.jpg.jpeg"
+                     alt="AFPSS Media Coverage 1"
+                     onclick="openMedia(this.src)">
+            </div>
 
-<div class="news-grid">
+            <!-- Media 2 -->
+            <div class="media-card">
+                <img src="news2.jpg.jpeg"
+                     alt="AFPSS Media Coverage 2"
+                     onclick="openMedia(this.src)">
+            </div>
 
-<div class="news-card">
+            <!-- Media 3 -->
+            <div class="media-card">
+                <img src="news3.jpg.jpeg"
+                     alt="AFPSS Media Coverage 3"
+                     onclick="openMedia(this.src)">
+            </div>
 
-<h3>School Activities</h3>
+        </div>
 
-<p>Latest educational and cultural programs.</p>
-
-</div>
-
-<div class="news-card">
-
-<h3>CSR Events</h3>
-
-<p>Updates from our donors and supporters.</p>
-
-</div>
-
-<div class="news-card">
-
-<h3>Media Coverage</h3>
-
-<p>AFPSS featured in newspapers and media.</p>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
+<!-- ================= MEDIA LIGHTBOX ================= -->
+
+<div id="mediaLightbox" class="media-lightbox">
+    <span class="media-close" onclick="closeMedia()">×</span>
+    <img id="mediaLightboxImage" src="" alt="AFPSS Media Coverage">
+</div>
 
 <!-- ================= CONTACT ================= -->
 
