@@ -1209,3 +1209,100 @@ menuToggle.addEventListener("click", function () {
         height:220px;
     }
 }
+/* ================= MEDIA COVERAGE DESIGN ================= */
+
+.media-section {
+    padding: 60px 20px;
+}
+
+.media-section .section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.media-section .section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.media-section .section-title p {
+    font-size: 17px;
+    color: #666;
+}
+
+/* Media Grid */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Media Card */
+.media-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.media-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.20);
+}
+
+/* Media Image */
+.media-card img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.media-card:hover img {
+    transform: scale(1.04);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .media-section {
+        padding: 40px 15px;
+    }
+
+    .media-section .section-title h2 {
+        font-size: 26px;
+    }
+
+    .media-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .media-card img {
+        height: auto;
+        max-height: 500px;
+        object-fit: contain;
+    }
+}
+
+/* ================= TABLET ================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .media-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .media-card img {
+        height: 320px;
+    }
+}
+
+/* ================= END MEDIA COVERAGE DESIGN ================= */
