@@ -211,3 +211,555 @@ margin-bottom:10px;
 .card p{
 font-size:18px;
 }
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+.about {
+    padding: 80px 8%;
+    background: #ffffff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+}
+
+.about-content {
+    flex: 1;
+    min-width: 320px;
+}
+
+.about-content h2 {
+    font-size: 38px;
+    color: #0b5ed7;
+    margin-bottom: 20px;
+}
+
+.about-content h3 {
+    color: #ff9800;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #0b5ed7;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.about-btn:hover {
+    background: #ff9800;
+}
+
+/* ===========================
+FOUNDER
+=========================== */
+
+.founder {
+    padding: 80px 8%;
+    background: #f8f9fa;
+}
+
+.founder-card {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.founder-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.founder-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+}
+
+.founder-content {
+    flex: 2;
+}
+
+.founder-content h2 {
+    color: #0b5ed7;
+    margin-bottom: 15px;
+}
+
+.founder-content h3 {
+    color: #ff9800;
+    margin-bottom: 15px;
+}
+
+.founder-content p {
+    line-height: 1.8;
+    color: #555;
+}/* ==========================================
+   PREMIUM ANIMATIONS
+========================================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+section{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(.9);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* ==========================================
+   CARD HOVER EFFECT
+========================================== */
+
+.card,
+.gallery-item,
+.video-card,
+.news-card,
+.contact-card,
+.bank-card,
+.qr-card{
+    transition:.35s;
+}
+
+.card:hover,
+.gallery-item:hover,
+.video-card:hover,
+.news-card:hover,
+.contact-card:hover,
+.bank-card:hover,
+.qr-card:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================
+   IMAGE EFFECT
+========================================== */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:15px;
+}
+
+.gallery-item img{
+
+    transition:.5s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.1);
+
+}
+
+/* ==========================================
+   BUTTON EFFECT
+========================================== */
+
+.btn,
+.btn-primary,
+.btn-secondary,
+.csr-btn{
+
+transition:.35s;
+
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.csr-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   NAVBAR STICKY
+========================================== */
+
+.navbar{
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+backdrop-filter:blur(12px);
+
+}
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:50px;
+
+}
+
+.section-title h2{
+
+font-size:40px;
+
+color:#0f766e;
+
+margin-bottom:10px;
+
+}
+
+.section-title p{
+
+color:#666;
+
+font-size:18px;
+
+}
+
+/* ==========================================
+   VIDEO CARD
+========================================== */
+
+.video-card iframe{
+
+width:100%;
+
+height:300px;
+
+border-radius:15px;
+
+}
+
+/* ==========================================
+   NEWS CARD
+========================================== */
+
+.news-card{
+
+background:#fff;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+margin-bottom:25px;
+
+}
+
+.news-card h3{
+
+margin-bottom:10px;
+
+color:#0f766e;
+
+}
+
+/* ==========================================
+   FOOTER SOCIAL
+========================================== */
+
+.footer-social{
+
+margin-top:20px;
+
+}
+
+.footer-social a{
+
+display:inline-block;
+
+margin:0 10px;
+
+font-size:20px;
+
+transition:.3s;
+
+}
+
+.footer-social a:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#0f766e;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#eee;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:600px){
+
+.section-title h2{
+
+font-size:28px;
+
+}
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.video-card iframe{
+
+height:220px;
+
+}
+
+footer{
+
+font-size:14px;
+
+}
+
+}/* ==========================================
+   AFPSS PREMIUM WEBSITE V2.0 FINAL
+========================================== */
+
+/* Floating WhatsApp Button */
+.whatsapp-float{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    z-index:9999;
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.12);
+}
+
+/* Back To Top */
+#topBtn{
+    position:fixed;
+    bottom:100px;
+    right:25px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#0f766e;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    z-index:9998;
+}
+
+#topBtn:hover{
+    background:#065f46;
+}
+
+/* Glass Cards */
+.glass{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:20px;
+}
+
+/* Gradient Text */
+.gradient-text{
+    background:linear-gradient(90deg,#0f766e,#22c55e);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Hero Overlay */
+.hero{
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+/* Fade Animation */
+.fade{
+    animation:fade 1s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Pulse Animation */
+.pulse{
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+/* Footer */
+footer{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+footer a{
+    color:#22c55e;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#fff;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.whatsapp-float{
+width:55px;
+height:55px;
+font-size:28px;
+}
+
+#topBtn{
+width:45px;
+height:45px;
+font-size:18px;
+}
+
+.hero-content h1{
+font-size:32px;
+}
+
+.hero-content p{
+font-size:16px;
+}
+
+}
