@@ -862,6 +862,33 @@ footer{
 
 .hero-stats p{
     font-size:16px;
+}/* ===== Bank Details Card ===== */
+
+.bank-details{
+    max-width:700px;
+    margin:40px auto;
+    padding:30px;
+    background:#ffffff;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    border-left:6px solid #0a6b39;
+}
+
+.bank-details h3{
+    color:#0a6b39;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.bank-details p{
+    font-size:18px;
+    margin:12px 0;
+    color:#333;
+    word-break:break-word;
+}
+
+.bank-details strong{
+    color:#000;
 }
 
 }
