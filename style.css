@@ -1012,3 +1012,14 @@ const navMenu = document.getElementById("nav-menu");
 menuToggle.addEventListener("click", function () {
     navMenu.classList.toggle("active");
 });
+.contact-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.contact-item a{
+    white-space: nowrap;
+}
