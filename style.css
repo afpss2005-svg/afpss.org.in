@@ -891,4 +891,40 @@ footer{
     color:#000;
 }
 
+}/* ===== Mobile Header Fix ===== */
+
+@media (max-width: 768px){
+
+.header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 15px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:22px;
+    font-weight:700;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+}
+
+.nav-links{
+    display:flex;
+    gap:18px;
+    font-size:15px;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+.nav-links::-webkit-scrollbar{
+    display:none;
+}
+
 }
