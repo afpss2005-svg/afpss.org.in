@@ -178,3 +178,140 @@ nav ul li a:hover{
     margin-top:10px;
     font-size:18px;
 }
+/* ================= ABOUT ================= */
+
+.about{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.about .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.about-left{
+    flex:1;
+}
+
+.about-left img{
+    width:100%;
+    max-width:450px;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.about-right{
+    flex:1;
+}
+
+.about-right h2{
+    font-size:42px;
+    color:#0a8f3d;
+    margin-bottom:20px;
+}
+
+.about-right h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.about-right p{
+    margin-bottom:20px;
+    font-size:18px;
+    color:#555;
+}
+
+.about-right ul{
+    list-style:none;
+    margin:30px 0;
+}
+
+.about-right ul li{
+    padding:10px 0;
+    font-size:18px;
+}
+
+/* ================= FOUNDER ================= */
+
+.founder{
+    padding:100px 0;
+    text-align:center;
+    background:#f7f9fc;
+}
+
+.founder h2{
+    font-size:40px;
+    color:#0a8f3d;
+    margin-bottom:40px;
+}
+
+.founder-img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid #0a8f3d;
+    margin-bottom:25px;
+}
+
+.founder h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.founder p{
+    max-width:700px;
+    margin:auto;
+    font-size:20px;
+    color:#555;
+    font-style:italic;
+}
+
+/* ================= SCHOOL ================= */
+
+.school{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.school h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:25px;
+    color:#0a8f3d;
+}
+
+.school p{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 50px;
+    font-size:18px;
+}
+
+.school-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.school-card{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.school-card:hover{
+    transform:translateY(-8px);
+}
+
+.school-card h3{
+    color:#0a8f3d;
+    margin-bottom:15px;
+}
