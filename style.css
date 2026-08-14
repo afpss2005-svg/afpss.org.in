@@ -86,191 +86,80 @@ nav ul li a:hover{
     color:#0b6b39;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+
+
+/* ================= HERO ================= */
 
 .hero{
-    position:relative;
-    width:100%;
-    min-height:100vh;
-    background-image:url("Hero.JPG.jpeg");
+    height:90vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("donate banner.JPG");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
+
     display:flex;
+    justify-content:center;
     align-items:center;
-}
+    text-align:center;
 
-.overlay{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.55);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:700px;
-    margin-left:8%;
+    padding:20px;
     color:#fff;
 }
 
-.small-title{
-    display:block;
-    font-size:32px;
-    font-weight:700;
-    color:#FFD54F;
-    margin-bottom:10px;
+.hero-content{
+    max-width:900px;
 }
 
 .hero h1{
-    font-size:72px;
-    line-height:1.05;
-    font-weight:800;
+    font-size:60px;
+    font-weight:700;
     margin-bottom:20px;
+    line-height:1.2;
 }
 
 .hero p{
     font-size:24px;
-    line-height:1.6;
     margin-bottom:35px;
+    line-height:1.6;
 }
 
-.hero-btn{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.donate,
-.learn{
+.donate-btn{
+    display:inline-block;
+    background:#f5a623;
+    color:#fff;
+    text-decoration:none;
     padding:18px 40px;
     border-radius:50px;
-    text-decoration:none;
-    font-size:20px;
-    font-weight:700;
-    transition:.3s;
-}
-
-.donate{
-    background:#0BA84B;
-    color:#fff;
-}
-
-.donate:hover{
-    background:#087C38;
-}
-
-.learn{
-    border:2px solid #fff;
-    color:#fff;
-}
-
-.learn:hover{
-    background:#fff;
-    color:#000;
-}
-
-/* =========================
-   COUNTER
-========================= */
-
-.counter{
-    width:90%;
-    margin:-70px auto 60px;
-    background:#0B5D3B;
-    border-radius:18px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    padding:35px 20px;
-    position:relative;
-    z-index:5;
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
-}
-
-.counter .box{
-    text-align:center;
-    color:#fff;
-}
-
-.counter .box h2{
-    font-size:48px;
-    color:#FFD54F;
-    margin-bottom:10px;
-}
-
-.counter .box p{
-    font-size:20px;
-    color:#fff;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:992px){
-
-.hero{
-    min-height:85vh;
-}
-
-.hero-content{
-    margin:0 25px;
-}
-
-.hero h1{
-    font-size:48px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-.counter{
-    grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:576px){
-
-.hero{
-    min-height:75vh;
-}
-
-.small-title{
     font-size:22px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.donate-btn:hover{
+    background:#d88b0a;
+}
+
+@media(max-width:768px){
+
+.hero{
+    height:80vh;
 }
 
 .hero h1{
-    font-size:36px;
+    font-size:42px;
 }
 
 .hero p{
-    font-size:16px;
+    font-size:20px;
 }
 
-.hero-btn{
-    flex-direction:column;
+.donate-btn{
+    font-size:20px;
+    padding:15px 30px;
 }
 
-.donate,
-.learn{
-    width:100%;
-    text-align:center;
-}
-
-.counter{
-    grid-template-columns:1fr;
-}
-
-.counter .box h2{
-    font-size:36px;
 }
 
 }
