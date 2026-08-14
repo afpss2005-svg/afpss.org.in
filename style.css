@@ -2539,3 +2539,309 @@ transform:translateY(-5px);
     font-size:18px;
     line-height:1.8;
 }
+/* =====================================================
+        SPONSOR A STUDENT - PREMIUM V2
+===================================================== */
+
+.sponsor-section{
+
+    padding:120px 0;
+    background:linear-gradient(180deg,#ffffff 0%,#f7fbf8 100%);
+    position:relative;
+    overflow:hidden;
+
+}
+
+.sponsor-section::before{
+
+    content:"";
+    position:absolute;
+    top:-120px;
+    right:-120px;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:rgba(11,143,67,.08);
+
+}
+
+.sponsor-section::after{
+
+    content:"";
+    position:absolute;
+    bottom:-140px;
+    left:-140px;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    background:rgba(255,193,7,.08);
+
+}
+
+.sponsor-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+    margin-top:60px;
+    position:relative;
+    z-index:2;
+
+}
+
+.sponsor-card{
+
+    background:#fff;
+    border-radius:28px;
+    padding:45px;
+    box-shadow:0 15px 45px rgba(0,0,0,.08);
+    transition:.45s;
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(11,143,67,.08);
+
+}
+
+.sponsor-card::before{
+
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(90deg,#0B8F43,#FFD54F);
+
+}
+
+.sponsor-card:hover{
+
+    transform:translateY(-12px);
+    box-shadow:0 30px 60px rgba(0,0,0,.16);
+
+}/* =====================================================
+        SPONSOR CARD CONTENT
+===================================================== */
+
+.sponsor-icon{
+
+    width:90px;
+    height:90px;
+    background:linear-gradient(135deg,#0B8F43,#18b85c);
+    color:#fff;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:42px;
+    margin-bottom:25px;
+    box-shadow:0 12px 30px rgba(11,143,67,.30);
+
+}
+
+.sponsor-card h3{
+
+    font-size:30px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:12px;
+
+}
+
+.sponsor-card h4{
+
+    display:inline-block;
+    background:#fff7e6;
+    color:#ff9800;
+    padding:10px 22px;
+    border-radius:50px;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:25px;
+    border:2px solid rgba(255,193,7,.30);
+
+}
+
+.sponsor-card ul{
+
+    list-style:none;
+    padding:0;
+    margin:0 0 35px;
+
+}
+
+.sponsor-card ul li{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:17px;
+    color:#555;
+    padding:12px 0;
+    border-bottom:1px dashed #ececec;
+
+}
+
+.sponsor-card ul li:last-child{
+
+    border-bottom:none;
+
+}
+
+/* ================= BUTTON ================= */
+
+.sponsor-card .btn-main{
+
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    padding:16px 24px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#0B8F43,#16a34a);
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:700;
+    transition:.35s;
+
+}
+
+.sponsor-card .btn-main:hover{
+
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(11,143,67,.35);
+
+}/* =====================================================
+        SPONSOR MESSAGE + PROGRESS BAR
+===================================================== */
+
+.sponsor-message{
+
+    margin-top:70px;
+    background:linear-gradient(135deg,#0B8F43,#16a34a);
+    border-radius:30px;
+    padding:60px;
+    color:#fff;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+
+}
+
+.sponsor-message::before{
+
+    content:"❤";
+    position:absolute;
+    top:-30px;
+    right:40px;
+    font-size:120px;
+    opacity:.08;
+    transform:rotate(-15deg);
+
+}
+
+.sponsor-message h3{
+
+    font-size:42px;
+    margin-bottom:20px;
+    font-weight:800;
+
+}
+
+.sponsor-message p{
+
+    font-size:20px;
+    line-height:1.9;
+    max-width:850px;
+    margin:auto;
+
+}
+
+/* ================= PROGRESS ================= */
+
+.progress-box{
+
+    margin:45px auto 0;
+    max-width:700px;
+
+}
+
+.progress-title{
+
+    display:flex;
+    justify-content:space-between;
+    color:#fff;
+    margin-bottom:12px;
+    font-size:17px;
+    font-weight:700;
+
+}
+
+.progress{
+
+    width:100%;
+    height:16px;
+    background:rgba(255,255,255,.25);
+    border-radius:50px;
+    overflow:hidden;
+
+}
+
+.progress span{
+
+    display:block;
+    width:68%;
+    height:100%;
+    border-radius:50px;
+    background:linear-gradient(90deg,#FFD54F,#FFF176);
+    animation:progressMove 2.5s ease;
+
+}
+
+@keyframes progressMove{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width:68%;
+    }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.sponsor-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.sponsor-card{
+
+    padding:30px;
+
+}
+
+.sponsor-message{
+
+    padding:35px 25px;
+
+}
+
+.sponsor-message h3{
+
+    font-size:28px;
+
+}
+
+.sponsor-message p{
+
+    font-size:16px;
+
+}
+
+}
