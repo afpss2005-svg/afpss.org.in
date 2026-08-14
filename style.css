@@ -87,106 +87,27 @@ nav ul li a:hover{
 }
 
 /* ================= HERO ================= */
+<h1>एक हात मदतीचा...<br>वंचितांच्या शिक्षणाला...</h1>
 
-.hero{
-    height:100vh;
-    background:url("hero.jpg") center center/cover no-repeat;
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:#fff;
-}
+<h2>Prashnachinh Adivasi Ashram School</h2>
 
-.overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.55);
-}
+<p>
+451 विद्यार्थ्यांना मोफत शिक्षण, निवास, अन्न,
+आरोग्य सेवा आणि उज्ज्वल भविष्य देण्यासाठी
+आपला सहभाग महत्त्वाचा आहे.
+</p>
 
-.hero-content{
-    position:relative;
-    z-index:5;
-    max-width:900px;
-    padding:20px;
-}
+<div class="hero-buttons">
 
-.hero h1{
-    font-size:52px;
-    margin-bottom:20px;
-    font-weight:700;
-}
+<a href="donate.html" class="btn-primary">
+❤️ Donate Now
+</a>
 
-.hero h2{
-    font-size:28px;
-    margin-bottom:20px;
-    color:#ffe082;
-}
+<a href="#about" class="btn-secondary">
+Learn More →
+</a>
 
-.hero p{
-    font-size:20px;
-    margin-bottom:18px;
-}
-
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    margin-top:35px;
-    flex-wrap:wrap;
-}
-
-.btn-primary,
-.btn-secondary{
-    padding:16px 36px;
-    border-radius:50px;
-    font-size:18px;
-    font-weight:bold;
-    transition:.4s;
-}
-
-.btn-primary{
-    background:#0b6b39;
-    color:#fff;
-}
-
-.btn-primary:hover{
-    background:#0d8345;
-    transform:translateY(-4px);
-}
-
-.btn-secondary{
-    background:#fff;
-    color:#222;
-}
-
-.btn-secondary:hover{
-    background:#f1f1f1;
-    transform:translateY(-4px);
-}
-
-/* Hero Counter */
-
-.hero-stats{
-    display:flex;
-    justify-content:center;
-    gap:70px;
-    margin-top:60px;
-    flex-wrap:wrap;
-}
-
-.hero-stats .card{
-    text-align:center;
-}
-
-.hero-stats h3{
-    font-size:48px;
-    color:#fff;
-}
-
-.hero-stats p{
-    font-size:20px;
+</div>
 }
 /* ==========================================
    PART 2 - ABOUT | FOUNDER | SCHOOL
