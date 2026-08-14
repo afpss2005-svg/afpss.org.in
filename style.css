@@ -86,203 +86,193 @@ nav ul li a:hover{
     color:#0b6b39;
 }
 
-/* ================= HERO ================= */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero{
-
-height:100vh;
-
-background:url('Hero.JPG.jpeg');
-
-background-size:cover;
-
-background-position:center;
-
-position:relative;
-
-display:flex;
-
-align-items:center;
-
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    background-image:url("Hero.JPG.jpeg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
 }
 
 .overlay{
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,.55);
-
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
 }
 
 .hero-content{
-
-position:relative;
-
-max-width:650px;
-
-padding-left:8%;
-
-color:#fff;
-
-z-index:5;
-
+    position:relative;
+    z-index:2;
+    max-width:700px;
+    margin-left:8%;
+    color:#fff;
 }
 
 .small-title{
-
-font-size:32px;
-
-font-weight:600;
-
-color:#FFD54F;
-
+    display:block;
+    font-size:32px;
+    font-weight:700;
+    color:#FFD54F;
+    margin-bottom:10px;
 }
 
 .hero h1{
-
-font-size:75px;
-
-line-height:85px;
-
-margin:20px 0;
-
-font-weight:800;
-
+    font-size:72px;
+    line-height:1.05;
+    font-weight:800;
+    margin-bottom:20px;
 }
 
 .hero p{
-
-font-size:24px;
-
-line-height:38px;
-
-margin-bottom:40px;
-
+    font-size:24px;
+    line-height:1.6;
+    margin-bottom:35px;
 }
 
 .hero-btn{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
 
-display:flex;
-
-gap:20px;
-
+.donate,
+.learn{
+    padding:18px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:700;
+    transition:.3s;
 }
 
 .donate{
-
-background:#00A651;
-
-padding:18px 45px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-color:#fff;
-
-font-size:20px;
-
-font-weight:700;
-
-transition:.3s;
-
-}
-
-.learn{
-
-border:2px solid #fff;
-
-padding:18px 45px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-color:#fff;
-
-font-size:20px;
-
-font-weight:700;
-
-transition:.3s;
-
+    background:#0BA84B;
+    color:#fff;
 }
 
 .donate:hover{
+    background:#087C38;
+}
 
-background:#008744;
-
+.learn{
+    border:2px solid #fff;
+    color:#fff;
 }
 
 .learn:hover{
+    background:#fff;
+    color:#000;
+}
 
-background:#fff;
+/* =========================
+   COUNTER
+========================= */
 
-color:#000;
+.counter{
+    width:90%;
+    margin:-70px auto 60px;
+    background:#0B5D3B;
+    border-radius:18px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    padding:35px 20px;
+    position:relative;
+    z-index:5;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
 
+.counter .box{
+    text-align:center;
+    color:#fff;
+}
+
+.counter .box h2{
+    font-size:48px;
+    color:#FFD54F;
+    margin-bottom:10px;
+}
+
+.counter .box p{
+    font-size:20px;
+    color:#fff;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:992px){
+
+.hero{
+    min-height:85vh;
+}
+
+.hero-content{
+    margin:0 25px;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.hero p{
+    font-size:18px;
 }
 
 .counter{
-
-width:90%;
-
-margin:auto;
-
-margin-top:-70px;
-
-background:#0B5D3B;
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-padding:35px;
-
-border-radius:20px;
-
-position:relative;
-
-z-index:10;
-
-color:#fff;
-
-text-align:center;
-
-box-shadow:0 20px 50px rgba(0,0,0,.25);
+    grid-template-columns:repeat(2,1fr);
+}
 
 }
 
-.counter h2{
+@media(max-width:576px){
 
-font-size:50px;
-
-color:#FFD54F;
-
+.hero{
+    min-height:75vh;
 }
 
-.counter p{
-
-font-size:22px;
-
-margin-top:10px;
-
+.small-title{
+    font-size:22px;
 }
 
-</div>
+.hero h1{
+    font-size:36px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.hero-btn{
+    flex-direction:column;
+}
+
+.donate,
+.learn{
+    width:100%;
+    text-align:center;
+}
+
+.counter{
+    grid-template-columns:1fr;
+}
+
+.counter .box h2{
+    font-size:36px;
+}
+
 }
 /* ==========================================
    PART 2 - ABOUT | FOUNDER | SCHOOL
