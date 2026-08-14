@@ -2977,4 +2977,204 @@ transform:translateY(-5px);
 
     transition:all .4s ease;
 
+}/* =====================================================
+        AFPSS JOURNEY TIMELINE
+===================================================== */
+
+.timeline-section{
+
+    padding:120px 0;
+    background:#f8fbf9;
+    position:relative;
+
+}
+
+.timeline{
+
+    position:relative;
+    max-width:1100px;
+    margin:70px auto 0;
+
+}
+
+.timeline::before{
+
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+
+    width:4px;
+    background:linear-gradient(#0B8F43,#FFD54F);
+
+    transform:translateX(-50%);
+
+}
+
+.timeline-item{
+
+    position:relative;
+    width:50%;
+    padding:25px 45px;
+    box-sizing:border-box;
+
+}
+
+.timeline-item.left{
+
+    left:0;
+    text-align:right;
+
+}
+
+.timeline-item.right{
+
+    left:50%;
+
+}
+
+.timeline-content{
+
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.timeline-content:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}/* =====================================================
+        TIMELINE PREMIUM PART 2
+===================================================== */
+
+/* Timeline Dots */
+
+.timeline-item::before{
+
+    content:"";
+    position:absolute;
+    top:45px;
+
+    width:22px;
+    height:22px;
+
+    background:#0B8F43;
+    border:5px solid #fff;
+
+    border-radius:50%;
+
+    box-shadow:0 0 0 5px rgba(11,143,67,.20);
+
+    z-index:2;
+
+}
+
+.timeline-item.left::before{
+
+    right:-11px;
+
+}
+
+.timeline-item.right::before{
+
+    left:-11px;
+
+}
+
+/* Year */
+
+.timeline-content h3{
+
+    color:#0B8F43;
+    font-size:28px;
+    margin-bottom:12px;
+    font-weight:800;
+
+}
+
+.timeline-content h4{
+
+    font-size:24px;
+    color:#222;
+    margin-bottom:15px;
+
+}
+
+.timeline-content p{
+
+    color:#666;
+    line-height:1.8;
+    font-size:17px;
+
+}
+
+/* Hover Glow */
+
+.timeline-content:hover{
+
+    border-left:6px solid #0B8F43;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.timeline::before{
+
+    left:25px;
+
+}
+
+.timeline-item{
+
+    width:100%;
+    left:0;
+    padding-left:70px;
+    padding-right:20px;
+    text-align:left;
+
+}
+
+.timeline-item.left,
+.timeline-item.right{
+
+    left:0;
+    text-align:left;
+
+}
+
+.timeline-item.left::before,
+.timeline-item.right::before{
+
+    left:14px;
+
+}
+
+.timeline-content{
+
+    padding:25px;
+
+}
+
+.timeline-content h3{
+
+    font-size:24px;
+
+}
+
+.timeline-content h4{
+
+    font-size:20px;
+
+}
+
 }
