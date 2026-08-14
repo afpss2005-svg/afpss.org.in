@@ -1453,3 +1453,41 @@ opacity:1;
     animation:zoomIn .8s ease;
 
 }
+.language-switcher{
+display:flex;
+align-items:center;
+gap:10px;
+margin-left:20px;
+}
+
+.language-switcher button{
+background:#ff9800;
+color:#fff;
+border:none;
+padding:8px 14px;
+border-radius:25px;
+cursor:pointer;
+font-size:14px;
+font-weight:600;
+transition:.3s;
+}
+
+.language-switcher button:hover{
+background:#0b8f43;
+transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+.language-switcher{
+margin-top:15px;
+justify-content:center;
+width:100%;
+}
+
+.language-switcher button{
+font-size:13px;
+padding:8px 12px;
+}
+
+}
