@@ -1655,3 +1655,296 @@ box-shadow:0 0 0 rgba(244,163,0,.4);
 }
 
 }
+/* ===============================
+   DONATE PAGE PREMIUM CSS
+================================= */
+
+.donation-story,
+.quick-donate,
+.donate-section,
+.bank-section,
+.transparency-section,
+.reports-section,
+.why-donate,
+.sponsor-section,
+.impact-section,
+.testimonial-section,
+.faq-section,
+.map-section,
+.contact-section,
+.get-involved,
+.final-appeal{
+    padding:90px 20px;
+    background:#ffffff;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    color:#ff6b35;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin:15px 0;
+    color:#1d3557;
+}
+
+.section-title p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+}
+
+.donate-grid,
+.bank-grid,
+.trust-grid,
+.report-grid,
+.why-grid,
+.sponsor-grid,
+.impact-grid,
+.testimonial-grid,
+.involve-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.donate-card,
+.bank-card,
+.trust-card,
+.report-card,
+.why-card,
+.sponsor-card,
+.impact-box,
+.testimonial-card,
+.involve-card{
+
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+transition:.35s;
+
+}
+
+.donate-card:hover,
+.bank-card:hover,
+.trust-card:hover,
+.report-card:hover,
+.why-card:hover,
+.sponsor-card:hover,
+.impact-box:hover,
+.testimonial-card:hover,
+.involve-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.price{
+
+font-size:34px;
+
+font-weight:700;
+
+color:#ff6b35;
+
+margin:20px 0;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:#ff6b35;
+
+color:#fff;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+background:#e65a27;
+
+transform:scale(1.05);
+
+}
+
+.hero-btn2{
+
+display:inline-block;
+
+padding:15px 35px;
+
+border:2px solid #ff6b35;
+
+color:#ff6b35;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.hero-btn2:hover{
+
+background:#ff6b35;
+
+color:#fff;
+
+}
+
+.footer{
+
+background:#0b1f33;
+
+color:#fff;
+
+padding:70px 20px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:40px;
+
+}
+
+.footer a{
+
+color:#fff;
+
+text-decoration:none;
+
+}
+
+.footer ul{
+
+list-style:none;
+
+padding:0;
+
+}
+
+.whatsapp{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:65px;
+
+height:65px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:32px;
+
+color:#fff;
+
+text-decoration:none;
+
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+z-index:999;
+
+}
+
+.scroll-top{
+
+position:fixed;
+
+bottom:105px;
+
+right:25px;
+
+width:55px;
+
+height:55px;
+
+background:#ff6b35;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:24px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+z-index:999;
+
+}
+
+@media(max-width:768px){
+
+.section-title h2{
+
+font-size:30px;
+
+}
+
+.hero-btn,
+
+.hero-btn2{
+
+display:block;
+
+width:100%;
+
+margin:10px 0;
+
+text-align:center;
+
+}
+
+}
