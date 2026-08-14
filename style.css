@@ -1284,21 +1284,16 @@ padding:60px 0;
 }
 
 /* ================= HERO ================= */
-
 .hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
-url("donate-banner.jpg");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:#fff;
-padding:20px;
+.hero{
+    height:100vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.60)),
+        url("./donate-banner.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
 }
 
 .hero-content{
