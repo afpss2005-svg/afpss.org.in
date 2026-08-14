@@ -2474,3 +2474,68 @@ transform:translateY(-5px);
         PREMIUM HERO SLIDER END
 ===================================================== */
 
+/* ==========================================
+            IMPACT DASHBOARD
+========================================== */
+
+.impact-section{
+    padding:100px 0;
+    background:#f8fbff;
+}
+
+.impact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-top:50px;
+}
+
+.impact-card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.impact-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.impact-icon{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.impact-card h3{
+    font-size:34px;
+    color:#0B8F43;
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+.impact-card p{
+    font-size:17px;
+    color:#555;
+}
+
+.impact-message{
+    margin-top:60px;
+    text-align:center;
+    background:#0B8F43;
+    color:#fff;
+    padding:40px;
+    border-radius:20px;
+}
+
+.impact-message h3{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.impact-message p{
+    font-size:18px;
+    line-height:1.8;
+}
