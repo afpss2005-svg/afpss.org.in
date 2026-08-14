@@ -1,93 +1,12 @@
-// AFPSS Premium Website 2.0
+/* ==========================================
+   AFPSS INTERNATIONAL PREMIUM WEBSITE
+   script.js
+   Part 01
+========================================== */
 
-// Sticky Header Shadow
-window.addEventListener("scroll", function () {
-    const header = document.querySelector("header");
-    if (window.scrollY > 50) {
-        header.style.boxShadow = "0 4px 20px rgba(0,0,0,0.15)";
-    } else {
-        header.style.boxShadow = "none";
-    }
-});
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    });
-});
-
-// Fade Animation
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-});
-
-document.querySelectorAll(".fade").forEach(el => {
-    observer.observe(el);
-});
-
-// Counter Animation
-const counters = document.querySelectorAll(".counter");
-
-counters.forEach(counter => {
-    counter.innerText = "0";
-
-    const updateCounter = () => {
-        const target = +counter.getAttribute("data-target");
-        const count = +counter.innerText;
-
-        const increment = target / 100;
-
-        if (count < target) {
-            counter.innerText = `${Math.ceil(count + increment)}`;
-            setTimeout(updateCounter, 20);
-        } else {
-            counter.innerText = target;
-        }
-    };
-
-    updateCounter();
-});
-
-// Donate Button
-const donateBtn = document.querySelector(".donate-btn");
-
-if (donateBtn) {
-    donateBtn.addEventListener("click", () => {
-        alert("🙏 Thank you for supporting AFPSS!");
-    });
-}
-const slides = document.querySelectorAll(".slide");
-
-let current = 0;
-
-setInterval(() => {
-
-    slides[current].classList.remove("active");
-
-    current++;
-
-    if(current >= slides.length){
-
-        current = 0;
-
-    }
-
-    slides[current].classList.add("active");
-
-},4000);/* ================= MOBILE MENU ================= */
+/* ===============================
+   MOBILE MENU
+=============================== */
 
 const menuToggle = document.getElementById("menu-toggle");
 const nav = document.querySelector("nav");
@@ -96,85 +15,444 @@ if (menuToggle && nav) {
 
     menuToggle.addEventListener("click", () => {
         nav.classList.toggle("active");
+    });
 
-        if (menuToggle.innerHTML.trim() === "☰") {
-            menuToggle.innerHTML = "✕";
-        } else {
-            menuToggle.innerHTML = "☰";
+}
+
+/* ===============================
+   SMOOTH SCROLL
+=============================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+    link.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
         }
+
     });
 
-    document.querySelectorAll("nav a").forEach(link => {
-        link.addEventListener("click", () => {
-            nav.classList.remove("active");
-            menuToggle.innerHTML = "☰";
+});
+
+/* ===============================
+   STICKY HEADER
+=============================== */
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector(".header");
+
+    if(window.scrollY > 80){
+
+        header.style.background="rgba(255,255,255,.97)";
+        header.style.boxShadow="0 10px 30px rgba(0,0,0,.10)";
+
+    }else{
+
+        header.style.background="rgba(255,255,255,.92)";
+        header.style.boxShadow="0 4px 20px rgba(0,0,0,.08)";
+
+    }
+
+});
+
+/* ===============================
+   SCROLL FADE ANIMATION
+=============================== */
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+document.querySelectorAll("section").forEach(sec=>{
+
+observer.observe(sec);
+
+});
+
+/* ===============================
+   END PART 01
+=============================== */
+
+/* ==========================================
+   PART 02
+   Animated Counter + Donate Effects
+========================================== */
+
+/* ===============================
+   ANIMATED COUNTERS
+=============================== */
+
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const counter = entry.target;
+
+            const target = +counter.getAttribute("data-target");
+
+            let count = 0;
+
+            const speed = target / 100;
+
+            const updateCounter = () => {
+
+                count += speed;
+
+                if (count < target) {
+
+                    counter.innerText = Math.floor(count);
+
+                    requestAnimationFrame(updateCounter);
+
+                } else {
+
+                    counter.innerText = target + "+";
+
+                }
+
+            };
+
+            updateCounter();
+
+            counterObserver.unobserve(counter);
+
+        }
+
+    });
+
+}, {
+    threshold: 0.5
+});
+
+counters.forEach(counter => {
+    counterObserver.observe(counter);
+});
+
+
+/* ===============================
+   DONATE BUTTON PULSE
+=============================== */
+
+const donateButtons = document.querySelectorAll(".hero-btn, .btn-primary");
+
+donateButtons.forEach(button => {
+
+    button.addEventListener("mouseenter", () => {
+
+        button.style.transform = "scale(1.05)";
+
+    });
+
+    button.addEventListener("mouseleave", () => {
+
+        button.style.transform = "scale(1)";
+
+    });
+
+});
+
+
+/* ===============================
+   RUPEE ICON ANIMATION
+=============================== */
+
+setInterval(() => {
+
+    const rupees = document.querySelectorAll(".rupee");
+
+    rupees.forEach(icon => {
+
+        icon.classList.add("animate");
+
+        setTimeout(() => {
+
+            icon.classList.remove("animate");
+
+        }, 700);
+
+    });
+
+}, 2500);
+
+
+/* ===============================
+   HERO BUTTON FLOAT EFFECT
+=============================== */
+
+const heroButton = document.querySelector(".hero-btn");
+
+if (heroButton) {
+
+    setInterval(() => {
+
+        heroButton.classList.toggle("floating");
+
+    }, 1500);
+
+}
+
+/* ===============================
+   END PART 02
+=============================== */
+
+/* ==========================================
+   AFPSS PREMIUM WEBSITE
+   SCRIPT.JS - PART 03
+========================================== */
+
+/* ===============================
+   GALLERY LIGHTBOX
+=============================== */
+
+const galleryImages = document.querySelectorAll(".gallery-card img");
+
+galleryImages.forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        const overlay = document.createElement("div");
+
+        overlay.className = "lightbox";
+
+        overlay.innerHTML = `
+            <span class="close-lightbox">&times;</span>
+            <img src="${img.src}" class="lightbox-image">
+        `;
+
+        document.body.appendChild(overlay);
+
+        overlay.onclick = () => {
+            overlay.remove();
+        };
+
+    });
+
+});
+
+
+/* ===============================
+   SCROLL REVEAL
+=============================== */
+
+const revealItems = document.querySelectorAll(
+".card, .impact-card, .award-card, .success-card, .news-card, .gallery-card"
+);
+
+const revealObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+    threshold: 0.15
+});
+
+revealItems.forEach(item => {
+    revealObserver.observe(item);
+});
+
+
+/* ===============================
+   BACK TO TOP BUTTON
+=============================== */
+
+const topButton = document.querySelector(".top-btn");
+
+window.addEventListener("scroll", () => {
+
+    if (!topButton) return;
+
+    if (window.scrollY > 400) {
+
+        topButton.style.display = "flex";
+
+    } else {
+
+        topButton.style.display = "none";
+
+    }
+
+});
+
+if (topButton) {
+
+    topButton.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
         });
+
     });
 
 }
 
-en:{
 
-home:"Home",
-about:"About",
-gallery:"Gallery",
-documents:"Documents",
-donate:"Donate",
-contact:"Contact",
+/* ===============================
+   END PART 03
+=============================== */
 
-hero_title:"A Helping Hand...",
-hero_subtitle:"For Education, Dignity and a Better Future for Pardhi Tribal Children.",
+/* ==========================================
+   AFPSS PREMIUM WEBSITE
+   SCRIPT.JS - PART 04 (FINAL)
+========================================== */
 
-donate_now:"Donate Now",
-learn_more:"Learn More"
+/* ===============================
+   LANGUAGE SWITCHER
+=============================== */
 
-}
-
-};
 function changeLanguage(lang){
 
-document.querySelectorAll("[data-key]").forEach(el=>{
+    localStorage.setItem("language", lang);
 
-const key=el.getAttribute("data-key");
-
-if(translations[lang][key]){
-
-el.innerHTML=translations[lang][key];
+    location.reload();
 
 }
+
+/* ===============================
+   PAGE LOADER
+=============================== */
+
+window.addEventListener("load", () => {
+
+    const loader = document.querySelector(".loader");
+
+    if(loader){
+
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+
+            loader.style.display = "none";
+
+        },500);
+
+    }
 
 });
 
-localStorage.setItem("language",lang);
+/* ===============================
+   ACTIVE MENU
+=============================== */
 
-}
+const menuLinks = document.querySelectorAll("nav ul li a");
 
-window.onload=function(){
+menuLinks.forEach(link => {
 
-const lang=localStorage.getItem("language") || "mr";
+    link.addEventListener("click", () => {
 
-changeLanguage(lang);
+        menuLinks.forEach(item => item.classList.remove("active"));
 
-}
-function changeLanguage(lang){
+        link.classList.add("active");
 
-document.querySelectorAll("[data-key]").forEach(el=>{
-
-const key=el.getAttribute("data-key");
-
-if(translations[lang] && translations[lang][key]){
-el.innerHTML = translations[lang][key];
-}
+    });
 
 });
 
-localStorage.setItem("language", lang);
+/* ===============================
+   HEADER SHADOW
+=============================== */
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector(".header");
+
+    if(window.scrollY > 30){
+
+        header.classList.add("sticky");
+
+    }else{
+
+        header.classList.remove("sticky");
+
+    }
+
+});
+
+/* ===============================
+   BUTTON RIPPLE EFFECT
+=============================== */
+
+const buttons = document.querySelectorAll(".hero-btn,.btn-primary,.btn-secondary");
+
+buttons.forEach(button=>{
+
+button.addEventListener("click",function(e){
+
+const ripple=document.createElement("span");
+
+ripple.classList.add("ripple");
+
+const rect=this.getBoundingClientRect();
+
+ripple.style.left=(e.clientX-rect.left)+"px";
+
+ripple.style.top=(e.clientY-rect.top)+"px";
+
+this.appendChild(ripple);
+
+setTimeout(()=>{
+
+ripple.remove();
+
+},600);
+
+});
+
+});
+
+/* ===============================
+   CURRENT YEAR
+=============================== */
+
+const year=document.getElementById("year");
+
+if(year){
+
+year.textContent=new Date().getFullYear();
 
 }
 
-window.addEventListener("load", function(){
+/* ===============================
+   END OF SCRIPT
+=============================== */
 
-const lang = localStorage.getItem("language") || "mr";
-changeLanguage(lang);
-
-});
+console.log("AFPSS Premium Website Loaded Successfully.");
