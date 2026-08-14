@@ -149,3 +149,28 @@ learn_more:"Learn More"
 }
 
 };
+function changeLanguage(lang){
+
+document.querySelectorAll("[data-key]").forEach(el=>{
+
+const key=el.getAttribute("data-key");
+
+if(translations[lang][key]){
+
+el.innerHTML=translations[lang][key];
+
+}
+
+});
+
+localStorage.setItem("language",lang);
+
+}
+
+window.onload=function(){
+
+const lang=localStorage.getItem("language") || "mr";
+
+changeLanguage(lang);
+
+}
