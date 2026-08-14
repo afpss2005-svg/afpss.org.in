@@ -1,7 +1,13 @@
-/* ==========================================
-   AFPSS Professional Website
-   Part 1
-========================================== */
+/* =====================================================
+   AFPSS PREMIUM NGO WEBSITE
+   STYLE.CSS
+   PART 1
+===================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ================= RESET ================= */
 
 *{
     margin:0;
@@ -14,1705 +20,1436 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f7f9fb;
-    color:#222;
+
+    font-family:'Poppins',sans-serif;
+    background:#f8faf8;
+    color:#333;
+    overflow-x:hidden;
     line-height:1.7;
+
 }
 
 img{
+
     max-width:100%;
     display:block;
+
 }
 
 a{
+
     text-decoration:none;
+    transition:.35s;
+
+}
+
+ul{
+
+    list-style:none;
+
 }
 
 .container{
+
     width:90%;
-    max-width:1200px;
+    max-width:1300px;
     margin:auto;
+
 }
 
 /* ================= HEADER ================= */
 
-.header{
+header{
+
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    background:#ffffff;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    z-index:999;
-}
+    height:90px;
 
-.header .container{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 0;
+
+    padding:0 60px;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(15px);
+
+    z-index:9999;
+
+    transition:.4s;
+
 }
 
 .logo{
+
     display:flex;
     align-items:center;
     gap:15px;
+
 }
 
 .logo img{
+
     width:65px;
+    height:65px;
+    border-radius:50%;
+    object-fit:cover;
+    background:#fff;
+
 }
 
 .logo h2{
-    color:#0b6b39;
-    font-size:32px;
-    font-weight:bold;
+
+    color:#fff;
+    font-size:28px;
+    font-weight:700;
+
 }
 
 nav ul{
+
     display:flex;
-    list-style:none;
-    gap:28px;
+    gap:35px;
+
 }
 
 nav ul li a{
-    color:#222;
-    font-weight:600;
-    transition:.3s;
+
+    color:#fff;
+    font-size:18px;
+    font-weight:500;
+
 }
 
 nav ul li a:hover{
-    color:#0b6b39;
+
+    color:#ffcc00;
+
 }
 
+.donate-menu{
 
+    background:#ff9800;
+    padding:12px 26px;
+    border-radius:50px;
+    color:#fff !important;
+    font-weight:700;
+
+}
+
+.donate-menu:hover{
+
+    background:#2e7d32;
+    transform:translateY(-3px);
+
+}
 
 /* ================= HERO ================= */
 
 .hero{
-    height:90vh;
+
+    height:100vh;
+
     background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("donate-banner.jpg");
+
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+
+    url("Hero.JPG.jpeg");
+
     background-size:cover;
+
     background-position:center;
+
     background-repeat:no-repeat;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
 
-    padding:20px;
     color:#fff;
+
+    padding:20px;
+
 }
 
 .hero-content{
+
     max-width:900px;
+
+    animation:fadeUp 1.2s ease;
+
 }
 
-.hero h1{
-    font-size:60px;
-    font-weight:700;
-    margin-bottom:20px;
-    line-height:1.2;
-}
+.hero h4{
 
-.hero p{
-    font-size:24px;
-    margin-bottom:35px;
-    line-height:1.6;
-}
+    color:#ffcc00;
 
-.donate-btn{
-    display:inline-block;
-    background:#f5a623;
-    color:#fff;
-    text-decoration:none;
-    padding:18px 40px;
-    border-radius:50px;
     font-size:22px;
-    font-weight:bold;
-    transition:0.3s;
-}
 
-.donate-btn:hover{
-    background:#d88b0a;
-}
+    letter-spacing:2px;
 
-@media(max-width:768px){
+    margin-bottom:20px;
 
-.hero{
-    height:80vh;
 }
 
 .hero h1{
-    font-size:42px;
+
+    font-size:68px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    margin-bottom:30px;
+
 }
 
 .hero p{
+
+    font-size:24px;
+
+    max-width:760px;
+
+    margin:auto;
+
+    margin-bottom:45px;
+
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-main{
+
+    background:#ff9800;
+
+    color:#fff;
+
+    padding:18px 45px;
+
+    border-radius:60px;
+
     font-size:20px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    display:inline-block;
+
 }
 
-.donate-btn{
+.btn-main:hover{
+
+    background:#2e7d32;
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+}
+
+.btn-outline{
+
+    border:2px solid #fff;
+
+    color:#fff;
+
+    padding:18px 45px;
+
+    border-radius:60px;
+
     font-size:20px;
-    padding:15px 30px;
-}
+
+    font-weight:700;
 
 }
 
-}
-/* ==========================================
-   PART 2 - ABOUT | FOUNDER | SCHOOL
-==========================================*/
+.btn-outline:hover{
 
-/* Section */
+    background:#fff;
 
-section{
-    padding:90px 0;
+    color:#2e7d32;
+
 }
+
+/* ================= SECTION TITLE ================= */
 
 .section-title{
+
     text-align:center;
-    margin-bottom:60px;
+
+    margin-bottom:70px;
+
+}
+
+.section-title h5{
+
+    color:#2e7d32;
+
+    font-size:20px;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
 }
 
 .section-title h2{
-    font-size:42px;
-    color:#0b6b39;
-    margin-bottom:15px;
+
+    font-size:48px;
+
+    color:#222;
+
+    margin-bottom:20px;
+
 }
 
 .section-title p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:20px;
+
     color:#666;
-    font-size:18px;
+
 }
 
-/* ================= ABOUT ================= */
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(80px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
 
 .about{
-    background:#ffffff;
-}
 
-.about-grid{
+    padding:120px 8%;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:70px;
     align-items:center;
+    background:#fff;
+
 }
 
-.about img{
+.about-image img{
+
     width:100%;
-    border-radius:20px;
-    box-shadow:0 20px 45px rgba(0,0,0,.15);
+    border-radius:25px;
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+
 }
 
-.about-content h3{
-    font-size:34px;
-    color:#0b6b39;
-    margin-bottom:20px;
+.about-content h5{
+
+    color:#2e7d32;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:15px;
+
+}
+
+.about-content h2{
+
+    font-size:48px;
+    color:#222;
+    margin-bottom:25px;
+
 }
 
 .about-content p{
+
     font-size:18px;
-    line-height:1.9;
     color:#555;
-    margin-bottom:20px;
+    margin-bottom:25px;
+    line-height:1.9;
+
 }
 
-.about-list{
-    list-style:none;
-    margin-top:20px;
+.about-content strong{
+
+    color:#2e7d32;
+
 }
 
-.about-list li{
-    margin-bottom:12px;
-    font-size:18px;
-}
-
-/* ================= FOUNDER ================= */
+/* =====================================================
+   FOUNDER
+===================================================== */
 
 .founder{
-    background:#f7f9fc;
-}
 
-.founder-grid{
-    display:grid;
-    grid-template-columns:350px 1fr;
-    gap:60px;
-    align-items:center;
-}
+    padding:120px 8%;
+    background:#f7faf8;
 
-.founder img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 20px 45px rgba(0,0,0,.18);
-}
-
-.founder-content h2{
-    color:#0b6b39;
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.founder-content h4{
-    color:#ff9800;
-    margin-bottom:25px;
-}
-
-.founder-content p{
-    font-size:18px;
-    color:#555;
-    line-height:1.9;
-    margin-bottom:18px;
-}
-
-/* ================= SCHOOL ================= */
-
-.school{
-    background:#ffffff;
-}
-
-.school-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:70px;
     align-items:center;
+
 }
 
-.school img{
+.founder-image img{
+
     width:100%;
+    border-radius:25px;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.founder-text h5{
+
+    color:#ff9800;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:15px;
+
+}
+
+.founder-text h2{
+
+    font-size:46px;
+    margin-bottom:25px;
+
+}
+
+.founder-text p{
+
+    font-size:18px;
+    color:#555;
+    line-height:1.9;
+
+}
+
+/* =====================================================
+   EMOTIONAL SECTION
+===================================================== */
+
+.emotional-section{
+
+    padding:120px 8%;
+    background:linear-gradient(135deg,#1b5e20,#2e7d32);
+    color:#fff;
+    text-align:center;
+
+}
+
+.emotional-content{
+
+    max-width:1000px;
+    margin:auto;
+
+}
+
+.emotional-content h5{
+
+    color:#ffd54f;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:15px;
+
+}
+
+.emotional-content h2{
+
+    font-size:48px;
+    margin-bottom:25px;
+
+}
+
+.emotional-content h3{
+
+    font-size:30px;
+    color:#ffe082;
+    margin-bottom:30px;
+
+}
+
+.emotional-content p{
+
+    font-size:20px;
+    line-height:2;
+    margin-bottom:25px;
+
+}
+
+/* =====================================================
+   DONATION BENEFITS
+===================================================== */
+
+.donation-benefits{
+
+    padding:120px 8%;
+    background:#fff;
+
+}
+
+.benefit-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+
+}
+
+.benefit-card{
+
+    background:#fff;
     border-radius:20px;
+    padding:40px 30px;
+    text-align:center;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
 }
 
-.school-content h2{
-    color:#0b6b39;
-    font-size:40px;
+.benefit-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.benefit-card{
+
+    font-size:50px;
+
+}
+
+.benefit-card h3{
+
+    margin:20px 0;
+    font-size:24px;
+    color:#2e7d32;
+
+}
+
+.benefit-card p{
+
+    color:#666;
+    font-size:17px;
+
+}
+
+/* =====================================================
+   IMPACT
+===================================================== */
+
+.impact-section{
+
+    padding:120px 8%;
+    background:#f7faf8;
+
+}
+
+.impact-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:35px;
+
+}
+
+.impact-card{
+
+    background:#fff;
+    padding:45px 30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.impact-card h1{
+
+    font-size:58px;
+    color:#ff9800;
+    margin-bottom:15px;
+
+}
+
+.impact-card h4{
+
+    font-size:26px;
+    margin-bottom:15px;
+
+}
+
+.impact-card p{
+
+    color:#666;
+
+}
+
+/* =====================================================
+   MISSION
+===================================================== */
+
+.mission-section{
+
+    padding:120px 8%;
+    background:#ffffff;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+
+}
+
+.mission-card{
+
+    background:#f8faf8;
+    border-radius:25px;
+    padding:45px 35px;
+    text-align:center;
+    transition:.35s;
+
+}
+
+.mission-card:hover{
+
+    background:#2e7d32;
+    color:#fff;
+    transform:translateY(-10px);
+
+}
+
+.mission-card .icon{
+
+    font-size:55px;
     margin-bottom:20px;
+
 }
 
-.school-content p{
+.mission-card h2{
+
+    margin-bottom:20px;
+    font-size:30px;
+
+}
+
+.mission-card p{
+
     font-size:18px;
     line-height:1.9;
-    color:#555;
+
 }
 
-.school-stats{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-    margin-top:35px;
-}
+/* =====================================================
+   APPEAL BOX
+===================================================== */
 
-.school-card{
-    background:#ffffff;
-    border-radius:15px;
-    padding:30px;
+.appeal-box{
+
+    padding:120px 8%;
+    background:#fffbf2;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.10);
-    transition:.3s;
-}
-
-.school-card:hover{
-    transform:translateY(-8px);
-}
-
-.school-card h3{
-    color:#0b6b39;
-    font-size:38px;
-    margin-bottom:10px;
-}
-
-.school-card p{
-    font-size:18px;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:992px){
-
-.about-grid,
-.founder-grid,
-.school-grid{
-
-grid-template-columns:1fr;
 
 }
 
-.section-title h2{
+.appeal-content{
 
-font-size:34px;
-
-}
-
-.hero h1{
-
-font-size:40px;
+    max-width:900px;
+    margin:auto;
 
 }
 
-}
+.appeal-content h2{
 
-@media(max-width:768px){
-
-.hero-buttons{
-
-flex-direction:column;
+    font-size:48px;
+    margin-bottom:25px;
+    color:#2e7d32;
 
 }
 
-.hero-stats{
+.appeal-content p{
 
-gap:30px;
-
-}
-
-.hero h1{
-
-font-size:32px;
+    font-size:22px;
+    color:#555;
+    line-height:2;
+    margin-bottom:30px;
 
 }
 
-.hero h2{
+.appeal-content blockquote{
 
-font-size:22px;
+    font-size:28px;
+    color:#ff9800;
+    font-style:italic;
+    margin:40px auto;
 
-}
+}/* =====================================================
+   GALLERY SECTION
+===================================================== */
 
-.about-content h3,
-.school-content h2,
-.founder-content h2{
+.gallery-section{
 
-font-size:30px;
+    padding:120px 8%;
+    background:#ffffff;
 
-}
-/* ==========================================
-   PART 3 - GALLERY | VIDEOS | DONATE | CSR
-==========================================*/
-
-/* =============== GALLERY =============== */
-
-.gallery{
-    background:#f8fafc;
 }
 
 .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
 
-.gallery-card{
-    overflow:hidden;
-    border-radius:18px;
-    background:#fff;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-    transition:.4s;
-}
-
-.gallery-card:hover{
-    transform:translateY(-10px);
-}
-
-.gallery-card img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    transition:.5s;
-}
-
-.gallery-card:hover img{
-    transform:scale(1.08);
-}
-
-/* =============== VIDEOS =============== */
-
-.videos{
-    background:#ffffff;
-}
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:30px;
-}
-
-.video-card{
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
-}
-
-.video-card iframe{
-    width:100%;
-    height:280px;
-    border:none;
-}
-
-/* =============== DONATE =============== */
-
-.donate{
-    background:linear-gradient(135deg,#0b6b39,#0f8f4d);
-    color:#fff;
-}
-
-.donate-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.donate-box{
-    background:rgba(255,255,255,.12);
-    padding:35px;
-    border-radius:20px;
-    backdrop-filter:blur(12px);
-}
-
-.donate-box h3{
-    font-size:34px;
-    margin-bottom:20px;
-}
-
-.donate-box p{
-    line-height:1.9;
-    margin-bottom:15px;
-}
-
-.qr-box{
-    text-align:center;
-}
-
-.qr-box img{
-    width:260px;
-    margin:auto;
-    border-radius:15px;
-    background:#fff;
-    padding:12px;
-}
-
-/* =============== CSR =============== */
-
-.csr{
-    background:#f5f7fa;
-}
-
-.csr-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.csr-card{
-    background:#fff;
-    padding:30px;
-    text-align:center;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,.10);
-    transition:.4s;
-}
-
-.csr-card:hover{
-    transform:translateY(-8px);
-}
-
-.csr-card img{
-    width:90px;
-    height:90px;
-    object-fit:contain;
-    margin:auto;
-}
-
-.csr-card h4{
-    margin-top:20px;
-    color:#0b6b39;
-}
-
-/* =============== RESPONSIVE =============== */
-
-@media(max-width:768px){
-
-.video-grid,
-.donate-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.gallery-card img{
-
-height:220px;
-
-}
-
-.video-card iframe{
-
-height:220px;
-
-}
-
-.qr-box img{
-
-width:200px;
-
-}
-
-}
-/* ==========================================
-   PART 4 - CONTACT | NEWS | FOOTER
-==========================================*/
-
-/* ============== NEWS ============== */
-
-.news{
-    background:#ffffff;
-}
-
-.news-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-.news-card{
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 15px 35px rgba(0,0,0,.10);
-    transition:.3s;
-}
-
-.news-card:hover{
-    transform:translateY(-8px);
-}
-
-.news-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.news-content{
-    padding:25px;
-}
-
-.news-content h3{
-    color:#0b6b39;
-    margin-bottom:15px;
-}
-
-.news-content p{
-    color:#555;
-    line-height:1.8;
-}
-
-/* ============== CONTACT ============== */
-
-.contact{
-    background:#f8fafc;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-}
-
-.contact-info{
-    background:#fff;
-    padding:35px;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,.10);
-}
-
-.contact-info h3{
-    color:#0b6b39;
-    margin-bottom:20px;
-}
-
-.contact-info p{
-    margin-bottom:15px;
-    color:#555;
-}
-
-.contact-form{
-    background:#fff;
-    padding:35px;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,.10);
-}
-
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:20px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    font-size:16px;
-}
-
-.contact-form textarea{
-    height:150px;
-    resize:none;
-}
-
-.contact-form button{
-    background:#0b6b39;
-    color:#fff;
-    border:none;
-    padding:15px 35px;
-    border-radius:40px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.contact-form button:hover{
-    background:#0f8f4d;
-}
-
-/* ============== MAP ============== */
-
-.map iframe{
-    width:100%;
-    height:450px;
-    border:0;
-}
-
-/* ============== FOOTER ============== */
-
-footer{
-    background:#0b6b39;
-    color:#fff;
-    text-align:center;
-    padding:35px 20px;
-}
-
-footer h3{
-    margin-bottom:15px;
-}
-
-footer p{
-    opacity:.9;
-    margin-bottom:10px;
-}
-
-footer a{
-    color:#fff;
-}
-
-/* ============== FLOAT BUTTONS ============== */
-
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:#25D366;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:28px;
-    text-decoration:none;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
-    z-index:999;
-}
-
-.scroll-top{
-    position:fixed;
-    bottom:95px;
-    right:20px;
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    background:#0b6b39;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    font-size:22px;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
-    z-index:999;
-}
-
-/* ============== MOBILE ============== */
-
-@media(max-width:768px){
-
-.contact-grid{
-    grid-template-columns:1fr;
-}
-
-.news-grid{
-    grid-template-columns:1fr;
-}
-
-.map iframe{
-    height:300px;
-}
-
-footer{
-    padding:25px 15px;
-}
-
-}   }
-
-/* ================= MOBILE MENU ================= */
-
-.menu-toggle{
-    display:none;
-    font-size:30px;
-    cursor:pointer;
-    color:#0a6b3b;
-}
-
-@media (max-width:768px){
-
-    .menu-toggle{
-        display:block;
-    }
-
-    nav{
-        position:absolute;
-        top:80px;
-        left:0;
-        width:100%;
-        background:#fff;
-        display:none;
-        box-shadow:0 5px 15px rgba(0,0,0,.15);
-    }
-
-    nav.active{
-        display:block;
-    }
-
-    nav ul{
-        flex-direction:column;
-        padding:20px;
-        gap:18px;
-    }
-}
-
-/* =================
-   MOBILE RESPONSIVE
-================= */
-
-@media (max-width:991px){
-/* ==============================
-   MOBILE RESPONSIVE
-============================== */
-
-@media (max-width:991px){
-
-.hero{
-    height:90vh;
-}
-
-.hero h1{
-    font-size:42px;
-}
-
-.hero h2{
-    font-size:24px;
-}
-
-.hero p{
-    font-size:18px;
-    padding:0 20px;
-}
-
-.hero-buttons{
-    flex-direction:column;
-    gap:15px;
-}
-
-.hero-stats{
-    gap:30px;
-}
-
-.hero-stats h3{
-    font-size:36px;
-}
-
-}
-
-@media (max-width:768px){
-
-.hero{
-    height:100vh;
-    padding:0 15px;
-}
-
-.hero h1{
-    font-size:32px;
-}
-
-.hero h2{
-    font-size:20px;
-}
-
-.hero p{
-    font-size:16px;
-}
-
-.btn-primary,
-.btn-secondary{
-    width:220px;
-    text-align:center;
-}
-
-.hero-stats{
-    flex-direction:column;
-    gap:20px;
-}
-
-.hero-stats h3{
-    font-size:30px;
-}
-
-.hero-stats p{
-    font-size:16px;
-}/* ===== Bank Details Card ===== */
-
-.bank-details{
-    max-width:700px;
-    margin:40px auto;
-    padding:30px;
-    background:#ffffff;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
-    border-left:6px solid #0a6b39;
-}
-
-.bank-details h3{
-    color:#0a6b39;
-    margin-bottom:20px;
-    text-align:center;
-}
-
-.bank-details p{
-    font-size:18px;
-    margin:12px 0;
-    color:#333;
-    word-break:break-word;
-}
-
-.bank-details strong{
-    color:#000;
-}
-
-}/* ===== Mobile Header Fix ===== */
-
-@media (max-width: 768px){
-
-.header .container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:10px 15px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-size:22px;
-    font-weight:700;
-}
-
-.logo img{
-    width:55px;
-    height:55px;
-}
-
-.nav-links{
-    display:flex;
-    gap:18px;
-    font-size:15px;
-    overflow-x:auto;
-    white-space:nowrap;
-}
-
-.nav-links::-webkit-scrollbar{
-    display:none;
-}
-
-}
-/* Mobile Menu */
-
-.menu-toggle{
-    display:none;
-    font-size:32px;
-    cursor:pointer;
-    color:#006b3c;
-}
-
-@media (max-width:768px){
-
-.menu-toggle{
-display:block;
-}
-
-nav{
-display:none;
-position:absolute;
-top:80px;
-left:0;
-width:100%;
-background:#fff;
-padding:20px 0;
-box-shadow:0 10px 20px rgba(0,0,0,.15);
-}
-
-nav.active{
-display:block;
-}
-
-nav ul{
-flex-direction:column;
-align-items:center;
-gap:20px;
-}
-
-}const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-
-menuToggle.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
-});
-.contact-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: nowrap;
-}
-
-.contact-item a{
-    white-space: nowrap;
-}
-.contact-item{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    margin:8px 0;
-}
-
-.contact-item span{
-    display:inline-flex;
-    align-items:center;
-    font-size:24px;
-    line-height:1;
-    flex-shrink:0;
-}
-
-.contact-item a{
-    display:inline-block;
-    white-space:nowrap;
-}
-.contact-item{
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center;
-    gap: 10px;
-    margin: 10px 0;
-}
-
-.contact-item span{
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    line-height: 1;
-}
-
-.contact-item a{
-    display: inline-block;
-    text-decoration: none;
-    white-space: nowrap;
-}
-/* ================= NEWS ================= */
-
-.news{
-    padding:80px 20px;
-    background:#f5f5f5;
-}
-
-.news h2{
-    text-align:center;
-    font-size:36px;
-    color:#006b3c;
-    margin-bottom:40px;
-}
-
-.news-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+    gap:25px;
+
 }
 
-.news-card{
-    background:#fff;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    transition:.3s;
-}
+.gallery-grid img{
 
-.news-card:hover{
-    transform:translateY(-8px);
-}
-
-.news-card img{
     width:100%;
     height:260px;
     object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,.20);
+
+}
+
+/* =====================================================
+   SUCCESS STORY
+===================================================== */
+
+.success-story{
+
+    padding:120px 8%;
+
+    background:#f8faf8;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.story-image img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.story-content h5{
+
+    color:#ff9800;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
+}
+
+.story-content h2{
+
+    font-size:46px;
+
+    margin-bottom:25px;
+
+}
+
+.story-content p{
+
+    font-size:19px;
+
+    line-height:2;
+
+    color:#555;
+
+    margin-bottom:35px;
+
+}
+
+/* =====================================================
+   PARTNERS
+===================================================== */
+
+.partners{
+
+    padding:120px 8%;
+
+    background:#ffffff;
+
+}
+
+.partner-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+}
+
+.partner-card{
+
+    background:#f7faf8;
+
+    border-radius:20px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    font-size:55px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.partner-card:hover{
+
+    background:#2e7d32;
+
+    color:#fff;
+
+    transform:translateY(-10px);
+
+}
+
+.partner-card h3{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+}
+
+/* =====================================================
+   DONATE CTA
+===================================================== */
+
+.donate-cta{
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+
+    url("donate-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:150px 8%;
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.cta-content{
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+.cta-content h2{
+
+    font-size:56px;
+
+    margin-bottom:25px;
+
+}
+
+.cta-content p{
+
+    font-size:24px;
+
+    line-height:2;
+
+    margin-bottom:40px;
+
+}
+
+/* =====================================================
+   NEWS
+===================================================== */
+
+.news-section{
+
+    padding:120px 8%;
+
+    background:#ffffff;
+
+}
+
+.news-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.news-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.news-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.news-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
 }
 
 .news-card h3{
-    font-size:22px;
-    color:#006b3c;
-    margin:15px;
+
+    font-size:24px;
+
+    padding:25px 25px 10px;
+
+    color:#2e7d32;
+
 }
 
 .news-card p{
-    margin:0 15px 20px;
-    color:#555;
-    line-height:1.6;
+
+    padding:0 25px 30px;
+
+    color:#666;
+
+    line-height:1.8;
+
 }
 
-@media(max-width:768px){
+/* =====================================================
+   PREMIUM CARDS
+===================================================== */
 
-.news h2{
+.card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+}
+
+/* =====================================================
+   HOVER EFFECTS
+===================================================== */
+
+.btn-main,
+.btn-outline,
+.partner-card,
+.news-card,
+.gallery-grid img,
+.impact-card,
+.benefit-card,
+.mission-card{
+
+    transition:all .35s ease;
+
+}
+
+/* =====================================================
+   SECTION SPACING
+===================================================== */
+
+section{
+
+    position:relative;
+
+}
+
+section:not(.hero){
+
+    overflow:hidden;
+
+}/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+.contact-section{
+    padding:120px 8%;
+    background:#f8faf8;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:35px;
+}
+
+.contact-card{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.contact-card h3{
+    color:#2e7d32;
+    margin-bottom:20px;
     font-size:28px;
 }
 
-.news-card img{
-    height:auto;
-}
-
-}
-/* ================= YOUTUBE VIDEOS ================= */
-
-.videos-section{
-    padding:80px 20px;
-    background:#f7f9f8;
-}
-
-.videos-section .section-title{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.videos-section .section-title h2{
-    font-size:36px;
-    margin-bottom:10px;
-    color:#006b3c;
-}
-
-.videos-section .section-title p{
-    font-size:20px;
+.contact-card p{
     color:#555;
-}
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:30px;
-    max-width:1100px;
-    margin:auto;
-}
-
-.video-card{
-    background:#fff;
-    padding:10px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.12);
-    overflow:hidden;
-}
-
-.video-card iframe{
-    width:100%;
-    height:315px;
-    border:0;
-    border-radius:10px;
-    display:block;
-}
-
-.youtube-channel{
-    text-align:center;
-    margin-top:40px;
-}
-
-.youtube-btn{
-    display:inline-block;
-    padding:14px 28px;
-    background:#e60000;
-    color:#fff;
-    text-decoration:none;
-    border-radius:30px;
+    line-height:2;
     font-size:18px;
-    font-weight:bold;
 }
 
-/* Mobile */
+/* =====================================================
+   GOOGLE MAP
+===================================================== */
 
-@media (max-width:768px){
-
-    .video-grid{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
-    .videos-section{
-        padding:50px 15px;
-    }
-
-    .videos-section .section-title h2{
-        font-size:28px;
-    }
-
-    .video-card iframe{
-        height:220px;
-    }
-}
-/* ================= MEDIA COVERAGE DESIGN ================= */
-
-.
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 768px) {
-
-    .media-section {
-        padding: 40px 15px;
-    }
-
-    .media-section .section-title h2 {
-        font-size: 26px;
-    }
-
-    .media-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .media-card img {
-        height: auto;
-        max-height: 500px;
-        object-fit: contain;
-    }
+.map-section iframe{
+    width:100%;
+    height:450px;
+    border:none;
 }
 
-/* ================= TABLET ================= */
+/* =====================================================
+   FINAL DONATE
+===================================================== */
 
-@media (min-width: 769px) and (max-width: 1024px) {
+.final-donate{
 
-    .media-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+    url("donate-banner.jpg");
 
-    .media-card img {
-        height: 320px;
-    }
-}
-
-/* ================= END MEDIA COVERAGE DESIGN ================= */
-
-   /* ===== HERO COUNTER FIX ===== */
-
-.counter{
-    display:grid !important;
-    grid-template-columns:repeat(4,1fr) !important;
-    gap:20px !important;
-    width:90% !important;
-    margin:-70px auto 60px auto !important;
-    padding:30px !important;
-    background:#0b6b43 !important;
-    border-radius:20px !important;
-    position:relative !important;
-    z-index:100 !important;
-}
-
-.counter .box{
-    display:flex !important;
-    flex-direction:column !important;
-    justify-content:center !important;
-    align-items:center !important;
-    text-align:center !important;
-}
-
-.counter .box h2{
-    font-size:48px !important;
-    color:#ffd54f !important;
-    margin:0 !important;
-}
-
-.counter .box p{
-    font-size:20px !important;
-    color:#fff !important;
-    margin-top:10px !important;
-}
-/* ================= GENERAL ================= */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#f7f8f5;
-color:#333;
-line-height:1.7;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:60px 0;
-}
-
-/* ================= HERO ================= */
-.hero{
-    min-height:100vh;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("donate-banner.jpg");
     background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-}
+    background-position:center;
+
+    padding:140px 8%;
+
+    text-align:center;
+
+    color:#fff;
 
 }
 
-.hero-content{
-max-width:900px;
+.final-donate h2{
+
+    font-size:55px;
+    margin-bottom:25px;
+
 }
 
-.hero h1{
-font-size:60px;
-font-weight:800;
-margin-bottom:20px;
+.final-donate p{
+
+    font-size:24px;
+    max-width:850px;
+    margin:auto;
+    line-height:2;
+    margin-bottom:40px;
+
 }
 
-.hero p{
-font-size:24px;
-margin-bottom:35px;
-line-height:1.8;
-}
-
-.hero-btn{
-display:inline-block;
-padding:18px 45px;
-background:#00A651;
-color:#fff;
-text-decoration:none;
-border-radius:40px;
-font-size:22px;
-font-weight:700;
-transition:.3s;
-}
-
-.hero-btn:hover{
-background:#008744;
-}
-
-/* ================= CARD ================= */
-
-.card{
-background:#fff;
-padding:35px;
-margin-bottom:35px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.card h2{
-color:#0B5D3B;
-margin-bottom:25px;
-}
-
-/* ================= QR ================= */
-
-.qr-section{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.qr-section img{
-width:320px;
-max-width:100%;
-border-radius:15px;
-}
-
-/* ================= BANK ================= */
-
-.bank-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:20px;
-}
-
-.bank-grid div{
-background:#F5FFF8;
-padding:20px;
-border-left:5px solid #00A651;
-border-radius:10px;
-}
-
-/* ================= TRUST ================= */
-
-.trust-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:25px;
-}
-
-.trust-card{
-background:#fff;
-padding:30px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.trust-card:hover{
-transform:translateY(-8px);
-}
-
-.icon{
-font-size:55px;
-margin-bottom:15px;
-}
-
-.download-btn{
-display:inline-block;
-padding:12px 30px;
-background:#0B5D3B;
-color:#fff;
-text-decoration:none;
-border-radius:30px;
-margin-top:20px;
-}
-
-.download-btn:hover{
-background:#F39C12;
-}
-
-/* ================= SPONSOR ================= */
-
-.sponsor-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-
-.sponsor-card{
-background:#fff;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-text-align:center;
-transition:.3s;
-}
-
-.sponsor-card:hover{
-transform:translateY(-8px);
-}
-
-.sponsor-card img{
-width:100%;
-height:190px;
-object-fit:cover;
-}
-
-.sponsor-card h3{
-margin:15px 0;
-color:#0B5D3B;
-}
-
-.sponsor-card h2{
-color:#F39C12;
-margin-bottom:15px;
-}
-
-.btn{
-display:inline-block;
-background:#00A651;
-color:#fff;
-text-decoration:none;
-padding:12px 30px;
-border-radius:30px;
-margin-bottom:25px;
-}
-
-.btn:hover{
-background:#008744;
-}
-
-/* ================= CONTACT ================= */
-
-.contact-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:30px;
-}
-
-/* ================= FOOTER ================= */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
-background:#0B5D3B;
-color:#fff;
-text-align:center;
-padding:40px 20px;
-margin-top:50px;
-}
 
-/* ================= MOBILE ================= */
-
-@media(max-width:900px){
-
-.hero h1{
-font-size:40px;
-}
-
-.hero p{
-font-size:20px;
-}
-
-.qr-section,
-.bank-grid,
-.trust-grid,
-.sponsor-grid,
-.contact-grid{
-grid-template-columns:1fr;
-}
+    background:#1b1b1b;
+    color:#fff;
+    padding:70px 8% 30px;
 
 }
-   /* ================= MAP ================= */
 
-.map{
-margin-top:25px;
+.footer-container{
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+
 }
 
-/* ================= WHATSAPP ================= */
+.footer-about img{
+
+    width:90px;
+    margin-bottom:20px;
+
+}
+
+.footer-about h2{
+
+    margin-bottom:15px;
+
+}
+
+.footer-links ul,
+.footer-docs ul{
+
+    padding:0;
+
+}
+
+.footer-links li,
+.footer-docs li{
+
+    margin:12px 0;
+
+}
+
+.footer-links a,
+.footer-docs a{
+
+    color:#ddd;
+
+}
+
+.footer-links a:hover,
+.footer-docs a:hover{
+
+    color:#ff9800;
+
+}
+
+footer hr{
+
+    margin:40px 0;
+    border:0;
+    border-top:1px solid #444;
+
+}
+
+footer .copyright{
+
+    text-align:center;
+    color:#bbb;
+
+}
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
 
 .whatsapp{
 
-position:fixed;
+    position:fixed;
 
-bottom:25px;
+    right:25px;
 
-right:25px;
+    bottom:25px;
 
-width:65px;
+    width:65px;
 
-height:65px;
+    height:65px;
 
-background:#25D366;
+    background:#25D366;
 
-border-radius:50%;
+    color:#fff;
 
-display:flex;
+    border-radius:50%;
 
-justify-content:center;
+    display:flex;
 
-align-items:center;
+    justify-content:center;
 
-font-size:34px;
+    align-items:center;
 
-color:#fff;
+    font-size:32px;
 
-text-decoration:none;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
 
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-
-z-index:999;
-
-transition:.3s;
+    z-index:9999;
 
 }
 
 .whatsapp:hover{
 
-transform:scale(1.12);
+    transform:scale(1.12);
 
 }
 
-/* ================= FOOTER ================= */
+/* =====================================================
+   SCROLL TOP
+===================================================== */
 
-footer{
+#topBtn{
 
-background:#0B5D3B;
+    position:fixed;
 
-padding:50px 20px;
+    left:25px;
 
-text-align:center;
+    bottom:25px;
 
-color:#fff;
+    width:55px;
 
-margin-top:60px;
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff9800;
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
 
 }
 
-footer h2{
+#topBtn:hover{
 
-margin-bottom:15px;
+    background:#2e7d32;
 
 }
 
-footer p{
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
-line-height:1.8;
+@media(max-width:992px){
+
+header{
+
+    padding:20px;
+
+}
+
+nav ul{
+
+    gap:15px;
+
+}
+
+.hero h1{
+
+    font-size:46px;
+
+}
+
+.about,
+.founder,
+.success-story{
+
+    grid-template-columns:1fr;
+
+}
+
+.footer-container{
+
+    grid-template-columns:1fr;
+
+}
 
 }
 
 @media(max-width:768px){
 
-.whatsapp{
+header{
 
-width:58px;
-
-height:58px;
-
-font-size:28px;
+    height:auto;
+    flex-direction:column;
+    padding:15px;
 
 }
 
-}/* ================= REPORT GRID ================= */
+nav ul{
 
-.report-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+    flex-wrap:wrap;
+    justify-content:center;
+
 }
 
-.report-card{
-    background:#fff;
-    border-radius:18px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+.hero{
+
+    height:auto;
+    padding:160px 20px 80px;
+
 }
 
-.report-card .icon{
-    font-size:60px;
-    margin-bottom:15px;
+.hero h1{
+
+    font-size:36px;
+
 }
 
-.report-card h3{
-    font-size:28px;
-    margin:15px 0;
+.hero p{
+
+    font-size:18px;
+
 }
 
-.report-card p{
-    color:#666;
-    margin-bottom:25px;
+.section-title h2{
+
+    font-size:34px;
+
 }
 
-/* ================= SPONSOR GRID ================= */
+.btn-main,
+.btn-outline{
 
-.sponsor-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-.sponsor-card{
-    background:#fff;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,.12);
-    text-align:center;
-    transition:.3s;
-}
-
-.sponsor-card:hover{
-    transform:translateY(-8px);
-}
-
-.sponsor-card img{
     width:100%;
-    height:190px;
-    object-fit:cover;
-}
-
-.sponsor-card h3{
-    margin-top:20px;
-    font-size:24px;
-}
-
-.sponsor-card p{
-    line-height:1.8;
-    color:#555;
-    padding:0 20px;
-}
-
-.price{
-    font-size:32px;
-    color:#ff6b00;
-    font-weight:bold;
-    margin:20px 0;
-}
-
-.btn{
-    display:inline-block;
-    margin:25px;
-    padding:14px 30px;
-    background:#0b6b44;
-    color:#fff;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:bold;
-}
-
-.btn:hover{
-    background:#084f33;
-}
-
-/* ================= IMPACT ================= */
-
-.impact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.impact-box{
-    background:#0b6b44;
-    color:#fff;
     text-align:center;
-    padding:35px;
-    border-radius:20px;
+
 }
 
-.impact-box h1{
-    font-size:48px;
-    margin-bottom:10px;
+.gallery-grid,
+.partner-grid,
+.news-grid,
+.impact-grid,
+.benefit-grid{
+
+    grid-template-columns:1fr;
+
 }
 
-.impact-box p{
-    font-size:20px;
 }
 
-/* ================= CONTACT ================= */
+/* =====================================================
+   ANIMATIONS
+===================================================== */
 
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:40px;
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+@keyframes zoomIn{
+
+from{
+
+transform:scale(.9);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+.hero,
+.about,
+.founder,
+.gallery-section,
+.news-section{
+
+    animation:fadeIn 1s ease;
+
+}
+
+.gallery-grid img,
+.partner-card,
+.news-card{
+
+    animation:zoomIn .8s ease;
+
 }
