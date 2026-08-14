@@ -1337,3 +1337,38 @@ menuToggle.addEventListener("click", function () {
 }
 
 /* ================= END MEDIA COVERAGE DESIGN ================= */
+
+   /* ===== HERO COUNTER FIX ===== */
+
+.counter{
+    display:grid !important;
+    grid-template-columns:repeat(4,1fr) !important;
+    gap:20px !important;
+    width:90% !important;
+    margin:-70px auto 60px auto !important;
+    padding:30px !important;
+    background:#0b6b43 !important;
+    border-radius:20px !important;
+    position:relative !important;
+    z-index:100 !important;
+}
+
+.counter .box{
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    align-items:center !important;
+    text-align:center !important;
+}
+
+.counter .box h2{
+    font-size:48px !important;
+    color:#ffd54f !important;
+    margin:0 !important;
+}
+
+.counter .box p{
+    font-size:20px !important;
+    color:#fff !important;
+    margin-top:10px !important;
+}
