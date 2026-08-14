@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donate | AFPSS</title>
+
+<title>Donate | Adivasi Fase Pardhi Sudhar Samiti</title>
+
+<meta name="description" content="Support Tribal Children's Education. Donate to Adivasi Fase Pardhi Sudhar Samiti and help provide education, food and shelter.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -16,22 +19,65 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#f5f7f4;
 color:#222;
 }
 
-/* HERO */
+/*================ HEADER ================*/
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:15px 8%;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(8px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+.logo{
+color:#fff;
+font-size:28px;
+font-weight:700;
+text-decoration:none;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD54F;
+}
+
+/*================ HERO ================*/
 
 .hero{
 
-height:90vh;
+height:100vh;
 
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('donate-banner.jpg');
+background:
+linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+url("donate-banner.jpg");
 
 background-size:cover;
 
 background-position:center;
+
+background-repeat:no-repeat;
 
 display:flex;
 
@@ -47,57 +93,65 @@ color:#fff;
 
 }
 
+.hero-content{
+
+max-width:900px;
+
+}
+
 .hero h1{
 
-font-size:60px;
+font-size:65px;
 
-margin-bottom:20px;
+font-weight:800;
+
+line-height:1.2;
+
+margin-bottom:25px;
 
 }
 
 .hero p{
 
-font-size:22px;
-
-max-width:800px;
-
-margin:auto;
+font-size:24px;
 
 line-height:1.8;
 
+margin-bottom:40px;
+
 }
 
-.btn{
+.hero-btn{
 
 display:inline-block;
 
-margin-top:35px;
+background:#00A651;
 
-padding:18px 40px;
+padding:18px 45px;
 
-background:#F5A623;
+border-radius:50px;
 
-color:#fff;
+font-size:22px;
 
-font-size:20px;
-
-font-weight:bold;
+font-weight:700;
 
 text-decoration:none;
 
-border-radius:50px;
+color:#fff;
 
 transition:.3s;
 
 }
 
-.btn:hover{
+.hero-btn:hover{
 
-background:#d98d00;
+background:#008744;
+
+transform:translateY(-3px);
 
 }
 
-/* CARD */
+/*================ CONTAINER ================*/
 
 .container{
 
@@ -105,7 +159,9 @@ width:90%;
 
 max-width:1200px;
 
-margin:70px auto;
+margin:auto;
+
+padding:70px 0;
 
 }
 
@@ -113,211 +169,143 @@ margin:70px auto;
 
 background:#fff;
 
+border-radius:20px;
+
 padding:40px;
 
-border-radius:18px;
+margin-bottom:40px;
 
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-margin-bottom:35px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
 
 }
 
 .card h2{
 
+font-size:38px;
+
 color:#0B5D3B;
 
 margin-bottom:25px;
 
-font-size:35px;
-
 }
 
-/* QR */
+/*================ QR SECTION ================*/
 
-.qr{
+.qr-section{
 
 display:grid;
 
 grid-template-columns:1fr 1fr;
 
-gap:40px;
+gap:50px;
 
 align-items:center;
 
 }
 
-.qr img{
+.qr-section img{
 
 width:320px;
 
 max-width:100%;
 
-}
-
-/* BANK */
-
-.bank{
-
-background:#f4fff6;
-
-padding:30px;
-
 border-radius:15px;
 
-line-height:2.1;
-
-font-size:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 
 }
 
-/* TRUST */
+.upi{
 
-.grid{
+font-size:22px;
 
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:25px;
-
-}
-
-.item{
-
-background:#F8F8F8;
-
-padding:25px;
-
-border-radius:12px;
-
-}
-
-.download{
-
-display:inline-block;
-
-margin-top:15px;
-
-background:#0B5D3B;
-
-color:#fff;
-
-padding:10px 25px;
-
-border-radius:8px;
-
-text-decoration:none;
-
-}
-
-/* SPONSOR */
-
-.sponsor{
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:20px;
-
-}
-
-.plan{
-
-background:#fff;
-
-border-radius:15px;
-
-padding:30px;
-
-text-align:center;
-
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-
-}
-
-.plan h3{
-
-font-size:28px;
+font-weight:700;
 
 color:#0B5D3B;
 
-margin-bottom:15px;
+margin-top:25px;
 
 }
 
-.price{
+.scan-text{
 
-font-size:34px;
+font-size:20px;
 
-font-weight:bold;
-
-color:#F5A623;
-
-margin:15px 0;
-
-}
-
-.plan a{
-
-display:inline-block;
+line-height:1.8;
 
 margin-top:20px;
 
-background:#0B5D3B;
-
-color:#fff;
-
-padding:12px 25px;
-
-text-decoration:none;
-
-border-radius:30px;
-
 }
 
-/* CONTACT */
+/*================ BANK DETAILS ================*/
 
-.contact{
+.bank{
 
-text-align:center;
+background:#F4FFF7;
+
+padding:30px;
+
+border-radius:15px;
 
 font-size:20px;
 
 line-height:2;
 
-}
-
-/* FOOTER */
-
-footer{
-
-background:#0B5D3B;
-
-padding:35px;
-
-text-align:center;
-
-color:#fff;
-
-font-size:18px;
+border-left:6px solid #00A651;
 
 }
 
-/* MOBILE */
+.bank b{
+
+color:#0B5D3B;
+
+}
+
+/*================ MOBILE ================*/
 
 @media(max-width:900px){
 
-.hero h1{
+header{
 
-font-size:38px;
+flex-direction:column;
 
 }
 
-.qr,.grid,.sponsor{
+nav{
+
+margin-top:15px;
+
+}
+
+nav a{
+
+margin:0 10px;
+
+}
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+.hero p{
+
+font-size:19px;
+
+}
+
+.qr-section{
 
 grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.card{
+
+padding:25px;
 
 }
 
@@ -329,21 +317,39 @@ grid-template-columns:1fr;
 
 <body>
 
+<header>
+
+<a href="index.html" class="logo">AFPSS</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
 <section class="hero">
 
-<div>
+<div class="hero-content">
 
 <h1>Your Donation Can Change A Child's Life</h1>
 
 <p>
 
-एक हात मदतीचा...
+एक हात मदतीचा...<br>
 
 वंचितांच्या शिक्षणाला...
 
 </p>
 
-<a href="#donate" class="btn">
+<a href="#donate" class="hero-btn">
 
 ❤️ Donate Now
 
@@ -359,23 +365,27 @@ grid-template-columns:1fr;
 
 <h2>📱 Scan & Donate</h2>
 
-<div class="qr">
+<div class="qr-section">
 
 <div>
 
-<img src="donation-qr.jpg">
+<img src="donation-qr.jpg" alt="Donation QR">
 
 </div>
 
 <div>
 
-<h3>UPI ID</h3>
+<h3>Support Tribal Children's Education</h3>
 
-<h1>9511239351@sbi</h1>
+<p class="scan-text">
 
-<p>
+Scan the QR Code using any UPI App and donate securely.
 
-QR Code Scan करून सुरक्षित देणगी द्या.
+</p>
+
+<p class="upi">
+
+UPI ID : 9511239351@sbi
 
 </p>
 
@@ -391,185 +401,145 @@ QR Code Scan करून सुरक्षित देणगी द्या.
 
 <div class="bank">
 
-<b>Account Name</b><br>
+<b>Account Name :</b><br>
 
 AADIWASI FASE PRADHI SUDHAR SAMITI
 
 <br><br>
 
-<b>Bank</b><br>
+<b>Bank :</b><br>
 
 State Bank of India
 
 <br><br>
 
-<b>Account Number</b><br>
+<b>Account Number :</b><br>
 
 36174604565
 
 <br><br>
 
-<b>IFSC</b><br>
+<b>IFSC :</b><br>
 
 SBIN0008252
 
 <br><br>
 
-<b>Branch</b><br>
+<b>Branch :</b><br>
 
 Mangrul Chawala
 
 </div>
 
 </div>
+<!-- ================= TRUST & TRANSPARENCY ================= -->
 
 <div class="card">
 
-<h2>🛡 Trust & Transparency</h2>
+<h2>🛡️ Trust & Transparency</h2>
 
-<div class="grid">
+<p style="margin-bottom:25px;font-size:20px;">
+Your donation is handled with complete transparency. Our NGO is registered and eligible for tax benefits.
+</p>
 
-<div class="item">
+<div class="trust-grid">
+
+<div class="trust-card">
+
+<div class="icon">📄</div>
 
 <h3>80G Certificate</h3>
 
-<a href="80G.pdf" class="download">Download</a>
+<p>Income Tax Exemption Certificate</p>
+
+<a href="80G.pdf" class="download-btn" target="_blank">
+Download PDF
+</a>
 
 </div>
 
-<div class="item">
+<div class="trust-card">
+
+<div class="icon">📄</div>
 
 <h3>12A Certificate</h3>
 
-<a href="12A.pdf" class="download">Download</a>
+<p>Income Tax Registration</p>
+
+<a href="12A.pdf" class="download-btn" target="_blank">
+Download PDF
+</a>
 
 </div>
 
-<div class="item">
+<div class="trust-card">
+
+<div class="icon">🏢</div>
 
 <h3>CSR Profile</h3>
 
-<a href="CSR.pdf" class="download">Download</a>
+<p>CSR Partnership Information</p>
+
+<a href="CSR.pdf" class="download-btn" target="_blank">
+Download PDF
+</a>
 
 </div>
 
-<div class="item">
+<div class="trust-card">
+
+<div class="icon">📑</div>
 
 <h3>Society Registration</h3>
 
-<a href="registration.pdf" class="download">Download</a>
+<p>Registration Certificate</p>
+
+<a href="Society-Registration.pdf" class="download-btn" target="_blank">
+Download PDF
+</a>
 
 </div>
 
 </div>
 
 </div>
+
+<!-- ================= REPORTS ================= -->
 
 <div class="card">
 
-<h2>📄 Reports</h2>
+<h2>📊 Reports & Financial Documents</h2>
 
-<div class="grid">
+<div class="trust-grid">
 
-<div class="item">
+<div class="trust-card">
+
+<div class="icon">📘</div>
 
 <h3>Annual Report</h3>
 
-<a href="annual-report.pdf" class="download">Download</a>
+<p>Activities & Achievements</p>
+
+<a href="Annual-Report.pdf" class="download-btn" target="_blank">
+Download
+</a>
 
 </div>
 
-<div class="item">
+<div class="trust-card">
+
+<div class="icon">📙</div>
 
 <h3>Audit Report</h3>
 
-<a href="audit-report.pdf" class="download">Download</a>
+<p>Audited Financial Statement</p>
+
+<a href="Audit-Report.pdf" class="download-btn" target="_blank">
+Download
+</a>
 
 </div>
 
 </div>
 
 </div>
-
-<div class="card">
-
-<h2>👦 Sponsor a Child</h2>
-
-<div class="sponsor">
-
-<div class="plan">
-
-<h3>School Kit</h3>
-
-<div class="price">₹3,000</div>
-
-<a href="#">Sponsor</a>
-
-</div>
-
-<div class="plan">
-
-<h3>Food Support</h3>
-
-<div class="price">₹10,000</div>
-
-<a href="#">Sponsor</a>
-
-</div>
-
-<div class="plan">
-
-<h3>Hostel</h3>
-
-<div class="price">₹25,000</div>
-
-<a href="#">Sponsor</a>
-
-</div>
-
-<div class="plan">
-
-<h3>Full Support</h3>
-
-<div class="price">₹50,000</div>
-
-<a href="#">Sponsor</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>📞 Contact</h2>
-
-<div class="contact">
-
-<b>Matin Bhosale</b><br>
-
-📞 +91 9096364529<br>
-
-📱 +91 9764239458<br>
-
-📧 afpss.org@gmail.com<br>
-
-🌐 www.afpss.org.in
-
-</div>
-
-</div>
-
-</div>
-
-<footer>
-
-© 2026 AFPSS | Adivasi Fase Pardhi Sudhar Samiti
-
-</footer>
-
-</body>
-</html>
-
-
