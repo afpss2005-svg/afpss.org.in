@@ -112,24 +112,6 @@ if (menuToggle && nav) {
     });
 
 }
-const translations = {
-
-mr:{
-
-home:"मुख्यपृष्ठ",
-about:"आमच्याविषयी",
-gallery:"गॅलरी",
-documents:"दस्तऐवज",
-donate:"देणगी",
-contact:"संपर्क",
-
-hero_title:"एक हात मदतीचा...",
-hero_subtitle:"फासे पारधी मुलांच्या शिक्षणासाठी, स्वाभिमानासाठी आणि उज्ज्वल भविष्यासाठी.",
-
-donate_now:"देणगी द्या",
-learn_more:"अधिक जाणून घ्या"
-
-},
 
 en:{
 
@@ -174,3 +156,25 @@ const lang=localStorage.getItem("language") || "mr";
 changeLanguage(lang);
 
 }
+function changeLanguage(lang){
+
+document.querySelectorAll("[data-key]").forEach(el=>{
+
+const key=el.getAttribute("data-key");
+
+if(translations[lang] && translations[lang][key]){
+el.innerHTML = translations[lang][key];
+}
+
+});
+
+localStorage.setItem("language", lang);
+
+}
+
+window.addEventListener("load", function(){
+
+const lang = localStorage.getItem("language") || "mr";
+changeLanguage(lang);
+
+});
