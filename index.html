@@ -1,69 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>AFPSS | Adivasi Fase Pardhi Sudhar Samiti</title>
-
-<meta name="description"
-content="Adivasi Fase Pardhi Sudhar Samiti | Prashnachinha Adivasi Ashram School">
-
-<link rel="icon" href="favicon.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
 <!-- ================= HEADER ================= -->
 
-<header>
+<header class="header">
 
-<div class="logo">
+    <div class="container nav-container">
 
-<img src="logo.png" alt="AFPSS Logo">
+        <a href="index.html" class="logo">
 
-<h2>AFPSS</h2>
+            <img src="logo.jpg" alt="AFPSS Logo">
 
-</div>
+            <div class="logo-text">
+                <h2>AFPSS</h2>
+                <span>Adivasi Fase Pardhi Sudhar Samiti</span>
+            </div>
 
-<nav>
+        </a>
 
-<ul>
+        <button id="menu-toggle" class="menu-toggle">☰</button>
 
-<li><a href="index.html">Home</a></li>
+        <nav>
 
-<li><a href="about.html">About</a></li>
+            <ul>
 
-<li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html" data-key="home">Home</a></li>
 
-<li><a href="documents.html">Documents</a></li>
+                <li><a href="about.html" data-key="about">About</a></li>
 
-<li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html" data-key="gallery">Gallery</a></li>
 
-<li><a href="donate.html" class="donate-menu">Donate</a></li>
+                <li><a href="documents.html" data-key="documents">Documents</a></li>
 
-</ul>
-</ul>
+                <li><a href="donate.html" data-key="donate">Donate</a></li>
 
-<div class="language-switcher">
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
 
-    <button onclick="changeLanguage('mr')">🇮🇳 मराठी</button>
+            </ul>
 
-    <button onclick="changeLanguage('en')">🇬🇧 English</button>
+            <div class="language-switcher">
 
-</div>
+                <button onclick="changeLanguage('mr')">🇮🇳 मराठी</button>
 
-</nav>
-</nav>
+                <button onclick="changeLanguage('en')">🇬🇧 English</button>
+
+            </div>
+
+        </nav>
+
+    </div>
 
 </header>
 
@@ -71,383 +53,236 @@ content="Adivasi Fase Pardhi Sudhar Samiti | Prashnachinha Adivasi Ashram School
 
 <section class="hero">
 
-<div class="hero-overlay"></div>
+    <div class="hero-overlay"></div>
 
-<div class="hero-content">
+    <div class="hero-content fade">
 
-<h4>
+        <span class="hero-tag">
+            Support Tribal Children's Education
+        </span>
 
-Welcome to AFPSS
+        <h1 data-key="hero_title">
 
-</h4>
+            एक हात मदतीचा...
 
-<h1>
+        </h1>
 
-एक हात मदतीचा...<br>
+        <p data-key="hero_subtitle">
 
-फासे पारधी मुलांच्या शिक्षणासाठी,<br>
+            फासे पारधी मुलांच्या शिक्षणासाठी,
+            स्वाभिमानासाठी आणि उज्ज्वल भविष्यासाठी.
 
-स्वाभिमानासाठी आणि उज्ज्वल भविष्यासाठी.
+        </p>
 
-</h1>
+        <div class="hero-buttons">
 
-<p>
+            <a href="donate.html"
+               class="hero-btn"
+               data-key="donate_now">
 
-Together we can provide education,
-safe shelter, nutritious food and hope
-for every child.
+                ❤️ Donate Now
 
-</p>
+            </a>
 
-<div class="hero-buttons">
+            <a href="about.html"
+               class="hero-btn2"
+               data-key="learn_more">
 
-<a href="donate.html" class="btn-main">
+                Learn More →
 
-❤️ Donate Now
+            </a>
 
-</a>
+        </div>
 
-<a href="#about" class="btn-outline">
-
-Learn More →
-
-</a>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- ================= IMPACT BAR ================= -->
+<!-- ================= IMPACT COUNTERS ================= -->
 
-<section class="impact-strip">
+<section class="counter-section">
 
-<div>
+<div class="container">
 
-<h2>512+</h2>
+<div class="counter-grid">
+
+<div class="counter-box fade">
+
+<h2 class="counter" data-target="512">512</h2>
 
 <p>Students</p>
 
 </div>
 
-<div>
+<div class="counter-box fade">
 
-<h2>2005</h2>
+<h2 class="counter" data-target="2005">2005</h2>
 
 <p>Established</p>
 
 </div>
 
-<div>
+<div class="counter-box fade">
 
-<h2>2011</h2>
+<h2>1st–10th</h2>
 
-<p>Ashram School</p>
+<p>Education</p>
 
 </div>
 
-<div>
+<div class="counter-box fade">
 
-<h2>1000+</h2>
+<h2 class="counter" data-target="1000">1000</h2>
 
-<p>Lives Inspired</p>
+<p>Lives Changed</p>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
-
 <!-- ================= ABOUT AFPSS ================= -->
-<!-- ================= FOUNDER STORY ================= -->
 
-<section class="founder">
+<section class="about-section fade">
 
-<div class="founder-image">
+<div class="container">
 
-<img src="founder.jpg" alt="Founder Matin Bhosale">
+<div class="section-title">
+
+<span>ABOUT AFPSS</span>
+
+<h2>
+आदिवासी फासे पारधी सुधार समिती
+</h2>
+
+<p>
+
+सन 2005 मध्ये स्थापन झालेली
+आदिवासी फासे पारधी सुधार समिती
+ही फासे पारधी समाजातील मुलांना
+शिक्षण, निवास, अन्न,
+आरोग्य आणि सन्मानाचे जीवन
+मिळावे या उद्देशाने कार्यरत आहे.
+
+</p>
 
 </div>
 
-<div class="founder-text">
+<div class="about-grid">
 
-<h5>OUR FOUNDER</h5>
+<div class="about-image">
 
-<h2>
-श्री. मतीन भोसले
-</h2>
+<img src="Hero.JPG.jpeg"
+alt="AFPSS School">
+
+</div>
+
+<div class="about-text">
 
 <h3>
-"एका शिक्षकापासून समाजपरिवर्तनाच्या प्रवासापर्यंत..."
+
+प्रश्नचिन्ह आदिवासी आश्रम शाळा
+
 </h3>
 
 <p>
 
-सन <strong>2005</strong> मध्ये फासे पारधी समाजाच्या सर्वांगीण विकासासाठी
-<strong>आदिवासी फासे पारधी सुधार समिती</strong> ची स्थापना करण्यात आली.
-समाजातील मुलांना शिक्षण, सन्मान आणि मुख्य प्रवाहात आणण्याचा हा निर्धार होता.
+सन 2011 मध्ये
+प्रश्नचिन्ह आदिवासी आश्रम शाळेची
+सुरुवात केवळ
+188 विद्यार्थ्यांसह झाली.
+
+आज
+512 हून अधिक विद्यार्थी
+या आश्रमशाळेत
+मोफत शिक्षण,
+निवास,
+भोजन
+आणि संस्कार घेत आहेत.
 
 </p>
 
-<p>
+<a href="about.html"
+class="hero-btn">
 
-श्री. <strong>मतीन भोसले</strong> हे जिल्हा परिषद शाळेत शिक्षक म्हणून कार्यरत होते.
-शिक्षक म्हणून काम करत असताना त्यांनी फासे पारधी समाजातील मुलांचे
-शिक्षणापासून वंचित राहणे, दारिद्र्य, असुरक्षित जीवन आणि सामाजिक उपेक्षा
-जवळून अनुभवली.
-
-समाजासाठी आयुष्य समर्पित करण्याचा निर्णय घेत त्यांनी
-<strong>सरकारी नोकरीचा राजीनामा</strong> दिला आणि पूर्णवेळ समाजसेवेला वाहून घेतले.
-
-</p>
-
-<p>
-
-सन <strong>2011</strong> मध्ये त्यांनी
-<strong>प्रश्नचिन्ह आदिवासी आश्रम शाळा</strong> सुरू केली.
-
-त्या वेळी शाळा पक्क्या इमारतीत नव्हती.
-झोपड्यांमध्ये वर्ग भरत होते.
-राहण्याची व्यवस्था नव्हती.
-अन्नाची कमतरता होती.
-आर्थिक साधने नव्हती.
-
-तरीही त्यांनी हार मानली नाही.
-
-</p>
-
-<p>
-
-सुरुवातीला केवळ
-<strong>188 विद्यार्थ्यांपासून</strong>
-सुरू झालेली ही आश्रमशाळा आज
-<strong>512 विद्यार्थ्यांचे</strong>
-जीवन घडवत आहे.
-
-आज येथे विद्यार्थ्यांना
-गुणवत्तापूर्ण शिक्षण,
-सुरक्षित निवास,
-पौष्टिक भोजन,
-आरोग्य सेवा,
-क्रीडा,
-संगणक शिक्षण
-आणि उज्ज्वल भविष्याची संधी मिळत आहे.
-
-</p>
-
-<p>
-
-हा प्रवास केवळ एका शाळेचा नाही,
-तर हजारो स्वप्नांना दिशा देणाऱ्या
-एका शिक्षकाच्या ध्येय, त्याग आणि समाजसेवेचा आहे.
-
-</p>
-
-<a href="about.html" class="btn-main">
-
-📖 Read Full Story
+Read Our Story →
 
 </a>
 
 </div>
 
-</section>
-<!-- ================= FOUNDER STORY ================= -->
+</div>
 
-<section class="founder" id="about">
+</div>
+
+</section>
+
+<!-- ================= FOUNDER ================= -->
+
+<section class="founder-section fade">
+
+<div class="container">
+
+<div class="founder-grid">
 
 <div class="founder-image">
-    <img src="IMG_1934.jpeg" alt="Matin Bhosale">
+
+<img src="IMG_1934.jpeg"
+alt="Matin Bhosale">
+
 </div>
 
 <div class="founder-content">
 
-<span class="section-tag">
-ABOUT AFPSS
-</span>
+<span>FOUNDER</span>
 
 <h2>
-एका शिक्षकापासून समाजपरिवर्तनाच्या प्रवासापर्यंत...
+
+श्री. मतीन भोसले
+
 </h2>
 
 <p>
 
-सन <strong>2005</strong> मध्ये
-<strong>आदिवासी फासे पारधी सुधार समिती</strong>
-ची स्थापना करण्यात आली.
-फासे पारधी समाजातील मुलांना शिक्षण,
-सन्मान आणि मुख्य प्रवाहात आणणे हेच या संस्थेचे ध्येय आहे.
+श्री. मतीन भोसले
+हे जिल्हा परिषद शाळेत शिक्षक होते.
+
+फासे पारधी समाजातील
+मुलांची अत्यंत कठीण परिस्थिती
+पाहून त्यांनी
+स्वतःच्या नोकरीचा
+राजीनामा दिला.
 
 </p>
 
 <p>
 
-संस्थेचे संस्थापक
-<strong>श्री. मतीन भोसले</strong>
-हे जिल्हा परिषद शाळेत शिक्षक म्हणून कार्यरत होते.
-समाजातील मुलांचे हाल, शिक्षणापासून वंचित राहिलेले जीवन,
-दारिद्र्य आणि सामाजिक उपेक्षा त्यांनी जवळून अनुभवली.
+झोपड्यांमध्ये राहणाऱ्या,
+भुकेल्या,
+शिक्षणापासून वंचित
+मुलांना
+नवे आयुष्य देण्यासाठी
+त्यांनी
+प्रश्नचिन्ह आदिवासी आश्रम शाळेची
+सुरुवात केली.
 
 </p>
 
 <p>
 
-या मुलांचे आयुष्य बदलण्याचा निर्धार करून
-त्यांनी सरकारी शिक्षकाच्या पदाचा राजीनामा दिला
-आणि स्वतःचे संपूर्ण आयुष्य
-फासे पारधी समाजासाठी समर्पित केले.
-
-</p>
-
-<p>
-
-सन <strong>2011</strong> मध्ये
-<strong>प्रश्नचिन्ह आदिवासी आश्रम शाळेची</strong>
-स्थापना करण्यात आली.
-
-सुरुवातीला शाळा झोपड्यांमध्ये चालत होती.
-राहण्याची व्यवस्था नव्हती.
-अन्नाची कमतरता होती.
-आर्थिक साधने नव्हती.
-
-तरीही शिक्षणाचा दिवा विझू दिला नाही.
-
-</p>
-
-<p>
-
-केवळ
-<strong>188 विद्यार्थ्यांपासून</strong>
-सुरू झालेली ही आश्रमशाळा
-आज
-<strong>512 विद्यार्थ्यांना</strong>
+आज हजारो विद्यार्थ्यांच्या
+जीवनात
 शिक्षण,
-निवास,
-भोजन,
-आरोग्य सेवा,
-संगणक शिक्षण
-आणि उज्ज्वल भविष्य देत आहे.
+स्वाभिमान
+आणि आशेचा प्रकाश
+पोहोचवण्याचे कार्य
+त्यांच्या नेतृत्वाखाली सुरू आहे.
 
 </p>
 
-<p>
-
-हा प्रवास एका व्यक्तीचा नसून,
-एका संपूर्ण समाजाच्या पुनर्जन्माचा प्रवास आहे.
-
-</p>
-
-<a href="about.html" class="hero-btn">
-Read Full Story →
-</a>
-
 </div>
-
-</section>
-<!-- ================= FOUNDER PREVIEW ================= -->
-
-<section class="founder">
-
-<div class="founder-text">
-
-<h5>
-
-FOUNDER'S MESSAGE
-
-</h5>
-
-<h2>
-
-Shri Matin Bhosale
-
-</h2>
-
-<p>
-
-जिल्हा परिषद शाळेतील शिक्षक म्हणून
-कार्यरत असताना त्यांनी
-फासे पारधी समाजातील मुलांची
-परिस्थिती जवळून अनुभवली.
-
-समाजासाठी पूर्णवेळ कार्य करता यावे
-यासाठी त्यांनी
-स्वतःच्या नोकरीचा राजीनामा देऊन
-जीवन शिक्षणसेवेला समर्पित केले.
-
-</p>
-
-<a href="about.html" class="btn-outline">
-
-Know More
-
-</a>
-
-</div>
-
-<div class="founder-image">
-
-<img src="founder.jpg" alt="Matin Bhosale">
-
-</div>
-
-</section>
-
-<!-- ======= Part 2 पासून पुढे सुरू होईल ======= -->
-    <!-- ================= OUR IMPACT ================= -->
-
-<section class="impact-section">
-
-<div class="section-title">
-
-<h5>OUR IMPACT</h5>
-
-<h2>Changing Lives Every Day</h2>
-
-<p>
-For more than a decade, AFPSS has been working to bring education,
-hope and dignity to children from the Pardhi community.
-</p>
-
-</div>
-
-<div class="impact-grid">
-
-<div class="impact-card">
-
-<h1>512+</h1>
-
-<h4>Students</h4>
-
-<p>Children receiving quality education and care.</p>
-
-</div>
-
-<div class="impact-card">
-
-<h1>2005</h1>
-
-<h4>Established</h4>
-
-<p>Serving tribal communities with dedication.</p>
-
-</div>
-
-<div class="impact-card">
-
-<h1>2011</h1>
-
-<h4>Ashram School</h4>
-
-<p>Residential education for tribal children.</p>
-
-</div>
-
-<div class="impact-card">
-
-<h1>1000+</h1>
-
-<h4>Lives Changed</h4>
-
-<p>Families empowered through education.</p>
 
 </div>
 
@@ -455,345 +290,342 @@ hope and dignity to children from the Pardhi community.
 
 </section>
 
-<!-- ================= MISSION VISION ================= -->
+<!-- ================= MISSION ================= -->
 
 <section class="mission-section">
 
-<div class="mission-card">
-
-<div class="icon">🎯</div>
-
-<h2>Our Mission</h2>
-
-<p>
-
-To provide quality education,
-safe shelter,
-nutrition and equal opportunities
-to every child from the Pardhi community.
-
-</p>
-
-</div>
-
-<div class="mission-card">
-
-<div class="icon">🌍</div>
-
-<h2>Our Vision</h2>
-
-<p>
-
-To build an educated,
-self-reliant and respected
-Pardhi community through education.
-
-</p>
-
-</div>
-
-<div class="mission-card">
-
-<div class="icon">⭐</div>
-
-<h2>Our Values</h2>
-
-<p>
-
-Transparency<br>
-
-Compassion<br>
-
-Equality<br>
-
-Education<br>
-
-Empowerment
-
-</p>
-
-</div>
-
-</section>
-
-<!-- ================= WHY SUPPORT ================= -->
-
-<section class="why-support">
+<div class="container">
 
 <div class="section-title">
 
-<h5>WHY SUPPORT AFPSS</h5>
+<h2>
 
-<h2>Your Support Creates Change</h2>
+Mission • Vision • Values
+
+</h2>
 
 </div>
 
-<div class="support-grid">
+<div class="mission-grid">
 
-<div class="support-box">
+<div class="mission-card fade">
 
-<div class="icon">📚</div>
+<h3>
 
-<h3>Quality Education</h3>
+🎯 Mission
+
+</h3>
 
 <p>
 
-Providing education
-from Grade 1 to Grade 10.
+प्रत्येक फासे पारधी
+मुलापर्यंत
+गुणवत्तापूर्ण शिक्षण,
+सुरक्षित निवास
+आणि सन्मानाचे जीवन
+पोहोचवणे.
 
 </p>
 
 </div>
 
-<div class="support-box">
+<div class="mission-card fade">
 
-<div class="icon">🍛</div>
+<h3>
 
-<h3>Nutritious Food</h3>
+🌍 Vision
+
+</h3>
 
 <p>
 
-Healthy meals
-for every child.
+शिक्षित,
+स्वावलंबी,
+आत्मविश्वासपूर्ण
+आणि सक्षम
+फासे पारधी समाज
+घडवणे.
 
 </p>
 
 </div>
 
-<div class="support-box">
+<div class="mission-card fade">
 
-<div class="icon">🏠</div>
+<h3>
 
-<h3>Safe Hostel</h3>
+❤️ Values
+
+</h3>
 
 <p>
 
-A secure residential
-environment.
+पारदर्शकता,
+सेवा,
+समर्पण,
+समानता,
+मानवता
+आणि शिक्षण.
 
 </p>
 
 </div>
-
-<div class="support-box">
-
-<div class="icon">💊</div>
-
-<h3>Healthcare</h3>
-
-<p>
-
-Medical care and
-regular health checkups.
-
-</p>
-
-</div>
-
-<div class="support-box">
-
-<div class="icon">👕</div>
-
-<h3>School Essentials</h3>
-
-<p>
-
-Uniforms,
-books,
-bags and stationery.
-
-</p>
-
-</div>
-
-<div class="support-box">
-
-<div class="icon">⚽</div>
-
-<h3>Sports & Culture</h3>
-
-<p>
-
-Building confidence,
-skills and leadership.
-
-</p>
 
 </div>
 
 </div>
 
 </section>
+<!-- ================= EMOTIONAL APPEAL ================= -->
 
-<!-- ================= EMOTIONAL SECTION ================= -->
+<section class="emotional-section fade">
 
-<section class="hope-section">
+<div class="container">
 
-<div class="hope-content">
+<div class="section-title">
 
-<h5>EVERY CHILD DESERVES A CHANCE</h5>
+<span>OUR APPEAL</span>
 
 <h2>
 
-One Helping Hand...
-Can Change A Child's Future
+एका समाजाच्या आयुष्याला नवी दिशा देण्याचा प्रवास
 
 </h2>
 
+</div>
+
+<div class="emotional-content">
+
+<h3>
+
+"प्रत्येक मुलाच्या डोळ्यांत एक स्वप्न आहे...
+त्याला फक्त संधीची गरज आहे."
+
+</h3>
+
 <p>
 
-Many children from the Pardhi community
-have faced generations of hardship.
+फासे पारधी समाजाने अनेक वर्षे
+उपेक्षा, गैरसमज आणि सामाजिक वंचिततेचा सामना केला आहे.
 
-Through education,
-love and care,
-they are discovering confidence,
-hope and a brighter tomorrow.
+या परिस्थितीचा सर्वाधिक परिणाम
+निरागस मुलांवर झाला.
 
-Your contribution is not just a donation—
-
-it is an investment
-in a child's dreams.
+आज प्रश्नचिन्ह आदिवासी आश्रम शाळेमुळे
+512 हून अधिक विद्यार्थ्यांना
+शिक्षण, निवास, भोजन आणि सुरक्षित भविष्य मिळत आहे.
 
 </p>
 
-<a href="donate.html" class="btn-main">
+<p>
 
-❤️ Sponsor A Child
+पण अजूनही अनेक मुलांना
+दर्जेदार शिक्षण,
+संगणक शिक्षण,
+वाचनालय,
+निवास,
+आरोग्य सेवा
+आणि आधुनिक सुविधा
+उपलब्ध करून देण्यासाठी
+आपल्या सहकार्याची गरज आहे.
+
+</p>
+
+<a href="donate.html" class="hero-btn">
+
+❤️ Support A Child
 
 </a>
 
 </div>
 
+</div>
+
 </section>
 
-<!-- ===== Part 3 Starts Next ===== -->
-    <!-- ================= GALLERY ================= -->
+<!-- ================= GALLERY ================= -->
 
-<section class="gallery-section">
+<section class="gallery-preview fade">
+
+<div class="container">
 
 <div class="section-title">
 
-<h5>OUR GALLERY</h5>
+<span>PHOTO GALLERY</span>
 
-<h2>Moments That Inspire</h2>
+<h2>
 
-<p>
-Every smile tells a story of hope and transformation.
-</p>
+आमच्या कार्याची काही क्षणचित्रे
+
+</h2>
 
 </div>
 
 <div class="gallery-grid">
 
-<img src="gallery-school.jpg" alt="School">
+<img src="media1.jpeg" alt="Gallery">
 
-<img src="gallery-event.jpg" alt="Event">
+<img src="media5.jpeg" alt="Gallery">
 
-<img src="gallery-meal.jpg" alt="Meal">
+<img src="media10.jpeg" alt="Gallery">
 
-<img src="gallery-children.jpg" alt="Children">
+<img src="media15.jpeg" alt="Gallery">
 
-<img src="gallery-collage.jpg" alt="Gallery">
+<img src="media20.jpeg" alt="Gallery">
 
-<img src="media1.jpeg" alt="AFPSS">
+<img src="media24.jpeg" alt="Gallery">
 
 </div>
 
-<div style="text-align:center;margin-top:40px;">
+<div class="center">
 
-<a href="gallery.html" class="btn-main">
+<a href="gallery.html" class="hero-btn">
 
-View Full Gallery →
+📸 View Full Gallery
 
 </a>
 
 </div>
 
-</section>
-
-<!-- ================= SUCCESS STORY ================= -->
-
-<section class="success-story">
-
-<div class="story-image">
-
-<img src="media2.jpeg" alt="Student">
-
-</div>
-
-<div class="story-content">
-
-<h5>SUCCESS STORY</h5>
-
-<h2>Education Brings New Hope</h2>
-
-<p>
-
-Every child deserves an opportunity to learn,
-grow and dream.
-
-Through AFPSS,
-hundreds of children have received education,
-nutrition,
-safe shelter
-and confidence to build a better future.
-
-</p>
-
-<a href="about.html" class="btn-outline">
-
-Read More
-
-</a>
-
 </div>
 
 </section>
 
-<!-- ================= PARTNERS ================= -->
+<!-- ================= DONATION IMPACT ================= -->
 
-<section class="partners">
+<section class="donation-section fade">
+
+<div class="container">
 
 <div class="section-title">
 
-<h5>OUR SUPPORTERS</h5>
+<span>YOUR SUPPORT</span>
 
-<h2>Together We Create Change</h2>
+<h2>
 
-</div>
+तुमची देणगी म्हणजे...
 
-<div class="partner-grid">
-
-<div class="partner-card">
-
-🤝
-
-<h3>CSR Partners</h3>
+</h2>
 
 </div>
 
-<div class="partner-card">
+<div class="donation-grid">
+
+<div class="donation-card">
+
+📚
+
+<h3>
+
+Education
+
+</h3>
+
+<p>
+
+एका मुलाच्या हातात
+पुस्तक.
+
+</p>
+
+</div>
+
+<div class="donation-card">
+
+🍛
+
+<h3>
+
+Food
+
+</h3>
+
+<p>
+
+एका मुलाच्या ताटात
+पौष्टिक भोजन.
+
+</p>
+
+</div>
+
+<div class="donation-card">
+
+🏠
+
+<h3>
+
+Shelter
+
+</h3>
+
+<p>
+
+सुरक्षित
+आश्रमशाळा.
+
+</p>
+
+</div>
+
+<div class="donation-card">
+
+👕
+
+<h3>
+
+Uniform
+
+</h3>
+
+<p>
+
+गणवेश,
+दप्तर,
+शैक्षणिक साहित्य.
+
+</p>
+
+</div>
+
+<div class="donation-card">
+
+💻
+
+<h3>
+
+Digital Learning
+
+</h3>
+
+<p>
+
+संगणक
+आणि आधुनिक शिक्षण.
+
+</p>
+
+</div>
+
+<div class="donation-card">
 
 ❤️
 
-<h3>Individual Donors</h3>
+<h3>
+
+Better Future
+
+</h3>
+
+<p>
+
+स्वाभिमान,
+आत्मविश्वास
+आणि उज्ज्वल भविष्य.
+
+</p>
 
 </div>
-
-<div class="partner-card">
-
-🏢
-
-<h3>Foundations</h3>
-
-</div>
-
-<div class="partner-card">
-
-🌍
-
-<h3>Volunteers</h3>
 
 </div>
 
@@ -803,30 +635,27 @@ Read More
 
 <!-- ================= DONATE CTA ================= -->
 
-<section class="donate-cta">
+<section class="cta-section fade">
 
-<div class="overlay"></div>
-
-<div class="cta-content">
+<div class="container">
 
 <h2>
 
-Support Tribal Children's Education
+🌟 एक छोटी मदत... मोठा बदल
 
 </h2>
 
 <p>
 
-Your support helps provide
-education,
-food,
-safe shelter,
-healthcare
-and hope.
+तुमची प्रत्येक देणगी
+एका विद्यार्थ्याच्या आयुष्यात
+शिक्षण,
+आत्मविश्वास
+आणि नव्या भविष्याची आशा निर्माण करते.
 
 </p>
 
-<a href="donate.html" class="btn-main">
+<a href="donate.html" class="hero-btn">
 
 ❤️ Donate Now
 
@@ -836,85 +665,54 @@ and hope.
 
 </section>
 
-<!-- ================= NEWS ================= -->
+<!-- ================= PARTNERS ================= -->
 
-<section id="news" class="news-section">
+<section class="partners-section fade">
+
+<div class="container">
 
 <div class="section-title">
 
-<h5>LATEST NEWS</h5>
+<span>OUR SUPPORTERS</span>
 
-<h2>News & Updates</h2>
+<h2>
 
-</div>
+विश्वासाने साथ देणारे सहकारी
 
-<div class="news-grid">
-
-<div class="news-card">
-
-<img src="media10.jpeg" alt="News">
-
-<h3>School Development</h3>
-
-<p>
-
-Infrastructure improvements
-continue with community support.
-
-</p>
+</h2>
 
 </div>
 
-<div class="news-card">
+<div class="partners-grid">
 
-<img src="media11.jpeg" alt="News">
+<div class="partner-box">CSR Partners</div>
 
-<h3>Student Activities</h3>
+<div class="partner-box">Donors</div>
 
-<p>
+<div class="partner-box">Foundations</div>
 
-Students participate in
-sports,
-culture
-and educational programs.
-
-</p>
-
-</div>
-
-<div class="news-card">
-
-<img src="media12.jpeg" alt="News">
-
-<h3>Community Support</h3>
-
-<p>
-
-Generous donors continue
-to support tribal education.
-
-</p>
+<div class="partner-box">Volunteers</div>
 
 </div>
 
 </div>
 
 </section>
+<!-- ================= CONTACT ================= -->
 
-<!-- ===== Part 4 Starts Next ===== -->
-    <!-- ================= CONTACT ================= -->
+<section class="contact-section fade">
 
-<section class="contact-section" id="contact">
+<div class="container">
 
 <div class="section-title">
 
-<h5>CONTACT US</h5>
+<span>CONTACT US</span>
 
-<h2>Get In Touch</h2>
+<h2>आमच्याशी संपर्क साधा</h2>
 
 <p>
-We would love to hear from you.
-Together we can transform lives through education.
+तुम्हाला संस्थेबद्दल अधिक माहिती हवी असल्यास
+किंवा सहकार्य करायचे असल्यास आमच्याशी संपर्क साधा.
 </p>
 
 </div>
@@ -923,19 +721,26 @@ Together we can transform lives through education.
 
 <div class="contact-card">
 
-<h3>🏫 Our Address</h3>
+<h3>🏫 संस्था</h3>
 
 <p>
 
-Prashnachinha Adivasi Ashram School<br>
+Adivasi Fase Pardhi Sudhar Samiti
 
-Mangrul Chawala,<br>
+</p>
 
-Tal. Nandgaon Khandeshwar,<br>
+<p>
 
-Dist. Amravati,<br>
+Prashnachinha Adivasi Ashram School
 
-Maharashtra - 444708
+</p>
+
+<p>
+
+Mangrul Chawala,
+Tal. Nandgaon Khandeshwar,
+Dist. Amravati,
+Maharashtra
 
 </p>
 
@@ -943,31 +748,37 @@ Maharashtra - 444708
 
 <div class="contact-card">
 
-<h3>📞 Phone</h3>
+<h3>📞 Contact</h3>
+
+<p>📱 +91 9096364529</p>
+
+<p>📱 +91 9764239458</p>
+
+<p>📧 afpss2005@gmail.com</p>
+
+<p>🌐 www.afpss.org.in</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>❤️ Support Us</h3>
 
 <p>
 
-+91 9096364529<br>
-
-+91 9764239458
-
-</p>
-
-<h3 style="margin-top:20px;">📧 Email</h3>
-
-<p>
-
-afpss2005@gmail.com
+तुमच्या सहकार्यामुळे
+शेकडो विद्यार्थ्यांचे
+भविष्य उज्ज्वल होत आहे.
 
 </p>
 
-<h3 style="margin-top:20px;">🌐 Website</h3>
+<a href="donate.html" class="hero-btn">
 
-<p>
+Donate Today
 
-www.afpss.org.in
+</a>
 
-</p>
+</div>
 
 </div>
 
@@ -980,49 +791,20 @@ www.afpss.org.in
 <section class="map-section">
 
 <iframe
+
 src="https://www.google.com/maps?q=Mangrul+Chawala+Amravati&output=embed"
+
 width="100%"
+
 height="450"
-style="border:0;"
+
+style="border:0"
+
 loading="lazy"
+
 allowfullscreen>
+
 </iframe>
-
-</section>
-
-<!-- ================= FINAL DONATE ================= -->
-
-<section class="final-donate">
-
-<div class="overlay"></div>
-
-<div class="donate-content">
-
-<h2>
-
-❤️ Every Child Deserves Education
-
-</h2>
-
-<p>
-
-Your contribution helps provide
-education,
-food,
-safe shelter,
-healthcare
-and hope
-for tribal children.
-
-</p>
-
-<a href="donate.html" class="btn-main">
-
-❤️ Donate Now
-
-</a>
-
-</div>
 
 </section>
 
@@ -1030,11 +812,13 @@ for tribal children.
 
 <footer>
 
-<div class="footer-container">
+<div class="container">
 
-<div class="footer-about">
+<img src="logo.jpg"
 
-<img src="logo.jpg" alt="AFPSS Logo" width="80">
+alt="AFPSS"
+
+class="footer-logo">
 
 <h2>
 
@@ -1044,61 +828,39 @@ Adivasi Fase Pardhi Sudhar Samiti
 
 <p>
 
-Prashnachinha Adivasi Ashram School
+"एक हात मदतीचा...
+फासे पारधी मुलांच्या शिक्षणासाठी,
+स्वाभिमानासाठी आणि उज्ज्वल भविष्यासाठी."
 
 </p>
-
-<p>
-
-Education • Shelter • Food • Healthcare • Hope
-
-</p>
-
-</div>
 
 <div class="footer-links">
 
-<h3>Quick Links</h3>
+<a href="index.html">Home</a>
 
-<ul>
+<a href="about.html">About</a>
 
-<li><a href="index.html">Home</a></li>
+<a href="gallery.html">Gallery</a>
 
-<li><a href="about.html">About</a></li>
+<a href="documents.html">Documents</a>
 
-<li><a href="gallery.html">Gallery</a></li>
+<a href="donate.html">Donate</a>
 
-<li><a href="documents.html">Documents</a></li>
-
-<li><a href="donate.html">Donate</a></li>
-
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
+<a href="contact.html">Contact</a>
 
 </div>
 
-<div class="footer-docs">
+<div class="social-links">
 
-<h3>Important Documents</h3>
+<a href="#">Facebook</a>
 
-<ul>
+<a href="#">Instagram</a>
 
-<li><a href="80G.pdf" target="_blank">80G Certificate</a></li>
+<a href="#">YouTube</a>
 
-<li><a href="12A.pdf" target="_blank">12A Certificate</a></li>
-
-<li><a href="CSR.pdf" target="_blank">CSR Profile</a></li>
-
-<li><a href="Society-Registration.pdf" target="_blank">Society Registration</a></li>
-
-</ul>
+<a href="#">LinkedIn</a>
 
 </div>
-
-</div>
-
-<hr>
 
 <p class="copyright">
 
@@ -1107,23 +869,30 @@ All Rights Reserved.
 
 </p>
 
+</div>
+
 </footer>
 
 <!-- ================= WHATSAPP ================= -->
 
 <a href="https://wa.me/919096364529"
+
 class="whatsapp"
+
 target="_blank"
+
 title="Chat on WhatsApp">
 
 💬
 
 </a>
 
-<!-- ================= SCROLL TOP ================= -->
+<!-- ================= SCROLL TO TOP ================= -->
 
-<button onclick="topFunction()"
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+
 id="topBtn"
+
 title="Go to top">
 
 ⬆
@@ -1131,10 +900,11 @@ title="Go to top">
 </button>
 
 <!-- ================= JAVASCRIPT ================= -->
-<!-- ================= JAVASCRIPT ================= -->
 
 <script src="translations.js"></script>
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
