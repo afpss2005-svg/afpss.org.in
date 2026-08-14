@@ -112,3 +112,40 @@ if (menuToggle && nav) {
     });
 
 }
+const translations = {
+
+mr:{
+
+home:"मुख्यपृष्ठ",
+about:"आमच्याविषयी",
+gallery:"गॅलरी",
+documents:"दस्तऐवज",
+donate:"देणगी",
+contact:"संपर्क",
+
+hero_title:"एक हात मदतीचा...",
+hero_subtitle:"फासे पारधी मुलांच्या शिक्षणासाठी, स्वाभिमानासाठी आणि उज्ज्वल भविष्यासाठी.",
+
+donate_now:"देणगी द्या",
+learn_more:"अधिक जाणून घ्या"
+
+},
+
+en:{
+
+home:"Home",
+about:"About",
+gallery:"Gallery",
+documents:"Documents",
+donate:"Donate",
+contact:"Contact",
+
+hero_title:"A Helping Hand...",
+hero_subtitle:"For Education, Dignity and a Better Future for Pardhi Tribal Children.",
+
+donate_now:"Donate Now",
+learn_more:"Learn More"
+
+}
+
+};
