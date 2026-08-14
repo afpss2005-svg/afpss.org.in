@@ -1285,14 +1285,14 @@ padding:60px 0;
 
 /* ================= HERO ================= */
 .hero{
-.hero{
-    height:100vh;
+    min-height:100vh;
     background-image:
-        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.60)),
-        url("./donate-banner.jpg");
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("donate-banner.jpg");
     background-size:cover;
-    background-position:center;
+    background-position:center center;
     background-repeat:no-repeat;
+}
 
 }
 
