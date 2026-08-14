@@ -87,25 +87,200 @@ nav ul li a:hover{
 }
 
 /* ================= HERO ================= */
-<h1>एक हात मदतीचा...<br>वंचितांच्या शिक्षणाला...</h1>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-<h2>Prashnachinh Adivasi Ashram School</h2>
+.hero{
 
-<p>
-451 विद्यार्थ्यांना मोफत शिक्षण, निवास, अन्न,
-आरोग्य सेवा आणि उज्ज्वल भविष्य देण्यासाठी
-आपला सहभाग महत्त्वाचा आहे.
-</p>
+height:100vh;
 
-<div class="hero-buttons">
+background:url('Hero.JPG.jpeg');
 
-<a href="donate.html" class="btn-primary">
-❤️ Donate Now
-</a>
+background-size:cover;
 
-<a href="#about" class="btn-secondary">
-Learn More →
-</a>
+background-position:center;
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+}
+
+.overlay{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.55);
+
+}
+
+.hero-content{
+
+position:relative;
+
+max-width:650px;
+
+padding-left:8%;
+
+color:#fff;
+
+z-index:5;
+
+}
+
+.small-title{
+
+font-size:32px;
+
+font-weight:600;
+
+color:#FFD54F;
+
+}
+
+.hero h1{
+
+font-size:75px;
+
+line-height:85px;
+
+margin:20px 0;
+
+font-weight:800;
+
+}
+
+.hero p{
+
+font-size:24px;
+
+line-height:38px;
+
+margin-bottom:40px;
+
+}
+
+.hero-btn{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.donate{
+
+background:#00A651;
+
+padding:18px 45px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:20px;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.learn{
+
+border:2px solid #fff;
+
+padding:18px 45px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:#fff;
+
+font-size:20px;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.donate:hover{
+
+background:#008744;
+
+}
+
+.learn:hover{
+
+background:#fff;
+
+color:#000;
+
+}
+
+.counter{
+
+width:90%;
+
+margin:auto;
+
+margin-top:-70px;
+
+background:#0B5D3B;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+padding:35px;
+
+border-radius:20px;
+
+position:relative;
+
+z-index:10;
+
+color:#fff;
+
+text-align:center;
+
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.counter h2{
+
+font-size:50px;
+
+color:#FFD54F;
+
+}
+
+.counter p{
+
+font-size:22px;
+
+margin-top:10px;
+
+}
 
 </div>
 }
