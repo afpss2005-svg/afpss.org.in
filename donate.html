@@ -4,44 +4,31 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>
-Donate | Adivasi Fase Pardhi Sudhar Samiti
-</title>
+<title>Donate | Adivasi Fase Pardhi Sudhar Samiti</title>
 
 <meta name="description"
-content="Support education, food, shelter and a brighter future for children of Prashnachinha Adivasi Ashram School.">
+content="Support tribal children's education, food, shelter, healthcare and a brighter future through Adivasi Fase Pardhi Sudhar Samiti.">
 
-<meta name="theme-color"
-content="#0B8B45">
+<meta name="theme-color" content="#0b8b45">
 
-<link rel="icon"
-href="logo.jpg">
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
 rel="stylesheet">
 
-
 <style>
 
-/* ==================================================
-   AFPSS PREMIUM DONATION PAGE
-================================================== */
+/* ===============================
+   RESET
+================================ */
 
 *{
+box-sizing:border-box;
 margin:0;
 padding:0;
-box-sizing:border-box;
 }
 
 html{
@@ -49,9 +36,9 @@ scroll-behavior:smooth;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:#f7faf8;
-color:#17221b;
+font-family:Poppins,Arial,sans-serif;
+background:#f6faf7;
+color:#17231c;
 line-height:1.7;
 }
 
@@ -64,22 +51,21 @@ width:min(1180px,92%);
 margin:auto;
 }
 
-
-/* ==================================================
+/* ===============================
    HEADER
-================================================== */
+================================ */
 
 .header{
 position:sticky;
 top:0;
 z-index:1000;
 background:rgba(255,255,255,.96);
-backdrop-filter:blur(15px);
+backdrop-filter:blur(12px);
 box-shadow:0 5px 25px rgba(0,0,0,.08);
 }
 
 .navbar{
-min-height:78px;
+min-height:76px;
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -90,752 +76,566 @@ gap:20px;
 display:flex;
 align-items:center;
 gap:12px;
-color:#123c28;
+color:#123b25;
 }
 
 .logo img{
-width:55px;
-height:55px;
+width:52px;
+height:52px;
 object-fit:cover;
 border-radius:50%;
+border:2px solid #0b8b45;
 }
 
-.logo-text h2{
+.logo h2{
 font-size:22px;
 }
 
-.logo-text p{
-font-size:12px;
-color:#0b8b45;
+.logo p{
+font-size:11px;
+color:#777;
 }
 
-.nav-links{
+nav ul{
 display:flex;
+list-style:none;
+gap:22px;
 align-items:center;
-gap:25px;
 }
 
-.nav-links a{
+nav a{
 color:#26352c;
 font-weight:600;
-}
-
-.nav-links a:hover{
-color:#0b8b45;
-}
-
-.nav-donate{
-background:#0b8b45;
-color:white!important;
-padding:11px 20px;
-border-radius:30px;
-}
-
-
-/* ==================================================
-   HERO
-================================================== */
-
-.donate-hero{
-position:relative;
-padding:110px 20px;
-background:
-linear-gradient(135deg,
-rgba(4,55,30,.95),
-rgba(11,139,69,.88)),
-url("school.jpg") center/cover;
-color:white;
-text-align:center;
-overflow:hidden;
-}
-
-.donate-hero:after{
-content:"";
-position:absolute;
-width:400px;
-height:400px;
-border-radius:50%;
-background:rgba(255,255,255,.08);
-right:-150px;
-top:-150px;
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-max-width:850px;
-margin:auto;
-}
-
-.hero-badge{
-display:inline-block;
-padding:8px 18px;
-border:1px solid rgba(255,255,255,.4);
-border-radius:30px;
-margin-bottom:22px;
 font-size:14px;
 }
 
-.donate-hero h1{
-font-size:clamp(38px,6vw,70px);
-line-height:1.15;
+nav a:hover{
+color:#0b8b45;
+}
+
+.menu-toggle{
+display:none;
+border:0;
+background:#0b8b45;
+color:white;
+font-size:25px;
+border-radius:10px;
+padding:5px 11px;
+}
+
+/* ===============================
+   HERO
+================================ */
+
+.hero{
+position:relative;
+min-height:650px;
+display:flex;
+align-items:center;
+
+background:
+linear-gradient(
+120deg,
+rgba(3,52,27,.9),
+rgba(11,139,69,.62)
+),
+url("hero.jpg") center/cover no-repeat;
+
+color:white;
+}
+
+.hero-content{
+max-width:760px;
+padding:90px 0;
+}
+
+.badge{
+display:inline-block;
+background:rgba(255,255,255,.14);
+border:1px solid rgba(255,255,255,.3);
+padding:9px 18px;
+border-radius:50px;
 margin-bottom:20px;
 }
 
-.donate-hero p{
-font-size:20px;
-max-width:760px;
-margin:auto;
-opacity:.95;
+.hero h1{
+font-size:clamp(42px,7vw,76px);
+line-height:1.08;
+margin-bottom:22px;
 }
 
+.hero p{
+font-size:19px;
+max-width:700px;
+color:#f1fff6;
+}
 
-/* ==================================================
-   BUTTON
-================================================== */
+/* ===============================
+   BUTTONS
+================================ */
+
+.buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:28px;
+}
 
 .btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
-gap:8px;
-padding:14px 28px;
-border-radius:35px;
+padding:13px 24px;
+border-radius:50px;
 font-weight:700;
-transition:.3s;
+border:2px solid transparent;
+transition:.25s;
 cursor:pointer;
-border:none;
 }
 
 .btn-primary{
-background:#0b8b45;
-color:white;
-box-shadow:0 10px 25px rgba(11,139,69,.25);
+background:#ffb703;
+color:#17231c;
 }
 
 .btn-primary:hover{
 transform:translateY(-3px);
-box-shadow:0 15px 35px rgba(11,139,69,.35);
+box-shadow:0 10px 25px rgba(255,183,3,.25);
 }
 
-.btn-light{
+.btn-secondary{
 background:white;
 color:#0b8b45;
+border-color:white;
 }
 
-.hero-buttons{
-margin-top:30px;
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
+.btn-outline{
+background:transparent;
+color:#0b8b45;
+border-color:#0b8b45;
 }
 
+.btn-outline:hover{
+background:#0b8b45;
+color:white;
+}
 
-/* ==================================================
-   SECTION
-================================================== */
+/* ===============================
+   SECTIONS
+================================ */
 
 section{
 padding:80px 0;
 }
 
-.section-title{
+.section-head{
 text-align:center;
-max-width:800px;
-margin:0 auto 50px;
+max-width:850px;
+margin:0 auto 45px;
 }
 
-.section-title span{
-color:#0b8b45;
-font-size:14px;
-font-weight:800;
+.section-head span{
+font-size:13px;
 letter-spacing:2px;
-}
-
-.section-title h2{
-font-size:clamp(30px,4vw,45px);
-margin:10px 0;
-}
-
-.section-title p{
-color:#647168;
-}
-
-
-/* ==================================================
-   EMOTIONAL APPEAL
-================================================== */
-
-.appeal{
-background:white;
-}
-
-.appeal-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-}
-
-.appeal-image img{
-width:100%;
-height:480px;
-object-fit:cover;
-border-radius:25px;
-box-shadow:0 20px 50px rgba(0,0,0,.12);
-}
-
-.appeal-content h2{
-font-size:38px;
-margin-bottom:20px;
-}
-
-.appeal-content p{
-font-size:18px;
-color:#56625a;
-margin-bottom:18px;
-}
-
-.quote{
-border-left:5px solid #0b8b45;
-padding:15px 20px;
-background:#f0f8f3;
-border-radius:0 15px 15px 0;
-font-weight:600;
-font-size:19px;
-}
-
-
-/* ==================================================
-   DONATION AMOUNTS
-================================================== */
-
-.amount-section{
-background:#f2f8f4;
-}
-
-.amount-grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:18px;
-}
-
-.amount-card{
-background:white;
-padding:30px 15px;
-text-align:center;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,.07);
-transition:.3s;
-border:2px solid transparent;
-}
-
-.amount-card:hover{
-transform:translateY(-8px);
-border-color:#0b8b45;
-}
-
-.amount-card .icon{
-font-size:38px;
-}
-
-.amount-card h3{
-font-size:28px;
-margin:12px 0;
-color:#0b8b45;
-}
-
-.amount-card p{
-font-size:14px;
-color:#68746c;
-margin-bottom:18px;
-}
-
-
-/* ==================================================
-   QR DONATION
-================================================== */
-
-.qr-section{
-background:white;
-}
-
-.qr-box{
-display:grid;
-grid-template-columns:360px 1fr;
-gap:55px;
-align-items:center;
-background:linear-gradient(135deg,#ffffff,#f0f8f3);
-padding:45px;
-border-radius:30px;
-box-shadow:0 15px 50px rgba(0,0,0,.08);
-}
-
-.qr-image{
-text-align:center;
-}
-
-.qr-image img{
-width:280px;
-max-width:100%;
-border-radius:20px;
-box-shadow:0 10px 35px rgba(0,0,0,.15);
-}
-
-.qr-content h2{
-font-size:35px;
-margin-bottom:15px;
-}
-
-.upi-box{
-background:white;
-padding:20px;
-border-radius:15px;
-margin:20px 0;
-border:1px solid #dce9e0;
-}
-
-.upi-id{
-font-size:24px;
 font-weight:800;
 color:#0b8b45;
-word-break:break-all;
 }
 
-
-/* ==================================================
-   BANK DETAILS
-================================================== */
-
-.bank-section{
-background:#f7faf8;
+.section-head h2{
+font-size:clamp(30px,5vw,45px);
+margin:8px 0 12px;
+color:#123b25;
 }
 
-.bank-card{
-background:white;
-border-radius:25px;
-padding:40px;
-box-shadow:0 10px 35px rgba(0,0,0,.07);
+.section-head p{
+color:#647269;
 }
 
-.bank-grid{
+/* ===============================
+   DONATION CARDS
+================================ */
+
+.cards{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;
+gap:24px;
 }
 
-.bank-item{
-background:#f5f9f6;
-padding:22px;
-border-radius:15px;
-}
-
-.bank-item span{
-display:block;
-font-size:13px;
-color:#6a756d;
-margin-bottom:5px;
-}
-
-.bank-item strong{
-font-size:18px;
-word-break:break-word;
-}
-
-
-/* ==================================================
-   SPONSOR CHILD
-================================================== */
-
-.sponsor{
+.card{
 background:white;
+border-radius:24px;
+padding:30px;
+box-shadow:0 12px 40px rgba(17,52,32,.08);
+border:1px solid #e7efe9;
 }
 
-.sponsor-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-}
-
-.sponsor-card{
-background:white;
-border-radius:22px;
+.donation-card{
+text-align:center;
+position:relative;
 overflow:hidden;
-box-shadow:0 10px 35px rgba(0,0,0,.08);
-border:1px solid #e7eee9;
-transition:.3s;
 }
 
-.sponsor-card:hover{
-transform:translateY(-7px);
+.donation-card.featured{
+border:2px solid #0b8b45;
+transform:translateY(-8px);
 }
 
-.sponsor-card img{
-width:100%;
-height:190px;
-object-fit:cover;
+.popular{
+position:absolute;
+top:0;
+left:0;
+right:0;
+background:#0b8b45;
+color:white;
+padding:7px;
+font-size:12px;
+font-weight:800;
 }
 
-.sponsor-content{
-padding:24px;
+.icon{
+font-size:45px;
+margin-bottom:10px;
 }
 
-.sponsor-content h3{
+.amount{
+font-size:38px;
+font-weight:800;
+color:#0b8b45;
+margin:8px 0;
+}
+
+.donation-card h3{
 font-size:21px;
 }
 
-.sponsor-price{
-font-size:28px;
-font-weight:800;
-color:#0b8b45;
-margin:10px 0;
+.donation-card p{
+color:#65736a;
+min-height:75px;
+margin:10px 0 18px;
 }
 
+/* ===============================
+   QR / PAYMENT
+================================ */
 
-/* ==================================================
-   WHAT YOUR DONATION DOES
-================================================== */
+.qr-wrap{
+display:grid;
+grid-template-columns:320px 1fr;
+gap:35px;
+align-items:center;
 
-.impact{
 background:
-linear-gradient(135deg,#063e22,#0b8b45);
+linear-gradient(
+135deg,
+#073f23,
+#0b8b45
+);
+
 color:white;
+border-radius:28px;
+padding:35px;
 }
 
-.impact .section-title span{
-color:#b9f2cf;
+.qr-wrap img{
+width:100%;
+max-width:300px;
+background:white;
+padding:15px;
+border-radius:20px;
+margin:auto;
+display:block;
 }
 
-.impact .section-title p{
-color:#e4f7eb;
+.qr-wrap h2{
+font-size:32px;
+margin-bottom:10px;
 }
 
-.impact-grid{
+/* ===============================
+   INFO
+================================ */
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+}
+
+.info{
+background:#fff;
+border:1px solid #e3ebe5;
+border-radius:18px;
+padding:20px;
+color:#17231c;
+}
+
+.info strong{
+display:block;
+color:#0b8b45;
+margin-bottom:5px;
+}
+
+/* ===============================
+   DOCUMENTS
+================================ */
+
+.documents{
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:20px;
+gap:18px;
 }
 
-.impact-card{
+.doc{
 text-align:center;
-padding:30px 20px;
-background:rgba(255,255,255,.1);
-border:1px solid rgba(255,255,255,.15);
+background:white;
 border-radius:20px;
+padding:25px;
+border:1px solid #e4ece7;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
 }
 
-.impact-card .icon{
-font-size:42px;
+.doc .icon{
+font-size:34px;
+}
+
+.doc h3{
+font-size:17px;
 margin-bottom:10px;
 }
 
-.impact-card h3{
-font-size:20px;
-margin-bottom:8px;
+.doc .btn{
+padding:9px 16px;
+font-size:13px;
 }
 
+/* ===============================
+   WHY DONATE
+================================ */
 
-/* ==================================================
-   TRANSPARENCY
-================================================== */
-
-.transparency{
-background:#f7faf8;
+.why{
+background:#eef8f1;
 }
 
-.document-grid{
+.why-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
 }
 
-.document-card{
-background:white;
-padding:30px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 8px 25px rgba(0,0,0,.06);
-}
-
-.document-icon{
-font-size:42px;
-margin-bottom:12px;
-}
-
-.document-card h3{
-margin-bottom:8px;
-}
-
-.document-card p{
-font-size:14px;
-color:#6b756e;
-margin-bottom:20px;
-}
-
-.document-btn{
-display:inline-block;
-padding:10px 18px;
-border-radius:25px;
-background:#e9f6ee;
-color:#08743a;
-font-weight:700;
-margin:4px;
-}
-
-
-/* ==================================================
-   CSR
-================================================== */
-
-.csr{
-background:white;
-}
-
-.csr-box{
-background:linear-gradient(135deg,#0b8b45,#075c2e);
-color:white;
-padding:55px;
-border-radius:30px;
+.why .card{
 text-align:center;
 }
 
-.csr-box h2{
-font-size:36px;
-margin-bottom:15px;
-}
+/* ===============================
+   IMPACT
+================================ */
 
-.csr-box p{
-max-width:800px;
-margin:0 auto 25px;
-font-size:18px;
-}
-
-
-/* ==================================================
-   INTERNATIONAL DONORS
-================================================== */
-
-.international{
-background:#f2f8f4;
-}
-
-.international-box{
+.impact{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
 }
 
-.info-card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,.06);
+.impact .card{
+text-align:center;
 }
 
-.info-card h3{
-margin-bottom:12px;
+.impact h3{
+font-size:35px;
 color:#0b8b45;
 }
 
-
-/* ==================================================
-   FINAL CTA
-================================================== */
-
-.final-cta{
-background:
-linear-gradient(135deg,
-rgba(5,62,32,.94),
-rgba(11,139,69,.92)),
-url("school.jpg") center/cover;
-color:white;
-text-align:center;
-}
-
-.final-cta h2{
-font-size:42px;
-margin-bottom:15px;
-}
-
-.final-cta p{
-font-size:19px;
-max-width:750px;
-margin:0 auto 25px;
-}
-
-
-/* ==================================================
+/* ===============================
    CONTACT
-================================================== */
+================================ */
 
 .contact{
-background:white;
-}
-
-.contact-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:30px;
+gap:25px;
 }
 
-.contact-card{
-background:#f5f9f6;
-padding:30px;
+.map iframe{
+width:100%;
+height:330px;
+border:0;
 border-radius:20px;
 }
 
-.contact-card h3{
-margin-bottom:10px;
-color:#0b8b45;
+/* ===============================
+   NOTICE
+================================ */
+
+.notice{
+background:#fff8e7;
+border-left:5px solid #ffb703;
+border-radius:15px;
+padding:18px 20px;
+margin-top:25px;
+color:#5c4a1b;
 }
 
-.contact-card a{
-color:#0b8b45;
-font-weight:600;
-}
-
-
-/* ==================================================
+/* ===============================
    FOOTER
-================================================== */
+================================ */
 
-footer{
-background:#092417;
-color:white;
+.footer{
+background:#082d19;
+color:#dceee3;
 padding:55px 0 25px;
 }
 
 .footer-grid{
 display:grid;
 grid-template-columns:2fr 1fr 1fr;
-gap:40px;
+gap:30px;
 }
 
-.footer-grid h3,
-.footer-grid h4{
-margin-bottom:15px;
+.footer h2,
+.footer h3{
+color:white;
+margin-bottom:12px;
 }
 
-.footer-grid p,
-.footer-grid a{
-color:#c8d8ce;
-}
-
-.footer-grid a{
-display:block;
-margin:6px 0;
+.footer a{
+color:#dceee3;
 }
 
 .footer-bottom{
-margin-top:35px;
-padding-top:20px;
 border-top:1px solid rgba(255,255,255,.15);
+margin-top:30px;
+padding-top:20px;
 text-align:center;
-color:#a9b9af;
+font-size:13px;
 }
 
-
-/* ==================================================
+/* ===============================
    WHATSAPP
-================================================== */
+================================ */
 
 .whatsapp{
 position:fixed;
 right:20px;
 bottom:20px;
+
 width:58px;
 height:58px;
+
 border-radius:50%;
-background:#25D366;
-color:white;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
+background:#25d366;
+color:white;
+
 font-size:28px;
-box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
 z-index:999;
 }
 
+/* ===============================
+   MOBILE
+================================ */
 
-/* ==================================================
-   RESPONSIVE
-================================================== */
+@media(max-width:900px){
 
-@media(max-width:1000px){
-
-.amount-grid{
-grid-template-columns:repeat(3,1fr);
-}
-
-.sponsor-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.impact-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.document-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.bank-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:750px){
-
-.nav-links{
+nav{
 display:none;
+position:absolute;
+top:76px;
+left:0;
+right:0;
+background:white;
+padding:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
 }
 
-.appeal-grid,
-.qr-box,
-.international,
-.contact-grid{
+nav.active{
+display:block;
+}
+
+nav ul{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.cards,
+.documents,
+.why-grid,
+.impact{
+grid-template-columns:repeat(2,1fr);
+}
+
+.qr-wrap,
+.contact{
 grid-template-columns:1fr;
 }
 
-.appeal-image img{
-height:350px;
 }
 
-.amount-grid,
-.sponsor-grid,
-.impact-grid,
-.document-grid,
-.bank-grid{
+@media(max-width:600px){
+
+section{
+padding:55px 0;
+}
+
+.cards,
+.documents,
+.why-grid,
+.impact{
 grid-template-columns:1fr;
 }
 
-.qr-box{
-padding:25px;
+.hero{
+min-height:580px;
 }
 
-.bank-card{
-padding:25px;
+.hero-content{
+padding:60px 0;
 }
 
-.csr-box{
-padding:35px 20px;
+.hero h1{
+font-size:43px;
 }
 
-.final-cta h2{
-font-size:32px;
+.qr-wrap{
+padding:24px;
+}
+
+.info-grid{
+grid-template-columns:1fr;
 }
 
 .footer-grid{
 grid-template-columns:1fr;
 }
 
-section{
-padding:60px 0;
+.logo h2{
+font-size:18px;
+}
+
+.logo img{
+width:45px;
+height:45px;
+}
+
+.donation-card.featured{
+transform:none;
 }
 
 }
+
+/* ===============================
+   END CSS
+================================ */
 
 </style>
 
@@ -845,9 +645,9 @@ padding:60px 0;
 <body>
 
 
-<!-- ==================================================
-HEADER
-================================================== -->
+<!-- ===============================
+     HEADER
+================================ -->
 
 <header class="header">
 
@@ -855,13 +655,12 @@ HEADER
 
 <div class="navbar">
 
-<a href="index.html"
-class="logo">
+<a href="index.html" class="logo">
 
 <img src="logo.jpg"
 alt="AFPSS Logo">
 
-<div class="logo-text">
+<div>
 
 <h2>AFPSS</h2>
 
@@ -871,32 +670,51 @@ alt="AFPSS Logo">
 
 </a>
 
-<nav class="nav-links">
 
-<a href="index.html">
-Home
+<button
+class="menu-toggle"
+id="menu-toggle">
+
+☰
+
+</button>
+
+
+<nav id="navbar">
+
+<ul>
+
+<li>
+<a href="#donate">
+Donate
 </a>
+</li>
 
-<a href="index.html#about">
-About
+<li>
+<a href="#payment">
+Payment
 </a>
+</li>
 
-<a href="index.html#founder">
-Founder
-</a>
-
-<a href="gallery.html">
-Gallery
-</a>
-
-<a href="documents.html">
+<li>
+<a href="#documents">
 Documents
 </a>
+</li>
 
-<a href="#donate"
-class="nav-donate">
-❤️ Donate
+<li>
+<a href="#impact">
+Impact
 </a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
+
+</ul>
 
 </nav>
 
@@ -907,49 +725,64 @@ class="nav-donate">
 </header>
 
 
-<!-- ==================================================
-HERO
-================================================== -->
+<!-- ===============================
+     HERO
+================================ -->
 
-<section class="donate-hero"
-id="donate">
+<section class="hero">
+
+<div class="container">
 
 <div class="hero-content">
 
-<span class="hero-badge">
-❤️ SUPPORT EDUCATION • BUILD FUTURES
+<span class="badge">
+
+❤️ Support Tribal Children's Education
+| Since 2005
+
 </span>
 
+
 <h1>
-तुमची देणगी<br>
-एका मुलाचे भविष्य बदलू शकते
+
+एक हात मदतीचा...<br>
+
+वंचितांच्या शिक्षणाला...
+
 </h1>
+
 
 <p>
 
 प्रश्नचिन्ह आदिवासी आश्रम शाळेतील
-फासे पारधी समाजातील मुलांना
-शिक्षण, अन्न, सुरक्षित निवास,
-आरोग्य आणि उज्ज्वल भविष्य मिळवून देण्यासाठी
-आजच सहकार्य करा.
+फासे पारधी समाजातील मुलांच्या
+शिक्षण, अन्न, निवास, आरोग्य आणि
+उज्ज्वल भविष्यासाठी आपले सहकार्य
+महत्त्वाचे आहे.
 
 </p>
 
-<div class="hero-buttons">
 
-<a href="#quick-donate"
-class="btn btn-light">
+<div class="buttons">
+
+<a
+class="btn btn-primary"
+href="#donate">
 
 ❤️ Donate Now
 
 </a>
 
-<a href="#transparency"
-class="btn btn-light">
 
-🛡️ Trust & Transparency
+<a
+class="btn btn-secondary"
+href="#payment">
+
+Payment Details →
 
 </a>
+
+</div>
 
 </div>
 
@@ -958,373 +791,461 @@ class="btn btn-light">
 </section>
 
 
-<!-- ==================================================
-EMOTIONAL APPEAL
-================================================== -->
+<!-- ===============================
+     DONATION
+================================ -->
 
-<section class="appeal">
+<section id="donate">
 
 <div class="container">
 
-<div class="appeal-grid">
+<div class="section-head">
 
-<div class="appeal-image">
+<span>
+SPONSOR A CHILD
+</span>
 
-<img src="school.jpg"
-alt="Prashnachinha Adivasi Ashram School">
+
+<h2>
+एका मुलाचे भविष्य घडवा
+</h2>
+
+
+<p>
+
+तुमच्या सोयीची देणगी निवडा.
+प्रत्येक Donate button तुमच्या
+आधीपासून तयार केलेल्या
+Google Donation Form कडे नेईल.
+
+</p>
 
 </div>
 
-<div class="appeal-content">
 
-<span style="color:#0b8b45;font-weight:800;">
-OUR MISSION
+<div class="cards">
+
+
+<!-- ₹501 -->
+
+<div class="card donation-card">
+
+<div class="icon">
+📚
+</div>
+
+<h3>
+Educational Support
+</h3>
+
+<div class="amount">
+₹501
+</div>
+
+<p>
+
+शैक्षणिक साहित्य,
+पुस्तके, वही व
+आवश्यक शिक्षण साहित्य.
+
+</p>
+
+<a
+class="btn btn-primary"
+
+href="https://forms.gle/X2jiNzdqzpGMtr5n8"
+
+target="_blank"
+
+rel="noopener">
+
+❤️ Donate ₹501
+
+</a>
+
+</div>
+
+
+<!-- ₹1001 -->
+
+<div class="card donation-card">
+
+<div class="icon">
+🎒
+</div>
+
+<div class="amount">
+₹1,001
+</div>
+
+<h3>
+Student Support
+</h3>
+
+<p>
+
+विद्यार्थ्यांच्या दैनंदिन
+शैक्षणिक गरजांसाठी
+सहकार्य.
+
+</p>
+
+<a
+class="btn btn-primary"
+
+href="https://forms.gle/X2jiNzdqzpGMtr5n8"
+
+target="_blank"
+
+rel="noopener">
+
+❤️ Donate ₹1,001
+
+</a>
+
+</div>
+
+
+<!-- ₹5001 -->
+
+<div class="card donation-card featured">
+
+<div class="popular">
+
+MOST POPULAR
+
+</div>
+
+<div class="icon">
+🍛
+</div>
+
+<div class="amount">
+₹5,001
+</div>
+
+<h3>
+Food + Education
+</h3>
+
+<p>
+
+अन्न, शिक्षण आणि
+विद्यार्थी कल्याणासाठी
+महत्त्वाचे योगदान.
+
+</p>
+
+<a
+class="btn btn-primary"
+
+href="https://forms.gle/X2jiNzdqzpGMtr5n8"
+
+target="_blank"
+
+rel="noopener">
+
+❤️ Donate ₹5,001
+
+</a>
+
+</div>
+
+
+<!-- ₹10001 -->
+
+<div class="card donation-card">
+
+<div class="icon">
+🏠
+</div>
+
+<div class="amount">
+₹10,001
+</div>
+
+<h3>
+Hostel & Student Support
+</h3>
+
+<p>
+
+निवास, शिक्षण आणि
+सुरक्षित वातावरणासाठी
+सहकार्य.
+
+</p>
+
+<a
+class="btn btn-primary"
+
+href="https://forms.gle/X2jiNzdqzpGMtr5n8"
+
+target="_blank"
+
+rel="noopener">
+
+❤️ Donate ₹10,001
+
+</a>
+
+</div>
+
+
+<!-- ₹25001 -->
+
+<div class="card donation-card">
+
+<div class="icon">
+❤️
+</div>
+
+<div class="amount">
+₹25,001
+</div>
+
+<h3>
+Major Student Support
+</h3>
+
+<p>
+
+शिक्षण, अन्न, निवास
+आणि विद्यार्थी कल्याणासाठी
+मोठे योगदान.
+
+</p>
+
+<a
+class="btn btn-primary"
+
+href="https://forms.gle/X2jiNzdqzpGMtr5n8"
+
+target="_blank"
+
+rel="noopener">
+
+❤️ Donate ₹25,001
+
+</a>
+
+</div>
+
+
+<!-- CUSTOM -->
+
+<div class="card donation-card">
+
+<div class="icon">
+💰
+</div>
+
+<h3>
+Custom Donation
+</h3>
+
+<div class="amount">
+Any Amount
+</div>
+
+<p>
+
+आपल्या इच्छेनुसार
+कोणतीही रक्कम देऊन
+सहकार्य करा.
+
+</p>
+
+<a
+class="btn btn-outline"
+
+href="https://forms.gle/X2jiNzdqzpGMtr5n8"
+
+target="_blank"
+
+rel="noopener">
+
+💰 Custom Donation
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="notice">
+
+<strong>
+🧾 Donation Receipt:
+</strong>
+
+कृपया Google Form मध्ये
+आपले नाव, Email, देणगीची रक्कम
+आणि Transaction/UTR माहिती
+अचूक भरा.
+
+तुमच्या सध्याच्या
+Google Form/Sheet मधील
+automatic receipt व्यवस्था
+याच प्रक्रियेसाठी वापरता येईल.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===============================
+     PAYMENT
+================================ -->
+
+<section id="payment">
+
+<div class="container">
+
+<div class="section-head">
+
+<span>
+DONATION PAYMENT
 </span>
 
 <h2>
-❤️ एका हाताने... अनेक स्वप्नांना आधार
+Scan & Donate
 </h2>
 
 <p>
 
-प्रत्येक मुलाच्या डोळ्यांत एक स्वप्न असते.
-त्याला फक्त संधीची गरज असते.
-
-</p>
-
-<p>
-
-तुमची देणगी एका विद्यार्थ्याला
-शिक्षण, पौष्टिक अन्न, सुरक्षित निवास,
-शैक्षणिक साहित्य आणि
-उज्ज्वल भविष्याच्या दिशेने
-एक पाऊल पुढे नेण्यास मदत करू शकते.
-
-</p>
-
-<div class="quote">
-
-"एक हात मदतीचा...
-वंचितांच्या शिक्षणाला."
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-QUICK DONATION
-================================================== -->
-
-<section class="amount-section"
-id="quick-donate">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>QUICK DONATION</span>
-
-<h2>तुमच्या सोयीप्रमाणे सहकार्य करा</h2>
-
-<p>
-
-तुम्ही कोणतीही रक्कम देऊ शकता.
-खालील रक्कम केवळ सोयीसाठी
-सुचविलेल्या योगदानाच्या श्रेणी आहेत.
+UPI App वापरून QR Code scan करा
+किंवा खालील Bank Details वापरा.
 
 </p>
 
 </div>
 
 
-<div class="amount-grid">
+<div class="qr-wrap">
 
 
-<div class="amount-card">
+<div>
 
-<div class="icon">📚</div>
-
-<h3>₹1,000</h3>
-
-<p>
-शैक्षणिक साहित्य
-आणि पुस्तके
-</p>
-
-<a href="#qr"
-class="btn btn-primary">
-Donate
-</a>
-
-</div>
-
-
-<div class="amount-card">
-
-<div class="icon">🍛</div>
-
-<h3>₹5,000</h3>
-
-<p>
-अन्न व शैक्षणिक
-सहाय्य
-</p>
-
-<a href="#qr"
-class="btn btn-primary">
-Donate
-</a>
-
-</div>
-
-
-<div class="amount-card">
-
-<div class="icon">🏠</div>
-
-<h3>₹10,000</h3>
-
-<p>
-निवास व विद्यार्थी
-सहाय्य
-</p>
-
-<a href="#qr"
-class="btn btn-primary">
-Donate
-</a>
-
-</div>
-
-
-<div class="amount-card">
-
-<div class="icon">❤️</div>
-
-<h3>₹25,000</h3>
-
-<p>
-विद्यार्थी कल्याण
-सहाय्य
-</p>
-
-<a href="#qr"
-class="btn btn-primary">
-Donate
-</a>
-
-</div>
-
-
-<div class="amount-card">
-
-<div class="icon">🌟</div>
-
-<h3>₹50,000</h3>
-
-<p>
-विशेष विद्यार्थी
-सहाय्य
-</p>
-
-<a href="#qr"
-class="btn btn-primary">
-Donate
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-QR DONATION
-================================================== -->
-
-<section class="qr-section"
-id="qr">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>UPI DONATION</span>
-
-<h2>📱 Scan & Donate</h2>
-
-<p>
-Google Pay, PhonePe, Paytm किंवा
-कोणत्याही UPI App मधून देणगी द्या.
-</p>
-
-</div>
-
-
-<div class="qr-box">
-
-
-<div class="qr-image">
-
-<img src="donation-qr.jpg"
+<img
+src="qr-code.jpg"
 alt="AFPSS Donation QR Code">
 
 </div>
 
 
-<div class="qr-content">
+<div>
 
 <h2>
-❤️ सुरक्षितपणे देणगी द्या
+❤️ Scan & Donate
 </h2>
 
 <p>
 
-QR Code स्कॅन करून थेट UPI द्वारे
+Google Pay, PhonePe, Paytm
+किंवा इतर UPI App मधून
 देणगी पाठवू शकता.
 
 </p>
 
 
-<div class="upi-box">
+<br>
 
-<span>
+
+<div class="info-grid">
+
+
+<div class="info">
+
+<strong>
 UPI ID
-</span>
+</strong>
 
-<div class="upi-id">
 9511239351@sbi
-</div>
 
 </div>
 
 
-<p>
-देणगी पाठवल्यानंतर कृपया
-आपल्या देणगीची माहिती संस्थेला कळवा.
-</p>
+<div class="info">
+
+<strong>
+Account Name
+</strong>
+
+AADIWASI FASE PARDHI
+SUDHAR SAMITI
+
+</div>
 
 
-<a href="https://wa.me/919764239458"
+<div class="info">
+
+<strong>
+Bank
+</strong>
+
+State Bank of India
+
+</div>
+
+
+<div class="info">
+
+<strong>
+Account Number
+</strong>
+
+36174604565
+
+</div>
+
+
+<div class="info">
+
+<strong>
+IFSC
+</strong>
+
+SBIN0008252
+
+</div>
+
+
+<div class="info">
+
+<strong>
+Branch
+</strong>
+
+Mangrul Chawala
+
+</div>
+
+
+</div>
+
+
+<br>
+
+
+<a
+
+class="btn btn-primary"
+
+href="https://forms.gle/X2jiNzdqzpGMtr5n8"
+
 target="_blank"
-class="btn btn-primary">
 
-💬 Donation Confirmation
+rel="noopener">
+
+🧾 Submit Donation Details
 
 </a>
 
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-BANK DETAILS
-================================================== -->
-
-<section class="bank-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>BANK TRANSFER</span>
-
-<h2>🏦 Bank Details</h2>
-
-<p>
-NEFT / RTGS / IMPS द्वारे देणगी देण्यासाठी
-खालील माहिती वापरा.
-</p>
-
-</div>
-
-
-<div class="bank-card">
-
-<div class="bank-grid">
-
-
-<div class="bank-item">
-
-<span>Account Name</span>
-
-<strong>
-AADIWASI FASE PARDHI SUDHAR SAMITI
-</strong>
-
-</div>
-
-
-<div class="bank-item">
-
-<span>Bank</span>
-
-<strong>
-State Bank of India
-</strong>
-
-</div>
-
-
-<div class="bank-item">
-
-<span>Account Number</span>
-
-<strong>
-36174604565
-</strong>
-
-</div>
-
-
-<div class="bank-item">
-
-<span>IFSC</span>
-
-<strong>
-SBIN0008252
-</strong>
-
-</div>
-
-
-<div class="bank-item">
-
-<span>Branch</span>
-
-<strong>
-Mangrul Chawala
-</strong>
-
-</div>
-
-
-<div class="bank-item">
-
-<span>UPI</span>
-
-<strong>
-9511239351@sbi
-</strong>
-
-</div>
-
 
 </div>
 
@@ -1335,82 +1256,98 @@ Mangrul Chawala
 </section>
 
 
-<!-- ==================================================
-WHAT YOUR SUPPORT DOES
-================================================== -->
+<!-- ===============================
+     WHY DONATE
+================================ -->
 
-<section class="impact">
+<section class="why">
 
 <div class="container">
 
-<div class="section-title">
 
-<span>YOUR IMPACT</span>
+<div class="section-head">
 
-<h2>तुमच्या मदतीचा उपयोग</h2>
+<span>
+YOUR SUPPORT
+</span>
+
+<h2>
+तुमची देणगी कुठे उपयोगी पडते?
+</h2>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="card">
+
+<div class="icon">
+🎓
+</div>
+
+<h3>
+शिक्षण
+</h3>
 
 <p>
-तुमच्या सहकार्यामुळे संस्थेच्या विविध
-विद्यार्थी-केंद्रित गरजांना मदत मिळू शकते.
+दर्जेदार शिक्षण व
+शैक्षणिक साहित्य.
 </p>
 
 </div>
 
 
-<div class="impact-grid">
+<div class="card">
 
+<div class="icon">
+🍛
+</div>
 
-<div class="impact-card">
-
-<div class="icon">📚</div>
-
-<h3>शिक्षण</h3>
+<h3>
+अन्न
+</h3>
 
 <p>
-पुस्तके, शैक्षणिक साहित्य
-आणि डिजिटल शिक्षण
+विद्यार्थ्यांसाठी अन्न
+व पोषण सहाय्य.
 </p>
 
 </div>
 
 
-<div class="impact-card">
+<div class="card">
 
-<div class="icon">🍛</div>
-
-<h3>पौष्टिक आहार</h3>
-
-<p>
-विद्यार्थ्यांच्या अन्न
-आणि पोषणाच्या गरजा
-</p>
-
+<div class="icon">
+🏠
 </div>
 
-
-<div class="impact-card">
-
-<div class="icon">🏠</div>
-
-<h3>निवास</h3>
+<h3>
+निवास
+</h3>
 
 <p>
 सुरक्षित निवासी सुविधा
-आणि विद्यार्थी कल्याण
+व विद्यार्थी कल्याण.
 </p>
 
 </div>
 
 
-<div class="impact-card">
+<div class="card">
 
-<div class="icon">⚕️</div>
+<div class="icon">
+❤️
+</div>
 
-<h3>आरोग्य</h3>
+<h3>
+आरोग्य
+</h3>
 
 <p>
-आरोग्य, स्वच्छता
-आणि आवश्यक काळजी
+आरोग्य, स्वच्छता व
+आवश्यक वैद्यकीय मदत.
 </p>
 
 </div>
@@ -1423,153 +1360,87 @@ WHAT YOUR SUPPORT DOES
 </section>
 
 
-<!-- ==================================================
-SPONSOR CHILD
-================================================== -->
+<!-- ===============================
+     IMPACT
+================================ -->
 
-<section class="sponsor">
+<section id="impact">
 
 <div class="container">
 
-<div class="section-title">
 
-<span>SPONSOR A CHILD</span>
+<div class="section-head">
 
-<h2>एका मुलाच्या शिक्षणाला साथ द्या</h2>
+<span>
+OUR IMPACT
+</span>
+
+<h2>
+परिवर्तनाचा प्रवास
+</h2>
 
 <p>
-तुमचे योगदान विद्यार्थ्यांच्या शिक्षण,
-कल्याण आणि भविष्यासाठी वापरले जाऊ शकते.
+
+प्रश्नचिन्ह आदिवासी आश्रम
+शाळेतील विद्यार्थ्यांच्या
+शिक्षणासाठी सातत्याने प्रयत्न.
+
 </p>
 
 </div>
 
 
-<div class="sponsor-grid">
+<div class="impact">
 
 
-<div class="sponsor-card">
-
-<img src="school-kit.jpg"
-alt="School Kit">
-
-<div class="sponsor-content">
+<div class="card">
 
 <h3>
-🎒 School Support
+451+
 </h3>
 
-<div class="sponsor-price">
-₹3,000
-</div>
-
 <p>
-School Bag<br>
-Books<br>
-Uniform<br>
-Stationery
+विद्यार्थी
 </p>
 
-<a href="#qr"
-class="btn btn-primary">
-Support
-</a>
-
-</div>
-
 </div>
 
 
-<div class="sponsor-card">
-
-<img src="food-support.jpg"
-alt="Food Support">
-
-<div class="sponsor-content">
+<div class="card">
 
 <h3>
-🍛 Food Support
+2011
 </h3>
 
-<div class="sponsor-price">
-₹10,000
-</div>
-
 <p>
-Food Support<br>
-Student Welfare<br>
-Nutrition
+शाळेची सुरुवात
 </p>
 
-<a href="#qr"
-class="btn btn-primary">
-Support
-</a>
-
-</div>
-
 </div>
 
 
-<div class="sponsor-card">
-
-<img src="hostel.jpg"
-alt="Hostel Support">
-
-<div class="sponsor-content">
+<div class="card">
 
 <h3>
-🏠 Hostel Support
+1st–10th
 </h3>
 
-<div class="sponsor-price">
-₹25,000
-</div>
-
 <p>
-Accommodation<br>
-Student Care<br>
-Safe Environment
+शिक्षण
 </p>
 
-<a href="#qr"
-class="btn btn-primary">
-Support
-</a>
-
-</div>
-
 </div>
 
 
-<div class="sponsor-card">
-
-<img src="full-support.jpg"
-alt="Student Support">
-
-<div class="sponsor-content">
+<div class="card">
 
 <h3>
-❤️ Student Support
+2005
 </h3>
 
-<div class="sponsor-price">
-₹50,000
-</div>
-
 <p>
-Education<br>
-Food<br>
-Hostel<br>
-Healthcare
+संस्था स्थापना
 </p>
-
-<a href="#qr"
-class="btn btn-primary">
-Support
-</a>
-
-</div>
 
 </div>
 
@@ -1581,37 +1452,43 @@ Support
 </section>
 
 
-<!-- ==================================================
-TRANSPARENCY
-================================================== -->
+<!-- ===============================
+     DOCUMENTS
+================================ -->
 
-<section class="transparency"
-id="transparency">
+<section id="documents">
 
 <div class="container">
 
-<div class="section-title">
 
-<span>TRUST & TRANSPARENCY</span>
+<div class="section-head">
 
-<h2>संस्थेची कागदपत्रे</h2>
+<span>
+TRUST & TRANSPARENCY
+</span>
+
+<h2>
+Documents & Compliance
+</h2>
 
 <p>
 
-देणगीदार, CSR कंपन्या आणि Foundation साठी
-आवश्यक कागदपत्रे येथे उपलब्ध आहेत.
+संस्थेच्या उपलब्ध कागदपत्रांद्वारे
+पारदर्शकता आणि विश्वास.
 
 </p>
 
 </div>
 
 
-<div class="document-grid">
+<div class="documents">
 
 
-<div class="document-card">
+<!-- 80G -->
 
-<div class="document-icon">
+<div class="doc">
+
+<div class="icon">
 📄
 </div>
 
@@ -1619,22 +1496,25 @@ id="transparency">
 80G Certificate
 </h3>
 
-<p>
-Tax Exemption Certificate
-</p>
+<a
+class="btn btn-outline"
 
-<a href="80G.pdf"
-target="_blank"
-class="document-btn">
+href="80G.pdf"
+
+target="_blank">
+
 View PDF
+
 </a>
 
 </div>
 
 
-<div class="document-card">
+<!-- 12A -->
 
-<div class="document-icon">
+<div class="doc">
+
+<div class="icon">
 📄
 </div>
 
@@ -1642,45 +1522,51 @@ View PDF
 12A Certificate
 </h3>
 
-<p>
-Income Tax Registration
-</p>
+<a
+class="btn btn-outline"
 
-<a href="12A.pdf"
-target="_blank"
-class="document-btn">
+href="12A.pdf"
+
+target="_blank">
+
 View PDF
+
 </a>
 
 </div>
 
 
-<div class="document-card">
+<!-- CSR -->
 
-<div class="document-icon">
-🏢
+<div class="doc">
+
+<div class="icon">
+🤝
 </div>
 
 <h3>
 CSR Profile
 </h3>
 
-<p>
-Corporate Social Responsibility
-</p>
+<a
+class="btn btn-outline"
 
-<a href="CSR.pdf"
-target="_blank"
-class="document-btn">
+href="CSR.pdf"
+
+target="_blank">
+
 View PDF
+
 </a>
 
 </div>
 
 
-<div class="document-card">
+<!-- Society -->
 
-<div class="document-icon">
+<div class="doc">
+
+<div class="icon">
 📑
 </div>
 
@@ -1688,22 +1574,55 @@ View PDF
 Society Registration
 </h3>
 
-<p>
-Official Registration Certificate
-</p>
+<a
+class="btn btn-outline"
 
-<a href="Society-Registration.pdf"
-target="_blank"
-class="document-btn">
+href="Society-Registration.pdf"
+
+target="_blank">
+
 View PDF
+
 </a>
 
 </div>
 
 
-<div class="document-card">
+</div>
 
-<div class="document-icon">
+</div>
+
+</section>
+
+
+<!-- ===============================
+     REPORTS
+================================ -->
+
+<section>
+
+<div class="container">
+
+
+<div class="section-head">
+
+<span>
+REPORTS
+</span>
+
+<h2>
+Reports & Financial Documents
+</h2>
+
+</div>
+
+
+<div class="documents">
+
+
+<div class="doc">
+
+<div class="icon">
 📘
 </div>
 
@@ -1711,37 +1630,39 @@ View PDF
 Annual Report
 </h3>
 
-<p>
-Activities & Impact Report
-</p>
+<a
+class="btn btn-outline"
 
-<a href="Annual-Report.pdf"
-target="_blank"
-class="document-btn">
+href="Annual-Report.pdf"
+
+target="_blank">
+
 View Report
+
 </a>
 
 </div>
 
 
-<div class="document-card">
+<div class="doc">
 
-<div class="document-icon">
-📊
+<div class="icon">
+📙
 </div>
 
 <h3>
 Audit Report
 </h3>
 
-<p>
-Audited Financial Statements
-</p>
+<a
+class="btn btn-outline"
 
-<a href="Audit-Report.pdf"
-target="_blank"
-class="document-btn">
+href="Audit-Report.pdf"
+
+target="_blank">
+
 View Report
+
 </a>
 
 </div>
@@ -1754,247 +1675,100 @@ View Report
 </section>
 
 
-<!-- ==================================================
-CSR
-================================================== -->
+<!-- ===============================
+     CONTACT
+================================ -->
 
-<section class="csr">
+<section id="contact">
 
 <div class="container">
 
-<div class="csr-box">
+
+<div class="section-head">
+
+<span>
+CONTACT US
+</span>
 
 <h2>
-🤝 CSR & Foundation Partnership
+आमच्याशी संपर्क साधा
 </h2>
 
-<p>
-
-CSR कंपन्या, Corporate Foundations,
-Trusts, Institutions आणि Individual Donors
-यांना AFPSS सोबत शिक्षणाच्या या प्रवासात
-सहभागी होण्यासाठी आम्ही आमंत्रित करतो.
-
-</p>
-
-<a href="mailto:afpss2005@gmail.com"
-class="btn btn-light">
-
-📧 Partner With Us
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-INTERNATIONAL
-================================================== -->
-
-<section class="international">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>GLOBAL SUPPORT</span>
-
-<h2>🌍 International Donors</h2>
-
-<p>
-
-भारताबाहेरून देणगी देऊ इच्छिणाऱ्या
-देणगीदारांनी कृपया संस्थेशी संपर्क साधावा.
-लागू असलेल्या भारतीय कायदे व नियमांनुसार
-देणगी स्वीकारण्याची पात्रता तपासणे आवश्यक आहे.
-
-</p>
-
 </div>
 
 
-<div class="international-box">
+<div class="contact">
 
 
-<div class="info-card">
+<div class="card">
+
 
 <h3>
-🌍 International Partnership
+🏫 Adivasi Fase Pardhi Sudhar Samiti
 </h3>
 
-<p>
-
-International donor किंवा Foundation म्हणून
-भागीदारीबाबत माहिती मिळवण्यासाठी
-आमच्याशी थेट संपर्क साधा.
-
-</p>
-
-<a href="mailto:afpss2005@gmail.com"
-class="btn btn-primary">
-Contact Us
-</a>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>
-📑 Transparency
-</h3>
 
 <p>
 
-Registration, 80G, 12A, CSR Profile,
-Annual Report आणि Audit Report
-पाहण्यासाठी वरील Documents विभागाचा वापर करा.
-
-</p>
-
-<a href="#transparency"
-class="btn btn-primary">
-View Documents
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-FINAL CTA
-================================================== -->
-
-<section class="final-cta">
-
-<div class="container">
-
-<h2>
-❤️ आज एका मुलाच्या भविष्याला साथ द्या
-</h2>
-
-<p>
-
-तुमची देणगी केवळ आर्थिक मदत नाही.
-ती शिक्षणाची संधी,
-आत्मविश्वास आणि
-उज्ज्वल भविष्याची आशा आहे.
-
-</p>
-
-<a href="#qr"
-class="btn btn-light">
-
-❤️ Donate Now
-
-</a>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-CONTACT
-================================================== -->
-
-<section class="contact">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>CONTACT</span>
-
-<h2>आमच्याशी संपर्क साधा</h2>
-
-</div>
-
-
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<h3>
-🏫 संस्था
-</h3>
-
-<p>
-Adivasi Fase Pardhi Sudhar Samiti
-</p>
-
-<p>
-Prashnachinha Adivasi Ashram School
-</p>
-
-<br>
-
-<h3>
-📍 Address
-</h3>
-
-<p>
+Prashnachinha Adivasi Ashram School<br>
 
 Mangrul Chawala,<br>
+
 Tal. Nandgaon Khandeshwar,<br>
+
 Dist. Amravati,<br>
+
 Maharashtra – India
 
 </p>
 
-</div>
-
-
-<div class="contact-card">
-
-<h3>
-📞 Phone
-</h3>
-
-<p>
-<a href="tel:+919096364529">
-+91 9096364529
-</a>
-</p>
-
-<p>
-<a href="tel:+919764239458">
-+91 9764239458
-</a>
-</p>
 
 <br>
+
+
+<h3>
+📱 Mobile
+</h3>
+
+
+<p>
+
++91 9096364529<br>
+
++91 9764239458
+
+</p>
+
+
+<br>
+
 
 <h3>
 📧 Email
 </h3>
 
+
 <p>
-<a href="mailto:afpss2005@gmail.com">
 afpss2005@gmail.com
-</a>
 </p>
 
-<br>
 
-<a href="https://wa.me/919764239458"
-target="_blank"
-class="btn btn-primary">
+</div>
 
-💬 WhatsApp Us
 
-</a>
+<div class="map">
+
+
+<iframe
+
+src="https://www.google.com/maps?q=Mangrul+Chawala+Amravati&output=embed"
+
+loading="lazy"
+
+allowfullscreen>
+
+</iframe>
+
 
 </div>
 
@@ -2006,26 +1780,24 @@ class="btn btn-primary">
 </section>
 
 
-<!-- ==================================================
-FOOTER
-================================================== -->
+<!-- ===============================
+     FOOTER
+================================ -->
 
-<footer>
+<footer class="footer">
+
 
 <div class="container">
+
 
 <div class="footer-grid">
 
 
 <div>
 
-<h3>
-AFPSS
-</h3>
-
-<p>
+<h2>
 Adivasi Fase Pardhi Sudhar Samiti
-</p>
+</h2>
 
 <p>
 Prashnachinha Adivasi Ashram School
@@ -2040,55 +1812,55 @@ Education • Shelter • Food • Healthcare • Hope
 
 <div>
 
-<h4>
+<h3>
 Quick Links
-</h4>
+</h3>
 
-<a href="index.html">
-Home
-</a>
-
-<a href="index.html#about">
-About
-</a>
-
-<a href="index.html#founder">
-Founder
-</a>
-
-<a href="gallery.html">
-Gallery
-</a>
-
-<a href="documents.html">
-Documents
-</a>
-
+<p>
 <a href="#donate">
 Donate
 </a>
+</p>
+
+<p>
+<a href="#payment">
+Payment
+</a>
+</p>
+
+<p>
+<a href="#documents">
+Documents
+</a>
+</p>
+
+<p>
+<a href="#contact">
+Contact
+</a>
+</p>
 
 </div>
 
 
 <div>
 
-<h4>
-Donation
-</h4>
+<h3>
+Website
+</h3>
 
 <p>
-UPI:
-9511239351@sbi
+
+<a href="https://afpss.org.in">
+
+afpss.org.in
+
+</a>
+
 </p>
 
 <p>
-SBI
-</p>
-
-<p>
-IFSC:
-SBIN0008252
+© 2026 AFPSS
 </p>
 
 </div>
@@ -2099,33 +1871,81 @@ SBIN0008252
 
 <div class="footer-bottom">
 
-<p>
 © 2026 Adivasi Fase Pardhi Sudhar Samiti
-</p>
-
-<p>
-All Rights Reserved • Built with ❤️ for Children's Education
-</p>
+| All Rights Reserved.
 
 </div>
+
 
 </div>
 
 </footer>
 
 
-<!-- ==================================================
-WHATSAPP
-================================================== -->
+<!-- ===============================
+     WHATSAPP
+================================ -->
 
-<a href="https://wa.me/919764239458"
-target="_blank"
+<a
+
 class="whatsapp"
-aria-label="WhatsApp">
+
+href="https://wa.me/919764239458"
+
+target="_blank"
+
+rel="noopener"
+
+title="WhatsApp">
 
 💬
 
 </a>
+
+
+<!-- ===============================
+     JAVASCRIPT
+================================ -->
+
+<script>
+
+const menuToggle =
+document.getElementById("menu-toggle");
+
+const navbar =
+document.getElementById("navbar");
+
+
+if(menuToggle){
+
+menuToggle.addEventListener(
+"click",
+()=>{
+
+navbar.classList.toggle("active");
+
+}
+);
+
+}
+
+
+document
+.querySelectorAll("nav a")
+.forEach(a=>{
+
+a.addEventListener(
+"click",
+()=>{
+
+navbar.classList.remove("active");
+
+}
+);
+
+});
+
+</script>
 
 
 </body>
