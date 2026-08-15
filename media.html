@@ -1099,7 +1099,273 @@ Transforming Lives Through Education Since 2005.
 
 </footer>
 
+<!-- ================= MEDIA 2.0 LIGHTBOX ================= -->
 
+<div class="media-lightbox"
+     id="media-lightbox"
+     aria-hidden="true">
+
+    <button
+        class="media-close"
+        id="media-close"
+        aria-label="Close">
+        ×
+    </button>
+
+    <button
+        class="media-prev"
+        id="media-prev"
+        aria-label="Previous">
+        ‹
+    </button>
+
+    <div class="media-lightbox-content">
+
+        <img
+            id="media-lightbox-image"
+            src=""
+            alt="AFPSS Media Coverage">
+
+        <div class="media-counter">
+            <span id="media-current">1</span>
+            /
+            <span id="media-total">24</span>
+        </div>
+
+    </div>
+
+    <button
+        class="media-next"
+        id="media-next"
+        aria-label="Next">
+        ›
+    </button>
+
+</div>
+
+
+<script>
+
+/* ================= AFPSS MEDIA 2.0 ================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cards = Array.from(
+        document.querySelectorAll(".media-card")
+    );
+
+    const lightbox =
+        document.getElementById("media-lightbox");
+
+    const image =
+        document.getElementById("media-lightbox-image");
+
+    const current =
+        document.getElementById("media-current");
+
+    const total =
+        document.getElementById("media-total");
+
+    const close =
+        document.getElementById("media-close");
+
+    const prev =
+        document.getElementById("media-prev");
+
+    const next =
+        document.getElementById("media-next");
+
+    let currentIndex = 0;
+
+    total.textContent = cards.length;
+
+
+    /* ================= OPEN ================= */
+
+    function openMedia(index) {
+
+        currentIndex = index;
+
+        const img =
+            cards[currentIndex].querySelector("img");
+
+        image.src = img.src;
+        image.alt = img.alt;
+
+        current.textContent =
+            currentIndex + 1;
+
+        total.textContent =
+            cards.length;
+
+        lightbox.classList.add("active");
+
+        lightbox.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.style.overflow =
+            "hidden";
+    }
+
+
+    /* ================= CLOSE ================= */
+
+    function closeMedia() {
+
+        lightbox.classList.remove("active");
+
+        lightbox.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.style.overflow = "";
+    }
+
+
+    /* ================= NEXT ================= */
+
+    function nextMedia() {
+
+        currentIndex =
+            (currentIndex + 1) % cards.length;
+
+        openMedia(currentIndex);
+    }
+
+
+    /* ================= PREVIOUS ================= */
+
+    function previousMedia() {
+
+        currentIndex =
+            (currentIndex - 1 + cards.length)
+            % cards.length;
+
+        openMedia(currentIndex);
+    }
+
+
+    /* ================= PHOTO CLICK ================= */
+
+    cards.forEach(function (card, index) {
+
+        card.addEventListener(
+            "click",
+            function () {
+                openMedia(index);
+            }
+        );
+
+    });
+
+
+    /* ================= BUTTONS ================= */
+
+    close.addEventListener(
+        "click",
+        closeMedia
+    );
+
+    next.addEventListener(
+        "click",
+        nextMedia
+    );
+
+    prev.addEventListener(
+        "click",
+        previousMedia
+    );
+
+
+    /* ================= BACKGROUND CLICK ================= */
+
+    lightbox.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === lightbox) {
+                closeMedia();
+            }
+
+        }
+    );
+
+
+    /* ================= KEYBOARD ================= */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (!lightbox.classList.contains("active")) {
+                return;
+            }
+
+            if (event.key === "Escape") {
+                closeMedia();
+            }
+
+            if (event.key === "ArrowRight") {
+                nextMedia();
+            }
+
+            if (event.key === "ArrowLeft") {
+                previousMedia();
+            }
+
+        }
+    );
+
+
+    /* ================= MOBILE SWIPE ================= */
+
+    let touchStartX = 0;
+
+    let touchEndX = 0;
+
+
+    lightbox.addEventListener(
+        "touchstart",
+        function (event) {
+
+            touchStartX =
+                event.changedTouches[0].screenX;
+
+        },
+        { passive: true }
+    );
+
+
+    lightbox.addEventListener(
+        "touchend",
+        function (event) {
+
+            touchEndX =
+                event.changedTouches[0].screenX;
+
+            const distance =
+                touchStartX - touchEndX;
+
+            if (Math.abs(distance) < 50) {
+                return;
+            }
+
+            if (distance > 0) {
+                nextMedia();
+            } else {
+                previousMedia();
+            }
+
+        },
+        { passive: true }
+    );
+
+});
+
+</script>
 </body>
 
 </html>
