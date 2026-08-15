@@ -456,3 +456,356 @@ year.textContent=new Date().getFullYear();
 =============================== */
 
 console.log("AFPSS Premium Website Loaded Successfully.");
+/* =====================================================
+   AFPSS 2.0
+   DIGITAL GALLERY JAVASCRIPT
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const galleryItems =
+        Array.from(
+            document.querySelectorAll(".digital-gallery-item")
+        );
+
+    const filters =
+        document.querySelectorAll(".gallery-filter");
+
+    const lightbox =
+        document.getElementById("gallery-lightbox");
+
+    const lightboxImage =
+        document.getElementById("gallery-lightbox-image");
+
+    const lightboxTitle =
+        document.getElementById("gallery-lightbox-title");
+
+    const lightboxDescription =
+        document.getElementById("gallery-lightbox-description");
+
+    const closeButton =
+        document.getElementById("gallery-close");
+
+    const prevButton =
+        document.getElementById("gallery-prev");
+
+    const nextButton =
+        document.getElementById("gallery-next");
+
+    const count =
+        document.getElementById("gallery-count");
+
+
+    let currentIndex = 0;
+
+    let visibleItems = [...galleryItems];
+
+
+    /* ================= UPDATE COUNT ================= */
+
+    function updateCount() {
+
+        if (count) {
+            count.textContent = visibleItems.length;
+        }
+
+    }
+
+
+    /* ================= OPEN LIGHTBOX ================= */
+
+    function openGallery(index) {
+
+        if (!visibleItems.length) return;
+
+        currentIndex = index;
+
+        const item =
+            visibleItems[currentIndex];
+
+        const image =
+            item.querySelector("img");
+
+        const title =
+            item.querySelector(
+                ".gallery-caption strong"
+            );
+
+        const description =
+            item.querySelector(
+                ".gallery-caption span"
+            );
+
+        lightboxImage.src = image.src;
+
+        lightboxImage.alt = image.alt;
+
+        lightboxTitle.textContent =
+            title ? title.textContent : "";
+
+        lightboxDescription.textContent =
+            description ? description.textContent : "";
+
+        lightbox.classList.add("active");
+
+        lightbox.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    /* ================= CLOSE ================= */
+
+    function closeGallery() {
+
+        lightbox.classList.remove("active");
+
+        lightbox.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    /* ================= NEXT ================= */
+
+    function nextGallery() {
+
+        if (!visibleItems.length) return;
+
+        currentIndex =
+            (currentIndex + 1)
+            % visibleItems.length;
+
+        openGallery(currentIndex);
+
+    }
+
+
+    /* ================= PREVIOUS ================= */
+
+    function previousGallery() {
+
+        if (!visibleItems.length) return;
+
+        currentIndex =
+            (currentIndex - 1 + visibleItems.length)
+            % visibleItems.length;
+
+        openGallery(currentIndex);
+
+    }
+
+
+    /* ================= PHOTO CLICK ================= */
+
+    galleryItems.forEach(function (item) {
+
+        item.addEventListener(
+            "click",
+            function () {
+
+                visibleItems =
+                    galleryItems.filter(
+                        function (galleryItem) {
+
+                            return galleryItem.style.display !== "none";
+
+                        }
+                    );
+
+                const clickedIndex =
+                    visibleItems.indexOf(item);
+
+                openGallery(
+                    clickedIndex >= 0
+                        ? clickedIndex
+                        : 0
+                );
+
+            }
+        );
+
+    });
+
+
+    /* ================= FILTER ================= */
+
+    filters.forEach(function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                filters.forEach(
+                    function (filter) {
+                        filter.classList.remove("active");
+                    }
+                );
+
+                button.classList.add("active");
+
+                const filter =
+                    button.dataset.filter;
+
+                galleryItems.forEach(
+                    function (item) {
+
+                        const category =
+                            item.dataset.category;
+
+                        if (
+                            filter === "all" ||
+                            category === filter
+                        ) {
+
+                            item.style.display = "block";
+
+                        } else {
+
+                            item.style.display = "none";
+
+                        }
+
+                    }
+                );
+
+                visibleItems =
+                    galleryItems.filter(
+                        function (item) {
+                            return item.style.display !== "none";
+                        }
+                    );
+
+                updateCount();
+
+            }
+        );
+
+    });
+
+
+    /* ================= BUTTONS ================= */
+
+    closeButton.addEventListener(
+        "click",
+        closeGallery
+    );
+
+    nextButton.addEventListener(
+        "click",
+        nextGallery
+    );
+
+    prevButton.addEventListener(
+        "click",
+        previousGallery
+    );
+
+
+    /* ================= BACKGROUND CLICK ================= */
+
+    lightbox.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                event.target === lightbox
+            ) {
+
+                closeGallery();
+
+            }
+
+        }
+    );
+
+
+    /* ================= KEYBOARD ================= */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                !lightbox.classList.contains("active")
+            ) {
+                return;
+            }
+
+            if (event.key === "Escape") {
+                closeGallery();
+            }
+
+            if (event.key === "ArrowRight") {
+                nextGallery();
+            }
+
+            if (event.key === "ArrowLeft") {
+                previousGallery();
+            }
+
+        }
+    );
+
+
+    /* ================= MOBILE SWIPE ================= */
+
+    let touchStartX = 0;
+
+    let touchEndX = 0;
+
+
+    lightbox.addEventListener(
+        "touchstart",
+        function (event) {
+
+            touchStartX =
+                event.changedTouches[0].screenX;
+
+        },
+        { passive: true }
+    );
+
+
+    lightbox.addEventListener(
+        "touchend",
+        function (event) {
+
+            touchEndX =
+                event.changedTouches[0].screenX;
+
+            const difference =
+                touchStartX - touchEndX;
+
+
+            if (Math.abs(difference) < 50) {
+                return;
+            }
+
+
+            if (difference > 0) {
+
+                nextGallery();
+
+            } else {
+
+                previousGallery();
+
+            }
+
+        },
+        { passive: true }
+    );
+
+
+    updateCount();
+
+});
