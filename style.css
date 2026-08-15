@@ -2083,3 +2083,274 @@ button {
 .founder-mission {
     color: #ffffff;
 }
+/* =====================================================
+   AFPSS 2.0
+   PREMIUM AWARDS SECTION
+===================================================== */
+
+.awards-section {
+    padding: 100px 0;
+    background:
+        linear-gradient(
+            135deg,
+            #f8faf9 0%,
+            #ffffff 50%,
+            #f4f7f5 100%
+        );
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.award-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    border: 1px solid #e4e9e6;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.14);
+}
+
+.award-image {
+    position: relative;
+
+    height: 360px;
+
+    overflow: hidden;
+
+    background: #eef2ef;
+}
+
+.award-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    cursor: pointer;
+
+    transition:
+        transform .5s ease;
+}
+
+.award-card:hover .award-image img {
+    transform: scale(1.04);
+}
+
+.award-year {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    background: #e99a25;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.18);
+}
+
+.award-content {
+    padding: 30px;
+}
+
+.award-icon {
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+.award-content h3 {
+    margin: 0 0 12px;
+
+    font-size: 24px;
+
+    color: #123c30;
+}
+
+.award-content p {
+    margin: 0 0 22px;
+
+    line-height: 1.8;
+
+    color: #5d6964;
+}
+
+.award-view {
+    border: 0;
+
+    background: #123c30;
+
+    color: #ffffff;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+.award-view:hover {
+    background: #e99a25;
+
+    transform: translateX(4px);
+}
+
+
+/* ================= 50+ CARD ================= */
+
+.awards-more {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    min-height: 360px;
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #123c30,
+            #1d5443
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 20px 50px rgba(18,60,48,.20);
+}
+
+.more-number {
+
+    font-size: 72px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    color: #f3bd54;
+
+    margin-bottom: 15px;
+}
+
+.awards-more h3 {
+
+    font-size: 28px;
+
+    margin: 0 0 12px;
+}
+
+.awards-more p {
+
+    max-width: 430px;
+
+    line-height: 1.8;
+
+    color: #d8e5df;
+
+    margin-bottom: 18px;
+}
+
+.awards-more span {
+
+    font-size: 13px;
+
+    color: #f3bd54;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .awards-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .award-image {
+
+        height: 420px;
+
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .awards-section {
+
+        padding: 70px 0;
+
+    }
+
+    .award-image {
+
+        height: 360px;
+
+    }
+
+    .award-content {
+
+        padding: 22px;
+
+    }
+
+    .award-content h3 {
+
+        font-size: 21px;
+
+    }
+
+}
