@@ -800,3 +800,33 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCount();
 
 });
+/* ================= HERO IMAGE SLIDESHOW ================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const heroBackground = document.querySelector(".hero-background");
+
+    if (!heroBackground) return;
+
+    const heroImages = [
+        "hero1.jpg",
+        "hero2.jpg",
+        "hero3.jpg",
+        "hero4.jpg"
+    ];
+
+    let currentHero = 0;
+
+    heroBackground.style.backgroundImage =
+        `url("${heroImages[currentHero]}")`;
+
+    setInterval(function () {
+
+        currentHero = (currentHero + 1) % heroImages.length;
+
+        heroBackground.style.backgroundImage =
+            `url("${heroImages[currentHero]}")`;
+
+    }, 5000);
+
+});
