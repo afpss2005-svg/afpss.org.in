@@ -2039,3 +2039,47 @@ button {
     }
 
 }
+/* =====================================================
+   AFPSS FOUNDER - FINAL PREMIUM FINISH
+===================================================== */
+
+.founder-premium-content {
+    color: #ffffff;
+}
+
+.founder-premium-content .eyebrow {
+    color: #f3c76a;
+}
+
+.founder-premium-content h2 {
+    color: #ffffff;
+}
+
+.founder-premium-content h3 {
+    color: #f3c76a;
+}
+
+.founder-premium-content > p {
+    color: #d5dfd9;
+}
+
+.founder-photo-card {
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.founder-photo-card img {
+    object-position: center top;
+}
+
+.founder-highlights div {
+    transition: 0.3s ease;
+}
+
+.founder-highlights div:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.12);
+}
+
+.founder-mission {
+    color: #ffffff;
+}
