@@ -2,3136 +2,2960 @@
 <html lang="mr">
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-      content="मतीन शंकराव भोसले सर — संघर्षातून शिक्षणक्रांतीकडे. प्रश्नचिन्ह आदिवासी आश्रमशाळा आणि वंचित फासेपारधी मुलांच्या शिक्षणाचा प्रवास.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>मतीन शंकराव भोसले सर | Founder Journey | AFPSS</title>
 
+<meta name="description"
+content="मतीन शंकराव भोसले सरांचा संघर्षमय जीवनप्रवास आणि प्रश्नचिन्ह आदिवासी आश्रमशाळेच्या उभारणीचा प्रवास.">
+
 <style>
-
-/* =========================================================
-   AFPSS — PREMIUM FOUNDER JOURNEY
-   MARATHI + ENGLISH
-   ========================================================= */
-
 :root{
     --green:#075c46;
-    --green-dark:#034536;
-    --green-light:#eaf5f0;
+    --dark:#033d30;
     --gold:#d5a62a;
-    --gold-light:#f7edcf;
-    --white:#ffffff;
-    --cream:#fbfaf5;
-    --text:#24332f;
-    --muted:#64716d;
-    --shadow:0 20px 60px rgba(0,50,40,.12);
-    --radius:28px;
+    --cream:#fbfaf4;
+    --light:#eef7f2;
+    --white:#fff;
+    --text:#253631;
+    --muted:#687671;
+    --shadow:0 18px 55px rgba(0,60,45,.12);
+    --radius:26px;
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-    font-family:
-        "Noto Sans Devanagari",
-        "Nirmala UI",
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-    background:
-        radial-gradient(
-            circle at top left,
-            #edf8f3 0%,
-            #ffffff 45%,
-            #fbfaf5 100%
-        );
-
+    font-family:"Noto Sans Devanagari","Nirmala UI","Segoe UI",Arial,sans-serif;
     color:var(--text);
-    line-height:1.8;
+    background:var(--cream);
+    line-height:1.85;
 }
 
+a{text-decoration:none;color:inherit}
+
 img{
-    max-width:100%;
+    width:100%;
     display:block;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
+.container{
+    width:min(1150px,92%);
+    margin:auto;
 }
 
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-.site-header{
+.header{
     position:sticky;
     top:0;
-    z-index:1000;
-
-    background:rgba(255,255,255,.94);
-    backdrop-filter:blur(18px);
-
-    border-bottom:1px solid rgba(7,92,70,.08);
-
-    box-shadow:0 5px 25px rgba(0,0,0,.05);
+    z-index:999;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #e5ece8;
 }
 
 .header-inner{
-    width:min(1200px,92%);
-    margin:auto;
-
-    min-height:78px;
-
+    min-height:74px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-
-    gap:25px;
+    gap:15px;
 }
 
-.brand{
+.logo-area{
     display:flex;
     align-items:center;
-    gap:13px;
+    gap:12px;
 }
 
-.brand img{
-    width:52px;
-    height:52px;
+.logo-area img{
+    width:48px;
+    height:48px;
     object-fit:contain;
     border-radius:50%;
 }
 
-.brand-title{
-    font-size:19px;
+.logo-title{
     font-weight:900;
     color:var(--green);
 }
 
-.brand-subtitle{
+.logo-sub{
     display:block;
-    font-size:11px;
+    font-size:10px;
     color:#74817d;
-    letter-spacing:.4px;
 }
 
 .nav{
     display:flex;
-    align-items:center;
-    gap:22px;
+    gap:18px;
 }
 
 .nav a{
-    font-size:14px;
-    font-weight:700;
-    color:#3d4b47;
-    transition:.25s;
+    font-size:13px;
+    font-weight:800;
+    color:#42534d;
 }
 
-.nav a:hover{
-    color:var(--green);
-}
+.nav a:hover{color:var(--green)}
 
-
-/* LANGUAGE SWITCH */
-
-.language-switcher{
+.lang{
     display:flex;
-    align-items:center;
-    gap:6px;
-
-    padding:5px;
-
-    border:1px solid rgba(7,92,70,.15);
-    border-radius:50px;
-
-    background:#fff;
+    gap:4px;
+    padding:4px;
+    border:1px solid #dbe6e1;
+    border-radius:30px;
 }
 
-.language-switcher button{
+.lang button{
     border:0;
     background:transparent;
-
-    padding:7px 13px;
-
-    border-radius:30px;
-
+    padding:7px 12px;
+    border-radius:25px;
     font-weight:800;
     cursor:pointer;
-
-    color:#60706a;
-
-    transition:.25s;
 }
 
-.language-switcher button.active{
+.lang button.active{
     background:var(--green);
-    color:#fff;
+    color:white;
 }
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
 
 .hero{
-    position:relative;
-    overflow:hidden;
-
-    padding:95px 0 90px;
-
+    padding:90px 0;
     background:
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(213,166,42,.16),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #edf8f3,
-            #ffffff 60%,
-            #fbf7e9
-        );
+    radial-gradient(circle at 15% 20%,rgba(213,166,42,.15),transparent 30%),
+    linear-gradient(135deg,#edf8f3,#fff 65%,#fbf5df);
 }
 
-.hero::before{
-    content:"";
-
-    position:absolute;
-
-    width:380px;
-    height:380px;
-
-    right:-140px;
-    top:-130px;
-
-    border-radius:50%;
-
-    background:rgba(213,166,42,.10);
-}
-
-.hero-container{
-    width:min(1200px,92%);
-    margin:auto;
-
+.hero-grid{
     display:grid;
-    grid-template-columns:
-        minmax(0,1.05fr)
-        minmax(360px,.95fr);
-
-    gap:70px;
-
+    grid-template-columns:1.05fr .95fr;
+    gap:65px;
     align-items:center;
 }
 
-.hero-kicker{
-    display:inline-block;
-
+.kicker{
     color:var(--gold);
-
-    font-size:13px;
     font-weight:900;
-
-    letter-spacing:3px;
-    text-transform:uppercase;
-
-    margin-bottom:18px;
+    letter-spacing:2px;
+    font-size:13px;
 }
 
 .hero h1{
     color:var(--green);
-
-    font-size:
-        clamp(42px,5vw,72px);
-
+    font-size:clamp(42px,6vw,72px);
     line-height:1.08;
-
-    font-weight:950;
-
-    margin-bottom:25px;
+    margin:15px 0 20px;
 }
 
-.hero h1 span{
-    color:var(--gold);
+.hero h1 span{color:var(--gold)}
+
+.hero p{
+    font-size:20px;
+    color:#50605a;
+    max-width:720px;
 }
 
-.hero-lead{
-    max-width:700px;
-
-    font-size:21px;
-    color:#465953;
-
-    margin-bottom:30px;
-}
-
-.hero-actions{
+.hero-buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:13px;
+    gap:12px;
+    margin-top:28px;
 }
 
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    min-height:50px;
-
-    padding:0 23px;
-
+    padding:12px 23px;
     border-radius:50px;
-
-    font-weight:850;
-
-    transition:.3s;
+    font-weight:900;
+    display:inline-block;
 }
 
 .btn-primary{
     background:var(--green);
     color:#fff;
-
-    box-shadow:
-        0 12px 28px rgba(7,92,70,.22);
+    box-shadow:0 10px 25px rgba(7,92,70,.2);
 }
 
-.btn-primary:hover{
-    transform:translateY(-3px);
-    background:var(--green-dark);
+.btn-gold{
+    background:var(--gold);
+    color:#173c31;
 }
 
 .btn-outline{
     border:1.5px solid var(--green);
     color:var(--green);
-    background:#fff;
+    background:white;
 }
-
-.btn-outline:hover{
-    background:var(--green);
-    color:#fff;
-}
-
-
-/* HERO PHOTO */
 
 .hero-photo{
-    position:relative;
-}
-
-.hero-photo-card{
-    position:relative;
-
+    border-radius:40px 40px 40px 8px;
     overflow:hidden;
-
-    border-radius:
-        45px
-        45px
-        45px
-        8px;
-
-    background:#fff;
-
+    border:8px solid white;
     box-shadow:var(--shadow);
-
-    border:8px solid rgba(255,255,255,.85);
 }
 
-.hero-photo-card img{
-    width:100%;
+.hero-photo img{
     aspect-ratio:4/5;
     object-fit:cover;
 }
 
-.hero-photo-badge{
-    position:absolute;
-
-    left:25px;
-    bottom:25px;
-
-    max-width:85%;
-
-    padding:17px 21px;
-
-    border-radius:18px;
-
-    background:rgba(3,69,54,.95);
-
-    color:#fff;
-
-    box-shadow:0 12px 35px rgba(0,0,0,.20);
-}
-
-.hero-photo-badge strong{
-    display:block;
-
-    color:#fff;
-
-    font-size:18px;
-}
-
-.hero-photo-badge small{
-    color:#e9d79a;
-}
-
-
-/* =========================================================
-   COMMON
-   ========================================================= */
-
 .section{
-    padding:95px 0;
+    padding:85px 0;
 }
 
-.container{
-    width:min(1120px,92%);
-    margin:auto;
-}
+.section.alt{background:#f1f8f4}
 
-.section-heading{
-    max-width:800px;
-    margin:0 auto 55px;
-
+.section-title{
     text-align:center;
+    max-width:850px;
+    margin:0 auto 50px;
 }
 
-.section-label{
+.label{
     color:var(--gold);
-
-    font-size:13px;
-    font-weight:900;
-
+    font-size:12px;
     letter-spacing:2px;
-    text-transform:uppercase;
+    font-weight:900;
 }
 
-.section-heading h2{
-    margin-top:12px;
-
+.section-title h2{
     color:var(--green);
-
-    font-size:
-        clamp(31px,4vw,50px);
-
-    line-height:1.15;
+    font-size:clamp(31px,4vw,50px);
+    line-height:1.2;
+    margin:10px 0;
 }
 
-.section-heading p{
-    margin-top:17px;
-
+.section-title p{
     color:var(--muted);
-
     font-size:17px;
 }
 
-
-/* =========================================================
-   INTRO
-   ========================================================= */
-
 .intro{
-    background:#fff;
-}
-
-.intro-grid{
     display:grid;
-    grid-template-columns:
-        .8fr
-        1.2fr;
-
-    gap:60px;
-
-    align-items:start;
+    grid-template-columns:.75fr 1.25fr;
+    gap:50px;
 }
 
-.intro-card{
-    padding:35px;
-
+.year-card{
+    background:linear-gradient(145deg,var(--green),var(--dark));
+    color:white;
     border-radius:var(--radius);
-
-    background:
-        linear-gradient(
-            145deg,
-            var(--green),
-            var(--green-dark)
-        );
-
-    color:#fff;
-
+    padding:35px;
     box-shadow:var(--shadow);
 }
 
-.intro-card .number{
-    font-size:58px;
+.year-card strong{
+    font-size:65px;
+    color:#f1d06a;
     line-height:1;
-
-    color:#f3d36f;
-
-    font-weight:950;
 }
 
-.intro-card h3{
+.year-card h3{
     font-size:25px;
     margin:15px 0;
 }
 
-.intro-card p{
-    color:#d9ebe5;
+.story p{
+    margin-bottom:20px;
+    font-size:17px;
 }
 
-.story-text p{
-    font-size:18px;
-    margin-bottom:22px;
-    color:#4c5a56;
-}
-
-.story-text strong{
-    color:var(--green);
-}
-
-
-/* =========================================================
-   JOURNEY TIMELINE
-   ========================================================= */
-
-.journey{
-    background:
-        linear-gradient(
-            180deg,
-            #f8fbf9,
-            #eef7f2
-        );
-}
+.story strong{color:var(--green)}
 
 .timeline{
-    position:relative;
-
     max-width:950px;
-
     margin:auto;
+    position:relative;
 }
 
-.timeline::before{
+.timeline:before{
     content:"";
-
     position:absolute;
-
     left:50%;
-
     top:0;
     bottom:0;
-
     width:2px;
-
-    background:
-        linear-gradient(
-            var(--gold),
-            var(--green),
-            var(--gold)
-        );
-
-    transform:translateX(-50%);
+    background:linear-gradient(var(--gold),var(--green),var(--gold));
 }
 
 .timeline-item{
     width:50%;
-
-    padding:0 45px 55px;
-
+    padding:0 42px 42px;
     position:relative;
-}
-
-.timeline-item:nth-child(odd){
-    text-align:right;
 }
 
 .timeline-item:nth-child(even){
     margin-left:50%;
 }
 
-.timeline-dot{
+.timeline-item:nth-child(odd){
+    text-align:right;
+}
+
+.dot{
     position:absolute;
-
-    top:0;
-
-    width:20px;
-    height:20px;
-
+    width:18px;
+    height:18px;
     border-radius:50%;
-
     background:var(--gold);
-
-    border:5px solid #fff;
-
-    box-shadow:
-        0 0 0 4px rgba(213,166,42,.22);
+    border:4px solid white;
+    box-shadow:0 0 0 4px #eadca9;
+    top:5px;
 }
 
-.timeline-item:nth-child(odd)
-.timeline-dot{
-    right:-10px;
+.timeline-item:nth-child(odd) .dot{
+    right:-9px;
 }
 
-.timeline-item:nth-child(even)
-.timeline-dot{
-    left:-10px;
+.timeline-item:nth-child(even) .dot{
+    left:-9px;
 }
 
 .timeline-card{
-    padding:28px;
-
-    background:#fff;
-
-    border-radius:23px;
-
-    box-shadow:
-        0 15px 40px rgba(0,60,45,.08);
-
-    border:1px solid rgba(7,92,70,.08);
+    background:white;
+    border-radius:22px;
+    padding:26px;
+    box-shadow:0 12px 35px rgba(0,50,40,.08);
+    border:1px solid #e4ece8;
 }
 
-.timeline-year{
+.timeline-card .year{
     display:inline-block;
-
-    padding:5px 13px;
-
-    border-radius:50px;
-
-    background:var(--gold-light);
-
-    color:#936d08;
-
-    font-size:13px;
+    background:#f7edcf;
+    color:#8c690d;
+    padding:3px 12px;
+    border-radius:20px;
     font-weight:900;
-
-    margin-bottom:10px;
+    font-size:12px;
 }
 
 .timeline-card h3{
     color:var(--green);
-    font-size:23px;
-    margin-bottom:9px;
+    margin:10px 0;
+    font-size:22px;
 }
 
-.timeline-card p{
-    color:#5a6763;
+.timeline-card p{color:#5d6b66}
+
+.highlight{
+    background:linear-gradient(135deg,var(--green),var(--dark));
+    color:white;
+    padding:75px 0;
 }
 
-
-/* =========================================================
-   MISSION
-   ========================================================= */
-
-.mission{
-    background:#fff;
-}
-
-.mission-grid{
+.highlight-grid{
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:22px;
-}
-
-.mission-card{
-    padding:32px;
-
-    border-radius:24px;
-
-    background:#fbfcfa;
-
-    border:1px solid rgba(7,92,70,.10);
-
-    transition:.3s;
-}
-
-.mission-card:hover{
-    transform:translateY(-6px);
-
-    box-shadow:
-        0 20px 45px rgba(0,50,40,.10);
-}
-
-.mission-icon{
-    width:55px;
-    height:55px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:17px;
-
-    background:var(--green-light);
-
-    font-size:27px;
-
-    margin-bottom:20px;
-}
-
-.mission-card h3{
-    color:var(--green);
-    font-size:21px;
-    margin-bottom:10px;
-}
-
-.mission-card p{
-    color:#66736f;
-}
-
-
-/* =========================================================
-   SCHOOL STORY
-   ========================================================= */
-
-.school-story{
-    background:
-        linear-gradient(
-            135deg,
-            #034536,
-            #075c46
-        );
-
-    color:#fff;
-}
-
-.school-grid{
-    display:grid;
-
-    grid-template-columns:
-        1fr
-        1fr;
-
-    gap:60px;
-
-    align-items:center;
-}
-
-.school-story .section-label{
-    color:#f0cd62;
-}
-
-.school-story h2{
-    color:#fff;
-
-    font-size:
-        clamp(32px,4vw,52px);
-
-    line-height:1.15;
-
-    margin:14px 0 24px;
-}
-
-.school-story p{
-    color:#d9e9e4;
-    font-size:17px;
-    margin-bottom:20px;
-}
-
-.school-photo{
-    overflow:hidden;
-
-    border-radius:35px;
-
-    border:7px solid rgba(255,255,255,.10);
-
-    box-shadow:
-        0 25px 70px rgba(0,0,0,.25);
-}
-
-.school-photo img{
-    width:100%;
-    aspect-ratio:4/3;
-    object-fit:cover;
-}
-
-
-/* =========================================================
-   IMPACT
-   ========================================================= */
-
-.impact{
-    background:#fbfaf5;
-}
-
-.impact-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
 
-.impact-card{
+.stat{
     text-align:center;
-
-    padding:32px 18px;
-
-    border-radius:25px;
-
-    background:#fff;
-
-    box-shadow:
-        0 10px 35px rgba(0,40,30,.07);
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:22px;
+    padding:27px 15px;
 }
 
-.impact-number{
+.stat strong{
+    display:block;
+    color:#f1d06a;
     font-size:42px;
-
     line-height:1;
-
-    color:var(--green);
-
-    font-weight:950;
 }
 
-.impact-card h3{
-    color:#3c4d48;
-
+.stat span{
+    display:block;
     margin-top:10px;
-
-    font-size:16px;
+    color:#dbe9e4;
 }
 
-.impact-card p{
-    color:#7a8581;
-
-    font-size:13px;
-
-    margin-top:4px;
-}
-
-
-/* =========================================================
-   QUOTE
-   ========================================================= */
-
-.quote-section{
-    padding:90px 0;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #fff9e7,
-            #fff
-        );
-}
-
-.quote-box{
+.quote{
     max-width:900px;
-
     margin:auto;
-
+    padding:45px 30px;
+    background:white;
+    border-radius:30px;
     text-align:center;
-
-    padding:55px 40px;
-
-    border-radius:35px;
-
-    background:#fff;
-
     box-shadow:var(--shadow);
-
     border-top:5px solid var(--gold);
 }
 
 .quote-mark{
-    font-size:75px;
-
     color:var(--gold);
-
-    line-height:.7;
-
-    font-family:Georgia,serif;
+    font:70px Georgia;
+    line-height:.6;
 }
 
-.quote-box p{
+.quote p{
     color:var(--green);
-
-    font-size:
-        clamp(23px,3vw,34px);
-
-    font-weight:850;
-
-    line-height:1.4;
-
-    margin:25px auto;
+    font-size:28px;
+    font-weight:900;
+    line-height:1.5;
+    margin:25px 0;
 }
 
-.quote-box small{
-    color:#78837f;
+.crisis{
+    background:#fff8e9;
 }
 
-
-/* =========================================================
-   MEDIA
-   ========================================================= */
-
-.media{
-    background:#f4f9f6;
+.crisis-box{
+    padding:40px;
+    background:white;
+    border-radius:28px;
+    box-shadow:var(--shadow);
 }
 
-.video-grid{
-    display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
-    gap:25px;
-
-    max-width:1050px;
-
-    margin:auto;
-}
-
-.video-card{
-    overflow:hidden;
-
-    border-radius:25px;
-
-    background:#000;
-
-    box-shadow:
-        0 18px 45px rgba(0,0,0,.14);
-}
-
-.video-card iframe{
-    display:block;
-
-    width:100%;
-
-    aspect-ratio:16/9;
-
-    border:0;
-}
-
-.video-info{
-    background:#fff;
-
-    padding:18px 20px;
-}
-
-.video-info h3{
+.crisis-box h3{
     color:var(--green);
-    font-size:18px;
-}
-
-.video-info p{
-    color:#75807c;
-    font-size:13px;
-}
-
-
-/* =========================================================
-   SOCIAL
-   ========================================================= */
-
-.social-section{
-    background:#fff;
-}
-
-.social-grid{
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:15px;
-}
-
-.social-btn{
-    min-width:190px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:10px;
-
-    padding:14px 22px;
-
-    border-radius:50px;
-
-    font-weight:850;
-
-    transition:.3s;
-}
-
-.facebook{
-    background:#1877f2;
-    color:#fff;
-}
-
-.youtube{
-    background:#111;
-    color:#fff;
-}
-
-.social-btn:hover{
-    transform:translateY(-4px);
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.16);
-}
-
-
-/* =========================================================
-   FINAL CTA
-   ========================================================= */
-
-.final-cta{
-    padding:100px 0;
-
-    background:
-        linear-gradient(
-            135deg,
-            #075c46,
-            #034536
-        );
-
-    text-align:center;
-
-    color:#fff;
-}
-
-.final-cta h2{
-    font-size:
-        clamp(32px,4vw,52px);
-
-    line-height:1.15;
-
+    font-size:30px;
     margin-bottom:18px;
 }
 
-.final-cta p{
-    max-width:750px;
-
-    margin:0 auto 30px;
-
-    color:#d7e9e3;
-
-    font-size:18px;
+.crisis-box p{
+    margin-bottom:18px;
 }
 
-.final-cta .btn-primary{
-    background:#f0c64c;
-    color:#173d32;
+.media-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
 }
 
-.final-cta .btn-primary:hover{
-    background:#fff;
+.video{
+    background:#000;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
 }
 
+.video iframe{
+    width:100%;
+    aspect-ratio:16/9;
+    border:0;
+    display:block;
+}
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+.video-title{
+    background:white;
+    padding:16px 20px;
+    color:var(--green);
+    font-weight:900;
+}
 
-.footer{
-    padding:35px 0;
+.youtube-list{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+}
 
-    background:#022f25;
+.youtube-link{
+    padding:15px;
+    border-radius:18px;
+    background:white;
+    border:1px solid #dfe9e4;
+    color:var(--green);
+    font-weight:800;
+    text-align:center;
+    transition:.25s;
+}
 
-    color:#bcd1ca;
+.youtube-link:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,50,40,.1);
+}
 
+.social{
     text-align:center;
 }
 
-.footer strong{
-    color:#fff;
+.facebook{
+    display:inline-block;
+    padding:13px 28px;
+    border-radius:50px;
+    background:#1877f2;
+    color:white;
+    font-weight:900;
 }
 
-.footer p{
+.final{
+    background:linear-gradient(135deg,var(--green),var(--dark));
+    color:white;
+    text-align:center;
+    padding:90px 0;
+}
+
+.final h2{
+    font-size:clamp(34px,5vw,55px);
+}
+
+.final p{
+    max-width:750px;
+    margin:15px auto 28px;
+    color:#dceae5;
+    font-size:18px;
+}
+
+.footer{
+    background:#022d24;
+    color:#bcd0ca;
+    text-align:center;
+    padding:30px 15px;
     font-size:13px;
 }
 
-
-/* =========================================================
-   LANGUAGE
-   ========================================================= */
-
-.lang-en{
-    display:none;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+.lang-en{display:none}
 
 @media(max-width:950px){
+    .nav{display:none}
 
-    .nav{
-        display:none;
-    }
-
-    .hero-container,
-    .intro-grid,
-    .school-grid{
+    .hero-grid,
+    .intro{
         grid-template-columns:1fr;
     }
 
-    .hero-container{
-        gap:45px;
+    .highlight-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
+    .youtube-list{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:650px){
+
     .hero{
+        padding:60px 0;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .section{
         padding:65px 0;
     }
 
-    .mission-grid{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .impact-grid{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .timeline::before{
-        left:18px;
+    .timeline:before{
+        left:14px;
     }
 
     .timeline-item,
     .timeline-item:nth-child(even){
         width:100%;
-
         margin-left:0;
-
-        padding-left:55px;
+        padding-left:45px;
         padding-right:0;
-
         text-align:left;
     }
 
-    .timeline-item:nth-child(odd)
-    .timeline-dot,
-    .timeline-item:nth-child(even)
-    .timeline-dot{
-        left:8px;
+    .timeline-item:nth-child(odd) .dot,
+    .timeline-item:nth-child(even) .dot{
+        left:5px;
         right:auto;
     }
 
-    .video-grid{
+    .highlight-grid,
+    .media-grid,
+    .youtube-list{
         grid-template-columns:1fr;
     }
 
+    .quote p{
+        font-size:22px;
+    }
 }
-
-
-@media(max-width:600px){
-
-    .header-inner{
-        min-height:68px;
-    }
-
-    .brand img{
-        width:44px;
-        height:44px;
-    }
-
-    .brand-title{
-        font-size:16px;
-    }
-
-    .brand-subtitle{
-        font-size:9px;
-    }
-
-    .language-switcher button{
-        padding:6px 9px;
-        font-size:12px;
-    }
-
-    .hero h1{
-        font-size:40px;
-    }
-
-    .hero-lead{
-        font-size:17px;
-    }
-
-    .hero-photo-card{
-        border-radius:30px 30px 30px 5px;
-    }
-
-    .section{
-        padding:70px 0;
-    }
-
-    .mission-grid,
-    .impact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .intro-card{
-        padding:28px;
-    }
-
-    .timeline-card{
-        padding:23px;
-    }
-
-    .quote-box{
-        padding:40px 22px;
-    }
-
-    .social-grid{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .social-btn{
-        width:100%;
-    }
-
-}
-
 </style>
 </head>
 
-
 <body>
 
+<header class="header">
+<div class="container header-inner">
 
-<!-- =========================================================
-     HEADER
-     ========================================================= -->
-
-<header class="site-header">
-
-<div class="header-inner">
-
-<a href="index.html" class="brand">
-
-<img src="logo.jpg"
-     alt="AFPSS Logo">
-
+<a href="index.html" class="logo-area">
+<img src="logo.jpg" alt="AFPSS">
 <div>
-<div class="brand-title">AFPSS</div>
-
-<span class="brand-subtitle">
-Adivasi Fase Pardhi Sudhar Samiti
-</span>
+<div class="logo-title">AFPSS</div>
+<span class="logo-sub">Adivasi Fase Pardhi Sudhar Samiti</span>
 </div>
-
 </a>
-
 
 <nav class="nav">
-
 <a href="index.html">Home</a>
-
 <a href="index.html#about">About</a>
-
-<a href="index.html#school">School</a>
-
-<a href="founder.html">
-Founder
-</a>
-
-<a href="media-news.html">
-Media
-</a>
-
-<a href="gallery.html">
-Gallery
-</a>
-
-<a href="documents.html">
-Documents
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
+<a href="founder.html">Founder</a>
+<a href="media-news.html">Media</a>
+<a href="gallery.html">Gallery</a>
+<a href="documents.html">Documents</a>
+<a href="contact.html">Contact</a>
 </nav>
 
-
-<div class="language-switcher">
-
-<button
-id="mrBtn"
-class="active"
-type="button">
-मराठी
-</button>
-
-<button
-id="enBtn"
-type="button">
-English
-</button>
-
+<div class="lang">
+<button id="mrBtn" class="active">मराठी</button>
+<button id="enBtn">English</button>
 </div>
 
 </div>
-
 </header>
 
 
+<!-- =====================================================
+MARATHI
+===================================================== -->
 
-<!-- =========================================================
-     MARATHI PAGE
-     ========================================================= -->
-
-<main class="lang-mr" id="marathiContent">
-
-
-<!-- HERO -->
+<div id="mrPage" class="lang-mr">
 
 <section class="hero">
-
-<div class="hero-container">
+<div class="container hero-grid">
 
 <div>
-
-<span class="hero-kicker">
-THE FOUNDER • THE JOURNEY • THE MISSION
-</span>
-
+<span class="kicker">THE FOUNDER • THE JOURNEY • THE MISSION</span>
 
 <h1>
-
 मतीन शंकराव<br>
-
-<span>
-भोसले सर
-</span>
-
+<span>भोसले सर</span>
 </h1>
 
-
-<p class="hero-lead">
-
+<p>
 संघर्षातून शिक्षणक्रांतीकडे...
 वंचित फासेपारधी मुलांच्या शिक्षणासाठी,
-सुरक्षित निवाऱ्यासाठी आणि सन्मानाच्या जीवनासाठी
-समर्पित सामाजिक प्रवास.
-
+सुरक्षित निवाऱ्यासाठी आणि सन्मानाच्या
+जीवनासाठी समर्पित जीवनप्रवास.
 </p>
 
-
-<div class="hero-actions">
-
-<a
-href="#journey"
-class="btn btn-primary">
-
-पूर्ण प्रवास ↓
-
+<div class="hero-buttons">
+<a href="#journey" class="btn btn-primary">
+पूर्ण जीवनप्रवास ↓
 </a>
 
-
-<a
-href="https://www.facebook.com/matin.bhosale.58"
+<a href="https://www.facebook.com/matin.bhosale.58"
 target="_blank"
-rel="noopener"
 class="btn btn-outline">
-
 Facebook Profile
-
 </a>
-
 </div>
-
 </div>
-
 
 <div class="hero-photo">
+<img src="founder.jpg" alt="मतीन शंकराव भोसले सर">
+</div>
 
-<div class="hero-photo-card">
+</div>
+</section>
 
-<img
-src="founder.jpg"
-alt="मतीन शंकराव भोसले सर">
 
-<div class="hero-photo-badge">
+<section class="section">
+<div class="container">
 
+<div class="section-title">
+<span class="label">THE BEGINNING</span>
+<h2>संघर्षातून शिक्षणक्रांतीकडे…</h2>
+<p>
+एका व्यक्तीचा नव्हे, तर एका समाजाच्या
+परिवर्तनासाठी सुरू झालेला प्रवास.
+</p>
+</div>
+
+<div class="intro">
+
+<div class="year-card">
+<strong>2005</strong>
+<h3>सामाजिक कार्याची दिशा</h3>
+<p>
+शिक्षण आणि सामाजिक परिवर्तनाच्या
+दिशेने मतीन सरांच्या कार्याचा प्रवास
+आकार घेऊ लागला.
+</p>
+</div>
+
+<div class="story">
+
+<p>
+अमरावती जिल्ह्यातील मंगरूळ चव्हाळा
+या गावातून सुरू झालेला मतीन भोसले
+यांचा प्रवास हा केवळ एका व्यक्तीच्या
+संघर्षाची कथा नाही.
+</p>
+
+<p>
+हा प्रवास आहे — गरिबीशी लढण्याचा,
+सामाजिक उपेक्षेला उत्तर देण्याचा,
+शिक्षणाच्या माध्यमातून परिवर्तन घडवण्याचा
+आणि फासेपारधी समाजातील मुलांना
+सन्मानाचे जीवन देण्याचा.
+</p>
+
+<p>
+आज हजारो लोकांसाठी प्रेरणास्थान ठरलेले
+मतीन भोसले सर स्वतः अत्यंत प्रतिकूल
+परिस्थितीतून पुढे आले.
+त्यांनी अनुभवलेली उपासमार, भटकंती,
+सामाजिक भेदभाव आणि शिक्षणाचा अभाव
+याच गोष्टींना त्यांनी परिवर्तनाची ताकद बनवले.
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">EARLY LIFE</span>
+<h2>१. संघर्षमय बालपण</h2>
+</div>
+
+<div class="story">
+<p>
+मतीन भोसले यांचे बालपण फासेपारधी
+समाजातील अत्यंत कठीण परिस्थितीत गेले.
+</p>
+
+<p>
+कुटुंबाच्या उदरनिर्वाहासाठी त्यांच्या
+वडिलांना मजुरीसोबतच जंगलात जाऊन
+पक्षी आणि लहान प्राण्यांची शिकार करण्याचा
+प्रयत्न करावा लागत असे.
+घरात अनेक वेळा अन्नाची कमतरता असे.
+कुटुंबाला उपासमारीला सामोरे जावे लागले.
+</p>
+
+<p>
+फासेपारधी समाजातील अनेक कुटुंबे
+गावाच्या मुख्य प्रवाहापासून दूर,
+पाल किंवा तात्पुरत्या निवाऱ्यात राहत होती.
+शिक्षण, रोजगार, शासकीय कागदपत्रे
+आणि मूलभूत सुविधा यांचा मोठ्या प्रमाणात अभाव होता.
+</p>
+
+<p>
+लहानपणीच मतीन यांनी आपल्या समाजाची
+ही वेदना जवळून अनुभवली.
+हीच वेदना पुढे त्यांच्या संपूर्ण
+जीवनकार्याची प्रेरणा ठरली.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">EDUCATION</span>
+<h2>२. शिक्षणाची पहिली पायरी</h2>
+</div>
+
+<div class="story">
+
+<p>
+मतीन यांच्या बालपणी त्यांच्या वडिलांना
+एका आरोपाखाली तुरुंगवास भोगावा लागला.
+</p>
+
+<p>
+वडील तुरुंगातून बाहेर आल्यानंतर त्यांनी
+आपल्या मुलांना शाळेत दाखल करण्याचा निर्णय घेतला.
+मतीन शाळेत गेले.
+</p>
+
+<p>
+परंतु शाळेचा प्रवास सोपा नव्हता.
+फासेपारधी समाजातील मुलगा म्हणून त्यांना
+भेदभावाचा सामना करावा लागला.
+काही विद्यार्थ्यांकडून त्यांची चेष्टा केली जात असे.
+</p>
+
+<p>
+या वातावरणामुळे काही काळ त्यांनी
+शाळेत जाणे बंद केले. मात्र त्यांच्या
+वडिलांनी हार मानली नाही.
+</p>
+
+<p>
+काही शिक्षकांनी त्यांना प्रेम आणि आधार दिला.
+त्यांना गणवेश, दप्तर, पाटी, पुस्तके
+आणि शैक्षणिक साहित्य मिळाले.
+मतीन यांनी या मदतीचे उत्तर आपल्या अभ्यासातून दिले.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">SOCIAL AWAKENING</span>
+<h2>३. शिक्षणातून निर्माण झालेली सामाजिक जाणीव</h2>
+</div>
+
+<div class="story">
+<p>
+शाळेत ऐकलेल्या कविता, प्रार्थना, गाणी
+आणि महान व्यक्तिमत्त्वांच्या जीवनकथांनी
+मतीन यांच्या विचारविश्वाला नवी दिशा दिली.
+</p>
+
+<p>
+महात्मा गांधी आणि छत्रपती शिवाजी महाराज
+यांच्या जीवनातून त्यांना प्रेरणा मिळाली.
+</p>
+
+<p>
+त्यांना जाणवले —
+<strong>शिक्षण म्हणजे केवळ नोकरी मिळवण्याचे
+साधन नाही; शिक्षण म्हणजे समाज बदलण्याची शक्ती आहे.</strong>
+</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">IDENTITY & RIGHTS</span>
+<h2>४. जात प्रमाणपत्रासाठी संघर्ष</h2>
+</div>
+
+<div class="story">
+<p>
+इयत्ता नववीत असताना मतीन यांना एका
+रेशन दुकानातील प्रसंगातून आपल्या समाजातील
+एका मोठ्या समस्येची जाणीव झाली.
+</p>
+
+<p>
+त्यांच्या कुटुंबाकडे रेशनकार्ड नव्हते.
+रेशनकार्ड मिळवण्यासाठी जात प्रमाणपत्र
+आणि ओळखपत्र आवश्यक होते.
+</p>
+
+<p>
+परंतु फासेपारधी समाजातील अनेक कुटुंबांकडे
+कोणतीही अधिकृत कागदपत्रे नव्हती.
+मतीन यांनी हा प्रश्न स्वतःपुरता मर्यादित ठेवला नाही.
+</p>
+
+<p>
+त्यांनी समाजातील लोकांना एकत्र केले.
+प्रशासनाकडे पाठपुरावा केला.
+अर्ज, निवेदने आणि आंदोलनाच्या माध्यमातून
+समाजाला अधिकृत ओळख मिळवून देण्यासाठी
+प्रयत्न केले.
+</p>
+
+<p>
+हा त्यांच्या सामाजिक कार्यातील
+पहिला मोठा टप्पा होता.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">A NEW DIRECTION</span>
+<h2>५. CRPF पासून पुन्हा शिक्षणाकडे</h2>
+</div>
+
+<div class="story">
+<p>
+दहावीची परीक्षा उत्तीर्ण झाल्यानंतर
+मतीन यांची CRPF मध्ये निवड झाली.
+त्यांनी प्रशिक्षणाला सुरुवात केली.
+</p>
+
+<p>
+मात्र प्रशिक्षणादरम्यान शारीरिक त्रास
+आणि दुखापतीमुळे त्यांना प्रशिक्षण
+सोडावे लागले.
+</p>
+
+<p>
+या अपयशाने मतीन खचले नाहीत.
+त्यांनी पुन्हा शिक्षणाचा मार्ग स्वीकारला
+आणि 2004 मध्ये बारावीची परीक्षा उत्तीर्ण केली.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">TEACHER</span>
+<h2>६. शिक्षक म्हणून नवी सुरुवात</h2>
+</div>
+
+<div class="story">
+<p>
+2005 मध्ये मतीन यांना जिल्हा परिषद
+शाळेत शिक्षक म्हणून काम करण्याची संधी मिळाली.
+धारणी परिसरात त्यांनी विद्यार्थ्यांना शिकवले.
+</p>
+
+<p>
+शिक्षक म्हणून काम करताना त्यांना एक गोष्ट
+अधिक स्पष्टपणे जाणवली —
+</p>
+
+<p>
 <strong>
-एक हात मदतीचा...
+“ज्या शिक्षणामुळे माझे आयुष्य बदलले,
+त्याच शिक्षणामुळे माझ्या समाजातील
+मुलांचेही आयुष्य बदलू शकते.”
 </strong>
+</p>
+
+<p>
+त्यामुळे नोकरी करत असतानाही ते
+फासेपारधी समाजातील मुलांच्या प्रश्नांशी
+जोडलेले राहिले.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">TURNING POINT • 2009</span>
+<h2>७. दोन मुलांनी बदललेले आयुष्य</h2>
+</div>
+
+<div class="story">
+
+<p>
+2009 मधील एका घटनेने मतीन यांच्या
+आयुष्याला निर्णायक वळण दिले.
+</p>
+
+<p>
+फासेपारधी समाजातील दोन लहान मुलांचे
+मृतदेह एका ओढ्याजवळ आढळल्याची माहिती
+त्यांना मिळाली.
+त्या मुलांचे आई-वडील पोलिसांच्या ताब्यात होते.
+</p>
+
+<p>
+मतीन घटनास्थळी पोहोचले.
+त्या दोन निष्पाप मुलांचा मृत्यू पाहून
+ते अंतर्बाह्य हादरले.
+</p>
+
+<div class="quote">
+<div class="quote-mark">“</div>
+<p>
+मी शिक्षक म्हणून फक्त माझ्या कुटुंबासाठी
+काम करायचे की माझ्या समाजातील
+या मुलांसाठीही काही करायचे?
+</p>
+</div>
+
+<p>
+याच घटनेने त्यांच्या आयुष्याची दिशा बदलली.
+त्यांनी समाजातील वंचित मुलांसाठी
+आपले आयुष्य समर्पित करण्याचा निर्णय घेतला.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">THE SEARCH</span>
+<h2>८. रस्त्यावरच्या मुलांचा शोध</h2>
+</div>
+
+<div class="story">
+
+<p>
+मतीन यांनी शिक्षकाच्या नोकरीतून विनावेतन
+रजा घेतली आणि स्वयंसेवकांच्या मदतीने
+विविध जिल्ह्यांमध्ये फासेपारधी समाजातील
+मुलांचा शोध सुरू केला.
+</p>
+
+<p>
+रेल्वे स्थानके, वाहतूक सिग्नल आणि
+सार्वजनिक ठिकाणी भीक मागणारी मुले
+त्यांच्या नजरेस पडत होती.
+अनेक मुले अनाथ होती.
+अनेकांच्या आई-वडिलांवर गुन्ह्यांचे
+आरोप होते किंवा ते तुरुंगात होते.
+</p>
+
+<p>
+या मुलांच्या आयुष्यात ना पुरेसे अन्न,
+ना कपडे, ना सुरक्षित घर आणि ना शिक्षण.
+</p>
+
+<p>
+मतीन यांनी मुलांना आश्वासन दिले —
+<strong>
+“तुम्हाला अन्न मिळेल, निवारा मिळेल आणि शिक्षण मिळेल.”
+</strong>
+</p>
+
+<p>
+सुमारे वर्षभराच्या प्रयत्नांनंतर
+विविध ठिकाणांहून <strong>188 मुलांना</strong>
+एकत्र आणण्यात आले.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">THE SCHOOL</span>
+<h2>९. शिक्षकाची नोकरी सोडून शाळेच्या स्वप्नासाठी</h2>
+</div>
+
+<div class="story">
+
+<p>
+समाजातील मुलांसाठी स्वतंत्र शाळा
+उभारण्याचा निर्णय मतीन यांनी घेतला.
+या ध्येयासाठी त्यांनी शिक्षकाची नोकरी सोडली.
+</p>
+
+<p>
+2012 मध्ये एका छोट्याशा जागेवर
+साध्या झोपडीत शाळेची सुरुवात झाली.
+कुटुंबातील शेळ्या विकून आणि शिक्षक म्हणून
+केलेल्या बचतीतून शाळेची सुरुवात करण्यात आली.
+</p>
+
+<p>
+परंतु शाळा सुरू करणे सोपे होते;
+शेकडो मुलांचे पोट भरणे हा खरा संघर्ष होता.
+कधी लोकांकडून भात-डाळ मागून मुलांचे
+जेवण चालवावे लागले.
+कधी मुलांना फक्त पातळ भाताचे पेज
+देण्याची वेळ आली.
+</p>
+
+<p>
+हा संघर्ष दीड वर्षापेक्षा अधिक काळ सुरू राहिला.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">PEOPLE'S SUPPORT • 2013</span>
+<h2>१०. भीक नको — मदत मागण्याचा नवा मार्ग</h2>
+</div>
+
+<div class="story">
+
+<p>
+ऑगस्ट 2013 मध्ये मतीन यांनी निधी
+उभारण्याची पद्धत बदलली.
+</p>
+
+<p>
+स्वतः भीक मागण्याऐवजी त्यांनी समाजातील
+प्रत्येक व्यक्तीला आपल्या शाळेसाठी
+<strong>एक रुपया देण्याचे आवाहन</strong> केले.
+</p>
+
+<p>
+यानंतर विविध संस्था, सामाजिक कार्यकर्ते,
+डॉक्टर, वकील, पत्रकार आणि सामान्य नागरिक
+त्यांच्या कार्याशी जोडले गेले.
+</p>
+
+<p>
+डॉ. प्रकाश आमटे यांच्यासह अनेकांनी मदत केली.
+हळूहळू शाळेला धान्य, कपडे, पुस्तके,
+स्टेशनरी आणि इतर आवश्यक साहित्य मिळू लागले.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">BUILDING THE DREAM • 2014</span>
+<h2>११. प्रश्नचिन्ह आदिवासी आश्रमशाळेची उभारणी</h2>
+</div>
+
+<div class="story">
+
+<p>
+2014 मध्ये शाळेच्या बांधकामाला सुरुवात झाली.
+विहिरी खोदण्यात आल्या आणि वर्गखोल्या बांधण्यात आल्या.
+</p>
+
+<p>
+ग्रंथालय, स्वच्छतागृहे, खुला मंच,
+अभ्यासासाठी जागा आणि खेळाचे मैदान
+तयार करण्यात आले.
+</p>
+
+<p>
+दूरदूरच्या भागातून येणाऱ्या विद्यार्थ्यांसाठी
+वसतिगृहाचीही व्यवस्था करण्यात आली.
+</p>
+
+<h3 style="color:var(--green);margin:25px 0 10px">
+“प्रश्नचिन्ह आदिवासी आश्रमशाळा”
+</h3>
+
+<p>
+या नावामागेही एक वेदना होती.
+</p>
+
+<p>
+फासेपारधी समाजाचे भविष्य काय?<br>
+या मुलांचे भविष्य काय?<br>
+शाळेला मान्यता मिळेल का?
+</p>
+
+<p>
+या सर्व प्रश्नचिन्हांमधूनच
+शाळेचे नाव जन्माला आले.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="highlight">
+<div class="container">
+
+<div class="section-title" style="color:white">
+<span class="label">GROWTH</span>
+<h2 style="color:white">
+१२. शाळा वाढत गेली… स्वप्न मोठे होत गेले
+</h2>
+</div>
+
+<div class="highlight-grid">
+
+<div class="stat">
+<strong>188</strong>
+<span>सुरुवातीची विद्यार्थी संख्या</span>
+</div>
+
+<div class="stat">
+<strong>450+</strong>
+<span>आजचे विद्यार्थी</span>
+</div>
+
+<div class="stat">
+<strong>2011</strong>
+<span>आश्रमशाळेच्या प्रवासाचा टप्पा</span>
+</div>
+
+<div class="stat">
+<strong>2005</strong>
+<span>संस्थेच्या सामाजिक प्रवासाची सुरुवात</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">STUDENTS • SPORTS • DREAMS</span>
+<h2>१३. रस्त्यावरची मुले मैदानावर आली</h2>
+</div>
+
+<div class="story">
+
+<p>
+ज्या मुलांच्या हातात कधीकाळी
+भीक मागण्याची वाटी होती,
+त्या मुलांच्या हातात आता पुस्तके आली.
+</p>
+
+<p>
+ज्या मुलांना उद्याची खात्री नव्हती,
+त्यांच्या डोळ्यांत भविष्याची स्वप्ने
+दिसू लागली.
+</p>
+
+<p>
+अनेक विद्यार्थ्यांनी दहावीची परीक्षा
+उत्तीर्ण केली.
+शाळेच्या मुलींच्या कबड्डी संघाने
+तालुका आणि राज्यस्तरीय स्पर्धांमध्ये
+यश मिळवले.
+</p>
+
+<p>
+ही केवळ क्रीडा क्षेत्रातील कामगिरी नव्हती.
+हा संदेश होता —
+<strong>
+वंचित मुलांमध्येही प्रतिभा असते.
+त्यांना फक्त संधीची गरज असते.
+</strong>
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section crisis">
+<div class="container">
+
+<div class="section-title">
+<span class="label">A MAJOR CRISIS</span>
+<h2>१४. समृद्धी महामार्गामुळे आलेले संकट</h2>
+</div>
+
+<div class="crisis-box">
+
+<p>
+ज्या शाळेसाठी मतीन यांनी अनेक वर्षे
+संघर्ष केला, ती शाळा पुन्हा एका
+मोठ्या संकटात सापडली.
+</p>
+
+<p>
+नागपूर-मुंबई समृद्धी महामार्गाच्या
+नियोजनामुळे शाळेच्या जागेवर प्रश्नचिन्ह निर्माण झाले.
+मतीन यांनी प्रशासन, अधिकारी आणि
+राजकीय नेत्यांकडे वारंवार पाठपुरावा केला.
+</p>
+
+<p>
+शाळा वाचवण्यासाठी प्रयत्न केले.
+परंतु शेवटी बुलडोझर शाळेच्या आवारात आले.
+</p>
+
+<p>
+वर्गखोल्या पाडल्या गेल्या.
+ग्रंथालय उद्ध्वस्त झाले.
+स्वच्छतागृहे आणि स्वयंपाकघर जमीनदोस्त झाले.
+खेळाचे मैदान नष्ट झाले.
+</p>
+
+<p>
+मतीन यांनी वर्षानुवर्षे लावलेली झाडेही उद्ध्वस्त झाली.
+एका क्षणात अनेक वर्षांची मेहनत मातीमध्ये मिळाली.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">NEVER GIVE UP</span>
+<h2>१५. पण मतीन भोसले थांबले नाहीत…</h2>
+</div>
+
+<div class="story">
+
+<p>
+शाळेची इमारत पाडली गेली.
+पण शिक्षणाचे स्वप्न पाडता आले नाही.
+</p>
+
+<p>
+शाळेतील शेकडो मुलांचे भविष्य पुन्हा
+उभे करण्याचे आव्हान मतीन यांच्यासमोर होते.
+</p>
+
+<p>
+पाणी, निवारा, वर्गखोल्या, स्वयंपाकघर,
+ग्रंथालय आणि विद्यार्थ्यांच्या शिक्षणाची व्यवस्था —
+प्रत्येक प्रश्न पुन्हा नव्याने उभा राहिला.
+</p>
+
+<p>
+पण मतीन पुन्हा कामाला लागले.
+कारण त्यांच्या दृष्टीने ही केवळ इमारत नव्हती.
+</p>
+
+<p>
+<strong>
+ही मुलांची घरे होती.<br>
+ही मुलांची शाळा होती.<br>
+ही त्यांच्या भविष्याची आशा होती.
+</strong>
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">THE HEART OF THE MISSION</span>
+<h2>१६. “मी त्या लेकरांची आई होतो, आहे आणि राहीलही…”</h2>
+</div>
+
+<div class="quote">
+
+<div class="quote-mark">“</div>
+
+<p>
+मी त्या लेकरांची आई होतो,
+आहे आणि राहीलही.
+</p>
 
 <small>
-वंचितांच्या शिक्षणाला...
+ही भावना त्यांच्या कार्यामागील
+माणुसकीची खरी ओळख आहे.
 </small>
 
 </div>
 
-</div>
+<div class="story" style="margin-top:35px">
+
+<p>
+ही मुले त्यांच्यासाठी केवळ विद्यार्थी नव्हती.
+ती त्यांच्या आयुष्याची जबाबदारी होती.
+</p>
+
+<p>
+फुटपाथवरून, रेल्वे स्थानकांवरून आणि
+रस्त्यांवरील सिग्नलवरून आणलेल्या मुलांना
+पुन्हा त्याच परिस्थितीत जाण्याची वेळ येऊ नये,
+यासाठी ते लढत राहिले.
+</p>
 
 </div>
-
 </div>
-
 </section>
 
 
-
-<!-- INTRO -->
-
-<section class="section intro">
-
+<section class="section alt">
 <div class="container">
 
-<div class="section-heading">
+<div class="section-title">
+<span class="label">PEOPLE BEHIND THE JOURNEY</span>
+<h2>१७. समाजाच्या मदतीने उभा राहिलेला संघर्ष</h2>
+</div>
 
-<span class="section-label">
-THE BEGINNING
-</span>
-
-<h2>
-एका विचारातून उभी राहिलेली चळवळ
-</h2>
+<div class="story">
 
 <p>
-शिक्षणाला परिवर्तनाचे साधन मानून समाजातील
-वंचित मुलांसाठी उभा राहिलेला एक दीर्घ प्रवास.
+मतीन यांच्या संघर्षात ते एकटे नव्हते.
+</p>
+
+<p>
+पत्रकार, सामाजिक कार्यकर्ते, शिक्षक,
+डॉक्टर, वकील, विविध संस्था, दाते
+आणि सामान्य नागरिक मदतीला पुढे आले.
+</p>
+
+<p>
+कुणी धान्य दिले.<br>
+कुणी कपडे दिले.<br>
+कुणी पुस्तके दिली.<br>
+कुणी आर्थिक मदत केली.<br>
+कुणी स्वतःचा वेळ दिला.
+</p>
+
+<p>
+या सामूहिक मदतीमुळे प्रश्नचिन्ह
+आश्रमशाळेचे कार्य पुढे चालू राहिले.
 </p>
 
 </div>
-
-
-<div class="intro-grid">
-
-
-<div class="intro-card">
-
-<div class="number">
-2005
 </div>
-
-<h3>
-संस्थेच्या सामाजिक प्रवासाची सुरुवात
-</h3>
-
-<p>
-वंचित आणि दुर्लक्षित समाजघटकांसाठी शिक्षण,
-सामाजिक आधार आणि परिवर्तनाच्या दिशेने
-संस्थेचा प्रवास सुरू झाला.
-</p>
-
-</div>
-
-
-<div class="story-text">
-
-<p>
-
-फासेपारधी समाजातील अनेक मुलांना शिक्षण,
-सुरक्षित निवारा, अन्न आणि सन्मानाचे जीवन
-मिळावे, या ध्येयाने <strong>मतीन शंकराव भोसले सरांनी</strong>
-आपल्या जीवनाचा मोठा भाग समाजकार्याला
-समर्पित केला.
-
-</p>
-
-
-<p>
-
-स्वतः अत्यंत प्रतिकूल परिस्थितीतून पुढे आलेल्या
-मतीन सरांनी शिक्षणाची ताकद अनुभवली.
-त्याच शिक्षणाच्या माध्यमातून आपल्या समाजातील
-मुलांचे भविष्य बदलण्याचा संकल्प त्यांनी केला.
-
-</p>
-
-
-<p>
-
-हा प्रवास केवळ एका व्यक्तीचा प्रवास नाही;
-तो एका समाजाच्या पुढच्या पिढीला
-शिक्षणाच्या मुख्य प्रवाहात आणण्याचा प्रयत्न आहे.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- JOURNEY -->
-
-<section
-class="section journey"
-id="journey">
-
+<section class="section">
 <div class="container">
 
-<div class="section-heading">
+<div class="section-title">
+<span class="label">A THOUGHT • A MOVEMENT</span>
+<h2>१८. मतीन भोसले — एका व्यक्तीची नव्हे, एका विचाराची ओळख</h2>
+</div>
 
-<span class="section-label">
-THE JOURNEY
-</span>
-
-<h2>
-प्रवास : संघर्षातून परिवर्तनाकडे
-</h2>
+<div class="story">
 
 <p>
-प्रत्येक टप्प्यामागे शिक्षण आणि मुलांच्या
-भविष्यासाठीचा एक स्पष्ट संकल्प.
+मतीन भोसले यांची कहाणी ही केवळ
+एका व्यक्तीच्या यशाची कहाणी नाही.
+</p>
+
+<p>
+ही एका संपूर्ण समाजाच्या परिवर्तनाची सुरुवात आहे.
+</p>
+
+<p>
+ज्यांना समाजाने उपेक्षित केले,
+ज्यांच्या हातात पुस्तकाऐवजी भीक मागण्याची
+वाटी आली, ज्यांच्या डोक्यावर घराऐवजी
+पाल होते आणि ज्यांना शिक्षणापासून दूर ठेवले गेले —
+त्या मुलांना मतीन यांनी शिक्षणाच्या
+मुख्य प्रवाहात आणण्याचा प्रयत्न केला.
 </p>
 
 </div>
-
-
-<div class="timeline">
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<span class="timeline-year">
-2005
-</span>
-
-<h3>
-संस्थेचा सामाजिक प्रवास
-</h3>
-
-<p>
-
-वंचित समाजघटकांसाठी सामाजिक कार्य,
-शिक्षण आणि परिवर्तनाच्या दिशेने
-संस्थेचा प्रवास आकार घेऊ लागला.
-
-</p>
-
 </div>
-
-</div>
-
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<span class="timeline-year">
-2011
-</span>
-
-<h3>
-प्रश्नचिन्ह आदिवासी आश्रमशाळेची सुरुवात
-</h3>
-
-<p>
-
-प्रश्नचिन्ह आदिवासी आश्रमशाळेचा प्रवास
-सुरू झाला. सुरुवातीच्या काळात
-<strong>188 विद्यार्थी</strong> शिक्षणाच्या
-प्रवाहात जोडले गेले.
-
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<span class="timeline-year">
-एक नवा अध्याय
-</span>
-
-<h3>
-शिक्षणासोबत निवासी आधार
-</h3>
-
-<p>
-
-शिक्षणाबरोबरच मुलांना सुरक्षित निवारा,
-अन्न, कपडे, शैक्षणिक साहित्य आणि
-आवश्यक आधार देण्याच्या दिशेने
-शाळेचा विस्तार होत गेला.
-
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<span class="timeline-year">
-आज
-</span>
-
-<h3>
-450+ विद्यार्थ्यांचा प्रवास
-</h3>
-
-<p>
-
-आज <strong>450+ विद्यार्थी</strong> शिक्षण,
-निवासी सुविधा आणि विविध उपक्रमांच्या
-माध्यमातून आपले भविष्य घडवत आहेत.
-
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- MISSION -->
-
-<section class="section mission">
-
+<section class="section alt">
 <div class="container">
 
-<div class="section-heading">
+<div class="section-title">
+<span class="label">THE BELIEF</span>
+<h2>१९. त्यांचा विश्वास</h2>
+</div>
 
-<span class="section-label">
-THE MISSION
-</span>
+<div class="quote">
 
-<h2>
-मतीन सरांच्या कार्यामागची मूलभूत भूमिका
-</h2>
+<div class="quote-mark">“</div>
+
+<p>शिक्षणातूनच खरा बदल घडतो.</p>
+
+<small>मतीन शंकराव भोसले सर</small>
 
 </div>
 
-
-<div class="mission-grid">
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-📚
-</div>
-
-<h3>
-शिक्षण
-</h3>
+<div class="story" style="margin-top:35px">
 
 <p>
-वंचित मुलांना शिक्षणाच्या मुख्य प्रवाहात
-आणणे आणि त्यांच्या भविष्यासाठी
-संधी निर्माण करणे.
+स्वतःच्या आयुष्यात शिक्षणामुळे झालेला
+बदल त्यांनी अनुभवला.
+म्हणूनच त्यांनी समाजातील मुलांसाठी
+शिक्षणाला सर्वात मोठे साधन मानले.
+</p>
+
+<p>
+त्यांच्यासाठी शाळा म्हणजे केवळ चार भिंती नाहीत.
+</p>
+
+<p>
+<strong>
+शाळा म्हणजे सुरक्षित घर.<br>
+शाळा म्हणजे अन्न.<br>
+शाळा म्हणजे संस्कार.<br>
+शाळा म्हणजे आत्मविश्वास.<br>
+शाळा म्हणजे भविष्य.
+</strong>
 </p>
 
 </div>
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-🏠
 </div>
-
-<h3>
-सुरक्षित निवारा
-</h3>
-
-<p>
-शिक्षणासोबत मुलांना सुरक्षित,
-मानवी आणि सन्मानजनक वातावरण
-उपलब्ध करून देणे.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-🍚
-</div>
-
-<h3>
-अन्न व पोषण
-</h3>
-
-<p>
-मुलांच्या शिक्षणाबरोबर त्यांच्या
-दैनंदिन गरजा आणि पोषणाची
-काळजी घेणे.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-💡
-</div>
-
-<h3>
-डिजिटल शिक्षण
-</h3>
-
-<p>
-आधुनिक तंत्रज्ञान आणि डिजिटल
-साधनांद्वारे विद्यार्थ्यांना
-नवीन संधींशी जोडणे.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-⚽
-</div>
-
-<h3>
-सर्वांगीण विकास
-</h3>
-
-<p>
-शिक्षणासोबत क्रीडा, संस्कार,
-कौशल्य आणि आत्मविश्वासाचा
-विकास साधणे.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-🤝
-</div>
-
-<h3>
-सन्मान व स्वाभिमान
-</h3>
-
-<p>
-प्रत्येक मुलाला समान संधी,
-सन्मान आणि स्वतःच्या पायावर
-उभे राहण्याची दिशा देणे.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- SCHOOL STORY -->
-
-<section class="section school-story">
-
+<section class="section">
 <div class="container">
 
-<div class="school-grid">
+<div class="section-title">
+<span class="label">THE JOURNEY CONTINUES</span>
+<h2>२०. आजही सुरू असलेला प्रवास</h2>
+</div>
 
-
-<div>
-
-<span class="section-label">
-PRASHNACHINH ADIVASI ASHRAM SCHOOL
-</span>
-
-<h2>
-प्रश्नचिन्ह : एका प्रश्नातून उभा राहिलेला परिवर्तनाचा प्रवास
-</h2>
+<div class="story">
 
 <p>
-
-ज्या मुलांना समाजाच्या मुख्य प्रवाहापासून
-दूर राहण्याची वेळ आली होती, त्यांच्यासाठी
-शिक्षणाचे दार उघडण्याचा प्रयत्न म्हणजे
-प्रश्नचिन्ह आदिवासी आश्रमशाळेचा प्रवास.
-
+मतीन भोसले यांचा प्रवास अजून संपलेला नाही.
+आजही त्यांचे ध्येय तेच आहे —
 </p>
 
-
 <p>
-
-2011 मध्ये सुरू झालेल्या या शैक्षणिक
-प्रवासाने अनेक मुलांना शिक्षण,
-निवासी आधार आणि सुरक्षित वातावरण
-मिळवून देण्याचा प्रयत्न केला आहे.
-
+फासेपारधी समाजातील वंचित, अनाथ आणि
+अत्यंत गरजू मुलांना शिक्षणाच्या
+मुख्य प्रवाहात आणणे.
 </p>
 
+<p>
+त्यांना चांगले अन्न मिळावे.<br>
+त्यांना सुरक्षित निवारा मिळावा.<br>
+त्यांच्या हातात पुस्तके असावीत.<br>
+त्यांना क्रीडा आणि कौशल्यांची संधी मिळावी.<br>
+त्यांना समाजात सन्मानाने जगता यावे.
+</p>
 
 <p>
-
-आज 450+ विद्यार्थी या प्रवासाचा भाग आहेत.
-त्यांच्या डोळ्यातील स्वप्न आणि त्यांच्या
-भविष्यातील शक्यता हीच या कार्याची
-सर्वात मोठी प्रेरणा आहे.
-
+आणि सर्वात महत्त्वाचे म्हणजे —
+त्यांनी आपल्या मुलांकडे पाहताना
+“आपल्या मुलांचे भविष्य काय?”
+असा प्रश्न विचारण्याची वेळ येऊ नये.
 </p>
 
 </div>
-
-
-<div class="school-photo">
-
-<img
-src="school1.jpg"
-alt="प्रश्नचिन्ह आदिवासी आश्रमशाळा">
-
 </div>
-
-
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- IMPACT -->
-
-<section class="section impact">
-
+<section class="section alt">
 <div class="container">
 
-<div class="section-heading">
+<div class="section-title">
+<span class="label">VISION</span>
+<h2>२१. मतीन सरांचे ध्येय</h2>
+</div>
 
-<span class="section-label">
-IMPACT
-</span>
+<div class="quote">
 
-<h2>
-प्रवासाचा परिणाम
-</h2>
+<div class="quote-mark">“</div>
 
 <p>
-आकड्यांमागे आहेत हजारो स्वप्ने,
-कुटुंबांची आशा आणि एका चांगल्या
-भविष्यासाठीचा प्रयत्न.
+रस्त्यावर, फुटपाथवर आणि अत्यंत प्रतिकूल
+परिस्थितीत वाढणाऱ्या मुलांना शिक्षण,
+सुरक्षित वातावरण, प्रेम आणि चांगले
+भविष्य मिळवून देणे.
 </p>
 
 </div>
 
-
-<div class="impact-grid">
-
-
-<div class="impact-card">
-
-<div class="impact-number">
-2005
 </div>
-
-<h3>
-संस्थेचा प्रवास
-</h3>
-
-<p>
-सामाजिक कार्याची सुरुवात
-</p>
-
-</div>
-
-
-<div class="impact-card">
-
-<div class="impact-number">
-2011
-</div>
-
-<h3>
-आश्रमशाळेची सुरुवात
-</h3>
-
-<p>
-शिक्षणाच्या प्रवासाचा महत्त्वाचा टप्पा
-</p>
-
-</div>
-
-
-<div class="impact-card">
-
-<div class="impact-number">
-188
-</div>
-
-<h3>
-सुरुवातीचे विद्यार्थी
-</h3>
-
-<p>
-2011 मधील प्रारंभिक विद्यार्थी संख्या
-</p>
-
-</div>
-
-
-<div class="impact-card">
-
-<div class="impact-number">
-450+
-</div>
-
-<h3>
-आजचे विद्यार्थी
-</h3>
-
-<p>
-शिक्षण आणि विकासाच्या प्रवासात
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- QUOTE -->
-
-<section class="quote-section">
-
+<section class="section">
 <div class="container">
 
-<div class="quote-box">
-
-<div class="quote-mark">
-“
+<div class="section-title">
+<span class="label">A STORY THE WORLD SHOULD KNOW</span>
+<h2>२२. जगाला सांगण्यासारखी एक प्रेरणादायी कहाणी</h2>
 </div>
 
+<div class="story">
+
+<p>एका गरीब फासेपारधी कुटुंबातील मुलगा…</p>
+<p>भेदभाव सहन करणारा विद्यार्थी…</p>
+<p>जात प्रमाणपत्रासाठी संघर्ष करणारा युवक…</p>
+<p>CRPF चे प्रशिक्षण सोडलेला तरुण…</p>
+<p>शिक्षक बनलेला माणूस…</p>
+<p>रस्त्यावरच्या मुलांना शोधणारा समाजसेवक…</p>
+<p>188 मुलांना एकत्र आणणारा कार्यकर्ता…</p>
+<p>झोपडीत शाळा सुरू करणारा शिक्षक…</p>
+<p>शेकडो मुलांसाठी आश्रमशाळा उभी करणारा संस्थापक…</p>
 <p>
-
-एका मुलाच्या हातात पुस्तक दिले,
-तर आपण एका पिढीचे भविष्य बदलू शकतो.
-
+आणि स्वतःच्या डोळ्यांसमोर शाळा उद्ध्वस्त
+होताना पाहूनही पुन्हा उभा राहणारा
+संघर्षशील माणूस…
 </p>
 
-<small>
-— मतीन शंकराव भोसले सर
-</small>
+<h3 style="color:var(--green);margin:25px 0">
+हीच आहे — मतीन भोसले यांची कहाणी.
+</h3>
 
+<p>
+ही कहाणी एका व्यक्तीची असली तरी
+तिचा संदेश संपूर्ण जगासाठी आहे —
+</p>
+
+<div class="quote">
+<p>
+एका मुलाला शिक्षणाची संधी दिली,
+तर आपण फक्त त्याचे आयुष्य बदलत नाही;
+आपण एका कुटुंबाचे, एका समाजाचे
+आणि पुढच्या पिढीचे भविष्य बदलत असतो.
+</p>
 </div>
 
 </div>
-
+</div>
 </section>
 
 
+<!-- YOUTUBE -->
 
-<!-- MEDIA -->
-
-<section class="section media">
-
+<section class="section alt">
 <div class="container">
 
-<div class="section-heading">
-
-<span class="section-label">
-MEDIA • YOUTUBE
-</span>
-
-<h2>
-मतीन भोसले सरांचा प्रवास — व्हिडिओंमधून
-</h2>
-
+<div class="section-title">
+<span class="label">MEDIA • YOUTUBE</span>
+<h2>मतीन भोसले सरांचा जीवनप्रवास — व्हिडिओंमधून</h2>
 <p>
-कार्याचा प्रवास प्रत्यक्ष पाहण्यासाठी
-आणि ऐकण्यासाठी.
+त्यांच्या कार्याचा आणि प्रश्नचिन्ह
+आश्रमशाळेच्या प्रवासाचा डिजिटल संग्रह.
 </p>
-
 </div>
 
+<div class="media-grid">
 
-<div class="video-grid">
-
-
-<div class="video-card">
-
+<div class="video">
 <iframe
 src="https://www.youtube.com/embed/CrGevRwRDCI"
-title="Matin Bhosale Sir's Journey"
-loading="lazy"
-allowfullscreen>
-</iframe>
-
-<div class="video-info">
-
-<h3>
-मतीन भोसले सरांचा जीवनप्रवास
-</h3>
-
-<p>
-Founder Journey • YouTube
-</p>
-
+title="Matin Bhosale"
+allowfullscreen></iframe>
+<div class="video-title">मतीन भोसले सरांचा जीवनप्रवास</div>
 </div>
 
-</div>
-
-
-
-<div class="video-card">
-
+<div class="video">
 <iframe
-src="https://www.youtube.com/embed/B73WNW-Hgjc"
-title="Prashnachinh Adivasi Ashram School"
-loading="lazy"
-allowfullscreen>
-</iframe>
+src="https://www.youtube.com/embed/EhR0QCwquc8"
+title="Matin Bhosale"
+allowfullscreen></iframe>
+<div class="video-title">मतीन भोसले — सामाजिक प्रवास</div>
+</div>
 
-<div class="video-info">
+<div class="video">
+<iframe
+src="https://www.youtube.com/embed/1-1ETYxU3P8"
+title="Prashnachinh School"
+allowfullscreen></iframe>
+<div class="video-title">प्रश्नचिन्ह आदिवासी आश्रमशाळा</div>
+</div>
 
-<h3>
-प्रश्नचिन्ह आदिवासी आश्रमशाळा
-</h3>
-
-<p>
-School Journey • YouTube
-</p>
-
+<div class="video">
+<iframe
+src="https://www.youtube.com/embed/hkRQf4bt-CI"
+title="Prashnachinh School"
+allowfullscreen></iframe>
+<div class="video-title">शाळेचा प्रवास</div>
 </div>
 
 </div>
 
+<div class="youtube-list">
+
+<a class="youtube-link"
+href="https://youtu.be/mpQUN06eHjs"
+target="_blank">▶ YouTube Video 05</a>
+
+<a class="youtube-link"
+href="https://youtu.be/NteWscB-STg"
+target="_blank">▶ YouTube Video 06</a>
+
+<a class="youtube-link"
+href="https://youtu.be/0z0XXzaoaMs"
+target="_blank">▶ YouTube Video 07</a>
+
+<a class="youtube-link"
+href="https://youtu.be/FcBKe15u7VA"
+target="_blank">▶ YouTube Video 08</a>
+
+<a class="youtube-link"
+href="https://youtu.be/7YRcJJOXO0U"
+target="_blank">▶ YouTube Video 09</a>
+
+<a class="youtube-link"
+href="https://youtu.be/wEML_FWtv64"
+target="_blank">▶ YouTube Video 10</a>
+
+<a class="youtube-link"
+href="https://youtu.be/1no-VJDP5nM"
+target="_blank">▶ YouTube Video 11</a>
+
+<a class="youtube-link"
+href="https://youtu.be/8uMx4_rvEvE"
+target="_blank">▶ YouTube Video 12</a>
+
+<a class="youtube-link"
+href="https://youtu.be/1jXsrBFNn-Q"
+target="_blank">▶ YouTube Video 13</a>
+
+<a class="youtube-link"
+href="https://youtu.be/shc-LXDIW8w"
+target="_blank">▶ YouTube Video 14</a>
+
+<a class="youtube-link"
+href="https://youtu.be/T_tsuimaZBk"
+target="_blank">▶ YouTube Video 15</a>
 
 </div>
 
 </div>
-
 </section>
 
 
-
-<!-- SOCIAL -->
-
-<section class="section social-section">
-
+<section class="section social">
 <div class="container">
 
-<div class="section-heading">
-
-<span class="section-label">
-CONNECT
-</span>
-
-<h2>
-मतीन भोसले सरांशी जोडलेले राहा
-</h2>
-
+<div class="section-title">
+<span class="label">CONNECT</span>
+<h2>मतीन भोसले सरांशी जोडलेले राहा</h2>
 </div>
 
-
-<div class="social-grid">
-
 <a
+class="facebook"
 href="https://www.facebook.com/matin.bhosale.58"
-target="_blank"
-rel="noopener"
-class="social-btn facebook">
-
-<span>f</span>
+target="_blank">
 Facebook Profile
-
-</a>
-
-
-<a
-href="https://www.youtube.com/"
-target="_blank"
-rel="noopener"
-class="social-btn youtube">
-
-<span>▶</span>
-YouTube
-
 </a>
 
 </div>
-
-</div>
-
 </section>
 
 
-
-<!-- FINAL CTA -->
-
-<section class="final-cta">
-
+<section class="final">
 <div class="container">
 
-<h2>
-एक हात मदतीचा...
-</h2>
+<h2>एक हात मदतीचा...</h2>
 
 <p>
-वंचित मुलांच्या शिक्षणासाठी,
-सुरक्षित भविष्यासाठी आणि
-स्वाभिमानाच्या जीवनासाठी
-आपणही या प्रवासाचा भाग होऊ शकता.
+वंचितांच्या शिक्षणाला...
+त्यांच्या उज्ज्वल भविष्याला...
 </p>
 
-<a
-href="donate.html"
-class="btn btn-primary">
-
+<a href="donate.html" class="btn btn-gold">
 ❤️ देणगी द्या
-
 </a>
 
 </div>
-
 </section>
 
-</main>
+</div>
 
 
+<!-- =====================================================
+ENGLISH
+===================================================== -->
 
-<!-- =========================================================
-     ENGLISH PAGE
-     ========================================================= -->
-
-<main
-class="lang-en"
-id="englishContent">
-
-
-<!-- HERO -->
+<div id="enPage" class="lang-en">
 
 <section class="hero">
-
-<div class="hero-container">
+<div class="container hero-grid">
 
 <div>
 
-<span class="hero-kicker">
-THE FOUNDER • THE JOURNEY • THE MISSION
-</span>
-
+<span class="kicker">THE FOUNDER • THE JOURNEY • THE MISSION</span>
 
 <h1>
-
 Matin Shankarrao<br>
-
-<span>
-Bhosale Sir
-</span>
-
+<span>Bhosale Sir</span>
 </h1>
 
-
-<p class="hero-lead">
-
+<p>
 From struggle to an educational movement —
-a lifelong commitment to education,
+a lifelong journey dedicated to education,
 safe shelter, dignity and opportunity
 for deprived children from the Phanse Pardhi community.
-
 </p>
 
+<div class="hero-buttons">
 
-<div class="hero-actions">
-
-<a
-href="#journey-en"
-class="btn btn-primary">
-
-Explore the Journey ↓
-
+<a href="#journeyEN" class="btn btn-primary">
+Explore Full Journey ↓
 </a>
 
-
-<a
-href="https://www.facebook.com/matin.bhosale.58"
+<a href="https://www.facebook.com/matin.bhosale.58"
 target="_blank"
-rel="noopener"
 class="btn btn-outline">
-
 Facebook Profile
-
 </a>
 
 </div>
 
 </div>
-
 
 <div class="hero-photo">
-
-<div class="hero-photo-card">
-
-<img
-src="founder.jpg"
-alt="Matin Shankarrao Bhosale Sir">
-
-<div class="hero-photo-badge">
-
-<strong>
-A Helping Hand...
-</strong>
-
-<small>
-For the Education of the Deprived...
-</small>
-
+<img src="founder.jpg" alt="Matin Shankarrao Bhosale Sir">
 </div>
 
 </div>
-
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- INTRO -->
-
-<section class="section intro">
-
+<section class="section">
 <div class="container">
 
-<div class="section-heading">
-
-<span class="section-label">
-THE BEGINNING
-</span>
-
-<h2>
-A Movement Born from a Powerful Belief
-</h2>
-
+<div class="section-title">
+<span class="label">THE BEGINNING</span>
+<h2>From Struggle to an Educational Revolution</h2>
 <p>
-A long journey built around the belief that
-education can create dignity, opportunity
-and lasting social change.
+A journey that began with one person's
+determination to create change for a community.
 </p>
-
 </div>
 
+<div class="intro">
 
-<div class="intro-grid">
-
-
-<div class="intro-card">
-
-<div class="number">
-2005
+<div class="year-card">
+<strong>2005</strong>
+<h3>The Social Mission Takes Shape</h3>
+<p>
+The journey towards education,
+social support and transformation
+began taking shape.
+</p>
 </div>
 
-<h3>
-The Beginning of the Social Mission
-</h3>
+<div class="story">
 
 <p>
-The organisation's journey began with a
-commitment towards education, social support
-and transformation for deprived communities.
+The journey of Matin Bhosale Sir,
+which began in Mangrul Chavala,
+Amravati district, is not merely
+the story of one individual's struggle.
 </p>
 
-</div>
-
-
-<div class="story-text">
-
 <p>
-
-With the vision of providing education,
-safe shelter, food and a dignified life
-to deprived children from the Phanse Pardhi
-community, <strong>Matin Shankarrao Bhosale Sir</strong>
-dedicated a major part of his life to social work.
-
+It is a journey of fighting poverty,
+responding to social exclusion,
+creating change through education
+and working towards a dignified life
+for children from the Phanse Pardhi community.
 </p>
 
-
 <p>
-
 Having grown up in extremely difficult
-circumstances, Matin Sir experienced the
-power of education. He then resolved to use
-education as a pathway to transform the future
-of children from his community.
-
-</p>
-
-
-<p>
-
-His journey is not only the story of one person.
-It represents a continuing effort to bring
-a generation of children into the mainstream
-of education and opportunity.
-
+circumstances, Matin Sir transformed
+his experiences of hunger, migration,
+social discrimination and lack of education
+into a force for change.
 </p>
 
 </div>
-
 </div>
-
 </div>
-
 </section>
 
 
-
-<!-- JOURNEY -->
-
-<section
-class="section journey"
-id="journey-en">
-
+<section class="section alt">
 <div class="container">
 
-<div class="section-heading">
+<div class="section-title">
+<span class="label">EARLY LIFE</span>
+<h2>1. A Childhood of Struggle</h2>
+</div>
 
-<span class="section-label">
-THE JOURNEY
-</span>
+<div class="story">
 
-<h2>
-From Struggle to Transformation
+<p>
+Matin Bhosale spent his childhood
+in extremely difficult circumstances
+within the Phanse Pardhi community.
+</p>
+
+<p>
+His father had to depend on labour and
+efforts to hunt birds and small animals
+in the forest to support the family.
+There were frequent shortages of food
+and periods of hunger.
+</p>
+
+<p>
+Many families in the Phanse Pardhi community
+lived away from the mainstream, often in
+temporary settlements. Education, employment,
+official documents and basic facilities
+were largely unavailable.
+</p>
+
+<p>
+Matin experienced this pain of his community
+from childhood. This experience later became
+the inspiration for his life's work.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">EDUCATION</span>
+<h2>2. The First Step Towards Education</h2>
+</div>
+
+<div class="story">
+
+<p>
+During Matin's childhood, his father
+spent time in jail following an allegation.
+After his release, his father decided
+to send his children to school.
+</p>
+
+<p>
+Matin entered school, but the journey
+was not easy.
+As a child from the Phanse Pardhi community,
+he experienced discrimination and ridicule.
+</p>
+
+<p>
+For some time, this environment caused
+him to stop attending school.
+His father, however, did not give up.
+</p>
+
+<p>
+Some teachers provided him with love and support.
+He received a uniform, school bag, slate,
+books and educational materials.
+Matin responded to this support through his studies.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">SOCIAL AWAKENING</span>
+<h2>3. Social Awareness Through Education</h2>
+</div>
+
+<div class="story">
+
+<p>
+Poems, prayers, songs and the life stories
+of great personalities he encountered
+at school gave Matin a new direction.
+</p>
+
+<p>
+The lives of Mahatma Gandhi and
+Chhatrapati Shivaji Maharaj inspired him.
+</p>
+
+<p>
+He realised:
+<strong>
+Education is not merely a means to obtain a job;
+education is a force capable of transforming society.
+</strong>
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">IDENTITY & RIGHTS</span>
+<h2>4. The Struggle for Caste and Identity Documents</h2>
+</div>
+
+<div class="story">
+
+<p>
+While studying in Class 9, Matin became aware
+of a major problem faced by his community
+through an incident at a ration shop.
+</p>
+
+<p>
+His family did not have a ration card.
+A caste certificate and identity documents
+were required to obtain one.
+</p>
+
+<p>
+Many Phanse Pardhi families had no official documents.
+Matin decided not to keep this issue limited
+to his own family.
+</p>
+
+<p>
+He brought members of the community together,
+followed up with the administration and worked
+through applications, representations and
+collective action.
+</p>
+
+<p>
+This became one of the first major milestones
+in his social work.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">A NEW DIRECTION</span>
+<h2>5. From CRPF Training Back to Education</h2>
+</div>
+
+<div class="story">
+
+<p>
+After passing Class 10, Matin was selected
+for the CRPF and began training.
+</p>
+
+<p>
+However, physical difficulties and injury
+forced him to leave the training.
+</p>
+
+<p>
+He did not allow this setback to defeat him.
+He returned to education and passed
+his Class 12 examination in 2004.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">TEACHER</span>
+<h2>6. A New Beginning as a Teacher</h2>
+</div>
+
+<div class="story">
+
+<p>
+In 2005, Matin received an opportunity
+to work as a teacher in a Zilla Parishad school.
+He taught students in the Dharni area.
+</p>
+
+<p>
+As a teacher, one thought became increasingly clear:
+</p>
+
+<p>
+<strong>
+“The education that changed my life
+can also change the future of children
+from my community.”
+</strong>
+</p>
+
+<p>
+Even while working as a teacher,
+he remained connected with the problems
+faced by the Phanse Pardhi community.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">TURNING POINT • 2009</span>
+<h2>7. Two Children Changed the Direction of His Life</h2>
+</div>
+
+<div class="story">
+
+<p>
+An incident in 2009 became a decisive
+turning point in Matin's life.
+</p>
+
+<p>
+He received information that the bodies
+of two young children from the Phanse Pardhi
+community had been found near a stream.
+Their parents were in police custody.
+</p>
+
+<p>
+Matin reached the location.
+The deaths of those innocent children
+deeply shook him.
+</p>
+
+<div class="quote">
+
+<div class="quote-mark">“</div>
+
+<p>
+Should I work only for my own family
+as a teacher, or should I also do
+something for the children of my community?
+</p>
+
+</div>
+
+<p>
+This incident changed the direction
+of his life. He decided to dedicate
+his life to deprived children.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">THE SEARCH</span>
+<h2>8. Searching for Children on the Streets</h2>
+</div>
+
+<div class="story">
+
+<p>
+Matin took leave without pay from
+his teaching job and began searching
+for children from the Phanse Pardhi
+community with the help of volunteers.
+</p>
+
+<p>
+He found children begging at railway stations,
+traffic signals and public places.
+Many were orphans. In many cases,
+their parents faced criminal allegations
+or were in jail.
+</p>
+
+<p>
+These children had insufficient food,
+clothing, shelter and access to education.
+</p>
+
+<p>
+Matin promised them:
+<strong>
+“You will have food, shelter and education.”
+</strong>
+</p>
+
+<p>
+After nearly a year of efforts,
+<strong>188 children</strong> were brought
+together from different locations.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">THE SCHOOL</span>
+<h2>9. Leaving Teaching to Build a School</h2>
+</div>
+
+<div class="story">
+
+<p>
+Matin decided to establish a school
+specifically for children from his community.
+He left his teaching job for this mission.
+</p>
+
+<p>
+In 2012, the school began in a simple
+hut on a small piece of land.
+The beginning was supported by selling
+family goats and using savings earned
+while working as a teacher.
+</p>
+
+<p>
+Starting a school was one challenge;
+feeding hundreds of children was another.
+At times, rice and dal had to be collected
+from people to provide meals.
+Sometimes the children had only thin rice porridge.
+</p>
+
+<p>
+This struggle continued for more than a year and a half.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">PEOPLE'S SUPPORT • 2013</span>
+<h2>10. A New Way of Asking for Support</h2>
+</div>
+
+<div class="story">
+
+<p>
+In August 2013, Matin changed the way
+he sought financial support.
+</p>
+
+<p>
+Instead of begging himself, he appealed
+to people in society to contribute
+<strong>one rupee for the school.</strong>
+</p>
+
+<p>
+Institutions, social workers, doctors,
+lawyers, journalists and ordinary citizens
+gradually joined the mission.
+</p>
+
+<p>
+Dr. Prakash Amte and many others
+also extended support.
+The school began receiving food grains,
+clothes, books, stationery and other materials.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">BUILDING THE DREAM • 2014</span>
+<h2>11. Building Prashnachinh Adivasi Ashram School</h2>
+</div>
+
+<div class="story">
+
+<p>
+Construction of the school began in 2014.
+Wells were developed and classrooms were built.
+</p>
+
+<p>
+A library, sanitation facilities,
+an open stage, study areas and
+a playground were developed.
+</p>
+
+<p>
+Residential arrangements were also
+created for students coming from distant areas.
+</p>
+
+<h3 style="color:var(--green);margin:25px 0 10px">
+“Prashnachinh Adivasi Ashram School”
+</h3>
+
+<p>
+The name itself carried a deep question.
+</p>
+
+<p>
+What is the future of the Phanse Pardhi community?<br>
+What is the future of these children?<br>
+Will the school receive recognition?
+</p>
+
+<p>
+The name emerged from these questions —
+the many question marks surrounding their future.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="highlight">
+<div class="container">
+
+<div class="section-title">
+<span class="label">GROWTH</span>
+<h2 style="color:white">
+12. The School Grew — The Dream Grew
 </h2>
-
-<p>
-Every milestone reflects a continuing commitment
-to the education and future of children.
-</p>
-
 </div>
 
+<div class="highlight-grid">
 
-<div class="timeline">
+<div class="stat">
+<strong>188</strong>
+<span>Initial students</span>
+</div>
 
+<div class="stat">
+<strong>450+</strong>
+<span>Students today</span>
+</div>
 
-<div class="timeline-item">
+<div class="stat">
+<strong>2011</strong>
+<span>Important school journey milestone</span>
+</div>
 
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<span class="timeline-year">
-2005
-</span>
-
-<h3>
-Beginning of the Social Mission
-</h3>
-
-<p>
-
-The organisation's social journey began with
-a focus on deprived communities, education
-and meaningful social transformation.
-
-</p>
-
+<div class="stat">
+<strong>2005</strong>
+<span>Beginning of the organisation's social journey</span>
 </div>
 
 </div>
-
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<span class="timeline-year">
-2011
-</span>
-
-<h3>
-Prashnachinh Adivasi Ashram School
-</h3>
-
-<p>
-
-The journey of Prashnachinh Adivasi Ashram
-School began. In its initial phase,
-<strong>188 students</strong> became part
-of the educational journey.
-
-</p>
-
 </div>
-
-</div>
-
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<span class="timeline-year">
-A New Chapter
-</span>
-
-<h3>
-Education with Residential Support
-</h3>
-
-<p>
-
-Along with education, the school developed
-support systems for safe shelter, food,
-clothing, educational materials and
-the everyday needs of children.
-
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<span class="timeline-year">
-Today
-</span>
-
-<h3>
-A Journey of 450+ Students
-</h3>
-
-<p>
-
-Today, <strong>450+ students</strong> are
-part of the journey, building their future
-through education, residential support
-and developmental opportunities.
-
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- MISSION -->
-
-<section class="section mission">
-
+<section class="section">
 <div class="container">
 
-<div class="section-heading">
-
-<span class="section-label">
-THE MISSION
-</span>
-
-<h2>
-The Values Behind the Work
-</h2>
-
+<div class="section-title">
+<span class="label">STUDENTS • SPORTS • DREAMS</span>
+<h2>13. Children from the Streets Reached the Playing Field</h2>
 </div>
 
-
-<div class="mission-grid">
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-📚
-</div>
-
-<h3>
-Education
-</h3>
+<div class="story">
 
 <p>
-Creating educational opportunities and
-bringing deprived children into the
-mainstream of learning.
+Children who once held begging bowls
+began holding books.
+</p>
+
+<p>
+Children who had no certainty about tomorrow
+began to see dreams for their future.
+</p>
+
+<p>
+Many students passed Class 10.
+The girls' kabaddi team achieved success
+at taluka and state-level competitions.
+</p>
+
+<p>
+This was not merely sporting achievement.
+It carried a larger message:
+<strong>
+Deprived children also have talent.
+They simply need an opportunity.
+</strong>
 </p>
 
 </div>
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-🏠
 </div>
-
-<h3>
-Safe Shelter
-</h3>
-
-<p>
-Providing children with a safe,
-supportive and dignified environment
-alongside education.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-🍚
-</div>
-
-<h3>
-Food & Nutrition
-</h3>
-
-<p>
-Supporting the everyday nutritional
-and basic needs of children so they
-can focus on learning.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-💡
-</div>
-
-<h3>
-Digital Education
-</h3>
-
-<p>
-Connecting students with modern
-technology and new educational
-opportunities.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-⚽
-</div>
-
-<h3>
-Holistic Development
-</h3>
-
-<p>
-Encouraging learning, sports,
-skills, confidence and overall
-development.
-</p>
-
-</div>
-
-
-<div class="mission-card">
-
-<div class="mission-icon">
-🤝
-</div>
-
-<h3>
-Dignity & Self-Respect
-</h3>
-
-<p>
-Creating equal opportunities and
-helping every child move towards
-a dignified and independent future.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- SCHOOL STORY -->
-
-<section class="section school-story">
-
+<section class="section crisis">
 <div class="container">
 
-<div class="school-grid">
+<div class="section-title">
+<span class="label">A MAJOR CRISIS</span>
+<h2>14. The Crisis Caused by the Samruddhi Expressway</h2>
+</div>
 
-
-<div>
-
-<span class="section-label">
-PRASHNACHINH ADIVASI ASHRAM SCHOOL
-</span>
-
-<h2>
-A Question That Became a Movement for Change
-</h2>
+<div class="crisis-box">
 
 <p>
-
-Prashnachinh Adivasi Ashram School represents
-an effort to open the doors of education for
-children who have historically remained away
-from the mainstream.
-
+The school that Matin had worked for
+over many years faced another major crisis.
 </p>
-
 
 <p>
-
-Beginning in 2011, the school journey has
-focused on education, residential support
-and a safe environment for children.
-
+Planning for the Nagpur-Mumbai Samruddhi
+Expressway created a question over the
+school's land.
+Matin repeatedly followed up with
+administrators, officials and political leaders.
 </p>
-
 
 <p>
+He tried to save the school.
+Eventually, bulldozers entered the school premises.
+</p>
 
-Today, 450+ students are part of this journey.
-Their dreams and future possibilities remain
-the strongest inspiration behind the mission.
+<p>
+Classrooms were demolished.
+The library was destroyed.
+Toilets and the kitchen were demolished.
+The playground was lost.
+</p>
 
+<p>
+Even trees planted by Matin over many years
+were destroyed.
+Years of work were reduced to rubble.
 </p>
 
 </div>
-
-
-<div class="school-photo">
-
-<img
-src="school1.jpg"
-alt="Prashnachinh Adivasi Ashram School">
-
 </div>
-
-
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- IMPACT -->
-
-<section class="section impact">
-
+<section class="section alt">
 <div class="container">
 
-<div class="section-heading">
+<div class="section-title">
+<span class="label">NEVER GIVE UP</span>
+<h2>15. But Matin Bhosale Did Not Stop…</h2>
+</div>
 
-<span class="section-label">
-IMPACT
-</span>
-
-<h2>
-The Journey in Numbers
-</h2>
+<div class="story">
 
 <p>
-Behind every number are dreams,
-families and the hope of a better future.
+The school building was demolished.
+But the dream of education could not be demolished.
+</p>
+
+<p>
+The challenge before Matin was to rebuild
+the future of hundreds of students.
+</p>
+
+<p>
+Water, shelter, classrooms, kitchen,
+library and education arrangements —
+every question appeared again.
+</p>
+
+<p>
+But Matin started working again.
+Because for him, this was not merely a building.
+</p>
+
+<p>
+<strong>
+It was the children's home.<br>
+It was the children's school.<br>
+It was their hope for the future.
+</strong>
 </p>
 
 </div>
-
-
-<div class="impact-grid">
-
-
-<div class="impact-card">
-
-<div class="impact-number">
-2005
 </div>
-
-<h3>
-Organisation Journey
-</h3>
-
-<p>
-Beginning of the social mission
-</p>
-
-</div>
-
-
-<div class="impact-card">
-
-<div class="impact-number">
-2011
-</div>
-
-<h3>
-Ashram School
-</h3>
-
-<p>
-Beginning of the educational journey
-</p>
-
-</div>
-
-
-<div class="impact-card">
-
-<div class="impact-number">
-188
-</div>
-
-<h3>
-Initial Students
-</h3>
-
-<p>
-Students at the beginning in 2011
-</p>
-
-</div>
-
-
-<div class="impact-card">
-
-<div class="impact-number">
-450+
-</div>
-
-<h3>
-Students Today
-</h3>
-
-<p>
-Part of the education journey
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
 </section>
 
 
-
-<!-- QUOTE -->
-
-<section class="quote-section">
-
+<section class="section">
 <div class="container">
 
-<div class="quote-box">
-
-<div class="quote-mark">
-“
+<div class="section-title">
+<span class="label">THE HEART OF THE MISSION</span>
+<h2>16. “I Was, Am and Will Remain a Mother to These Children…”</h2>
 </div>
 
+<div class="quote">
+
+<div class="quote-mark">“</div>
+
 <p>
-
-Give a book to one child,
-and we can change the future
-of an entire generation.
-
+I was, am and will remain
+a mother to these children.
 </p>
 
 <small>
-— Matin Shankarrao Bhosale Sir
+A reflection of the humanity behind his mission.
 </small>
 
 </div>
 
-</div>
+<div class="story" style="margin-top:35px">
 
+<p>
+These children were not merely students to him.
+They were his responsibility.
+</p>
+
+<p>
+He continued fighting so that children
+brought from footpaths, railway stations
+and traffic signals would never have
+to return to the same circumstances.
+</p>
+
+</div>
+</div>
 </section>
 
 
-
-<!-- MEDIA -->
-
-<section class="section media">
-
+<section class="section alt">
 <div class="container">
 
-<div class="section-heading">
+<div class="section-title">
+<span class="label">PEOPLE BEHIND THE JOURNEY</span>
+<h2>17. A Struggle Sustained by Society</h2>
+</div>
 
-<span class="section-label">
-MEDIA • YOUTUBE
-</span>
-
-<h2>
-Matin Bhosale Sir's Journey — Through Videos
-</h2>
+<div class="story">
 
 <p>
-Explore the journey and the work through video stories.
+Matin was not alone in his struggle.
+</p>
+
+<p>
+Journalists, social workers, teachers,
+doctors, lawyers, institutions, donors
+and ordinary citizens came forward.
+</p>
+
+<p>
+Some gave food grains.<br>
+Some gave clothes.<br>
+Some gave books.<br>
+Some provided financial support.<br>
+Some gave their time.
+</p>
+
+<p>
+This collective support helped
+Prashnachinh Ashram School continue its work.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">A THOUGHT • A MOVEMENT</span>
+<h2>18. Matin Bhosale — More Than One Person, A Thought</h2>
+</div>
+
+<div class="story">
+
+<p>
+Matin Bhosale's story is not merely
+a story of one person's success.
+</p>
+
+<p>
+It represents the beginning of transformation
+for an entire community.
+</p>
+
+<p>
+Children who were marginalised,
+children who held begging bowls instead of books,
+children who lived under temporary shelters
+and children who were kept away from education —
+Matin has worked to bring them into
+the mainstream of education.
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">THE BELIEF</span>
+<h2>19. His Belief</h2>
+</div>
+
+<div class="quote">
+
+<div class="quote-mark">“</div>
+
+<p>
+Real change begins through education.
+</p>
+
+<small>— Matin Shankarrao Bhosale Sir</small>
+
+</div>
+
+<div class="story" style="margin-top:35px">
+
+<p>
+Matin experienced the transformation
+education brought to his own life.
+That is why he considers education
+the strongest tool for his community's children.
+</p>
+
+<p>
+For him, a school is not merely four walls.
+</p>
+
+<p>
+<strong>
+A school is a safe home.<br>
+A school is food.<br>
+A school is values.<br>
+A school is confidence.<br>
+A school is the future.
+</strong>
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">THE JOURNEY CONTINUES</span>
+<h2>20. The Journey Continues Today</h2>
+</div>
+
+<div class="story">
+
+<p>
+Matin Bhosale's journey is not over.
+His goal remains the same —
+</p>
+
+<p>
+to bring deprived, orphaned and
+extremely vulnerable children from
+the Phanse Pardhi community into
+the mainstream of education.
+</p>
+
+<p>
+To ensure they receive nutritious food.<br>
+To provide safe shelter.<br>
+To place books in their hands.<br>
+To give them opportunities in sports and skills.<br>
+To help them live with dignity in society.
+</p>
+
+<p>
+And most importantly —
+to ensure that parents do not have
+to look at their children and ask,
+“What will happen to their future?”
+</p>
+
+</div>
+</div>
+</section>
+
+
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">VISION</span>
+<h2>21. Matin Sir's Mission</h2>
+</div>
+
+<div class="quote">
+
+<div class="quote-mark">“</div>
+
+<p>
+To provide education, a safe environment,
+love and a better future to children
+growing up on streets, footpaths and
+in extremely difficult circumstances.
 </p>
 
 </div>
 
+</div>
+</section>
 
-<div class="video-grid">
+
+<section class="section">
+<div class="container">
+
+<div class="section-title">
+<span class="label">A STORY THE WORLD SHOULD KNOW</span>
+<h2>22. An Inspirational Story the World Should Know</h2>
+</div>
+
+<div class="story">
+
+<p>A boy from a poor Phanse Pardhi family…</p>
+<p>A student who faced discrimination…</p>
+<p>A young man who struggled for identity documents…</p>
+<p>A young man who left CRPF training…</p>
+<p>A teacher…</p>
+<p>A social worker searching for children on the streets…</p>
+<p>A worker who brought together 188 children…</p>
+<p>A teacher who began a school in a hut…</p>
+<p>A founder who built an Ashram School for hundreds of children…</p>
+
+<p>
+And a determined person who,
+even after watching the school being demolished,
+stood up again and continued the struggle…
+</p>
+
+<h3 style="color:var(--green);margin:25px 0">
+This is the story of Matin Bhosale.
+</h3>
+
+<p>
+Although this is the story of one person,
+its message belongs to the entire world —
+</p>
+
+<div class="quote">
+<p>
+When we give one child an opportunity
+to learn, we do not change only one life;
+we change the future of a family,
+a community and the next generation.
+</p>
+</div>
+
+</div>
+</div>
+</section>
 
 
-<div class="video-card">
+<!-- YOUTUBE -->
 
+<section class="section alt">
+<div class="container">
+
+<div class="section-title">
+<span class="label">MEDIA • YOUTUBE</span>
+
+<h2>
+Matin Bhosale Sir's Life Journey — Through Videos
+</h2>
+
+<p>
+A digital collection of his journey,
+work and the story of Prashnachinh Ashram School.
+</p>
+</div>
+
+<div class="media-grid">
+
+<div class="video">
 <iframe
 src="https://www.youtube.com/embed/CrGevRwRDCI"
-title="Matin Bhosale Sir's Journey"
-loading="lazy"
-allowfullscreen>
-</iframe>
-
-<div class="video-info">
-
-<h3>
-Matin Bhosale Sir's Journey
-</h3>
-
-<p>
-Founder Journey • YouTube
-</p>
-
+title="Matin Bhosale"
+allowfullscreen></iframe>
+<div class="video-title">
+Matin Bhosale Sir's Life Journey
+</div>
 </div>
 
-</div>
-
-
-
-<div class="video-card">
-
+<div class="video">
 <iframe
-src="https://www.youtube.com/embed/B73WNW-Hgjc"
-title="Prashnachinh Adivasi Ashram School"
-loading="lazy"
-allowfullscreen>
-</iframe>
+src="https://www.youtube.com/embed/EhR0QCwquc8"
+title="Matin Bhosale"
+allowfullscreen></iframe>
+<div class="video-title">
+Matin Bhosale — Social Journey
+</div>
+</div>
 
-<div class="video-info">
-
-<h3>
+<div class="video">
+<iframe
+src="https://www.youtube.com/embed/1-1ETYxU3P8"
+title="Prashnachinh School"
+allowfullscreen></iframe>
+<div class="video-title">
 Prashnachinh Adivasi Ashram School
-</h3>
+</div>
+</div>
 
-<p>
-School Journey • YouTube
-</p>
-
+<div class="video">
+<iframe
+src="https://www.youtube.com/embed/hkRQf4bt-CI"
+title="Prashnachinh School"
+allowfullscreen></iframe>
+<div class="video-title">
+The School Journey
+</div>
 </div>
 
 </div>
 
+<div class="youtube-list">
+
+<a class="youtube-link" href="https://youtu.be/mpQUN06eHjs" target="_blank">▶ YouTube Video 05</a>
+<a class="youtube-link" href="https://youtu.be/NteWscB-STg" target="_blank">▶ YouTube Video 06</a>
+<a class="youtube-link" href="https://youtu.be/0z0XXzaoaMs" target="_blank">▶ YouTube Video 07</a>
+<a class="youtube-link" href="https://youtu.be/FcBKe15u7VA" target="_blank">▶ YouTube Video 08</a>
+<a class="youtube-link" href="https://youtu.be/7YRcJJOXO0U" target="_blank">▶ YouTube Video 09</a>
+<a class="youtube-link" href="https://youtu.be/wEML_FWtv64" target="_blank">▶ YouTube Video 10</a>
+<a class="youtube-link" href="https://youtu.be/1no-VJDP5nM" target="_blank">▶ YouTube Video 11</a>
+<a class="youtube-link" href="https://youtu.be/8uMx4_rvEvE" target="_blank">▶ YouTube Video 12</a>
+<a class="youtube-link" href="https://youtu.be/1jXsrBFNn-Q" target="_blank">▶ YouTube Video 13</a>
+<a class="youtube-link" href="https://youtu.be/shc-LXDIW8w" target="_blank">▶ YouTube Video 14</a>
+<a class="youtube-link" href="https://youtu.be/T_tsuimaZBk" target="_blank">▶ YouTube Video 15</a>
 
 </div>
 
 </div>
-
 </section>
 
 
-
-<!-- SOCIAL -->
-
-<section class="section social-section">
-
+<section class="section social">
 <div class="container">
 
-<div class="section-heading">
-
-<span class="section-label">
-CONNECT
-</span>
-
-<h2>
-Connect with Matin Bhosale Sir
-</h2>
-
+<div class="section-title">
+<span class="label">CONNECT</span>
+<h2>Connect with Matin Bhosale Sir</h2>
 </div>
 
-
-<div class="social-grid">
-
 <a
+class="facebook"
 href="https://www.facebook.com/matin.bhosale.58"
-target="_blank"
-rel="noopener"
-class="social-btn facebook">
-
-<span>f</span>
+target="_blank">
 Facebook Profile
-
-</a>
-
-
-<a
-href="https://www.youtube.com/"
-target="_blank"
-rel="noopener"
-class="social-btn youtube">
-
-<span>▶</span>
-YouTube
-
 </a>
 
 </div>
-
-</div>
-
 </section>
 
 
-
-<!-- FINAL CTA -->
-
-<section class="final-cta">
-
+<section class="final">
 <div class="container">
 
-<h2>
-A Helping Hand...
-</h2>
+<h2>A Helping Hand...</h2>
 
 <p>
-Join the journey towards education,
-safe futures and dignity for deprived children.
+For the education of the deprived...
+For their brighter future...
 </p>
 
-<a
-href="donate.html"
-class="btn btn-primary">
-
+<a href="donate.html" class="btn btn-gold">
 ❤️ Donate Now
-
 </a>
 
 </div>
-
 </section>
 
-</main>
+</div>
 
-
-
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
 
 <footer class="footer">
-
-<div class="container">
-
 <p>
-
 <strong>AFPSS</strong> —
 Adivasi Fase Pardhi Sudhar Samiti
-
 </p>
 
 <p>
 Prashnachinh Adivasi Ashram School
 </p>
 
-<p>
-© 2005–2026 AFPSS. All Rights Reserved.
-</p>
-
-</div>
-
+<p>© 2005–2026 AFPSS. All Rights Reserved.</p>
 </footer>
 
 
-
-<!-- =========================================================
-     LANGUAGE SCRIPT
-     ========================================================= -->
-
 <script>
 
-(function(){
+const mrBtn=document.getElementById("mrBtn");
+const enBtn=document.getElementById("enBtn");
+const mrPage=document.getElementById("mrPage");
+const enPage=document.getElementById("enPage");
 
-"use strict";
+function showMarathi(){
 
+    mrPage.style.display="block";
+    enPage.style.display="none";
 
-const mrBtn =
-    document.getElementById("mrBtn");
+    mrBtn.classList.add("active");
+    enBtn.classList.remove("active");
 
-const enBtn =
-    document.getElementById("enBtn");
+    document.documentElement.lang="mr";
 
-const mrContent =
-    document.getElementById("marathiContent");
-
-const enContent =
-    document.getElementById("englishContent");
-
-
-function setLanguage(lang){
-
-    if(lang === "en"){
-
-        mrContent.style.display = "none";
-
-        enContent.style.display = "block";
-
-        mrBtn.classList.remove("active");
-
-        enBtn.classList.add("active");
-
-        document.documentElement.lang = "en";
-
-        localStorage.setItem(
-            "afpss-founder-language",
-            "en"
-        );
-
-        window.scrollTo({
-            top:0,
-            behavior:"smooth"
-        });
-
-    }else{
-
-        mrContent.style.display = "block";
-
-        enContent.style.display = "none";
-
-        enBtn.classList.remove("active");
-
-        mrBtn.classList.add("active");
-
-        document.documentElement.lang = "mr";
-
-        localStorage.setItem(
-            "afpss-founder-language",
-            "mr"
-        );
-
-        window.scrollTo({
-            top:0,
-            behavior:"smooth"
-        });
-
-    }
-
-}
-
-
-mrBtn.addEventListener(
-    "click",
-    function(){
-        setLanguage("mr");
-    }
-);
-
-
-enBtn.addEventListener(
-    "click",
-    function(){
-        setLanguage("en");
-    }
-);
-
-
-const savedLanguage =
-    localStorage.getItem(
-        "afpss-founder-language"
+    localStorage.setItem(
+        "afpss-founder-lang",
+        "mr"
     );
-
-
-if(savedLanguage === "en"){
-
-    setLanguage("en");
-
-}else{
-
-    setLanguage("mr");
-
 }
 
-})();
+function showEnglish(){
+
+    mrPage.style.display="none";
+    enPage.style.display="block";
+
+    enBtn.classList.add("active");
+    mrBtn.classList.remove("active");
+
+    document.documentElement.lang="en";
+
+    localStorage.setItem(
+        "afpss-founder-lang",
+        "en"
+    );
+}
+
+mrBtn.onclick=showMarathi;
+enBtn.onclick=showEnglish;
+
+if(
+    localStorage.getItem("afpss-founder-lang")
+    === "en"
+){
+    showEnglish();
+}else{
+    showMarathi();
+}
 
 </script>
-
 
 </body>
 </html>
