@@ -6,23 +6,20 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+      content="width=device-width, initial-scale=1.0">
 
 <title>
-AFPSS | Adivasi Fase Pardhi Sudhar Samiti | Tribal Children's Education
+AFPSS | Adivasi Fase Pardhi Sudhar Samiti
 </title>
 
 <meta name="description"
-content="Adivasi Fase Pardhi Sudhar Samiti works for the education, residential care, nutrition, healthcare and brighter future of tribal children through Prashnachinha Adivasi Ashram School.">
+content="Adivasi Fase Pardhi Sudhar Samiti works for the education, residential care, nutrition and brighter future of tribal children through Prashnachinha Adivasi Ashram School.">
 
 <meta name="keywords"
-content="AFPSS, Adivasi Fase Pardhi Sudhar Samiti, Fase Pardhi, tribal children education, tribal NGO Maharashtra, Amravati NGO, Prashnachinha Adivasi Ashram School">
+content="AFPSS, Adivasi Fase Pardhi Sudhar Samiti, Fase Pardhi, Tribal Children Education, Amravati NGO, Prashnachinha Adivasi Ashram School">
 
 <meta name="author"
 content="Adivasi Fase Pardhi Sudhar Samiti">
-
-<meta name="robots"
-content="index, follow">
 
 <link rel="canonical"
 href="https://afpss.org.in/">
@@ -31,15 +28,1071 @@ href="https://afpss.org.in/">
 href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
-href="https://fonts.googleapis.com"
+href="https://fonts.gstatic.com"
 crossorigin>
 
 <link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap"
 rel="stylesheet">
 
 <link rel="stylesheet"
 href="style.css">
+
+<style>
+
+/* =====================================================
+   FINAL INDEX LANGUAGE SYSTEM
+===================================================== */
+
+.language-switcher{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    padding:5px;
+
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:30px;
+
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(12px);
+}
+
+.language-switcher button{
+    border:0;
+    background:transparent;
+
+    color:#fff;
+
+    padding:7px 12px;
+    border-radius:20px;
+
+    font-weight:800;
+    cursor:pointer;
+}
+
+.language-switcher button.active{
+    background:#fff;
+    color:#075b3b;
+}
+
+.language-switcher span{
+    color:#fff;
+}
+
+
+/* HERO */
+
+.premium-hero{
+    position:relative;
+    min-height:82vh;
+    overflow:hidden;
+    isolation:isolate;
+    background:#043d2a;
+}
+
+.hero-slider{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:0;
+}
+
+.hero-slide{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:
+        opacity 1.2s ease,
+        transform 4s ease;
+
+    transform:scale(1.04);
+}
+
+.hero-slide.active{
+    opacity:1;
+    visibility:visible;
+    transform:scale(1);
+}
+
+.premium-hero-overlay{
+    position:absolute;
+    inset:0;
+
+    z-index:1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,30,20,.88),
+            rgba(0,50,35,.55),
+            rgba(0,0,0,.15)
+        );
+}
+
+.premium-hero-content{
+    position:relative;
+    z-index:3;
+
+    width:min(1200px,92%);
+    margin:auto;
+
+    min-height:82vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+
+    color:#fff;
+}
+
+.hero-language{
+    position:absolute;
+    right:0;
+    top:25px;
+}
+
+.hero-small-text{
+    color:#ffd45b;
+    font-weight:800;
+    font-size:17px;
+    margin-bottom:18px;
+}
+
+.premium-hero h1{
+    font-size:clamp(45px,6vw,82px);
+    line-height:1.08;
+
+    margin:0;
+
+    font-weight:900;
+    letter-spacing:-2px;
+}
+
+.premium-hero h1 span{
+    color:#ffd45b;
+}
+
+.hero-message{
+    font-size:18px;
+    font-weight:600;
+    margin-top:8px;
+}
+
+.premium-donate-btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin-top:28px;
+
+    padding:16px 32px;
+
+    background:#ef3340;
+    color:#fff;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:17px;
+    font-weight:900;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.28);
+
+    transition:.3s;
+}
+
+.premium-donate-btn:hover{
+    transform:translateY(-4px);
+}
+
+
+/* SECTION */
+
+.premium-section{
+    padding:95px 0;
+}
+
+.premium-container{
+    width:min(1150px,92%);
+    margin:auto;
+}
+
+.premium-title{
+    text-align:center;
+    max-width:850px;
+
+    margin:0 auto 45px;
+}
+
+.premium-title small{
+    color:#b27709;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.premium-title h2{
+    color:#075b3b;
+    font-size:42px;
+    margin:12px 0;
+}
+
+.premium-title p{
+    color:#687870;
+    line-height:1.7;
+}
+
+
+/* IMPACT */
+
+.premium-impact{
+    padding:90px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3faf6,
+            #fff
+        );
+}
+
+.impact-grid{
+    width:min(1100px,92%);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.impact-card{
+    padding:32px 20px;
+
+    text-align:center;
+
+    background:#fff;
+
+    border:1px solid #e1ece7;
+    border-radius:22px;
+
+    box-shadow:
+        0 15px 40px rgba(0,60,40,.08);
+
+    transition:.3s;
+}
+
+.impact-card:hover{
+    transform:translateY(-7px);
+}
+
+.impact-card .impact-icon{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.impact-card strong{
+    display:block;
+
+    color:#075b3b;
+
+    font-size:38px;
+    font-weight:900;
+}
+
+.impact-card h3{
+    color:#17352a;
+    margin:10px 0;
+}
+
+.impact-card p{
+    color:#687870;
+}
+
+
+/* ABOUT */
+
+.premium-about{
+    padding:100px 0;
+    background:#fff;
+}
+
+.about-premium-grid{
+    width:min(1150px,92%);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.about-premium-image{
+    position:relative;
+}
+
+.about-premium-image img{
+    width:100%;
+
+    display:block;
+
+    aspect-ratio:4/3;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    box-shadow:
+        0 25px 60px rgba(0,60,40,.16);
+}
+
+.about-badge{
+    position:absolute;
+
+    right:20px;
+    bottom:20px;
+
+    padding:14px 20px;
+
+    border-radius:18px;
+
+    background:#075b3b;
+    color:#fff;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.22);
+}
+
+.about-badge strong{
+    display:block;
+    font-size:25px;
+}
+
+.about-premium-content h2{
+    color:#075b3b;
+
+    font-size:44px;
+
+    line-height:1.15;
+
+    margin:12px 0 25px;
+}
+
+.about-premium-content p{
+    color:#53665d;
+
+    font-size:16px;
+
+    line-height:1.85;
+}
+
+.about-highlight{
+    margin-top:25px;
+
+    padding:18px;
+
+    background:#f4faf7;
+
+    border-left:4px solid #e8a81d;
+
+    border-radius:12px;
+
+    color:#075b3b;
+
+    font-weight:800;
+}
+
+
+/* ACTIVITIES */
+
+.activities-grid{
+    width:min(1100px,92%);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+}
+
+.activity-box{
+    padding:28px 20px;
+
+    background:#fff;
+
+    border:1px solid #e1ece7;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+        0 12px 35px rgba(0,60,40,.07);
+
+    transition:.3s;
+}
+
+.activity-box:hover{
+    transform:translateY(-6px);
+}
+
+.activity-box .icon{
+    font-size:38px;
+}
+
+.activity-box h3{
+    color:#075b3b;
+}
+
+.activity-box p{
+    color:#687870;
+    line-height:1.6;
+}
+
+
+/* STORY */
+
+.story-box{
+    width:min(1050px,92%);
+    margin:auto;
+
+    padding:45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5faf7,
+            #fff
+        );
+
+    border-radius:28px;
+
+    border:1px solid #e0ece6;
+
+    box-shadow:
+        0 20px 50px rgba(0,60,40,.08);
+}
+
+.story-box h2{
+    color:#075b3b;
+
+    font-size:40px;
+}
+
+.story-box p{
+    color:#52655c;
+
+    font-size:16px;
+
+    line-height:1.9;
+}
+
+.story-quote{
+    margin-top:25px;
+
+    padding:22px;
+
+    background:#075b3b;
+
+    color:#fff;
+
+    border-radius:16px;
+
+    font-size:18px;
+
+    font-weight:800;
+}
+
+
+/* FOUNDER */
+
+.founder-premium-grid{
+    width:min(1150px,92%);
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    gap:65px;
+
+    align-items:center;
+}
+
+.founder-premium-grid img{
+    width:100%;
+
+    border-radius:28px;
+
+    box-shadow:
+        0 25px 60px rgba(0,60,40,.17);
+}
+
+.founder-content h2{
+    color:#075b3b;
+
+    font-size:42px;
+
+    margin:10px 0;
+}
+
+.founder-content h3{
+    color:#b27709;
+}
+
+.founder-content p{
+    color:#53665d;
+
+    line-height:1.85;
+}
+
+.founder-quote{
+    padding:20px;
+
+    background:#f4faf7;
+
+    border-left:4px solid #e7a91d;
+
+    border-radius:12px;
+
+    color:#075b3b;
+
+    font-weight:800;
+}
+
+
+/* SUCCESS */
+
+.success-section{
+    padding:90px 0;
+
+    background:#f7faf8;
+}
+
+.success-grid{
+    width:min(1100px,92%);
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.success-grid img{
+    width:100%;
+
+    border-radius:25px;
+
+    object-fit:cover;
+}
+
+.success-content h2{
+    color:#075b3b;
+
+    font-size:40px;
+}
+
+.success-content p{
+    color:#596a62;
+
+    line-height:1.8;
+}
+
+
+/* AWARDS */
+
+.awards-grid{
+    width:min(1100px,92%);
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.award-card{
+    overflow:hidden;
+
+    background:#fff;
+
+    border:1px solid #e1ece7;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 15px 40px rgba(0,60,40,.08);
+}
+
+.award-card img{
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+}
+
+.award-card-content{
+    padding:22px;
+}
+
+.award-card-content h3{
+    color:#075b3b;
+}
+
+.award-card-content p{
+    color:#687870;
+    line-height:1.6;
+}
+
+.awards-more{
+    padding:30px;
+
+    text-align:center;
+
+    background:#075b3b;
+
+    color:#fff;
+
+    border-radius:22px;
+}
+
+.awards-more h3{
+    font-size:25px;
+}
+
+.awards-more-btn{
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    background:#fff;
+
+    color:#075b3b;
+
+    text-decoration:none;
+
+    font-weight:900;
+}
+
+
+/* GALLERY */
+
+.gallery-grid{
+    width:min(1150px,92%);
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:14px;
+}
+
+.gallery-grid img{
+    width:100%;
+
+    height:190px;
+
+    object-fit:cover;
+
+    border-radius:16px;
+
+    transition:.35s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.04);
+}
+
+
+/* MEDIA */
+
+.media-preview{
+    width:min(1100px,92%);
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+}
+
+.media-card{
+    padding:30px 20px;
+
+    text-align:center;
+
+    background:#fff;
+
+    border:1px solid #e1ece7;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 15px 40px rgba(0,60,40,.08);
+}
+
+.media-card .media-icon{
+    font-size:42px;
+}
+
+.media-card h3{
+    color:#075b3b;
+}
+
+.media-card a{
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:#075b3b;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:800;
+}
+
+
+/* DOCUMENTS */
+
+.documents-grid{
+    width:min(1100px,92%);
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+}
+
+.document-card{
+    padding:28px 20px;
+
+    background:#fff;
+
+    border:1px solid #e1ece7;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    box-shadow:
+        0 12px 35px rgba(0,60,40,.07);
+}
+
+.document-card span{
+    font-size:35px;
+}
+
+.document-card h3{
+    color:#075b3b;
+}
+
+.document-card p{
+    color:#687870;
+}
+
+.document-card strong{
+    color:#b27709;
+}
+
+
+/* LOCATION */
+
+.location-section{
+    padding:90px 0;
+
+    background:#f4faf7;
+
+    text-align:center;
+}
+
+.map-button{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:20px;
+
+    padding:15px 28px;
+
+    border-radius:40px;
+
+    background:#075b3b;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:900;
+}
+
+
+/* DONATION */
+
+.donation-cta{
+    padding:75px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #075b3b,
+            #033c28
+        );
+
+    color:#fff;
+
+    text-align:center;
+}
+
+.donation-cta h2{
+    font-size:42px;
+}
+
+.donation-cta a{
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:15px 30px;
+
+    border-radius:40px;
+
+    background:#ef3340;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:900;
+}
+
+
+/* FOOTER */
+
+.footer{
+    background:#062d20;
+
+    color:#fff;
+
+    padding:55px 0 20px;
+}
+
+.footer-grid{
+    width:min(1100px,92%);
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap:35px;
+}
+
+.footer h3{
+    color:#ffd45b;
+}
+
+.footer a{
+    display:block;
+
+    color:#dbe9e2;
+
+    text-decoration:none;
+
+    margin:8px 0;
+}
+
+.footer p{
+    color:#b8cbc2;
+    line-height:1.7;
+}
+
+.footer-bottom{
+    margin-top:40px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    color:#a9bbb3;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    width:58px;
+    height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#25d366;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    font-size:28px;
+
+    text-decoration:none;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
+    z-index:999;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .impact-grid,
+    .activities-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-premium-grid,
+    .founder-premium-grid,
+    .success-grid{
+        grid-template-columns:1fr;
+    }
+
+    .awards-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .media-preview,
+    .documents-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .premium-hero,
+    .premium-hero-content{
+        min-height:88vh;
+    }
+
+    .hero-language{
+        top:15px;
+        right:0;
+    }
+
+    .premium-hero h1{
+        font-size:43px;
+        letter-spacing:-1px;
+    }
+
+    .hero-small-text{
+        font-size:14px;
+    }
+
+    .hero-message{
+        font-size:15px;
+    }
+
+    .premium-donate-btn{
+        width:100%;
+        max-width:280px;
+    }
+
+    .impact-grid,
+    .activities-grid,
+    .awards-grid,
+    .media-preview,
+    .documents-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid img{
+        height:160px;
+    }
+
+    .premium-title h2,
+    .about-premium-content h2,
+    .founder-content h2,
+    .success-content h2,
+    .donation-cta h2{
+        font-size:32px;
+    }
+
+    .story-box{
+        padding:25px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -47,15 +1100,16 @@ href="style.css">
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="site-header">
 
 <div class="nav-container">
 
-
 <a href="index.html"
-class="brand">
+   class="brand">
 
 <img
 src="logo.jpg"
@@ -86,7 +1140,7 @@ aria-label="Open Menu">
 
 <nav id="mainNav">
 
-<a href="index.html">Home</a>
+<a href="#home">Home</a>
 
 <a href="#about">About</a>
 
@@ -113,88 +1167,207 @@ aria-label="Open Menu">
 </header>
 
 
+<!-- =====================================================
+     PREMIUM HERO
+===================================================== -->
 
-<!-- ================= PREMIUM HERO ================= -->
+<section
+class="premium-hero"
+id="home">
 
-<section class="premium-hero" id="home">
 
-    <div class="hero-slider">
+<div class="hero-slider">
 
-        <div class="hero-slide active"
-             style="background-image:url('hero.jpg');">
-        </div>
 
-        <div class="hero-slide"
-             style="background-image:url('gallery-children.jpg');">
-        </div>
+<div
+class="hero-slide active"
+style="background-image:url('hero.JPG');">
+</div>
 
-        <div class="hero-slide"
-             style="background-image:url('gallery-school.jpg');">
-        </div>
 
-        <div class="hero-slide"
-             style="background-image:url('hero5.jpg');">
-        </div>
+<div
+class="hero-slide"
+style="background-image:url('hero4.jpg');">
+</div>
 
-    </div>
 
-    <div class="premium-hero-overlay"></div>
+<div
+class="hero-slide"
+style="background-image:url('hero5.jpg');">
+</div>
 
-    <div class="premium-hero-content">
 
-        <div class="hero-language">
-            मराठी&nbsp;&nbsp; | &nbsp;&nbsp;English
-        </div>
+<div
+class="hero-slide"
+style="background-image:url('gallery-school.jpg');">
+</div>
 
-        <span class="hero-small-text">
-            ❤️ Empowering Tribal Children Through Education
-        </span>
 
-        <h1>
-            एक हात मदतीचा...<br>
-            <span>वंचितांच्या शिक्षणाला...</span>
-        </h1>
+</div>
 
-        <p class="hero-english">
-            Empowering Tribal Children Through Education
-        </p>
 
-        <p class="hero-message">
-            ❤️ Together, we can build a brighter future.
-        </p>
+<div class="premium-hero-overlay"></div>
 
-        <a href="donate.html" class="premium-donate-btn">
-            ❤️ Donate Now
-        </a>
 
-    </div>
+<div class="premium-hero-content">
+
+
+<div class="hero-language">
+
+<div class="language-switcher">
+
+<button
+id="marathiBtn"
+class="active">
+
+मराठी
+
+</button>
+
+<span>|</span>
+
+<button
+id="englishBtn">
+
+English
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- MARATHI HERO -->
+
+<div
+class="lang-mr">
+
+<span class="hero-small-text">
+
+❤️ वंचित आदिवासी मुलांच्या शिक्षणासाठी
+
+</span>
+
+
+<h1>
+
+एक हात मदतीचा...<br>
+
+<span>
+वंचितांच्या शिक्षणाला...
+</span>
+
+</h1>
+
+
+<p class="hero-message">
+
+शिक्षणातून स्वाभिमान, संधीमधून परिवर्तन
+
+</p>
+
+
+<a
+href="donate.html"
+class="premium-donate-btn">
+
+❤️ देणगी द्या
+
+</a>
+
+</div>
+
+
+<!-- ENGLISH HERO -->
+
+<div
+class="lang-en"
+style="display:none;">
+
+<span class="hero-small-text">
+
+❤️ Empowering Tribal Children Through Education
+
+</span>
+
+
+<h1>
+
+A Helping Hand...<br>
+
+<span>
+For the Education of the Deprived...
+</span>
+
+</h1>
+
+
+<p class="hero-message">
+
+Education • Care • Opportunity • Dignity
+
+</p>
+
+
+<a
+href="donate.html"
+class="premium-donate-btn">
+
+❤️ Donate Now
+
+</a>
+
+</div>
+
+
+</div>
 
 </section>
 
-<!-- ================= END PREMIUM HERO ================= -->
-<!-- ================= END PREMIUM HERO ================= -->
 
-
-
-<!-- ================= IMPACT ================= -->
+<!-- =====================================================
+     IMPACT
+===================================================== -->
 
 <section
-class="section impact-section">
+class="premium-impact"
+id="impact">
 
-<div class="container">
+
+<div class="premium-title">
+
+<small>
+OUR IMPACT
+</small>
 
 
-<div class="section-heading">
-
-<span>OUR IMPACT</span>
+<div class="lang-mr">
 
 <h2>
 दोन दशकांचा परिवर्तनाचा प्रवास
 </h2>
 
 <p>
-Two decades of education, care and social transformation.
+एका मुलाचे आयुष्य बदलले तर एका कुटुंबाचे भविष्य बदलते.
 </p>
+
+</div>
+
+
+<div
+class="lang-en"
+style="display:none;">
+
+<h2>
+Two Decades of Transformation
+</h2>
+
+<p>
+When we change a child's life, we change the future of a family.
+</p>
+
+</div>
 
 </div>
 
@@ -204,12 +1377,36 @@ Two decades of education, care and social transformation.
 
 <div class="impact-card">
 
-<strong>451+</strong>
+<div class="impact-icon">
+🎓
+</div>
 
-<h3>विद्यार्थी</h3>
+<strong>
+451+
+</strong>
 
-<p>
-Students receiving residential education.
+<h3 class="lang-mr">
+विद्यार्थी
+</h3>
+
+<h3
+class="lang-en"
+style="display:none;">
+
+Students
+
+</h3>
+
+<p class="lang-mr">
+निवासी शिक्षण
+</p>
+
+<p
+class="lang-en"
+style="display:none;">
+
+Residential Education
+
 </p>
 
 </div>
@@ -217,12 +1414,36 @@ Students receiving residential education.
 
 <div class="impact-card">
 
-<strong>2005</strong>
+<div class="impact-icon">
+🏛️
+</div>
 
-<h3>संस्थेची स्थापना</h3>
+<strong>
+2005
+</strong>
 
-<p>
-A journey dedicated to social transformation.
+<h3 class="lang-mr">
+संस्थेची स्थापना
+</h3>
+
+<h3
+class="lang-en"
+style="display:none;">
+
+Organisation Founded
+
+</h3>
+
+<p class="lang-mr">
+सामाजिक कार्याचा प्रवास
+</p>
+
+<p
+class="lang-en"
+style="display:none;">
+
+Beginning of Social Service
+
 </p>
 
 </div>
@@ -230,12 +1451,36 @@ A journey dedicated to social transformation.
 
 <div class="impact-card">
 
-<strong>2011</strong>
+<div class="impact-icon">
+🏫
+</div>
 
-<h3>आश्रमशाळेचा प्रवास</h3>
+<strong>
+2011
+</strong>
 
-<p>
-Started with 188 children.
+<h3 class="lang-mr">
+आश्रमशाळेचा प्रवास
+</h3>
+
+<h3
+class="lang-en"
+style="display:none;">
+
+Ashram School Journey
+
+</h3>
+
+<p class="lang-mr">
+१८८ विद्यार्थ्यांपासून सुरुवात
+</p>
+
+<p
+class="lang-en"
+style="display:none;">
+
+Started with 188 children
+
 </p>
 
 </div>
@@ -243,101 +1488,177 @@ Started with 188 children.
 
 <div class="impact-card">
 
-<strong>50+</strong>
+<div class="impact-icon">
+🏆
+</div>
 
-<h3>पुरस्कार</h3>
+<strong>
+50+
+</strong>
 
-<p>
-State and national recognition.
+<h3 class="lang-mr">
+पुरस्कार
+</h3>
+
+<h3
+class="lang-en"
+style="display:none;">
+
+Awards
+
+</h3>
+
+<p class="lang-mr">
+विविध स्तरांवरील सन्मान
+</p>
+
+<p
+class="lang-en"
+style="display:none;">
+
+Recognition & Honours
+
 </p>
 
 </div>
 
-
-</div>
 
 </div>
 
 </section>
 
 
-
-<!-- ================= ABOUT ================= -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section
-class="section about-section"
+class="premium-about"
 id="about">
 
-<div class="container about-grid">
+
+<div class="about-premium-grid">
 
 
-<div class="about-image">
+<div class="about-premium-image">
 
 <img
-src="students.jpg"
-alt="Students of Prashnachinha Adivasi Ashram School">
-
-<div class="image-badge">
-
-451+ Students
-
-</div>
-
-</div>
+src="tribal-children-education.jpg"
+alt="Prashnachinha Adivasi Ashram School Students"
+loading="lazy">
 
 
-<div class="about-content">
+<div class="about-badge">
 
-<span class="eyebrow">
-ABOUT AFPSS
+<strong>
+451+
+</strong>
+
+<span class="lang-mr">
+विद्यार्थी
 </span>
 
+<span
+class="lang-en"
+style="display:none;">
+
+Students
+
+</span>
+
+</div>
+
+</div>
+
+
+<div class="about-premium-content">
+
+
+<small>
+ABOUT AFPSS
+</small>
+
+
+<div class="lang-mr">
+
 <h2>
-शिक्षणातून स्वाभिमान,
+शिक्षणातून स्वाभिमान,<br>
 संधीतून परिवर्तन
 </h2>
 
 
 <p>
-
 फासेपारधी समाजातील अनेक मुले सामाजिक,
 आर्थिक आणि शैक्षणिक अडचणींमुळे
 मुख्य प्रवाहापासून दूर राहिली.
-
 </p>
 
 
 <p>
-
 आदिवासी फासे पारधी सुधार समितीने
 2005 पासून सातत्याने या मुलांना
 शिक्षणाच्या मुख्य प्रवाहात आणण्यासाठी
 कार्य सुरू ठेवले आहे.
-
 </p>
 
 
 <p>
-
-आज प्रश्नचिन्ह आदिवासी आश्रम शाळेत
-451 हून अधिक विद्यार्थी निवासी शिक्षण,
-अन्न, आरोग्य, संगणक शिक्षण,
-क्रीडा आणि संस्कारांसह पुढे जात आहेत.
-
+प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या माध्यमातून
+विद्यार्थ्यांना शिक्षण, निवास, अन्न,
+आरोग्य, संगणक शिक्षण, क्रीडा आणि
+संस्कारांची संधी दिली जात आहे.
 </p>
 
 
-<div class="dual-language">
+<div class="about-highlight">
 
-<strong>
-Empowering Tribal Children Through Education
-</strong>
-
-<span>
-Education • Care • Opportunity • Dignity
-</span>
+❤️ शिक्षण • निवास • पोषण • संधी • स्वाभिमान
 
 </div>
+
+</div>
+
+
+<div
+class="lang-en"
+style="display:none;">
+
+<h2>
+Education, Dignity,<br>
+Transformative Change
+</h2>
+
+
+<p>
+Many children from the Fase Pardhi community
+have faced social, economic and educational
+barriers.
+</p>
+
+
+<p>
+Adivasi Fase Pardhi Sudhar Samiti has worked
+since 2005 to bring children into the
+mainstream of education.
+</p>
+
+
+<p>
+Through Prashnachinha Adivasi Ashram School,
+students receive education, residential care,
+nutrition, healthcare, digital learning,
+sports and values-based development.
+</p>
+
+
+<div class="about-highlight">
+
+❤️ Education • Care • Opportunity • Dignity
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -346,447 +1667,567 @@ Education • Care • Opportunity • Dignity
 </section>
 
 
-
-<!-- ================= SCHOOL ACTIVITIES ================= -->
+<!-- =====================================================
+     SCHOOL ACTIVITIES
+===================================================== -->
 
 <section
-class="section activities-section"
+class="premium-section"
 id="activities">
 
-<div class="container">
+
+<div class="premium-title">
+
+<small>
+SCHOOL ACTIVITIES
+</small>
 
 
-<div class="section-heading">
-
-<span>SCHOOL ACTIVITIES</span>
-
-<h2>
+<h2 class="lang-mr">
 आमच्या शाळेतील उपक्रम
 </h2>
 
-<p>
-Learning beyond the classroom.
+<h2
+class="lang-en"
+style="display:none;">
+
+Our School Activities
+
+</h2>
+
+
+<p class="lang-mr">
+वर्गाच्या पलीकडील शिक्षण आणि सर्वांगीण विकास.
+</p>
+
+<p
+class="lang-en"
+style="display:none;">
+
+Learning beyond the classroom and holistic development.
+
 </p>
 
 </div>
 
 
-<div class="activity-grid">
+<div class="activities-grid">
 
 
-<div class="activity-card">
+<div class="activity-box">
 
-<div class="activity-icon">📚</div>
+<div class="icon">
+📚
+</div>
 
-<h3>Education</h3>
+<h3>
+Education
+</h3>
 
-<p>
+<p class="lang-mr">
 दर्जेदार शिक्षण आणि शैक्षणिक साहित्य.
 </p>
 
-</div>
+<p
+class="lang-en"
+style="display:none;">
 
+Quality education and learning resources.
 
-<div class="activity-card">
-
-<div class="activity-icon">🏠</div>
-
-<h3>Residential Care</h3>
-
-<p>
-सुरक्षित निवास आणि विद्यार्थ्यांची दैनंदिन काळजी.
 </p>
 
 </div>
 
 
-<div class="activity-card">
+<div class="activity-box">
 
-<div class="activity-icon">🍛</div>
+<div class="icon">
+🏠
+</div>
 
-<h3>Nutrition</h3>
+<h3>
+Residential Care
+</h3>
 
-<p>
+<p class="lang-mr">
+सुरक्षित निवासी व्यवस्था आणि विद्यार्थी काळजी.
+</p>
+
+<p
+class="lang-en"
+style="display:none;">
+
+Safe residential care for students.
+
+</p>
+
+</div>
+
+
+<div class="activity-box">
+
+<div class="icon">
+🍛
+</div>
+
+<h3>
+Nutrition
+</h3>
+
+<p class="lang-mr">
 पौष्टिक आहार आणि अन्नाची सुविधा.
 </p>
 
+<p
+class="lang-en"
+style="display:none;">
+
+Nutritious food and daily meals.
+
+</p>
+
 </div>
 
 
-<div class="activity-card">
+<div class="activity-box">
 
-<div class="activity-icon">💻</div>
+<div class="icon">
+💻
+</div>
 
-<h3>Digital Education</h3>
+<h3>
+Digital Education
+</h3>
 
-<p>
+<p class="lang-mr">
 संगणक आणि आधुनिक शिक्षणाच्या संधी.
 </p>
 
-</div>
+<p
+class="lang-en"
+style="display:none;">
 
+Digital learning and computer education.
 
-<div class="activity-card">
-
-<div class="activity-icon">⚽</div>
-
-<h3>Sports</h3>
-
-<p>
-क्रीडा, शारीरिक विकास आणि संघभावना.
 </p>
 
 </div>
 
 
-<div class="activity-card">
+<div class="activity-box">
 
-<div class="activity-icon">🎨</div>
+<div class="icon">
+⚽
+</div>
 
-<h3>Culture & Values</h3>
+<h3>
+Sports
+</h3>
 
-<p>
+<p class="lang-mr">
+क्रीडा आणि शारीरिक विकास.
+</p>
+
+<p
+class="lang-en"
+style="display:none;">
+
+Sports and physical development.
+
+</p>
+
+</div>
+
+
+<div class="activity-box">
+
+<div class="icon">
+🎨
+</div>
+
+<h3>
+Culture & Values
+</h3>
+
+<p class="lang-mr">
 संस्कार, कला आणि सांस्कृतिक उपक्रम.
 </p>
 
-</div>
+<p
+class="lang-en"
+style="display:none;">
 
+Culture, arts and values.
 
-<div class="activity-card">
-
-<div class="activity-icon">🩺</div>
-
-<h3>Healthcare</h3>
-
-<p>
-आरोग्याची काळजी आणि आवश्यक वैद्यकीय मदत.
 </p>
 
 </div>
 
 
-<div class="activity-card">
+<div class="activity-box">
 
-<div class="activity-icon">🌱</div>
+<div class="icon">
+🩺
+</div>
 
-<h3>Life Skills</h3>
+<h3>
+Healthcare
+</h3>
 
-<p>
+<p class="lang-mr">
+आरोग्याची काळजी आणि वैद्यकीय मदत.
+</p>
+
+<p
+class="lang-en"
+style="display:none;">
+
+Healthcare and medical support.
+
+</p>
+
+</div>
+
+
+<div class="activity-box">
+
+<div class="icon">
+🌱
+</div>
+
+<h3>
+Life Skills
+</h3>
+
+<p class="lang-mr">
 स्वावलंबन, आत्मविश्वास आणि व्यक्तिमत्त्व विकास.
 </p>
 
+<p
+class="lang-en"
+style="display:none;">
+
+Life skills, confidence and personality development.
+
+</p>
+
 </div>
 
-
-</div>
 
 </div>
 
 </section>
 
 
-
-<!-- ================= OUR STORY ================= -->
+<!-- =====================================================
+     OUR STORY
+===================================================== -->
 
 <section
-class="section story-section"
+class="premium-section"
 id="story">
 
-<div class="container">
+
+<div class="premium-title">
+
+<small>
+OUR STORY
+</small>
 
 
-<div class="section-heading">
-
-<span>OUR STORY</span>
-
-<h2>
-188 पासून 451+ विद्यार्थ्यांपर्यंत
+<h2 class="lang-mr">
+❓ प्रश्नचिन्हचा प्रवास
 </h2>
 
+
+<h2
+class="lang-en"
+style="display:none;">
+
+❓ The Prashnachinha Journey
+
+</h2>
+
+</div>
+
+
+<div class="story-box">
+
+
+<div class="lang-mr">
+
+<h2>
+१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष!
+</h2>
+
+
 <p>
-A journey of education, courage and hope.
+कधीकाळी या मुलांच्या हातात पुस्तक नव्हते,
+शाळा नव्हती आणि सुरक्षित भविष्याची हमी नव्हती.
 </p>
 
-</div>
-
-
-<div class="timeline">
-
-
-<div class="timeline-item">
-
-<div class="timeline-year">
-2005
-</div>
-
-<div class="timeline-content">
-
-<h3>
-संस्थेची स्थापना
-</h3>
 
 <p>
-आदिवासी फासे पारधी सुधार समितीचा
-सामाजिक परिवर्तनाचा प्रवास सुरू झाला.
+फासेपारधी समाजातील मुलांच्या आयुष्यात
+शिक्षणाचा प्रकाश आणण्याचे स्वप्न
+प्रा. मतीन भोसले सरांनी पाहिले.
 </p>
 
-</div>
-
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-year">
-2011
-</div>
-
-<div class="timeline-content">
-
-<h3>
-188 विद्यार्थ्यांसह सुरुवात
-</h3>
 
 <p>
+२२ सप्टेंबर २०११ रोजी १८८ विद्यार्थ्यांपासून
 प्रश्नचिन्ह आदिवासी आश्रम शाळेचा
 शिक्षणाचा प्रवास सुरू झाला.
 </p>
 
-</div>
-
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-year">
-2011–Today
-</div>
-
-<div class="timeline-content">
-
-<h3>
-शिक्षणाच्या मुख्य प्रवाहात प्रवेश
-</h3>
 
 <p>
-वंचित मुलांना शिक्षणाच्या मुख्य प्रवाहात
-आणण्यासाठी सातत्यपूर्ण प्रयत्न.
+शिक्षणासाठी संघर्ष झाला.
+निवासासाठी संघर्ष झाला.
+अन्नासाठी संघर्ष झाला.
+पण प्रश्नचिन्ह थांबले नाही.
 </p>
 
-</div>
-
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-year">
-Today
-</div>
-
-<div class="timeline-content">
-
-<h3>
-451+ विद्यार्थी
-</h3>
 
 <p>
-निवासी शिक्षण, अन्न, आरोग्य,
-संगणक शिक्षण, क्रीडा आणि संस्कारांसह
-उज्ज्वल भविष्याकडे वाटचाल.
+आज या प्रवासाने हजारो विद्यार्थ्यांच्या
+आयुष्याला शिक्षणाची दिशा दिली आहे.
 </p>
 
-</div>
+
+<div class="story-quote">
+
+एका मुलाचे आयुष्य बदलले,
+तर एका कुटुंबाचे भविष्य बदलते.
 
 </div>
 
+</div>
+
+
+<div
+class="lang-en"
+style="display:none;">
+
+<h2>
+From 188 Children to Thousands of Dreams
+</h2>
+
+
+<p>
+There was a time when many children
+did not have books, schools or the security
+of a better future.
+</p>
+
+
+<p>
+Prof. Matin Bhosale dreamed of bringing
+the light of education to children
+from the Fase Pardhi community.
+</p>
+
+
+<p>
+On 22 September 2011, Prashnachinha
+Adivasi Ashram School began its journey
+with 188 students.
+</p>
+
+
+<p>
+There were challenges around education,
+residential care and food, but the mission
+continued.
+</p>
+
+
+<p>
+The journey has since helped thousands
+of students move towards education
+and a brighter future.
+</p>
+
+
+<div class="story-quote">
+
+Change one child's life,
+and you change the future of a family.
 
 </div>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-
-<!-- ================= FOUNDER ================= -->
-
-<!-- ================= PREMIUM FOUNDER ================= -->
-
-<section class="section founder-section" id="founder">
-
-    <div class="container founder-premium">
-
-        <!-- LEFT: FOUNDER PHOTO -->
-
-        <div class="founder-photo-wrap">
-
-            <div class="founder-photo-card">
-
-                <img
-                    src="founder.jpg"
-                    alt="मा. मतीन शंकरराव भोसले - Founder & Chairman, AFPSS"
-                    loading="lazy">
-
-                <div class="founder-photo-caption">
-
-                    <strong>मा. मतीन शंकरराव भोसले</strong>
-
-                    <span>Founder & Chairman</span>
-
-                </div>
-
-            </div>
-
-            <div class="founder-years">
-                <strong>20+</strong>
-                <span>Years of Social Service</span>
-            </div>
-
-        </div>
-
-
-        <!-- RIGHT: FOUNDER STORY -->
-
-        <div class="founder-premium-content">
-
-            <span class="eyebrow">
-                OUR FOUNDER
-            </span>
-
-            <h2>
-                मा. मतीन शंकरराव भोसले
-            </h2>
-
-            <h3>
-                Founder & Chairman
-            </h3>
-
-            <div class="founder-quote">
-
-                <span class="quote-mark">“</span>
-
-                <p>
-                    प्रत्येक मुलाला शिक्षणाचा अधिकार आहे.
-                    समाजाने नाकारलेल्या मुलांनाही
-                    स्वप्न पाहण्याचा अधिकार आहे.
-                </p>
-
-            </div>
-
-            <p>
-                2011 मध्ये जिल्हा परिषद शाळेत शिक्षक म्हणून
-                कार्यरत असताना श्री. मतीन शंकरराव भोसले यांनी
-                फासेपारधी समाजातील शिक्षणापासून वंचित
-                मुलांसाठी प्रश्नचिन्ह आदिवासी आश्रम शाळेची
-                स्थापना केली.
-            </p>
-
-            <p>
-                188 मुला-मुलींपासून सुरू झालेला हा प्रवास
-                आज 451+ विद्यार्थ्यांपर्यंत पोहोचला आहे.
-                शिक्षणासोबत निवास, अन्न, आरोग्य,
-                संगणक शिक्षण, क्रीडा आणि संस्कारांची
-                संधी देण्यासाठी हा प्रयत्न सातत्याने सुरू आहे.
-            </p>
-
-            <div class="founder-highlights">
-
-                <div>
-                    <strong>2005</strong>
-                    <span>संस्थेची स्थापना</span>
-                </div>
-
-                <div>
-                    <strong>2011</strong>
-                    <span>आश्रमशाळेचा प्रवास</span>
-                </div>
-
-                <div>
-                    <strong>451+</strong>
-                    <span>विद्यार्थी</span>
-                </div>
-
-            </div>
-
-            <div class="founder-mission">
-
-                <strong>
-                    Education • Social Justice • Transformation
-                </strong>
-
-                <span>
-                    शिक्षणातून स्वाभिमान • संधीमधून परिवर्तन
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SUCCESS STORY ================= -->
+<!-- =====================================================
+     FOUNDER
+===================================================== -->
 
 <section
-class="section success-section">
+class="premium-section"
+id="founder">
 
-<div class="container success-grid">
+
+<div class="founder-premium-grid">
 
 
-<div class="success-image">
+<div>
+
+<img
+src="founder.jpg"
+alt="Prof. Matin Bhosale Founder Chairman"
+loading="lazy">
+
+</div>
+
+
+<div class="founder-content">
+
+<small>
+OUR FOUNDER
+</small>
+
+
+<h2>
+मा. मतीन शंकरराव भोसले
+</h2>
+
+
+<h3>
+Founder & Chairman
+</h3>
+
+
+<div class="founder-quote">
+
+“प्रत्येक मुलाला शिक्षणाचा अधिकार आहे.
+समाजाने नाकारलेल्या मुलांनाही
+स्वप्न पाहण्याचा अधिकार आहे.”
+
+</div>
+
+
+<div class="lang-mr">
+
+<p>
+फासेपारधी समाजातील शिक्षणापासून वंचित
+मुलांसाठी प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या
+माध्यमातून शिक्षणाची नवी वाट निर्माण करण्याचे
+कार्य त्यांनी सुरू केले.
+</p>
+
+
+<p>
+शिक्षणासोबत निवास, अन्न, आरोग्य,
+संगणक शिक्षण, क्रीडा आणि संस्कार यांचा
+समावेश असलेले वातावरण निर्माण करण्याचा
+सतत प्रयत्न केला जात आहे.
+</p>
+
+</div>
+
+
+<div
+class="lang-en"
+style="display:none;">
+
+<p>
+Prof. Matin Bhosale has worked to create
+educational opportunities for children
+from the Fase Pardhi community through
+Prashnachinha Adivasi Ashram School.
+</p>
+
+
+<p>
+The work focuses not only on education,
+but also residential care, nutrition,
+healthcare, digital learning, sports
+and values.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SUCCESS STORY
+===================================================== -->
+
+<section
+class="success-section">
+
+
+<div class="success-grid">
+
+
+<div>
 
 <img
 src="students.jpg"
-alt="AFPSS student">
+alt="AFPSS Student"
+loading="lazy">
 
 </div>
 
 
 <div class="success-content">
 
-<span class="eyebrow">
+<small>
 SUCCESS STORY
-</span>
+</small>
 
-<h2>
+
+<h2 class="lang-mr">
 एका विद्यार्थ्याची प्रेरणादायी वाटचाल
 </h2>
+
+
+<h2
+class="lang-en"
+style="display:none;">
+
+An Inspiring Student Journey
+
+</h2>
+
 
 <h3>
 प्रा. योगेश पवार
 </h3>
 
-<p class="success-role">
+
+<p>
 Assistant Professor | Seloo, Wardha
 </p>
 
 
-<p>
-
+<p class="lang-mr">
 शिक्षणाची संधी मिळाल्याने एका विद्यार्थ्याचे
 जीवन कसे बदलू शकते याचे प्रेरणादायी उदाहरण.
 </p>
 
 
-<p>
+<p
+class="lang-en"
+style="display:none;">
 
-शिक्षण, मार्गदर्शन आणि संधीमुळे आज ते
-उच्च शिक्षण पूर्ण करून प्राध्यापक म्हणून
-कार्यरत आहेत.
+An inspiring example of how education,
+guidance and opportunity can transform
+a student's life.
 
 </p>
 
-
-<div class="quote-box">
-
-Education can change a life.
-
-</div>
-
 </div>
 
 </div>
@@ -794,544 +2235,117 @@ Education can change a life.
 </section>
 
 
+<!-- =====================================================
+     AWARDS
+===================================================== -->
 
-<!-- ================= AWARDS ================= -->
+<section
+class="premium-section"
+id="awards">
 
-<!-- ================= PREMIUM AWARDS ================= -->
 
-<section class="awards-section" id="awards">
+<div class="premium-title">
 
-    <div class="container">
+<small>
+RECOGNITION
+</small>
 
-        <div class="section-title">
-
-            <span>RECOGNITION</span>
-
-            <h2>50+ Awards & Recognition</h2>
-
-            <p>
-                सामाजिक कार्याची राज्य आणि राष्ट्रीय स्तरावर दखल.
-            </p>
-
-        </div>
-
-
-        <div class="awards-grid">
-
-
-            <!-- AWARD 1 -->
-
-            <article class="award-card">
-
-                <div class="award-image">
-
-                    <img
-                        src="award-baba-amte.jpg"
-                        alt="श्रद्धेय बाबा आमटे मानवता पुरस्कार 2018"
-                        loading="lazy"
-                        onclick="openMedia(this.src)">
-
-                    <span class="award-year">
-                        2018
-                    </span>
-
-                </div>
-
-                <div class="award-content">
-
-                    <div class="award-icon">
-                        🏆
-                    </div>
-
-                    <h3>
-                        श्रद्धेय बाबा आमटे मानवता पुरस्कार
-                    </h3>
-
-                    <p>
-                        फासेपारधी समाजातील मुलांच्या शिक्षणासाठी
-                        आणि सामाजिक कार्यासाठी केलेल्या योगदानाची
-                        दखल.
-                    </p>
-
-                    <button
-                        class="award-view"
-                        onclick="openMedia('award-baba-amte.jpg')">
-
-                        View Award →
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- AWARD 2 -->
-
-            <article class="award-card">
-
-                <div class="award-image">
-
-                    <img
-                        src="award-lokmat.jpg"
-                        alt="लोकमत समाजसेवा पुरस्कार"
-                        loading="lazy"
-                        onclick="openMedia(this.src)">
-
-                    <span class="award-year">
-                        2026
-                    </span>
-
-                </div>
-
-                <div class="award-content">
-
-                    <div class="award-icon">
-                        🏅
-                    </div>
-
-                    <h3>
-                        लोकमत समाजसेवा पुरस्कार
-                    </h3>
-
-                    <p>
-                        फासेपारधी समाजातील शिक्षण आणि सामाजिक
-                        परिवर्तनासाठी केलेल्या कार्याची दखल.
-                    </p>
-
-                    <button
-                        class="award-view"
-                        onclick="openMedia('award-lokmat.jpg')">
-
-                        View Award →
-                    </button>
-
-                </div>
-
-            </article>
-
-
-            <!-- 50+ RECOGNITION -->
-
-            <div class="awards-more">
-
-                <div class="more-number">
-                    50+
-                </div>
-
-                <h3>
-                    Awards & Honours
-                </h3>
-
-                <p>
-                    सामाजिक कार्याची विविध स्तरांवर झालेली
-                    दखल आणि सन्मान.
-                </p>
-
-                <span>
-                    More awards will be added to the gallery.
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= DIGITAL GALLERY 2.0 ================= -->
-
-<section class="section digital-gallery" id="gallery">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>OUR SCHOOL GALLERY</span>
-
-            <h2>आमच्या कार्याची प्रेरणादायी झलक</h2>
-
-            <p>
-                Real moments. Real stories. Real impact.
-            </p>
-
-        </div>
-
-
-        <!-- GALLERY FILTERS -->
-
-        <div class="gallery-filters">
-
-            <button class="gallery-filter active" data-filter="all">
-                All Photos
-            </button>
-
-            <button class="gallery-filter" data-filter="school">
-                School Life
-            </button>
-
-            <button class="gallery-filter" data-filter="education">
-                Education
-            </button>
-
-            <button class="gallery-filter" data-filter="activities">
-                Activities
-            </button>
-
-        </div>
-
-
-        <!-- PHOTO COUNT -->
-
-        <div class="gallery-info">
-
-            <span>
-                📸 <strong id="gallery-count">15</strong> Photos
-            </span>
-
-            <span>
-                AFPSS • Prashnachinha Adivasi Ashram School
-            </span>
-
-        </div>
-
-
-        <!-- PHOTO GRID -->
-
-        <div class="digital-gallery-grid">
-
-
-            <div class="digital-gallery-item"
-                 data-category="school"
-                 data-index="0">
-
-                <img src="school1.jpg"
-                     alt="AFPSS School Life"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>School Life</strong>
-                    <span>AFPSS Students</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="education"
-                 data-index="1">
-
-                <img src="school2.jpg"
-                     alt="AFPSS Education"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>Education</strong>
-                    <span>Learning & Education</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="activities"
-                 data-index="2">
-
-                <img src="school3.jpg"
-                     alt="AFPSS School Activities"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>Activities</strong>
-                    <span>School Activity</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="school"
-                 data-index="3">
-
-                <img src="school4.jpg"
-                     alt="AFPSS Students"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>School Life</strong>
-                    <span>Our Students</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="education"
-                 data-index="4">
-
-                <img src="school5.jpg"
-                     alt="AFPSS Educational Activity"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>Education</strong>
-                    <span>Learning Together</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="activities"
-                 data-index="5">
-
-                <img src="school6.jpg"
-                     alt="AFPSS Student Activity"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>Activities</strong>
-                    <span>Student Activities</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="school"
-                 data-index="6">
-
-                <img src="school7.jpg"
-                     alt="AFPSS School Students"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>School Life</strong>
-                    <span>Students Together</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="activities"
-                 data-index="7">
-
-                <img src="school8.jpg"
-                     alt="AFPSS School Programme"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>Activities</strong>
-                    <span>School Programme</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="education"
-                 data-index="8">
-
-                <img src="school9.jpg"
-                     alt="AFPSS Students Education"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>Education</strong>
-                    <span>Education & Growth</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="activities"
-                 data-index="9">
-
-                <img src="school10.jpg"
-                     alt="AFPSS School Activities"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>Activities</strong>
-                    <span>School Activities</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="school"
-                 data-index="10">
-
-                <img src="school11.jpg"
-                     alt="AFPSS Tribal Students"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>School Life</strong>
-                    <span>Tribal Students</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="activities"
-                 data-index="11">
-
-                <img src="school12.jpg"
-                     alt="AFPSS Student Activities"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>Activities</strong>
-                    <span>Student Activities</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="school"
-                 data-index="12">
-
-                <img src="school13.jpg"
-                     alt="AFPSS School Life"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>School Life</strong>
-                    <span>Life at AFPSS</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="education"
-                 data-index="13">
-
-                <img src="school14.jpg"
-                     alt="AFPSS Educational Programme"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>Education</strong>
-                    <span>Educational Programme</span>
-                </div>
-
-            </div>
-
-
-            <div class="digital-gallery-item"
-                 data-category="activities"
-                 data-index="14">
-
-                <img src="school15.jpg"
-                     alt="AFPSS School Community"
-                     loading="lazy">
-
-                <div class="gallery-caption">
-                    <strong>Activities</strong>
-                    <span>AFPSS Community</span>
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= GALLERY LIGHTBOX ================= -->
-
-<div class="gallery-lightbox"
-     id="gallery-lightbox"
-     aria-hidden="true">
-
-    <button class="gallery-close"
-            id="gallery-close"
-            aria-label="Close">
-        ×
-    </button>
-
-    <button class="gallery-prev"
-            id="gallery-prev"
-            aria-label="Previous">
-        ‹
-    </button>
-
-    <div class="gallery-lightbox-content">
-
-        <img id="gallery-lightbox-image"
-             src=""
-             alt="AFPSS Gallery">
-
-        <div class="gallery-counter">
-            <span id="gallery-current">1</span>
-            /
-            <span id="gallery-total">15</span>
-        </div>
-
-        <div class="gallery-lightbox-caption">
-
-            <strong id="gallery-lightbox-title">
-                School Life
-            </strong>
-
-            <span id="gallery-lightbox-description">
-                AFPSS Students
-            </span>
-
-        </div>
-
-    </div>
-
-    <button class="gallery-next"
-            id="gallery-next"
-            aria-label="Next">
-        ›
-    </button>
-
-</div>
-
-<!-- ================= MEDIA COVERAGE ================= -->
-
-<section class="section media-section">
-
-<div class="container media-banner">
-
-
-<div>
-
-<span class="eyebrow">
-MEDIA COVERAGE
-</span>
 
 <h2>
-माध्यमांमधील आमचा प्रवास
+🏆 50+ Awards & Recognition
 </h2>
 
-<p>
-Our journey has been recognised by the media.
+
+<p class="lang-mr">
+सामाजिक कार्याची विविध स्तरांवर झालेली दखल.
+</p>
+
+
+<p
+class="lang-en"
+style="display:none;">
+
+Recognition of social work at different levels.
+
 </p>
 
 </div>
+
+
+<div class="awards-grid">
+
+
+<article class="award-card">
+
+<img
+src="award-baba-amte.jpg"
+alt="Baba Amte Humanitarian Award"
+loading="lazy">
+
+<div class="award-card-content">
+
+<h3>
+श्रद्धेय बाबा आमटे मानवता पुरस्कार
+</h3>
+
+<p>
+फासेपारधी समाजातील मुलांच्या शिक्षणासाठी
+आणि सामाजिक कार्यासाठी योगदानाची दखल.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="award-card">
+
+<img
+src="award-lokmat.jpg"
+alt="Lokmat Award"
+loading="lazy">
+
+<div class="award-card-content">
+
+<h3>
+लोकमत समाजसेवा पुरस्कार
+</h3>
+
+<p>
+शिक्षण आणि सामाजिक परिवर्तनासाठी
+केलेल्या कार्याची दखल.
+</p>
+
+</div>
+
+</article>
+
+
+<div class="awards-more">
+
+<div
+style="font-size:48px;font-weight:900;">
+50+
+</div>
+
+<h3>
+Awards & Honours
+</h3>
+
+<p>
+अजून अनेक पुरस्कार आणि सन्मान.
+</p>
 
 
 <a
-href="media.html"
-class="btn btn-light">
+href="awards.html"
+class="awards-more-btn">
 
-📰 View Media Coverage →
+🏆 View All Awards →
 
 </a>
+
+</div>
 
 
 </div>
@@ -1339,33 +2353,304 @@ class="btn btn-light">
 </section>
 
 
-
-<!-- ================= DOCUMENTS ================= -->
+<!-- =====================================================
+     GALLERY
+===================================================== -->
 
 <section
-class="section documents-section"
-id="documents">
-
-<div class="container">
+class="premium-section"
+id="gallery">
 
 
-<div class="section-heading">
+<div class="premium-title">
 
-<span>TRANSPARENCY</span>
+<small>
+OUR SCHOOL GALLERY
+</small>
 
-<h2>
-Trust & Transparency
+
+<h2 class="lang-mr">
+आमच्या कार्याची प्रेरणादायी झलक
 </h2>
 
+
+<h2
+class="lang-en"
+style="display:none;">
+
+Our School Gallery
+
+</h2>
+
+
 <p>
-पारदर्शकता आणि विश्वास हे आमच्या संस्थेचे
-मुख्य आधारस्तंभ आहेत.
+Real moments. Real stories. Real impact.
 </p>
 
 </div>
 
 
-<div class="document-grid">
+<div class="gallery-grid">
+
+
+<img src="school1.jpg"
+alt="AFPSS School Life"
+loading="lazy">
+
+
+<img src="school2.jpg"
+alt="AFPSS Education"
+loading="lazy">
+
+
+<img src="school3.jpg"
+alt="AFPSS Activities"
+loading="lazy">
+
+
+<img src="school4.jpg"
+alt="AFPSS Students"
+loading="lazy">
+
+
+<img src="school5.jpg"
+alt="Education"
+loading="lazy">
+
+
+<img src="school6.jpg"
+alt="Student Activity"
+loading="lazy">
+
+
+<img src="school7.jpg"
+alt="Students Together"
+loading="lazy">
+
+
+<img src="school8.jpg"
+alt="School Programme"
+loading="lazy">
+
+
+<img src="school9.jpg"
+alt="Education"
+loading="lazy">
+
+
+<img src="school10.jpg"
+alt="School Activities"
+loading="lazy">
+
+
+<img src="school11.jpg"
+alt="Tribal Students"
+loading="lazy">
+
+
+<img src="school12.jpg"
+alt="Student Activities"
+loading="lazy">
+
+
+<img src="school13.jpg"
+alt="School Life"
+loading="lazy">
+
+
+<img src="school14.jpg"
+alt="Educational Programme"
+loading="lazy">
+
+
+<img src="school15.jpg"
+alt="AFPSS Community"
+loading="lazy">
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     MEDIA
+===================================================== -->
+
+<section
+class="premium-section"
+id="media">
+
+
+<div class="premium-title">
+
+<small>
+MEDIA CENTRE
+</small>
+
+
+<h2 class="lang-mr">
+माध्यमांमधील आमचा प्रवास
+</h2>
+
+
+<h2
+class="lang-en"
+style="display:none;">
+
+AFPSS Media Centre
+
+</h2>
+
+
+<p class="lang-mr">
+YouTube videos, बातम्या, मुलाखती आणि
+माध्यमांमधील आमच्या कार्याची नोंद.
+</p>
+
+
+<p
+class="lang-en"
+style="display:none;">
+
+YouTube videos, news coverage, interviews
+and stories about our work.
+
+</p>
+
+</div>
+
+
+<div class="media-preview">
+
+
+<div class="media-card">
+
+<div class="media-icon">
+▶️
+</div>
+
+<h3>
+YouTube Videos
+</h3>
+
+<p>
+Our video stories
+</p>
+
+<a href="media.html">
+View Videos →
+</a>
+
+</div>
+
+
+<div class="media-card">
+
+<div class="media-icon">
+📰
+</div>
+
+<h3>
+News Coverage
+</h3>
+
+<p>
+Media & newspapers
+</p>
+
+<a href="media.html">
+View News →
+</a>
+
+</div>
+
+
+<div class="media-card">
+
+<div class="media-icon">
+📸
+</div>
+
+<h3>
+Media Photos
+</h3>
+
+<p>
+Photo stories
+</p>
+
+<a href="media.html">
+View Photos →
+</a>
+
+</div>
+
+
+<div class="media-card">
+
+<div class="media-icon">
+🎥
+</div>
+
+<h3>
+Video Stories
+</h3>
+
+<p>
+Our journey
+</p>
+
+<a href="media.html">
+Explore Media →
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     DOCUMENTS
+===================================================== -->
+
+<section
+class="premium-section"
+id="documents">
+
+
+<div class="premium-title">
+
+<small>
+TRANSPARENCY
+</small>
+
+
+<h2 class="lang-mr">
+विश्वास आणि पारदर्शकता
+</h2>
+
+
+<h2
+class="lang-en"
+style="display:none;">
+
+Trust & Transparency
+
+</h2>
+
+
+<p>
+Our documents and registrations.
+</p>
+
+</div>
+
+
+<div class="documents-grid">
 
 
 <a
@@ -1373,9 +2658,13 @@ href="80G.pdf"
 target="_blank"
 class="document-card">
 
-<span>📄</span>
+<span>
+📄
+</span>
 
-<h3>80G Certificate</h3>
+<h3>
+80G Certificate
+</h3>
 
 <p>
 Income Tax document
@@ -1393,9 +2682,13 @@ href="12A.pdf"
 target="_blank"
 class="document-card">
 
-<span>📄</span>
+<span>
+📄
+</span>
 
-<h3>12A Registration</h3>
+<h3>
+12A Registration
+</h3>
 
 <p>
 Registration document
@@ -1413,9 +2706,13 @@ href="Society-Registration.pdf"
 target="_blank"
 class="document-card">
 
-<span>🏢</span>
+<span>
+🏢
+</span>
 
-<h3>Registration</h3>
+<h3>
+Registration
+</h3>
 
 <p>
 Society Registration
@@ -1433,9 +2730,13 @@ href="Audit-Report.pdf"
 target="_blank"
 class="document-card">
 
-<span>📊</span>
+<span>
+📊
+</span>
 
-<h3>Audit Report</h3>
+<h3>
+Audit Report
+</h3>
 
 <p>
 Financial transparency
@@ -1450,140 +2751,185 @@ View Report →
 
 </div>
 
-</div>
-
 </section>
 
 
-
-<!-- ================= DONATION CTA ================= -->
+<!-- =====================================================
+     DONATION CTA
+===================================================== -->
 
 <section
 class="donation-cta">
 
-<div class="container">
 
+<div class="premium-container">
 
-<div>
 
 <span>
 HELP BUILD A BRIGHTER FUTURE
 </span>
 
+
+<div class="lang-mr">
+
 <h2>
-एका मुलाचे शिक्षण...
+एका मुलाचे शिक्षण...<br>
 एका पिढीचे भविष्य.
 </h2>
 
 <p>
-Your support can help provide education,
+आपली मदत शिक्षण, अन्न, निवास आणि
+विद्यार्थी कल्याणासाठी महत्त्वाची आहे.
+</p>
+
+</div>
+
+
+<div
+class="lang-en"
+style="display:none;">
+
+<h2>
+One Child's Education...<br>
+A Generation's Future.
+</h2>
+
+<p>
+Your support helps provide education,
 care, nutrition and opportunity.
 </p>
 
 </div>
 
 
+<a href="donate.html">
+
+❤️
+<span class="lang-mr">
+देणगी द्या
+</span>
+
+<span
+class="lang-en"
+style="display:none;">
+
+Donate Now
+
+</span>
+
+</a>
+
 </div>
 
 </section>
 
 
-
-<!-- ================= CONTACT ================= -->
+<!-- =====================================================
+     CONTACT + MAP
+===================================================== -->
 
 <section
-class="section contact-section"
+class="location-section"
 id="contact">
 
-<div class="container">
+
+<div class="premium-title">
+
+<small>
+OUR LOCATION
+</small>
 
 
-<div class="section-heading">
-
-<span>CONTACT US</span>
-
-<h2>
+<h2 class="lang-mr">
 आमच्याशी संपर्क साधा
 </h2>
 
-</div>
+
+<h2
+class="lang-en"
+style="display:none;">
+
+Visit & Contact Us
+
+</h2>
 
 
-<div class="contact-grid">
+<p class="lang-mr">
+
+📍 प्रश्नचिन्ह आदिवासी आश्रम शाळा<br>
+
+मंगरूळ चव्हाळा,<br>
+
+ता. नांदगाव खंडेश्वर,<br>
+
+जि. अमरावती, महाराष्ट्र
+
+</p>
 
 
-<div class="contact-card">
+<p
+class="lang-en"
+style="display:none;">
 
-<span>📍</span>
+📍 Prashnachinha Adivasi Ashram School<br>
 
-<h3>
-Address
-</h3>
-
-<p>
-
-Adivasi Fase Pardhi Sudhar Samiti<br>
-
-Mangrul Chawhala,<br>
+Mangrul Chawala,<br>
 
 Tal. Nandgaon Khandeshwar,<br>
 
-Dist. Amravati,<br>
-
-Maharashtra – India
+Dist. Amravati, Maharashtra, India
 
 </p>
 
-</div>
-
-
-<div class="contact-card">
-
-<span>📞</span>
-
-<h3>
-Phone
-</h3>
 
 <p>
-+91 9096364529
+
+📞 +91 9096364529<br>
+📞 +91 9764239458
+
 </p>
+
 
 <p>
-+91 9764239458
+✉️ afpss2005@gmail.com
 </p>
 
-</div>
 
+<a
+href="https://maps.app.goo.gl/nMU4ecoQZBkDD9Wr8"
+target="_blank"
+rel="noopener"
+class="map-button">
 
-<div class="contact-card">
+📍
 
-<span>✉️</span>
+<span class="lang-mr">
+Google Maps वर मार्ग पहा
+</span>
 
-<h3>
-Email
-</h3>
+<span
+class="lang-en"
+style="display:none;">
 
-<p>
-afpss2005@gmail.com
-</p>
+View Location on Google Maps
 
-</div>
+</span>
 
-
-</div>
+</a>
 
 </div>
 
 </section>
 
 
-
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="footer">
 
-<div class="container footer-grid">
+
+<div class="footer-grid">
 
 
 <div>
@@ -1598,7 +2944,9 @@ alt="AFPSS Logo">
 
 <div>
 
-<strong>AFPSS</strong>
+<strong>
+AFPSS
+</strong>
 
 <span>
 Adivasi Fase Pardhi Sudhar Samiti
@@ -1648,7 +2996,7 @@ Connect
 </h3>
 
 <a href="media.html">
-Media Coverage
+Media
 </a>
 
 <a href="#documents">
@@ -1693,13 +3041,15 @@ All Rights Reserved.
 </footer>
 
 
-
-<!-- ================= WHATSAPP ================= -->
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
 
 <a
 href="https://wa.me/919764239458"
 class="whatsapp"
 target="_blank"
+rel="noopener"
 aria-label="WhatsApp">
 
 💬
@@ -1707,10 +3057,15 @@ aria-label="WhatsApp">
 </a>
 
 
-
-<!-- ================= MOBILE MENU ================= -->
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
 const menuToggle =
 document.getElementById("menuToggle");
@@ -1718,6 +3073,7 @@ document.getElementById("menuToggle");
 const mainNav =
 document.getElementById("mainNav");
 
+if(menuToggle && mainNav){
 
 menuToggle.addEventListener(
 "click",
@@ -1725,9 +3081,7 @@ function(){
 
 mainNav.classList.toggle("open");
 
-}
-);
-
+});
 
 document
 .querySelectorAll("#mainNav a")
@@ -1739,10 +3093,179 @@ function(){
 
 mainNav.classList.remove("open");
 
+});
+
+});
+
 }
+
+
+/* =====================================================
+   PREMIUM HERO SLIDER
+   4 PHOTOS - 3 SECONDS
+===================================================== */
+
+const heroSlides =
+document.querySelectorAll(".hero-slide");
+
+let currentHeroSlide = 0;
+
+if(heroSlides.length > 1){
+
+heroSlides.forEach(
+function(slide,index){
+
+slide.classList.toggle(
+"active",
+index === 0
 );
 
 });
+
+
+setInterval(function(){
+
+heroSlides[
+currentHeroSlide
+].classList.remove("active");
+
+
+currentHeroSlide =
+(currentHeroSlide + 1)
+% heroSlides.length;
+
+
+heroSlides[
+currentHeroSlide
+].classList.add("active");
+
+
+},3000);
+
+}
+
+
+/* =====================================================
+   MARATHI / ENGLISH
+===================================================== */
+
+const marathiBtn =
+document.getElementById("marathiBtn");
+
+const englishBtn =
+document.getElementById("englishBtn");
+
+
+const marathiContent =
+document.querySelectorAll(".lang-mr");
+
+const englishContent =
+document.querySelectorAll(".lang-en");
+
+
+function setLanguage(language){
+
+if(language === "en"){
+
+marathiContent.forEach(
+function(el){
+
+el.style.display = "none";
+
+});
+
+
+englishContent.forEach(
+function(el){
+
+el.style.display = "";
+
+});
+
+
+englishBtn.classList.add("active");
+
+marathiBtn.classList.remove("active");
+
+document.documentElement.lang =
+"en";
+
+localStorage.setItem(
+"afpssLanguage",
+"en"
+);
+
+}
+
+else{
+
+englishContent.forEach(
+function(el){
+
+el.style.display = "none";
+
+});
+
+
+marathiContent.forEach(
+function(el){
+
+el.style.display = "";
+
+});
+
+
+marathiBtn.classList.add("active");
+
+englishBtn.classList.remove("active");
+
+document.documentElement.lang =
+"mr";
+
+localStorage.setItem(
+"afpssLanguage",
+"mr"
+);
+
+}
+
+}
+
+
+if(
+marathiBtn &&
+englishBtn
+){
+
+marathiBtn.addEventListener(
+"click",
+function(){
+
+setLanguage("mr");
+
+});
+
+
+englishBtn.addEventListener(
+"click",
+function(){
+
+setLanguage("en");
+
+});
+
+
+const savedLanguage =
+localStorage.getItem(
+"afpssLanguage"
+) || "mr";
+
+
+setLanguage(
+savedLanguage
+);
+
+}
 
 </script>
 
