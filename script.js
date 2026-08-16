@@ -830,36 +830,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
 
 });
-/* =========================================
-   PREMIUM HERO — 4 PHOTO SLIDER
-   Change photo every 3 seconds
-========================================= */
+/* =========================================================
+   AFPSS PREMIUM HERO SLIDER
+   4 PHOTOS | 3 SECONDS
+========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const heroSlides = document.querySelectorAll(".hero-slide");
+    const heroSlides = document.querySelectorAll(
+        ".premium-hero .hero-slide"
+    );
 
-    if (!heroSlides.length) return;
+    if (heroSlides.length < 2) return;
 
     let currentHeroSlide = 0;
 
-    // First photo
-    heroSlides.forEach((slide, index) => {
-        slide.classList.toggle("active", index === 0);
+    heroSlides.forEach(function (slide, index) {
+        slide.classList.toggle(
+            "active",
+            index === 0
+        );
     });
 
-    // Change every 3 seconds
     setInterval(function () {
 
-        heroSlides[currentHeroSlide].classList.remove("active");
+        heroSlides[currentHeroSlide]
+            .classList.remove("active");
 
-        currentHeroSlide++;
+        currentHeroSlide =
+            (currentHeroSlide + 1) %
+            heroSlides.length;
 
-        if (currentHeroSlide >= heroSlides.length) {
-            currentHeroSlide = 0;
-        }
-
-        heroSlides[currentHeroSlide].classList.add("active");
+        heroSlides[currentHeroSlide]
+            .classList.add("active");
 
     }, 3000);
 
