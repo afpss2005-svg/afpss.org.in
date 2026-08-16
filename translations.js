@@ -797,3 +797,79 @@
 
 
 })();
+/* =====================================================
+   AFPS | MARATHI / ENGLISH LANGUAGE SWITCHER
+   ===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const marathiBtn = document.getElementById("marathiBtn");
+    const englishBtn = document.getElementById("englishBtn");
+
+    const marathiContent = document.querySelectorAll(".lang-mr");
+    const englishContent = document.querySelectorAll(".lang-en");
+
+    function setLanguage(lang) {
+
+        if (lang === "en") {
+
+            marathiContent.forEach(function (el) {
+                el.style.display = "none";
+            });
+
+            englishContent.forEach(function (el) {
+                el.style.display = "";
+            });
+
+            if (marathiBtn) {
+                marathiBtn.classList.remove("active");
+            }
+
+            if (englishBtn) {
+                englishBtn.classList.add("active");
+            }
+
+            document.documentElement.lang = "en";
+            localStorage.setItem("afpss-language", "en");
+
+        } else {
+
+            marathiContent.forEach(function (el) {
+                el.style.display = "";
+            });
+
+            englishContent.forEach(function (el) {
+                el.style.display = "none";
+            });
+
+            if (englishBtn) {
+                englishBtn.classList.remove("active");
+            }
+
+            if (marathiBtn) {
+                marathiBtn.classList.add("active");
+            }
+
+            document.documentElement.lang = "mr";
+            localStorage.setItem("afpss-language", "mr");
+        }
+    }
+
+    if (marathiBtn) {
+        marathiBtn.addEventListener("click", function () {
+            setLanguage("mr");
+        });
+    }
+
+    if (englishBtn) {
+        englishBtn.addEventListener("click", function () {
+            setLanguage("en");
+        });
+    }
+
+    const savedLanguage =
+        localStorage.getItem("afpss-language") || "mr";
+
+    setLanguage(savedLanguage);
+
+});
