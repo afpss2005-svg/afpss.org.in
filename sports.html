@@ -8,20 +8,30 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>
-Sports & Achievements | AFPSS
-</title>
+<title>क्रीडा व विद्यार्थ्यांचे यश | AFPSS</title>
 
 <meta name="description"
-content="Prashnachinha Adivasi Ashram School students' sports achievements, Kabaddi, state-level participation, medals, trophies and sporting journey.">
+      content="प्रश्नचिन्ह आदिवासी आश्रम शाळेतील विद्यार्थ्यांचा क्रीडा प्रवास, कबड्डी, स्पर्धा, पुरस्कार, ट्रॉफी आणि उल्लेखनीय यश.">
 
 <link rel="stylesheet"
       href="style.css">
 
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap"
+rel="stylesheet">
+
+
 <style>
 
 /* =====================================================
-   SPORTS PAGE
+   SPORTS PAGE — FINAL CLEAN VERSION
 ===================================================== */
 
 *{
@@ -30,21 +40,14 @@ content="Prashnachinha Adivasi Ashram School students' sports achievements, Kaba
 
 body{
     margin:0;
-    background:#f5faf7;
-    color:#17382b;
     font-family:
         "Noto Sans Devanagari",
-        "Inter",
+        Inter,
         Arial,
         sans-serif;
-}
 
-img{
-    max-width:100%;
-}
-
-a{
-    text-decoration:none;
+    background:#f6faf8;
+    color:#17382b;
 }
 
 
@@ -53,8 +56,6 @@ a{
 ===================================================== */
 
 .sports-header{
-
-    position:relative;
 
     background:
         linear-gradient(
@@ -67,10 +68,14 @@ a{
 
     padding:22px 0;
 
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.12);
+    position:sticky;
 
-    z-index:10;
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:
+        0 5px 25px rgba(0,0,0,.15);
 }
 
 .sports-nav{
@@ -90,76 +95,90 @@ a{
 
 .sports-brand{
 
+    color:#fff;
+
+    text-decoration:none;
+
     display:flex;
 
     align-items:center;
 
     gap:12px;
-
-    color:#fff;
 }
 
 .sports-brand img{
 
-    width:52px;
-    height:52px;
+    width:48px;
 
-    object-fit:cover;
+    height:48px;
 
-    border-radius:12px;
+    object-fit:contain;
+
+    border-radius:10px;
 }
 
 .sports-brand strong{
 
     display:block;
 
-    font-size:21px;
+    font-size:22px;
+
+    font-weight:900;
 }
 
 .sports-brand span{
 
     display:block;
 
-    font-size:11px;
+    font-size:12px;
 
-    color:#d8ebe2;
+    opacity:.85;
 }
 
-.sports-nav-links{
+.sports-back{
 
-    display:flex;
+    display:inline-flex;
 
     align-items:center;
 
-    gap:18px;
-}
+    gap:8px;
 
-.sports-nav-links a{
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.12);
 
     color:#fff;
 
-    font-size:14px;
+    text-decoration:none;
 
-    font-weight:700;
+    font-weight:800;
+
+    border:1px solid
+        rgba(255,255,255,.2);
 }
 
-.sports-nav-links a:hover{
 
-    color:#ffd45b;
-}
+/* =====================================================
+   LANGUAGE
+===================================================== */
 
 .language-switcher{
 
     display:flex;
 
-    gap:5px;
+    align-items:center;
+
+    gap:4px;
 
     padding:4px;
 
     border-radius:30px;
 
     background:
-        rgba(255,255,255,.12);
+        rgba(0,0,0,.18);
 }
 
 .language-switcher button{
@@ -195,7 +214,7 @@ a{
 
     position:relative;
 
-    min-height:70vh;
+    min-height:620px;
 
     display:flex;
 
@@ -203,42 +222,29 @@ a{
 
     overflow:hidden;
 
-    background:
+    background:#033c28;
+}
+
+.sports-hero-image{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
         linear-gradient(
-            135deg,
-            #075b3b,
-            #062f21
-        );
-}
+            90deg,
+            rgba(0,35,24,.92),
+            rgba(0,55,38,.68),
+            rgba(0,0,0,.20)
+        ),
+        url("sports-hero.jpg");
 
-.sports-hero::before{
+    background-size:cover;
 
-    content:"⚽";
+    background-position:center;
 
-    position:absolute;
-
-    right:7%;
-
-    top:10%;
-
-    font-size:180px;
-
-    opacity:.08;
-}
-
-.sports-hero::after{
-
-    content:"🏆";
-
-    position:absolute;
-
-    left:5%;
-
-    bottom:5%;
-
-    font-size:150px;
-
-    opacity:.06;
+    transform:scale(1.01);
 }
 
 .sports-hero-content{
@@ -260,13 +266,13 @@ a{
 
     color:#ffd45b;
 
-    font-size:13px;
+    font-size:15px;
 
     font-weight:900;
 
-    letter-spacing:3px;
+    letter-spacing:1px;
 
-    margin-bottom:18px;
+    margin-bottom:15px;
 }
 
 .sports-hero h1{
@@ -278,7 +284,7 @@ a{
     font-size:
         clamp(42px,7vw,76px);
 
-    line-height:1.08;
+    line-height:1.1;
 
     font-weight:900;
 }
@@ -290,26 +296,27 @@ a{
 
 .sports-hero p{
 
-    max-width:760px;
+    max-width:700px;
 
-    margin:22px 0 0;
-
-    color:#d9ebe3;
-
-    font-size:18px;
+    font-size:19px;
 
     line-height:1.8;
+
+    color:
+        rgba(255,255,255,.9);
+
+    margin:20px 0 0;
 }
 
-.hero-actions{
+.hero-buttons{
 
     display:flex;
 
     flex-wrap:wrap;
 
-    gap:14px;
+    gap:12px;
 
-    margin-top:30px;
+    margin-top:28px;
 }
 
 .hero-btn{
@@ -320,27 +327,29 @@ a{
 
     justify-content:center;
 
-    padding:14px 25px;
+    padding:14px 24px;
 
     border-radius:40px;
 
-    background:#fff;
-
-    color:#075b3b;
+    text-decoration:none;
 
     font-weight:900;
-}
-
-.hero-btn.secondary{
 
     background:#ef3340;
 
     color:#fff;
 }
 
+.hero-btn.secondary{
+
+    background:#fff;
+
+    color:#075b3b;
+}
+
 
 /* =====================================================
-   COMMON SECTION
+   GENERAL
 ===================================================== */
 
 .sports-section{
@@ -355,54 +364,64 @@ a{
     margin:auto;
 }
 
-.section-heading{
+.section-title{
 
     text-align:center;
 
-    max-width:820px;
+    max-width:850px;
 
     margin:0 auto 45px;
 }
 
-.section-heading small{
+.section-title small{
 
     color:#b27709;
+
+    font-size:12px;
 
     font-weight:900;
 
     letter-spacing:2px;
 }
 
-.section-heading h2{
-
-    margin:12px 0;
+.section-title h2{
 
     color:#075b3b;
 
     font-size:
-        clamp(30px,5vw,44px);
+        clamp(30px,5vw,46px);
+
+    margin:10px 0;
 
     line-height:1.2;
 }
 
-.section-heading p{
+.section-title p{
 
     color:#687870;
 
     line-height:1.8;
+
+    margin:0;
 }
 
 
 /* =====================================================
-   IMPACT
+   STATS
 ===================================================== */
 
-.impact-section{
+.stats-section{
+
+    padding:70px 0;
 
     background:#fff;
 }
 
-.sports-impact-grid{
+.stats-grid{
+
+    width:min(1100px,92%);
+
+    margin:auto;
 
     display:grid;
 
@@ -412,7 +431,11 @@ a{
     gap:20px;
 }
 
-.sports-impact-card{
+.stat-card{
+
+    padding:30px 20px;
+
+    text-align:center;
 
     background:#f7fbf9;
 
@@ -420,101 +443,41 @@ a{
 
     border-radius:22px;
 
-    padding:30px 20px;
-
-    text-align:center;
-
     box-shadow:
         0 12px 35px
-        rgba(0,60,40,.07);
-
-    transition:.3s;
+        rgba(0,60,40,.06);
 }
 
-.sports-impact-card:hover{
-
-    transform:
-        translateY(-7px);
-}
-
-.sports-impact-card .icon{
+.stat-icon{
 
     font-size:38px;
 
     margin-bottom:10px;
 }
 
-.sports-impact-card strong{
+.stat-card strong{
 
     display:block;
 
     color:#075b3b;
 
-    font-size:36px;
+    font-size:40px;
 
     font-weight:900;
 }
 
-.sports-impact-card h3{
+.stat-card h3{
 
-    margin:9px 0;
+    margin:8px 0;
 
     color:#17382b;
 }
 
-.sports-impact-card p{
-
-    margin:0;
+.stat-card p{
 
     color:#687870;
 
-    line-height:1.6;
-}
-
-
-/* =====================================================
-   MESSAGE
-===================================================== */
-
-.sports-message{
-
-    margin-top:55px;
-
-    padding:45px;
-
-    border-radius:28px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #075b3b,
-            #033c28
-        );
-
-    color:#fff;
-
-    text-align:center;
-}
-
-.sports-message h2{
-
-    margin:0 0 15px;
-
-    font-size:
-        clamp(28px,4vw,42px);
-}
-
-.sports-message p{
-
-    max-width:800px;
-
-    margin:auto;
-
-    color:#d9ebe3;
-
-    line-height:1.8;
-
-    font-size:17px;
+    margin:0;
 }
 
 
@@ -522,9 +485,14 @@ a{
    ACHIEVEMENTS
 ===================================================== */
 
-.achievements-section{
+.achievement-section{
 
-    background:#f5faf7;
+    background:
+        linear-gradient(
+            135deg,
+            #f1f8f4,
+            #fff
+        );
 }
 
 .achievement-grid{
@@ -534,12 +502,10 @@ a{
     grid-template-columns:
         repeat(3,1fr);
 
-    gap:24px;
+    gap:22px;
 }
 
 .achievement-card{
-
-    overflow:hidden;
 
     background:#fff;
 
@@ -547,16 +513,25 @@ a{
 
     border-radius:24px;
 
+    overflow:hidden;
+
     box-shadow:
         0 15px 40px
         rgba(0,60,40,.08);
+
+    transition:.3s;
+}
+
+.achievement-card:hover{
+
+    transform:translateY(-6px);
 }
 
 .achievement-card img{
 
     width:100%;
 
-    height:270px;
+    height:240px;
 
     object-fit:cover;
 
@@ -568,27 +543,22 @@ a{
     padding:24px;
 }
 
-.achievement-icon{
-
-    font-size:34px;
-}
-
 .achievement-content h3{
 
-    margin:12px 0 8px;
-
     color:#075b3b;
+
+    margin:0 0 10px;
 
     font-size:21px;
 }
 
 .achievement-content p{
 
-    margin:0;
-
     color:#687870;
 
     line-height:1.7;
+
+    margin:0;
 }
 
 
@@ -608,7 +578,7 @@ a{
     grid-template-columns:
         1fr 1fr;
 
-    gap:60px;
+    gap:55px;
 
     align-items:center;
 }
@@ -617,54 +587,54 @@ a{
 
     width:100%;
 
-    aspect-ratio:4/3;
-
-    object-fit:cover;
-
     border-radius:28px;
+
+    display:block;
 
     box-shadow:
         0 25px 60px
         rgba(0,60,40,.14);
 }
 
-.kabaddi-content small{
-
-    color:#b27709;
-
-    font-weight:900;
-
-    letter-spacing:2px;
-}
-
 .kabaddi-content h2{
-
-    margin:12px 0 22px;
 
     color:#075b3b;
 
-    font-size:
-        clamp(32px,5vw,48px);
+    font-size:42px;
+
+    margin:10px 0 20px;
 }
 
 .kabaddi-content p{
 
-    color:#53665d;
+    color:#596a62;
 
     line-height:1.85;
+
+    font-size:16px;
 }
 
-.kabaddi-quote{
+.kabaddi-points{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:12px;
 
     margin-top:25px;
+}
 
-    padding:22px;
+.kabaddi-point{
 
-    background:#f4faf7;
+    padding:15px;
+
+    border-radius:14px;
+
+    background:#f3faf6;
 
     border-left:4px solid #e7a91d;
-
-    border-radius:12px;
 
     color:#075b3b;
 
@@ -673,13 +643,75 @@ a{
 
 
 /* =====================================================
-   SPORTS AWARDS
+   STATE ACHIEVEMENTS
 ===================================================== */
 
-.awards-section{
+.state-section{
 
-    background:#f5faf7;
+    background:#f7faf8;
 }
+
+.state-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:22px;
+}
+
+.state-card{
+
+    background:#fff;
+
+    border:1px solid #deebe5;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,60,40,.07);
+}
+
+.state-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.state-card-content{
+
+    padding:22px;
+}
+
+.state-card-content h3{
+
+    color:#075b3b;
+
+    margin:0 0 8px;
+}
+
+.state-card-content p{
+
+    color:#687870;
+
+    line-height:1.7;
+
+    margin:0;
+}
+
+
+/* =====================================================
+   AWARDS
+===================================================== */
 
 .awards-grid{
 
@@ -693,13 +725,13 @@ a{
 
 .sport-award-card{
 
+    padding:30px 22px;
+
     background:#fff;
 
     border:1px solid #deebe5;
 
     border-radius:22px;
-
-    padding:30px 22px;
 
     text-align:center;
 
@@ -708,16 +740,18 @@ a{
         rgba(0,60,40,.07);
 }
 
-.sport-award-card .award-icon{
+.award-icon{
 
     font-size:52px;
+
+    margin-bottom:12px;
 }
 
 .sport-award-card h3{
 
     color:#075b3b;
 
-    margin:15px 0 8px;
+    margin:10px 0;
 }
 
 .sport-award-card p{
@@ -725,59 +759,6 @@ a{
     color:#687870;
 
     line-height:1.7;
-
-    margin:0;
-}
-
-
-/* =====================================================
-   EVERY STUDENT
-===================================================== */
-
-.student-section{
-
-    background:#fff;
-}
-
-.student-box{
-
-    padding:50px;
-
-    border-radius:28px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #f3faf6,
-            #fff
-        );
-
-    border:1px solid #deebe5;
-
-    text-align:center;
-}
-
-.student-box h2{
-
-    margin:0 0 18px;
-
-    color:#075b3b;
-
-    font-size:
-        clamp(30px,5vw,44px);
-}
-
-.student-box p{
-
-    max-width:850px;
-
-    margin:auto;
-
-    color:#596a62;
-
-    line-height:1.9;
-
-    font-size:17px;
 }
 
 
@@ -787,7 +768,7 @@ a{
 
 .gallery-section{
 
-    background:#f5faf7;
+    background:#f7faf8;
 }
 
 .sports-gallery{
@@ -797,12 +778,12 @@ a{
     grid-template-columns:
         repeat(4,1fr);
 
-    gap:16px;
+    gap:15px;
 }
 
-.sports-gallery figure{
+.sports-gallery a{
 
-    margin:0;
+    display:block;
 
     overflow:hidden;
 
@@ -811,38 +792,104 @@ a{
     background:#fff;
 
     border:1px solid #deebe5;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0,60,40,.06);
 }
 
 .sports-gallery img{
 
     width:100%;
 
-    height:230px;
-
-    object-fit:cover;
+    height:210px;
 
     display:block;
+
+    object-fit:cover;
 
     transition:.35s;
 }
 
-.sports-gallery figure:hover img{
+.sports-gallery a:hover img{
 
-    transform:scale(1.05);
+    transform:scale(1.06);
 }
 
 
 /* =====================================================
-   FINAL CTA
+   VIDEOS
 ===================================================== */
 
-.sports-cta{
+.video-section{
 
-    padding:80px 20px;
+    background:#fff;
+}
+
+.video-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:28px;
+
+    width:min(1000px,92%);
+
+    margin:auto;
+}
+
+.video-card{
+
+    background:#f7faf8;
+
+    border:1px solid #deebe5;
+
+    border-radius:24px;
+
+    padding:18px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,60,40,.08);
+}
+
+.video-card iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:0;
+
+    border-radius:16px;
+
+    display:block;
+}
+
+.video-card h3{
+
+    color:#075b3b;
+
+    margin:16px 4px 4px;
+
+    font-size:20px;
+}
+
+.video-card p{
+
+    color:#687870;
+
+    margin:5px 4px 0;
+
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   SPORTS MESSAGE
+===================================================== */
+
+.sports-message{
+
+    padding:75px 20px;
 
     background:
         linear-gradient(
@@ -851,45 +898,29 @@ a{
             #033c28
         );
 
-    text-align:center;
-
     color:#fff;
+
+    text-align:center;
 }
 
-.sports-cta h2{
-
-    margin:0 0 15px;
+.sports-message h2{
 
     font-size:
-        clamp(30px,5vw,45px);
+        clamp(30px,5vw,44px);
+
+    margin:0 0 15px;
 }
 
-.sports-cta p{
+.sports-message p{
 
-    max-width:760px;
+    max-width:750px;
 
     margin:auto;
 
-    color:#d9ebe3;
-
     line-height:1.8;
-}
 
-.sports-cta a{
-
-    display:inline-flex;
-
-    margin-top:25px;
-
-    padding:15px 28px;
-
-    border-radius:40px;
-
-    background:#ef3340;
-
-    color:#fff;
-
-    font-weight:900;
+    color:
+        rgba(255,255,255,.85);
 }
 
 
@@ -903,23 +934,33 @@ a{
 
     color:#fff;
 
-    padding:35px 20px;
+    padding:45px 20px 20px;
 
     text-align:center;
 }
 
-.sports-footer p{
-
-    margin:7px 0;
-
-    color:#b8cbc2;
-}
-
 .sports-footer a{
 
-    color:#ffd45b;
+    color:#dbe9e2;
+
+    text-decoration:none;
 
     font-weight:800;
+}
+
+.footer-bottom{
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.15);
+
+    color:#a9bbb3;
+
+    font-size:13px;
 }
 
 
@@ -929,19 +970,13 @@ a{
 
 @media(max-width:900px){
 
-    .sports-nav-links{
-
-        gap:10px;
-    }
-
-    .sports-impact-grid{
+    .stats-grid{
 
         grid-template-columns:
             repeat(2,1fr);
     }
 
-    .achievement-grid,
-    .awards-grid{
+    .achievement-grid{
 
         grid-template-columns:
             repeat(2,1fr);
@@ -950,6 +985,17 @@ a{
     .kabaddi-grid{
 
         grid-template-columns:1fr;
+    }
+
+    .state-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .awards-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .sports-gallery{
@@ -963,20 +1009,14 @@ a{
 
 @media(max-width:600px){
 
+    .sports-header{
+
+        position:relative;
+    }
+
     .sports-nav{
 
         flex-wrap:wrap;
-    }
-
-    .sports-nav-links{
-
-        width:100%;
-
-        justify-content:center;
-
-        flex-wrap:wrap;
-
-        font-size:12px;
     }
 
     .sports-brand span{
@@ -984,9 +1024,16 @@ a{
         display:none;
     }
 
+    .sports-back{
+
+        padding:8px 13px;
+
+        font-size:13px;
+    }
+
     .sports-hero{
 
-        min-height:78vh;
+        min-height:620px;
     }
 
     .sports-hero h1{
@@ -999,9 +1046,33 @@ a{
         font-size:15px;
     }
 
-    .sports-impact-grid,
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .hero-btn{
+
+        width:100%;
+
+        max-width:290px;
+    }
+
+    .stats-grid,
     .achievement-grid,
     .awards-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .kabaddi-content h2{
+
+        font-size:32px;
+    }
+
+    .kabaddi-points{
 
         grid-template-columns:1fr;
     }
@@ -1010,17 +1081,20 @@ a{
 
         grid-template-columns:
             repeat(2,1fr);
+
+        gap:10px;
     }
 
     .sports-gallery img{
 
-        height:180px;
+        height:160px;
     }
 
-    .sports-message,
-    .student-box{
+    .video-grid{
 
-        padding:30px 22px;
+        grid-template-columns:1fr;
+
+        width:92%;
     }
 
 }
@@ -1060,9 +1134,7 @@ a{
 
             <div>
 
-                <strong>
-                    AFPSS
-                </strong>
+                <strong>AFPSS</strong>
 
                 <span>
                     Adivasi Fase Pardhi Sudhar Samiti
@@ -1073,44 +1145,34 @@ a{
         </a>
 
 
-        <nav class="sports-nav-links">
+        <div
+            class="language-switcher">
 
-            <a href="index.html">
-                Home
-            </a>
+            <button
+                id="mrBtn"
+                class="active">
 
-            <a href="index.html#about">
-                About
-            </a>
+                मराठी
 
-            <a href="sports.html">
-                Sports
-            </a>
+            </button>
 
-            <a href="media.html">
-                Media
-            </a>
+            <button
+                id="enBtn">
 
-            <a href="index.html#gallery">
-                Gallery
-            </a>
+                English
 
-            <div class="language-switcher">
+            </button>
 
-                <button
-                    id="mrBtn"
-                    class="active">
-                    मराठी
-                </button>
+        </div>
 
-                <button
-                    id="enBtn">
-                    English
-                </button>
 
-            </div>
+        <a
+            href="index.html"
+            class="sports-back">
 
-        </nav>
+            ← Home
+
+        </a>
 
     </div>
 
@@ -1123,44 +1185,38 @@ a{
 
 <section class="sports-hero">
 
+    <div class="sports-hero-image"></div>
+
+
     <div class="sports-hero-content">
 
         <span class="sports-kicker">
-            SPORTS • ACHIEVEMENTS • PRIDE
+
+            🏆 SPORTS • ACHIEVEMENT • TEAMWORK
+
         </span>
 
 
         <div class="lang-mr">
 
             <h1>
-                क्रीडेतून<br>
+
+                मैदानावरचा संघर्ष...<br>
+
                 <span>
-                    आत्मविश्वास आणि विजयाकडे...
+                    यशाची नवी ओळख!
                 </span>
+
             </h1>
 
             <p>
-                मैदानावरची जिद्द, संघभावना, शिस्त आणि
-                मेहनतीच्या जोरावर प्रश्नचिन्ह आदिवासी
-                आश्रमशाळेतील विद्यार्थी विविध क्रीडा
-                स्पर्धांमध्ये आपली ओळख निर्माण करत आहेत.
+
+                प्रश्नचिन्ह आदिवासी आश्रम शाळेतील
+                विद्यार्थ्यांचा क्रीडा प्रवास,
+                कबड्डी, स्पर्धा, पुरस्कार आणि
+                उल्लेखनीय यशाची प्रेरणादायी वाटचाल.
+
             </p>
-
-            <div class="hero-actions">
-
-                <a
-                    href="#achievements"
-                    class="hero-btn">
-                    🏆 आमचे यश पाहा
-                </a>
-
-                <a
-                    href="donate.html"
-                    class="hero-btn secondary">
-                    ❤️ क्रीडा उपक्रमाला साथ द्या
-                </a>
-
-            </div>
 
         </div>
 
@@ -1168,35 +1224,44 @@ a{
         <div class="lang-en">
 
             <h1>
-                Through Sports<br>
+
+                From the Field of Struggle...<br>
+
                 <span>
-                    Towards Confidence & Victory...
+                    To New Achievements!
                 </span>
+
             </h1>
 
             <p>
-                Through determination, teamwork,
-                discipline and hard work, students of
+
+                The inspiring sports journey of
                 Prashnachinha Adivasi Ashram School
-                continue to create their identity
-                through sports.
+                students through Kabaddi,
+                competitions, awards and achievements.
+
             </p>
 
-            <div class="hero-actions">
+        </div>
 
-                <a
-                    href="#achievements"
-                    class="hero-btn">
-                    🏆 Our Achievements
-                </a>
 
-                <a
-                    href="donate.html"
-                    class="hero-btn secondary">
-                    ❤️ Support Sports
-                </a>
+        <div class="hero-buttons">
 
-            </div>
+            <a
+                href="#gallery"
+                class="hero-btn">
+
+                📸 Sports Gallery
+
+            </a>
+
+            <a
+                href="#videos"
+                class="hero-btn secondary">
+
+                ▶️ Sports Videos
+
+            </a>
 
         </div>
 
@@ -1206,207 +1271,129 @@ a{
 
 
 <!-- =====================================================
-     SPORTS IMPACT
+     STATS
 ===================================================== -->
 
-<section class="sports-section impact-section">
+<section class="stats-section">
 
-    <div class="sports-container">
+    <div class="stats-grid">
 
-        <div class="section-heading">
 
-            <small>
-                SPORTS IMPACT
-            </small>
+        <div class="stat-card">
 
-            <div class="lang-mr">
-
-                <h2>
-                    मैदानातून घडणारा आत्मविश्वास
-                </h2>
-
-                <p>
-                    क्रीडा विद्यार्थ्यांना फक्त जिंकायला
-                    शिकवत नाही; ती त्यांना शिस्त,
-                    संघभावना आणि नेतृत्व शिकवते.
-                </p>
-
+            <div class="stat-icon">
+                🤼
             </div>
 
-            <div class="lang-en">
+            <strong>
+                01
+            </strong>
 
-                <h2>
-                    Confidence Built on the Field
-                </h2>
+            <h3 class="lang-mr">
+                कबड्डी
+            </h3>
 
-                <p>
-                    Sports teach more than winning.
-                    They build discipline, teamwork,
-                    leadership and confidence.
-                </p>
+            <h3 class="lang-en">
+                Kabaddi
+            </h3>
 
-            </div>
+            <p class="lang-mr">
+                प्रमुख क्रीडा प्रवास
+            </p>
+
+            <p class="lang-en">
+                Major Sports Journey
+            </p>
 
         </div>
 
 
-        <div class="sports-impact-grid">
+        <div class="stat-card">
 
-
-            <div class="sports-impact-card">
-
-                <div class="icon">
-                    👧👦
-                </div>
-
-                <strong>
-                    450+
-                </strong>
-
-                <h3 class="lang-mr">
-                    विद्यार्थी
-                </h3>
-
-                <h3 class="lang-en">
-                    Students
-                </h3>
-
-                <p class="lang-mr">
-                    क्रीडा आणि शिक्षणाच्या प्रवासात
-                </p>
-
-                <p class="lang-en">
-                    On their education and sports journey
-                </p>
-
+            <div class="stat-icon">
+                🏆
             </div>
 
+            <strong>
+                50+
+            </strong>
 
-            <div class="sports-impact-card">
+            <h3 class="lang-mr">
+                सन्मान
+            </h3>
 
-                <div class="icon">
-                    🤼
-                </div>
+            <h3 class="lang-en">
+                Honours
+            </h3>
 
-                <strong>
-                    01
-                </strong>
+            <p class="lang-mr">
+                विद्यार्थ्यांच्या विविध यशाची दखल
+            </p>
 
-                <h3 class="lang-mr">
-                    कबड्डीची विशेष ओळख
-                </h3>
-
-                <h3 class="lang-en">
-                    Kabaddi Excellence
-                </h3>
-
-                <p class="lang-mr">
-                    संघभावनेतून यश
-                </p>
-
-                <p class="lang-en">
-                    Success through teamwork
-                </p>
-
-            </div>
-
-
-            <div class="sports-impact-card">
-
-                <div class="icon">
-                    🏅
-                </div>
-
-                <strong>
-                    STATE
-                </strong>
-
-                <h3 class="lang-mr">
-                    राज्यस्तरीय सहभाग
-                </h3>
-
-                <h3 class="lang-en">
-                    State-Level Participation
-                </h3>
-
-                <p class="lang-mr">
-                    विद्यार्थ्यांना मोठ्या व्यासपीठाची संधी
-                </p>
-
-                <p class="lang-en">
-                    Opportunities at a larger platform
-                </p>
-
-            </div>
-
-
-            <div class="sports-impact-card">
-
-                <div class="icon">
-                    🏆
-                </div>
-
-                <strong>
-                    🏆
-                </strong>
-
-                <h3 class="lang-mr">
-                    पुरस्कार आणि सन्मान
-                </h3>
-
-                <h3 class="lang-en">
-                    Awards & Recognition
-                </h3>
-
-                <p class="lang-mr">
-                    विद्यार्थ्यांच्या मेहनतीचा गौरव
-                </p>
-
-                <p class="lang-en">
-                    Celebrating student effort
-                </p>
-
-            </div>
+            <p class="lang-en">
+                Recognition of achievements
+            </p>
 
         </div>
 
 
-        <div class="sports-message">
+        <div class="stat-card">
 
-            <div class="lang-mr">
-
-                <h2>
-                    जिंकण्यापेक्षा मोठे आहे —
-                    प्रयत्न करण्याचे धैर्य.
-                </h2>
-
-                <p>
-                    प्रश्नचिन्हच्या विद्यार्थ्यांनी
-                    क्रीडेतून स्वतःवर विश्वास ठेवायला,
-                    संघासोबत खेळायला आणि अडचणींवर
-                    मात करायला शिकले आहे.
-                </p>
-
+            <div class="stat-icon">
+                🥇
             </div>
 
+            <strong>
+                STATE
+            </strong>
 
-            <div class="lang-en">
+            <h3 class="lang-mr">
+                राज्यस्तरीय सहभाग
+            </h3>
 
-                <h2>
-                    Greater Than Winning —
-                    The Courage to Try.
-                </h2>
+            <h3 class="lang-en">
+                State Level
+            </h3>
 
-                <p>
-                    Through sports, students learn
-                    to believe in themselves,
-                    work as a team and overcome
-                    challenges.
-                </p>
+            <p class="lang-mr">
+                विविध क्रीडा स्पर्धांमध्ये सहभाग
+            </p>
 
-            </div>
+            <p class="lang-en">
+                Participation in competitions
+            </p>
 
         </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                👧
+            </div>
+
+            <strong>
+                TEAM
+            </strong>
+
+            <h3 class="lang-mr">
+                विद्यार्थिनींचे यश
+            </h3>
+
+            <h3 class="lang-en">
+                Girls' Achievement
+            </h3>
+
+            <p class="lang-mr">
+                मुलींचा सक्रिय सहभाग
+            </p>
+
+            <p class="lang-en">
+                Active participation of girls
+            </p>
+
+        </div>
+
 
     </div>
 
@@ -1418,44 +1405,40 @@ a{
 ===================================================== -->
 
 <section
-    class="sports-section achievements-section"
-    id="achievements">
+    class="sports-section achievement-section">
 
     <div class="sports-container">
 
-        <div class="section-heading">
+
+        <div class="section-title">
 
             <small>
-                OUR ACHIEVEMENTS
+                SPORTS ACHIEVEMENTS
             </small>
 
-            <div class="lang-mr">
+            <h2 class="lang-mr">
+                विद्यार्थ्यांचे क्रीडा यश
+            </h2>
 
-                <h2>
-                    विद्यार्थ्यांच्या यशाची कहाणी
-                </h2>
+            <h2 class="lang-en">
+                Students' Sports Achievements
+            </h2>
 
-                <p>
-                    ही केवळ पदके आणि ट्रॉफी नाहीत.
-                    या प्रत्येक यशामागे मेहनत,
-                    शिस्त आणि संघर्ष आहे.
-                </p>
+            <p class="lang-mr">
 
-            </div>
+                अभ्यासासोबतच क्रीडा क्षेत्रातही
+                विद्यार्थ्यांना संधी आणि व्यासपीठ
+                मिळवून देण्याचा प्रयत्न.
 
-            <div class="lang-en">
+            </p>
 
-                <h2>
-                    The Story Behind Every Achievement
-                </h2>
+            <p class="lang-en">
 
-                <p>
-                    These are more than medals and trophies.
-                    Every achievement represents discipline,
-                    hard work and determination.
-                </p>
+                Along with education, students receive
+                opportunities to participate and excel
+                in sports.
 
-            </div>
+            </p>
 
         </div>
 
@@ -1466,756 +1449,19 @@ a{
             <article class="achievement-card">
 
                 <img
-                    src="sports-state.jpg"
-                    alt="State level sports achievement"
+                    src="sports-champions.jpg"
+                    alt="Sports Champions"
                     loading="lazy">
 
                 <div class="achievement-content">
 
-                    <div class="achievement-icon">
-                        🥇
-                    </div>
-
-                    <div class="lang-mr">
-
-                        <h3>
-                            राज्यस्तरीय क्रीडा यश
-                        </h3>
-
-                        <p>
-                            विद्यार्थ्यांनी राज्यस्तरीय
-                            व्यासपीठावर आपल्या क्रीडा
-                            कौशल्याचे दर्शन घडवले.
-                        </p>
-
-                    </div>
-
-                    <div class="lang-en">
-
-                        <h3>
-                            State-Level Sporting Achievement
-                        </h3>
-
-                        <p>
-                            Students demonstrated their
-                            sporting talent on the
-                            state-level platform.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="achievement-card">
-
-                <img
-                    src="sports-kabaddi.jpg"
-                    alt="Kabaddi champions"
-                    loading="lazy">
-
-                <div class="achievement-content">
-
-                    <div class="achievement-icon">
-                        🏆
-                    </div>
-
-                    <div class="lang-mr">
-
-                        <h3>
-                            कबड्डीतील विजयी कामगिरी
-                        </h3>
-
-                        <p>
-                            संघभावना, वेग, ताकद आणि
-                            रणनीतीच्या जोरावर विद्यार्थ्यांनी
-                            कबड्डीमध्ये उल्लेखनीय कामगिरी केली.
-                        </p>
-
-                    </div>
-
-                    <div class="lang-en">
-
-                        <h3>
-                            Kabaddi Champions
-                        </h3>
-
-                        <p>
-                            With teamwork, speed,
-                            strength and strategy,
-                            students achieved remarkable
-                            results in Kabaddi.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <article class="achievement-card">
-
-                <img
-                    src="sports-girls.jpg"
-                    alt="Girls state sports achievement"
-                    loading="lazy">
-
-                <div class="achievement-content">
-
-                    <div class="achievement-icon">
-                        🏅
-                    </div>
-
-                    <div class="lang-mr">
-
-                        <h3>
-                            विद्यार्थिनींचे क्रीडा यश
-                        </h3>
-
-                        <p>
-                            मुलींनीही क्रीडा क्षेत्रात
-                            आत्मविश्वासाने पुढे येत
-                            शाळेचा गौरव वाढवला.
-                        </p>
-
-                    </div>
-
-                    <div class="lang-en">
-
-                        <h3>
-                            Girls in Sports
-                        </h3>
-
-                        <p>
-                            Girls have also stepped forward
-                            with confidence and brought
-                            recognition to the school.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     KABADDI
-===================================================== -->
-
-<section class="sports-section kabaddi-section">
-
-    <div class="sports-container">
-
-        <div class="kabaddi-grid">
-
-            <div class="kabaddi-image">
-
-                <img
-                    src="sports-kabaddi-team.jpg"
-                    alt="Prashnachinha students Kabaddi"
-                    loading="lazy">
-
-            </div>
-
-
-            <div class="kabaddi-content">
-
-                <small>
-                    KABADDI • TEAM SPIRIT
-                </small>
-
-
-                <div class="lang-mr">
-
-                    <h2>
-                        कबड्डी —
-                        संघभावनेतून विजयाकडे
-                    </h2>
-
-                    <p>
-                        कबड्डीच्या मैदानावर प्रत्येक खेळाडूला
-                        स्वतःची ताकद आणि संघाची ताकद दोन्ही
-                        ओळखावी लागते.
-                    </p>
-
-                    <p>
-                        प्रश्नचिन्हच्या विद्यार्थ्यांनी या
-                        खेळातून शिस्त, धैर्य, निर्णयक्षमता
-                        आणि संघभावना आत्मसात केली.
-                    </p>
-
-                    <div class="kabaddi-quote">
-                        “मैदानावर एकत्र खेळणारा संघ,
-                        जीवनातही एकमेकांना पुढे घेऊन जातो.”
-                    </div>
-
-                </div>
-
-
-                <div class="lang-en">
-
-                    <h2>
-                        Kabaddi —
-                        Victory Through Team Spirit
-                    </h2>
-
-                    <p>
-                        Kabaddi teaches every player
-                        to understand both individual
-                        strength and the strength
-                        of the team.
-                    </p>
-
-                    <p>
-                        Through the sport, students
-                        develop discipline, courage,
-                        decision-making and teamwork.
-                    </p>
-
-                    <div class="kabaddi-quote">
-                        “A team that plays together
-                        on the field learns to lift
-                        one another in life.”
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     AWARDS
-===================================================== -->
-
-<section class="sports-section awards-section">
-
-    <div class="sports-container">
-
-        <div class="section-heading">
-
-            <small>
-                AWARDS • MEDALS • TROPHIES
-            </small>
-
-            <div class="lang-mr">
-
-                <h2>
-                    मेहनतीला मिळालेला सन्मान
-                </h2>
-
-                <p>
-                    विद्यार्थ्यांनी मिळवलेली प्रत्येक
-                    पदक, ट्रॉफी आणि प्रमाणपत्र
-                    त्यांच्या मेहनतीची आठवण आहे.
-                </p>
-
-            </div>
-
-            <div class="lang-en">
-
-                <h2>
-                    Recognition for Hard Work
-                </h2>
-
-                <p>
-                    Every medal, trophy and certificate
-                    represents the effort and determination
-                    of our students.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="awards-grid">
-
-
-            <div class="sport-award-card">
-
-                <div class="award-icon">
-                    🏆
-                </div>
-
-                <div class="lang-mr">
-
-                    <h3>
-                        क्रीडा पुरस्कार
+                    <h3 class="lang-mr">
+                        क्रीडा विजेते
                     </h3>
 
-                    <p>
-                        विद्यार्थ्यांच्या क्रीडा
-                        कामगिरीचा गौरव.
-                    </p>
-
-                </div>
-
-                <div class="lang-en">
-
-                    <h3>
-                        Sports Award
+                    <h3 class="lang-en">
+                        Sports Champions
                     </h3>
 
-                    <p>
-                        Celebrating the sporting
-                        achievements of our students.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="sport-award-card">
-
-                <div class="award-icon">
-                    🥇
-                </div>
-
-                <div class="lang-mr">
-
-                    <h3>
-                        विद्यार्थ्यांचे यश
-                    </h3>
-
-                    <p>
-                        मेहनत, शिस्त आणि
-                        सातत्याचा परिणाम.
-                    </p>
-
-                </div>
-
-                <div class="lang-en">
-
-                    <h3>
-                        Student Achievement
-                    </h3>
-
-                    <p>
-                        The result of hard work,
-                        discipline and consistency.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="sport-award-card">
-
-                <div class="award-icon">
-                    🏆
-                </div>
-
-                <div class="lang-mr">
-
-                    <h3>
-                        विजयाची ट्रॉफी
-                    </h3>
-
-                    <p>
-                        मैदानावरील मेहनतीची
-                        सुंदर आठवण.
-                    </p>
-
-                </div>
-
-                <div class="lang-en">
-
-                    <h3>
-                        The Winning Trophy
-                    </h3>
-
-                    <p>
-                        A symbol of determination
-                        and achievement.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     EVERY STUDENT
-===================================================== -->
-
-<section class="sports-section student-section">
-
-    <div class="sports-container">
-
-        <div class="student-box">
-
-            <div class="lang-mr">
-
-                <h2>
-                    प्रत्येक विद्यार्थ्याचे यश महत्त्वाचे
-                </h2>
-
-                <p>
-                    मोठ्या संघाच्या विजयाइतकेच एका
-                    विद्यार्थ्याने मिळवलेले छोटे यशही
-                    आमच्यासाठी महत्त्वाचे आहे.
-
-                    कारण प्रत्येक पदकाच्या मागे
-                    एका विद्यार्थ्याचा आत्मविश्वास वाढतो
-                    आणि पुढचे स्वप्न जन्माला येते.
-                </p>
-
-            </div>
-
-
-            <div class="lang-en">
-
-                <h2>
-                    Every Student Achievement Matters
-                </h2>
-
-                <p>
-                    A student's individual achievement
-                    is just as important as a team's victory.
-
-                    Behind every medal is growing confidence
-                    and a new dream for the future.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     SPORTS GALLERY
-===================================================== -->
-
-<section class="sports-section gallery-section">
-
-    <div class="sports-container">
-
-        <div class="section-heading">
-
-            <small>
-                SPORTS GALLERY
-            </small>
-
-            <div class="lang-mr">
-
-                <h2>
-                    क्रीडा क्षणांची छायाचित्रे
-                </h2>
-
-                <p>
-                    मैदानावरील काही अविस्मरणीय क्षण.
-                </p>
-
-            </div>
-
-            <div class="lang-en">
-
-                <h2>
-                    Moments From the Field
-                </h2>
-
-                <p>
-                    A collection of memorable moments
-                    from our students' sporting journey.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="sports-gallery">
-
-
-            <figure>
-                <img
-                    src="sports1.jpg"
-                    alt="Sports champions"
-                    loading="lazy">
-            </figure>
-
-
-            <figure>
-                <img
-                    src="sports2.jpg"
-                    alt="Kabaddi students"
-                    loading="lazy">
-            </figure>
-
-
-            <figure>
-                <img
-                    src="sports3.jpg"
-                    alt="School sports team"
-                    loading="lazy">
-            </figure>
-
-
-            <figure>
-                <img
-                    src="sports4.jpg"
-                    alt="Sports team trophy"
-                    loading="lazy">
-            </figure>
-
-
-            <figure>
-                <img
-                    src="sports5.jpg"
-                    alt="Student sports achievement"
-                    loading="lazy">
-            </figure>
-
-
-            <figure>
-                <img
-                    src="sports6.jpg"
-                    alt="Sports achievement"
-                    loading="lazy">
-            </figure>
-
-
-            <figure>
-                <img
-                    src="sports7.jpg"
-                    alt="School sports gallery"
-                    loading="lazy">
-            </figure>
-
-
-            <figure>
-                <img
-                    src="sports8.jpg"
-                    alt="Sports award presentation"
-                    loading="lazy">
-            </figure>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FINAL CTA
-===================================================== -->
-
-<section class="sports-cta">
-
-    <div class="lang-mr">
-
-        <h2>
-            मैदानावर जिंकणारी मुले...
-            आयुष्यातही जिंकली पाहिजेत.
-        </h2>
-
-        <p>
-            प्रश्नचिन्हच्या विद्यार्थ्यांना शिक्षणासोबत
-            क्रीडा, आत्मविश्वास, नेतृत्व आणि संधी देणे
-            हा आमच्या सर्वांगीण विकासाचा प्रयत्न आहे.
-        </p>
-
-        <a href="donate.html">
-            ❤️ विद्यार्थ्यांना साथ द्या
-        </a>
-
-    </div>
-
-
-    <div class="lang-en">
-
-        <h2>
-            Children Who Learn to Win on the Field...
-            Can Win in Life Too.
-        </h2>
-
-        <p>
-            Along with education, we strive to provide
-            students with sports, confidence, leadership
-            and opportunities for holistic development.
-        </p>
-
-        <a href="donate.html">
-            ❤️ Support Our Students
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="sports-footer">
-
-    <p>
-        <strong>
-            Prashnachinha Adivasi Ashram School
-        </strong>
-    </p>
-
-    <p>
-        Adivasi Fase Pardhi Sudhar Samiti
-    </p>
-
-    <p>
-        Mangrul Chawala, Tal. Nandgaon Khandeshwar,
-        Dist. Amravati, Maharashtra
-    </p>
-
-    <p>
-        <a href="index.html">
-            ← मुख्यपृष्ठ / Home
-        </a>
-    </p>
-
-    <p>
-        © 2026 Adivasi Fase Pardhi Sudhar Samiti.
-        All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<!-- =====================================================
-     LANGUAGE SCRIPT
-===================================================== -->
-
-<script>
-
-const mrBtn =
-document.getElementById("mrBtn");
-
-const enBtn =
-document.getElementById("enBtn");
-
-const mrContent =
-document.querySelectorAll(".lang-mr");
-
-const enContent =
-document.querySelectorAll(".lang-en");
-
-
-function setLanguage(language){
-
-    if(language === "en"){
-
-        mrContent.forEach(function(el){
-
-            el.style.display = "none";
-
-        });
-
-        enContent.forEach(function(el){
-
-            el.style.display = "";
-
-        });
-
-        enBtn.classList.add("active");
-
-        mrBtn.classList.remove("active");
-
-        document.documentElement.lang = "en";
-
-        localStorage.setItem(
-            "afpssSportsLanguage",
-            "en"
-        );
-
-    }else{
-
-        enContent.forEach(function(el){
-
-            el.style.display = "none";
-
-        });
-
-        mrContent.forEach(function(el){
-
-            el.style.display = "";
-
-        });
-
-        mrBtn.classList.add("active");
-
-        enBtn.classList.remove("active");
-
-        document.documentElement.lang = "mr";
-
-        localStorage.setItem(
-            "afpssSportsLanguage",
-            "mr"
-        );
-
-    }
-
-}
-
-
-mrBtn.addEventListener(
-    "click",
-    function(){
-
-        setLanguage("mr");
-
-    }
-);
-
-
-enBtn.addEventListener(
-    "click",
-    function(){
-
-        setLanguage("en");
-
-    }
-);
-
-
-const savedLanguage =
-localStorage.getItem(
-    "afpssSportsLanguage"
-) || "mr";
-
-
-setLanguage(savedLanguage);
-
-</script>
-
-
-</body>
-
-</html>
-
+                    <p class="lang-mr">
+               
