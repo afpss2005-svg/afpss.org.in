@@ -2493,145 +2493,1755 @@ loading="lazy">
 </section>
 
 
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Media Centre | Adivasi Fase Pardhi Sudhar Samiti
+    </title>
+
+    <meta
+        name="description"
+        content="प्रश्नचिन्ह आदिवासी आश्रम शाळा - Media Centre, Newspaper Stories, YouTube Videos and Media Photos">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+
+    <style>
+
+        /* =================================================
+           MEDIA PAGE
+        ================================================= */
+
+        *{
+            box-sizing:border-box;
+        }
+
+        body{
+            margin:0;
+            font-family:
+                "Noto Sans Devanagari",
+                Arial,
+                sans-serif;
+
+            background:#f5faf7;
+            color:#17382b;
+        }
+
+
+        /* =================================================
+           HEADER
+        ================================================= */
+
+        .media-page-header{
+
+            position:relative;
+
+            padding:90px 20px 80px;
+
+            text-align:center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #075b3b,
+                    #033c28
+                );
+
+            color:#fff;
+
+            overflow:hidden;
+        }
+
+        .media-page-header::before{
+
+            content:"";
+
+            position:absolute;
+
+            width:350px;
+            height:350px;
+
+            border-radius:50%;
+
+            border:1px solid
+                rgba(255,255,255,.12);
+
+            top:-180px;
+            left:-100px;
+        }
+
+        .media-page-header::after{
+
+            content:"";
+
+            position:absolute;
+
+            width:300px;
+            height:300px;
+
+            border-radius:50%;
+
+            border:1px solid
+                rgba(255,255,255,.10);
+
+            bottom:-170px;
+            right:-80px;
+        }
+
+        .media-header-content{
+
+            position:relative;
+            z-index:2;
+
+            max-width:900px;
+
+            margin:auto;
+        }
+
+        .media-header-badge{
+
+            display:inline-block;
+
+            padding:8px 18px;
+
+            border-radius:50px;
+
+            background:
+                rgba(255,255,255,.12);
+
+            border:1px solid
+                rgba(255,255,255,.18);
+
+            font-size:12px;
+
+            font-weight:800;
+
+            letter-spacing:2px;
+
+            margin-bottom:18px;
+        }
+
+        .media-header-content h1{
+
+            margin:0 0 15px;
+
+            font-size:
+                clamp(32px,5vw,52px);
+
+            font-weight:900;
+
+            line-height:1.2;
+        }
+
+        .media-header-content p{
+
+            max-width:720px;
+
+            margin:auto;
+
+            color:
+                rgba(255,255,255,.84);
+
+            font-size:17px;
+
+            line-height:1.8;
+        }
+
+
+        /* =================================================
+           LANGUAGE BUTTONS
+        ================================================= */
+
+        .media-language{
+
+            margin-top:25px;
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:10px;
+        }
+
+        .media-language button{
+
+            padding:9px 18px;
+
+            border-radius:30px;
+
+            border:1px solid
+                rgba(255,255,255,.3);
+
+            background:
+                rgba(255,255,255,.1);
+
+            color:#fff;
+
+            cursor:pointer;
+
+            font-weight:800;
+        }
+
+        .media-language button:hover{
+
+            background:#fff;
+            color:#075b3b;
+        }
+
+
+        /* =================================================
+           CONTAINER
+        ================================================= */
+
+        .media-page-container{
+
+            width:min(1200px,94%);
+
+            margin:auto;
+
+            padding:75px 0;
+        }
+
+
+        /* =================================================
+           SECTION TITLE
+        ================================================= */
+
+        .media-section-title{
+
+            text-align:center;
+
+            max-width:800px;
+
+            margin:0 auto 40px;
+        }
+
+        .media-section-title span{
+
+            color:#b27709;
+
+            font-size:12px;
+
+            font-weight:900;
+
+            letter-spacing:2px;
+        }
+
+        .media-section-title h2{
+
+            margin:10px 0;
+
+            color:#075b3b;
+
+            font-size:
+                clamp(28px,4vw,40px);
+
+            font-weight:900;
+        }
+
+        .media-section-title p{
+
+            color:#687870;
+
+            line-height:1.8;
+
+            margin:0;
+        }
+
+
+        /* =================================================
+           NEWS GRID
+        ================================================= */
+
+        .news-grid{
+
+            display:grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:22px;
+        }
+
+
+        /* =================================================
+           NEWS CARD
+        ================================================= */
+
+        .news-card{
+
+            background:#fff;
+
+            border:1px solid #deebe5;
+
+            border-radius:22px;
+
+            overflow:hidden;
+
+            box-shadow:
+                0 12px 35px
+                rgba(0,70,40,.07);
+
+            transition:.35s;
+        }
+
+        .news-card:hover{
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 22px 50px
+                rgba(0,70,40,.14);
+        }
+
+
+        /* =================================================
+           NEWS IMAGE
+        ================================================= */
+
+        .news-image{
+
+            position:relative;
+
+            height:230px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf5ef,
+                    #f7fbf9
+                );
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            overflow:hidden;
+        }
+
+        .news-image img{
+
+            width:100%;
+            height:100%;
+
+            object-fit:cover;
+
+            display:block;
+        }
+
+        .news-number{
+
+            position:absolute;
+
+            top:12px;
+            left:12px;
+
+            padding:6px 11px;
+
+            border-radius:30px;
+
+            background:#075b3b;
+
+            color:#fff;
+
+            font-size:12px;
+
+            font-weight:900;
+        }
+
+
+        /* =================================================
+           NEWS CONTENT
+        ================================================= */
+
+        .news-content{
+
+            padding:22px;
+        }
+
+        .news-paper{
+
+            display:inline-block;
+
+            margin-bottom:8px;
+
+            color:#b27709;
+
+            font-size:12px;
+
+            font-weight:900;
+
+            text-transform:uppercase;
+
+            letter-spacing:.5px;
+        }
+
+        .news-content h3{
+
+            margin:0 0 9px;
+
+            color:#17382b;
+
+            font-size:18px;
+
+            line-height:1.5;
+        }
+
+        .news-content p{
+
+            margin:0;
+
+            color:#718078;
+
+            font-size:14px;
+
+            line-height:1.7;
+        }
+
+
+        /* =================================================
+           VIDEOS
+        ================================================= */
+
+        .video-section{
+
+            margin-top:90px;
+        }
+
+        .video-grid{
+
+            display:grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:22px;
+        }
+
+        .video-card{
+
+            background:#fff;
+
+            border:1px solid #deebe5;
+
+            border-radius:22px;
+
+            padding:20px;
+
+            box-shadow:
+                0 12px 35px
+                rgba(0,70,40,.07);
+        }
+
+        .video-card iframe{
+
+            width:100%;
+
+            aspect-ratio:16/9;
+
+            border:0;
+
+            border-radius:15px;
+
+            display:block;
+        }
+
+        .video-card h3{
+
+            margin:15px 0 0;
+
+            color:#075b3b;
+
+            font-size:17px;
+        }
+
+
+        /* =================================================
+           PHOTOS
+        ================================================= */
+
+        .photo-section{
+
+            margin-top:90px;
+        }
+
+        .photo-placeholder-grid{
+
+            display:grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap:18px;
+        }
+
+        .photo-placeholder{
+
+            height:180px;
+
+            border-radius:20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf5ef,
+                    #ffffff
+                );
+
+            border:1px solid #deebe5;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            font-size:42px;
+        }
+
+
+        /* =================================================
+           BACK HOME
+        ================================================= */
+
+        .media-back-home{
+
+            margin-top:70px;
+
+            text-align:center;
+        }
+
+        .media-back-home a{
+
+            display:inline-flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            padding:14px 28px;
+
+            border-radius:40px;
+
+            background:#075b3b;
+
+            color:#fff;
+
+            text-decoration:none;
+
+            font-weight:900;
+
+            transition:.3s;
+        }
+
+        .media-back-home a:hover{
+
+            transform:
+                translateY(-3px);
+
+            background:#033c28;
+        }
+
+
+        /* =================================================
+           TABLET
+        ================================================= */
+
+        @media(max-width:900px){
+
+            .news-grid{
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .video-grid{
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .photo-placeholder-grid{
+
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+        }
+
+
+        /* =================================================
+           MOBILE
+        ================================================= */
+
+        @media(max-width:600px){
+
+            .media-page-header{
+
+                padding:70px 18px;
+            }
+
+            .media-header-content p{
+
+                font-size:14px;
+            }
+
+            .media-page-container{
+
+                width:92%;
+
+                padding:55px 0;
+            }
+
+            .news-grid{
+
+                grid-template-columns:1fr;
+
+                gap:16px;
+            }
+
+            .video-grid{
+
+                grid-template-columns:1fr;
+            }
+
+            .photo-placeholder-grid{
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+                gap:12px;
+            }
+
+            .news-image{
+
+                height:240px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
 <!-- =====================================================
-     MEDIA
+     MEDIA HEADER
 ===================================================== -->
 
-<section
-class="premium-section"
-id="media">
+<header class="media-page-header">
+
+    <div class="media-header-content">
+
+        <span class="media-header-badge">
+            MEDIA CENTRE
+        </span>
 
 
-<div class="premium-title">
+        <!-- MARATHI -->
 
-<small>
-MEDIA CENTRE
-</small>
+        <div id="mediaMr">
 
+            <h1>
+                माध्यमांमधील प्रश्नचिन्हचा प्रवास
+            </h1>
 
-<h2 class="lang-mr">
-माध्यमांमधील आमचा प्रवास
-</h2>
+            <p>
+                वर्तमानपत्रांतील बातम्या, YouTube व्हिडिओ,
+                छायाचित्रे आणि प्रश्नचिन्हच्या कार्याची
+                माध्यमांमधील दखल.
+            </p>
 
-
-<h2
-class="lang-en"
-style="display:none;">
-
-AFPSS Media Centre
-
-</h2>
+        </div>
 
 
-<p class="lang-mr">
-YouTube videos, बातम्या, मुलाखती आणि
-माध्यमांमधील आमच्या कार्याची नोंद.
-</p>
+        <!-- ENGLISH -->
+
+        <div
+            id="mediaEn"
+            style="display:none;">
+
+            <h1>
+                Prashnachinha in the Media
+            </h1>
+
+            <p>
+                Newspaper stories, YouTube videos,
+                photographs and media coverage
+                of our journey.
+            </p>
+
+        </div>
 
 
-<p
-class="lang-en"
-style="display:none;">
+        <div class="media-language">
 
-YouTube videos, news coverage, interviews
-and stories about our work.
+            <button onclick="showMarathi()">
+                मराठी
+            </button>
 
-</p>
+            <button onclick="showEnglish()">
+                English
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+<div class="media-page-container">
+
+
+    <!-- =================================================
+         NEWS
+    ================================================= -->
+
+    <section id="news">
+
+        <div class="media-section-title">
+
+            <span>
+                NEWSPAPER STORIES
+            </span>
+
+            <h2>
+                35+ बातम्या आणि माध्यमांची दखल
+            </h2>
+
+            <p>
+                प्रश्नचिन्हच्या कार्याचा माध्यमांमधील प्रवास.
+            </p>
+
+        </div>
+
+
+        <div class="news-grid">
+
+
+            <!-- NEWS 01 -->
+
+            <article class="news-card">
+
+                <div class="news-image">
+
+                    <span class="news-number">
+                        01
+                    </span>
+
+                    <img
+                        src="news-01.jpg"
+                        alt="Newspaper Story 01"
+                        loading="lazy">
+
+                </div>
+
+                <div class="news-content">
+
+                    <span class="news-paper">
+                        Newspaper
+                    </span>
+
+                    <h3>
+                        Newspaper Story 01
+                    </h3>
+
+                    <p>
+                        प्रश्नचिन्हच्या कार्याची
+                        माध्यमांमधील दखल.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- NEWS 02 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">02</span>
+                    <img src="news-02.jpg"
+                         alt="Newspaper Story 02"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 02</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 03 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">03</span>
+                    <img src="news-03.jpg"
+                         alt="Newspaper Story 03"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 03</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 04 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">04</span>
+                    <img src="news-04.jpg"
+                         alt="Newspaper Story 04"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 04</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 05 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">05</span>
+                    <img src="news-05.jpg"
+                         alt="Newspaper Story 05"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 05</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 06 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">06</span>
+                    <img src="news-06.jpg"
+                         alt="Newspaper Story 06"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 06</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 07 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">07</span>
+                    <img src="news-07.jpg"
+                         alt="Newspaper Story 07"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 07</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 08 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">08</span>
+                    <img src="news-08.jpg"
+                         alt="Newspaper Story 08"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 08</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 09 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">09</span>
+                    <img src="news-09.jpg"
+                         alt="Newspaper Story 09"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 09</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 10 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">10</span>
+                    <img src="news-10.jpg"
+                         alt="Newspaper Story 10"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 10</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 11 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">11</span>
+                    <img src="news-11.jpg"
+                         alt="Newspaper Story 11"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 11</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 12 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">12</span>
+                    <img src="news-12.jpg"
+                         alt="Newspaper Story 12"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 12</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 13 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">13</span>
+                    <img src="news-13.jpg"
+                         alt="Newspaper Story 13"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 13</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 14 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">14</span>
+                    <img src="news-14.jpg"
+                         alt="Newspaper Story 14"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 14</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 15 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">15</span>
+                    <img src="news-15.jpg"
+                         alt="Newspaper Story 15"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 15</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 16 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">16</span>
+                    <img src="news-16.jpg"
+                         alt="Newspaper Story 16"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 16</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 17 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">17</span>
+                    <img src="news-17.jpg"
+                         alt="Newspaper Story 17"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 17</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 18 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">18</span>
+                    <img src="news-18.jpg"
+                         alt="Newspaper Story 18"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 18</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 19 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">19</span>
+                    <img src="news-19.jpg"
+                         alt="Newspaper Story 19"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 19</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 20 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">20</span>
+                    <img src="news-20.jpg"
+                         alt="Newspaper Story 20"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 20</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 21 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">21</span>
+                    <img src="news-21.jpg"
+                         alt="Newspaper Story 21"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 21</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 22 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">22</span>
+                    <img src="news-22.jpg"
+                         alt="Newspaper Story 22"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 22</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 23 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">23</span>
+                    <img src="news-23.jpg"
+                         alt="Newspaper Story 23"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 23</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 24 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">24</span>
+                    <img src="news-24.jpg"
+                         alt="Newspaper Story 24"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 24</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 25 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">25</span>
+                    <img src="news-25.jpg"
+                         alt="Newspaper Story 25"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 25</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 26 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">26</span>
+                    <img src="news-26.jpg"
+                         alt="Newspaper Story 26"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 26</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 27 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">27</span>
+                    <img src="news-27.jpg"
+                         alt="Newspaper Story 27"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 27</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 28 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">28</span>
+                    <img src="news-28.jpg"
+                         alt="Newspaper Story 28"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 28</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 29 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">29</span>
+                    <img src="news-29.jpg"
+                         alt="Newspaper Story 29"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 29</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 30 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">30</span>
+                    <img src="news-30.jpg"
+                         alt="Newspaper Story 30"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 30</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 31 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">31</span>
+                    <img src="news-31.jpg"
+                         alt="Newspaper Story 31"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 31</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 32 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">32</span>
+                    <img src="news-32.jpg"
+                         alt="Newspaper Story 32"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 32</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 33 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">33</span>
+                    <img src="news-33.jpg"
+                         alt="Newspaper Story 33"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 33</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 34 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">34</span>
+                    <img src="news-34.jpg"
+                         alt="Newspaper Story 34"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 34</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+            <!-- NEWS 35 -->
+
+            <article class="news-card">
+                <div class="news-image">
+                    <span class="news-number">35</span>
+                    <img src="news-35.jpg"
+                         alt="Newspaper Story 35"
+                         loading="lazy">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-paper">Newspaper</span>
+                    <h3>Newspaper Story 35</h3>
+                    <p>प्रश्नचिन्हच्या कार्याची माध्यमांमधील दखल.</p>
+                </div>
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         YOUTUBE VIDEOS
+    ================================================= -->
+
+    <section
+        class="video-section"
+        id="videos">
+
+        <div class="media-section-title">
+
+            <span>
+                VIDEO STORIES
+            </span>
+
+            <h2>
+                YouTube Videos
+            </h2>
+
+            <p>
+                प्रश्नचिन्हच्या कार्याचा व्हिडिओ प्रवास.
+            </p>
+
+        </div>
+
+
+        <div class="video-grid">
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/B73WNW-Hgjc"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    Prashnachinha Story
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/1qfSw4cujBQ"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    Prashnachinha Journey
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/OvxY73yN7Kg"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    School Story
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/hkRQf4bt-CI"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    Student Journey
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/qaK1HQ7hAs8"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    School Activities
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/dPjm-E0WxXc"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    Social Work
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/E45uYsnHUnQ"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    Prashnachinha Media
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/v6pPH-9bGas"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    Education Journey
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/Dzmny2BpRxE"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    Student Stories
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/Klz1ZtE2g6Q"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    School Media
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/P2s_dQ3xD2c"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    Social Transformation
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/PqKVBQaqEUk"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    Prashnachinha Story
+                </h3>
+
+            </div>
+
+
+            <div class="video-card">
+
+                <iframe
+                    src="https://www.youtube.com/embed/XKCPXgLOn44"
+                    title="Prashnachinha Video"
+                    allowfullscreen>
+                </iframe>
+
+                <h3>
+                    Education & Hope
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         PHOTO GALLERY
+    ================================================= -->
+
+    <section
+        class="photo-section"
+        id="photos">
+
+        <div class="media-section-title">
+
+            <span>
+                MEDIA PHOTOS
+            </span>
+
+            <h2>
+                माध्यमांमधील छायाचित्रे
+            </h2>
+
+            <p>
+                येथे आपल्या Media Photos पुढे upload करता येतील.
+            </p>
+
+        </div>
+
+
+        <div class="photo-placeholder-grid">
+
+            <div class="photo-placeholder">
+                📸
+            </div>
+
+            <div class="photo-placeholder">
+                📸
+            </div>
+
+            <div class="photo-placeholder">
+                📸
+            </div>
+
+            <div class="photo-placeholder">
+                📸
+            </div>
+
+            <div class="photo-placeholder">
+                📸
+            </div>
+
+            <div class="photo-placeholder">
+                📸
+            </div>
+
+            <div class="photo-placeholder">
+                📸
+            </div>
+
+            <div class="photo-placeholder">
+                📸
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         BACK HOME
+    ================================================= -->
+
+    <div class="media-back-home">
+
+        <a href="index.html">
+
+            ←
+            <span style="margin-left:8px;">
+                Back to Home
+            </span>
+
+        </a>
+
+    </div>
+
 
 </div>
 
-
-<div class="media-preview">
-
-
-<div class="media-card">
-
-<div class="media-icon">
-▶️
-</div>
-
-<h3>
-YouTube Videos
-</h3>
-
-<p>
-Our video stories
-</p>
-
-<a href="media.html">
-View Videos →
-</a>
-
-</div>
+</main>
 
 
-<div class="media-card">
+<!-- =====================================================
+     LANGUAGE SCRIPT
+===================================================== -->
 
-<div class="media-icon">
-📰
-</div>
+<script>
 
-<h3>
-News Coverage
-</h3>
+function showMarathi(){
 
-<p>
-Media & newspapers
-</p>
+    document.getElementById("mediaMr")
+        .style.display = "block";
 
-<a href="media.html">
-View News →
-</a>
+    document.getElementById("mediaEn")
+        .style.display = "none";
 
-</div>
+}
 
 
-<div class="media-card">
+function showEnglish(){
 
-<div class="media-icon">
-📸
-</div>
+    document.getElementById("mediaMr")
+        .style.display = "none";
 
-<h3>
-Media Photos
-</h3>
+    document.getElementById("mediaEn")
+        .style.display = "block";
 
-<p>
-Photo stories
-</p>
+}
 
-<a href="media.html">
-View Photos →
-</a>
-
-</div>
+</script>
 
 
-<div class="media-card">
-
-<div class="media-icon">
-🎥
-</div>
-
-<h3>
-Video Stories
-</h3>
-
-<p>
-Our journey
-</p>
-
-<a href="media.html">
-Explore Media →
-</a>
-
-</div>
-
-
-</div>
-
-</section>
-
+</body>
+</html>
 
 <!-- =====================================================
      DOCUMENTS
