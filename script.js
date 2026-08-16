@@ -830,3 +830,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
 
 });
+/* =========================================
+   PREMIUM HERO — 4 PHOTO SLIDER
+   Change photo every 3 seconds
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const heroSlides = document.querySelectorAll(".hero-slide");
+
+    if (!heroSlides.length) return;
+
+    let currentHeroSlide = 0;
+
+    // First photo
+    heroSlides.forEach((slide, index) => {
+        slide.classList.toggle("active", index === 0);
+    });
+
+    // Change every 3 seconds
+    setInterval(function () {
+
+        heroSlides[currentHeroSlide].classList.remove("active");
+
+        currentHeroSlide++;
+
+        if (currentHeroSlide >= heroSlides.length) {
+            currentHeroSlide = 0;
+        }
+
+        heroSlides[currentHeroSlide].classList.add("active");
+
+    }, 3000);
+
+});
