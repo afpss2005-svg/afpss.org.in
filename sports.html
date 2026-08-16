@@ -5,37 +5,36 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>क्रीडा व विद्यार्थ्यांचे यश | AFPSS</title>
 
 <meta name="description"
-      content="प्रश्नचिन्ह आदिवासी आश्रम शाळेतील विद्यार्थ्यांचा क्रीडा प्रवास, कबड्डी, स्पर्धा, पुरस्कार, ट्रॉफी आणि उल्लेखनीय यश.">
+content="प्रश्नचिन्ह आदिवासी आश्रम शाळेतील विद्यार्थ्यांचा क्रीडा प्रवास, कबड्डी, स्पर्धा, पुरस्कार, ट्रॉफी आणि उल्लेखनीय यश.">
 
-<link rel="stylesheet"
-      href="style.css">
+<link rel="stylesheet" href="style.css">
 
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
       href="https://fonts.gstatic.com"
       crossorigin>
 
-<link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap"
-rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
 
 <style>
 
 /* =====================================================
-   SPORTS PAGE — FINAL CLEAN VERSION
+   SPORTS PAGE — FINAL
 ===================================================== */
 
 *{
     box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -45,9 +44,16 @@ body{
         Inter,
         Arial,
         sans-serif;
-
     background:#f6faf8;
     color:#17382b;
+}
+
+img{
+    max-width:100%;
+}
+
+a{
+    -webkit-tap-highlight-color:transparent;
 }
 
 
@@ -56,108 +62,62 @@ body{
 ===================================================== */
 
 .sports-header{
-
-    background:
-        linear-gradient(
-            135deg,
-            #075b3b,
-            #033c28
-        );
-
+    background:linear-gradient(135deg,#075b3b,#033c28);
     color:#fff;
-
-    padding:22px 0;
-
+    padding:18px 0;
     position:sticky;
-
     top:0;
-
     z-index:1000;
-
-    box-shadow:
-        0 5px 25px rgba(0,0,0,.15);
+    box-shadow:0 5px 25px rgba(0,0,0,.15);
 }
 
 .sports-nav{
-
     width:min(1150px,92%);
-
     margin:auto;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
-    gap:20px;
+    gap:15px;
 }
 
 .sports-brand{
-
     color:#fff;
-
     text-decoration:none;
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
 }
 
 .sports-brand img{
-
     width:48px;
-
     height:48px;
-
     object-fit:contain;
-
     border-radius:10px;
 }
 
 .sports-brand strong{
-
     display:block;
-
     font-size:22px;
-
     font-weight:900;
 }
 
 .sports-brand span{
-
     display:block;
-
     font-size:12px;
-
     opacity:.85;
 }
 
 .sports-back{
-
     display:inline-flex;
-
     align-items:center;
-
     gap:8px;
-
     padding:10px 18px;
-
     border-radius:30px;
-
-    background:
-        rgba(255,255,255,.12);
-
+    background:rgba(255,255,255,.12);
     color:#fff;
-
     text-decoration:none;
-
     font-weight:800;
-
-    border:1px solid
-        rgba(255,255,255,.2);
+    border:1px solid rgba(255,255,255,.2);
 }
 
 
@@ -166,42 +126,26 @@ body{
 ===================================================== */
 
 .language-switcher{
-
     display:flex;
-
     align-items:center;
-
     gap:4px;
-
     padding:4px;
-
     border-radius:30px;
-
-    background:
-        rgba(0,0,0,.18);
+    background:rgba(0,0,0,.18);
 }
 
 .language-switcher button{
-
     border:0;
-
     background:transparent;
-
     color:#fff;
-
     padding:7px 12px;
-
     border-radius:20px;
-
     font-weight:800;
-
     cursor:pointer;
 }
 
 .language-switcher button.active{
-
     background:#fff;
-
     color:#075b3b;
 }
 
@@ -211,24 +155,16 @@ body{
 ===================================================== */
 
 .sports-hero{
-
     position:relative;
-
     min-height:620px;
-
     display:flex;
-
     align-items:center;
-
     overflow:hidden;
-
     background:#033c28;
 }
 
 .sports-hero-image{
-
     position:absolute;
-
     inset:0;
 
     background-image:
@@ -241,109 +177,67 @@ body{
         url("sports-hero.jpg");
 
     background-size:cover;
-
     background-position:center;
-
-    transform:scale(1.01);
 }
 
 .sports-hero-content{
-
     position:relative;
-
     z-index:2;
-
     width:min(1150px,92%);
-
     margin:auto;
-
     color:#fff;
 }
 
 .sports-kicker{
-
     display:inline-block;
-
     color:#ffd45b;
-
     font-size:15px;
-
     font-weight:900;
-
     letter-spacing:1px;
-
     margin-bottom:15px;
 }
 
 .sports-hero h1{
-
     margin:0;
-
     max-width:800px;
-
-    font-size:
-        clamp(42px,7vw,76px);
-
+    font-size:clamp(42px,7vw,76px);
     line-height:1.1;
-
     font-weight:900;
 }
 
 .sports-hero h1 span{
-
     color:#ffd45b;
 }
 
 .sports-hero p{
-
     max-width:700px;
-
     font-size:19px;
-
     line-height:1.8;
-
-    color:
-        rgba(255,255,255,.9);
-
+    color:rgba(255,255,255,.9);
     margin:20px 0 0;
 }
 
 .hero-buttons{
-
     display:flex;
-
     flex-wrap:wrap;
-
     gap:12px;
-
     margin-top:28px;
 }
 
 .hero-btn{
-
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
-
     padding:14px 24px;
-
     border-radius:40px;
-
     text-decoration:none;
-
     font-weight:900;
-
     background:#ef3340;
-
     color:#fff;
 }
 
 .hero-btn.secondary{
-
     background:#fff;
-
     color:#075b3b;
 }
 
@@ -353,55 +247,37 @@ body{
 ===================================================== */
 
 .sports-section{
-
     padding:90px 0;
 }
 
 .sports-container{
-
     width:min(1150px,92%);
-
     margin:auto;
 }
 
 .section-title{
-
     text-align:center;
-
     max-width:850px;
-
     margin:0 auto 45px;
 }
 
 .section-title small{
-
     color:#b27709;
-
     font-size:12px;
-
     font-weight:900;
-
     letter-spacing:2px;
 }
 
 .section-title h2{
-
     color:#075b3b;
-
-    font-size:
-        clamp(30px,5vw,46px);
-
+    font-size:clamp(30px,5vw,46px);
     margin:10px 0;
-
     line-height:1.2;
 }
 
 .section-title p{
-
     color:#687870;
-
     line-height:1.8;
-
     margin:0;
 }
 
@@ -411,72 +287,46 @@ body{
 ===================================================== */
 
 .stats-section{
-
     padding:70px 0;
-
     background:#fff;
 }
 
 .stats-grid{
-
     width:min(1100px,92%);
-
     margin:auto;
-
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
 
 .stat-card{
-
     padding:30px 20px;
-
     text-align:center;
-
     background:#f7fbf9;
-
     border:1px solid #deebe5;
-
     border-radius:22px;
-
-    box-shadow:
-        0 12px 35px
-        rgba(0,60,40,.06);
+    box-shadow:0 12px 35px rgba(0,60,40,.06);
 }
 
 .stat-icon{
-
     font-size:38px;
-
     margin-bottom:10px;
 }
 
 .stat-card strong{
-
     display:block;
-
     color:#075b3b;
-
     font-size:40px;
-
     font-weight:900;
 }
 
 .stat-card h3{
-
     margin:8px 0;
-
     color:#17382b;
 }
 
 .stat-card p{
-
     color:#687870;
-
     margin:0;
 }
 
@@ -486,78 +336,48 @@ body{
 ===================================================== */
 
 .achievement-section{
-
-    background:
-        linear-gradient(
-            135deg,
-            #f1f8f4,
-            #fff
-        );
+    background:linear-gradient(135deg,#f1f8f4,#fff);
 }
 
 .achievement-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:22px;
 }
 
 .achievement-card{
-
     background:#fff;
-
     border:1px solid #deebe5;
-
     border-radius:24px;
-
     overflow:hidden;
-
-    box-shadow:
-        0 15px 40px
-        rgba(0,60,40,.08);
-
+    box-shadow:0 15px 40px rgba(0,60,40,.08);
     transition:.3s;
 }
 
 .achievement-card:hover{
-
     transform:translateY(-6px);
 }
 
 .achievement-card img{
-
     width:100%;
-
     height:240px;
-
     object-fit:cover;
-
     display:block;
 }
 
 .achievement-content{
-
     padding:24px;
 }
 
 .achievement-content h3{
-
     color:#075b3b;
-
     margin:0 0 10px;
-
     font-size:21px;
 }
 
 .achievement-content p{
-
     color:#687870;
-
     line-height:1.7;
-
     margin:0;
 }
 
@@ -567,77 +387,48 @@ body{
 ===================================================== */
 
 .kabaddi-section{
-
     background:#fff;
 }
 
 .kabaddi-grid{
-
     display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns:1fr 1fr;
     gap:55px;
-
     align-items:center;
 }
 
 .kabaddi-image img{
-
     width:100%;
-
     border-radius:28px;
-
     display:block;
-
-    box-shadow:
-        0 25px 60px
-        rgba(0,60,40,.14);
+    box-shadow:0 25px 60px rgba(0,60,40,.14);
 }
 
 .kabaddi-content h2{
-
     color:#075b3b;
-
     font-size:42px;
-
     margin:10px 0 20px;
 }
 
 .kabaddi-content p{
-
     color:#596a62;
-
     line-height:1.85;
-
     font-size:16px;
 }
 
 .kabaddi-points{
-
     display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns:1fr 1fr;
     gap:12px;
-
     margin-top:25px;
 }
 
 .kabaddi-point{
-
     padding:15px;
-
     border-radius:14px;
-
     background:#f3faf6;
-
     border-left:4px solid #e7a91d;
-
     color:#075b3b;
-
     font-weight:800;
 }
 
@@ -647,64 +438,42 @@ body{
 ===================================================== */
 
 .state-section{
-
     background:#f7faf8;
 }
 
 .state-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
     gap:22px;
 }
 
 .state-card{
-
     background:#fff;
-
     border:1px solid #deebe5;
-
     border-radius:22px;
-
     overflow:hidden;
-
-    box-shadow:
-        0 12px 35px
-        rgba(0,60,40,.07);
+    box-shadow:0 12px 35px rgba(0,60,40,.07);
 }
 
 .state-card img{
-
     width:100%;
-
     height:280px;
-
     object-fit:cover;
-
     display:block;
 }
 
 .state-card-content{
-
     padding:22px;
 }
 
 .state-card-content h3{
-
     color:#075b3b;
-
     margin:0 0 8px;
 }
 
 .state-card-content p{
-
     color:#687870;
-
     line-height:1.7;
-
     margin:0;
 }
 
@@ -714,50 +483,32 @@ body{
 ===================================================== */
 
 .awards-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns:repeat(3,1fr);
     gap:22px;
 }
 
 .sport-award-card{
-
     padding:30px 22px;
-
     background:#fff;
-
     border:1px solid #deebe5;
-
     border-radius:22px;
-
     text-align:center;
-
-    box-shadow:
-        0 12px 35px
-        rgba(0,60,40,.07);
+    box-shadow:0 12px 35px rgba(0,60,40,.07);
 }
 
 .award-icon{
-
     font-size:52px;
-
     margin-bottom:12px;
 }
 
 .sport-award-card h3{
-
     color:#075b3b;
-
     margin:10px 0;
 }
 
 .sport-award-card p{
-
     color:#687870;
-
     line-height:1.7;
 }
 
@@ -767,48 +518,32 @@ body{
 ===================================================== */
 
 .gallery-section{
-
     background:#f7faf8;
 }
 
 .sports-gallery{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns:repeat(4,1fr);
     gap:15px;
 }
 
 .sports-gallery a{
-
     display:block;
-
     overflow:hidden;
-
     border-radius:18px;
-
     background:#fff;
-
     border:1px solid #deebe5;
 }
 
 .sports-gallery img{
-
     width:100%;
-
     height:210px;
-
     display:block;
-
     object-fit:cover;
-
     transition:.35s;
 }
 
 .sports-gallery a:hover img{
-
     transform:scale(1.06);
 }
 
@@ -818,109 +553,67 @@ body{
 ===================================================== */
 
 .video-section{
-
     background:#fff;
 }
 
 .video-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
     gap:28px;
-
     width:min(1000px,92%);
-
     margin:auto;
 }
 
 .video-card{
-
     background:#f7faf8;
-
     border:1px solid #deebe5;
-
     border-radius:24px;
-
     padding:18px;
-
-    box-shadow:
-        0 15px 40px
-        rgba(0,60,40,.08);
+    box-shadow:0 15px 40px rgba(0,60,40,.08);
 }
 
 .video-card iframe{
-
     width:100%;
-
     aspect-ratio:16/9;
-
     border:0;
-
     border-radius:16px;
-
     display:block;
 }
 
 .video-card h3{
-
     color:#075b3b;
-
     margin:16px 4px 4px;
-
     font-size:20px;
 }
 
 .video-card p{
-
     color:#687870;
-
     margin:5px 4px 0;
-
     line-height:1.6;
 }
 
 
 /* =====================================================
-   SPORTS MESSAGE
+   MESSAGE
 ===================================================== */
 
 .sports-message{
-
     padding:75px 20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #075b3b,
-            #033c28
-        );
-
+    background:linear-gradient(135deg,#075b3b,#033c28);
     color:#fff;
-
     text-align:center;
 }
 
 .sports-message h2{
-
-    font-size:
-        clamp(30px,5vw,44px);
-
+    font-size:clamp(30px,5vw,44px);
     margin:0 0 15px;
 }
 
 .sports-message p{
-
     max-width:750px;
-
     margin:auto;
-
     line-height:1.8;
-
-    color:
-        rgba(255,255,255,.85);
+    color:rgba(255,255,255,.85);
 }
 
 
@@ -929,38 +622,33 @@ body{
 ===================================================== */
 
 .sports-footer{
-
     background:#062d20;
-
     color:#fff;
-
     padding:45px 20px 20px;
-
     text-align:center;
 }
 
 .sports-footer a{
-
     color:#dbe9e2;
-
     text-decoration:none;
-
     font-weight:800;
 }
 
 .footer-bottom{
-
     margin-top:25px;
-
     padding-top:20px;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.15);
-
+    border-top:1px solid rgba(255,255,255,.15);
     color:#a9bbb3;
-
     font-size:13px;
+}
+
+
+/* =====================================================
+   LANGUAGE
+===================================================== */
+
+.lang-en{
+    display:none;
 }
 
 
@@ -971,142 +659,100 @@ body{
 @media(max-width:900px){
 
     .stats-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .achievement-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .kabaddi-grid{
-
         grid-template-columns:1fr;
     }
 
     .state-grid{
-
         grid-template-columns:1fr;
     }
 
     .awards-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 
     .sports-gallery{
-
-        grid-template-columns:
-            repeat(3,1fr);
+        grid-template-columns:repeat(3,1fr);
     }
 
 }
 
-
 @media(max-width:600px){
 
     .sports-header{
-
         position:relative;
     }
 
     .sports-nav{
-
         flex-wrap:wrap;
     }
 
     .sports-brand span{
-
         display:none;
     }
 
     .sports-back{
-
         padding:8px 13px;
-
         font-size:13px;
     }
 
     .sports-hero{
-
         min-height:620px;
     }
 
     .sports-hero h1{
-
         font-size:43px;
     }
 
     .sports-hero p{
-
         font-size:15px;
     }
 
     .hero-buttons{
-
         flex-direction:column;
-
         align-items:flex-start;
     }
 
     .hero-btn{
-
         width:100%;
-
         max-width:290px;
     }
 
     .stats-grid,
     .achievement-grid,
     .awards-grid{
-
         grid-template-columns:1fr;
     }
 
     .kabaddi-content h2{
-
         font-size:32px;
     }
 
     .kabaddi-points{
-
         grid-template-columns:1fr;
     }
 
     .sports-gallery{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
+        grid-template-columns:repeat(2,1fr);
         gap:10px;
     }
 
     .sports-gallery img{
-
         height:160px;
     }
 
     .video-grid{
-
         grid-template-columns:1fr;
-
         width:92%;
     }
 
-}
-
-
-/* =====================================================
-   LANGUAGE
-===================================================== */
-
-.lang-en{
-
-    display:none;
 }
 
 </style>
@@ -1145,30 +791,23 @@ body{
         </a>
 
 
-        <div
-            class="language-switcher">
+        <div class="language-switcher">
 
             <button
                 id="mrBtn"
                 class="active">
-
                 मराठी
-
             </button>
 
-            <button
-                id="enBtn">
-
+            <button id="enBtn">
                 English
-
             </button>
 
         </div>
 
 
-        <a
-            href="index.html"
-            class="sports-back">
+        <a href="index.html"
+           class="sports-back">
 
             ← Home
 
@@ -1187,35 +826,25 @@ body{
 
     <div class="sports-hero-image"></div>
 
-
     <div class="sports-hero-content">
 
         <span class="sports-kicker">
-
             🏆 SPORTS • ACHIEVEMENT • TEAMWORK
-
         </span>
 
 
         <div class="lang-mr">
 
             <h1>
-
                 मैदानावरचा संघर्ष...<br>
-
-                <span>
-                    यशाची नवी ओळख!
-                </span>
-
+                <span>यशाची नवी ओळख!</span>
             </h1>
 
             <p>
-
                 प्रश्नचिन्ह आदिवासी आश्रम शाळेतील
                 विद्यार्थ्यांचा क्रीडा प्रवास,
                 कबड्डी, स्पर्धा, पुरस्कार आणि
                 उल्लेखनीय यशाची प्रेरणादायी वाटचाल.
-
             </p>
 
         </div>
@@ -1224,22 +853,15 @@ body{
         <div class="lang-en">
 
             <h1>
-
                 From the Field of Struggle...<br>
-
-                <span>
-                    To New Achievements!
-                </span>
-
+                <span>To New Achievements!</span>
             </h1>
 
             <p>
-
                 The inspiring sports journey of
                 Prashnachinha Adivasi Ashram School
                 students through Kabaddi,
                 competitions, awards and achievements.
-
             </p>
 
         </div>
@@ -1247,17 +869,15 @@ body{
 
         <div class="hero-buttons">
 
-            <a
-                href="#gallery"
-                class="hero-btn">
+            <a href="#gallery"
+               class="hero-btn">
 
                 📸 Sports Gallery
 
             </a>
 
-            <a
-                href="#videos"
-                class="hero-btn secondary">
+            <a href="#videos"
+               class="hero-btn secondary">
 
                 ▶️ Sports Videos
 
@@ -1281,21 +901,12 @@ body{
 
         <div class="stat-card">
 
-            <div class="stat-icon">
-                🤼
-            </div>
+            <div class="stat-icon">🤼</div>
 
-            <strong>
-                01
-            </strong>
+            <strong>01</strong>
 
-            <h3 class="lang-mr">
-                कबड्डी
-            </h3>
-
-            <h3 class="lang-en">
-                Kabaddi
-            </h3>
+            <h3 class="lang-mr">कबड्डी</h3>
+            <h3 class="lang-en">Kabaddi</h3>
 
             <p class="lang-mr">
                 प्रमुख क्रीडा प्रवास
@@ -1310,21 +921,12 @@ body{
 
         <div class="stat-card">
 
-            <div class="stat-icon">
-                🏆
-            </div>
+            <div class="stat-icon">🏆</div>
 
-            <strong>
-                50+
-            </strong>
+            <strong>50+</strong>
 
-            <h3 class="lang-mr">
-                सन्मान
-            </h3>
-
-            <h3 class="lang-en">
-                Honours
-            </h3>
+            <h3 class="lang-mr">सन्मान</h3>
+            <h3 class="lang-en">Honours</h3>
 
             <p class="lang-mr">
                 विद्यार्थ्यांच्या विविध यशाची दखल
@@ -1339,13 +941,9 @@ body{
 
         <div class="stat-card">
 
-            <div class="stat-icon">
-                🥇
-            </div>
+            <div class="stat-icon">🥇</div>
 
-            <strong>
-                STATE
-            </strong>
+            <strong>STATE</strong>
 
             <h3 class="lang-mr">
                 राज्यस्तरीय सहभाग
@@ -1368,13 +966,9 @@ body{
 
         <div class="stat-card">
 
-            <div class="stat-icon">
-                👧
-            </div>
+            <div class="stat-icon">👧</div>
 
-            <strong>
-                TEAM
-            </strong>
+            <strong>TEAM</strong>
 
             <h3 class="lang-mr">
                 विद्यार्थिनींचे यश
@@ -1394,7 +988,6 @@ body{
 
         </div>
 
-
     </div>
 
 </section>
@@ -1404,17 +997,13 @@ body{
      ACHIEVEMENTS
 ===================================================== -->
 
-<section
-    class="sports-section achievement-section">
+<section class="sports-section achievement-section">
 
     <div class="sports-container">
 
-
         <div class="section-title">
 
-            <small>
-                SPORTS ACHIEVEMENTS
-            </small>
+            <small>SPORTS ACHIEVEMENTS</small>
 
             <h2 class="lang-mr">
                 विद्यार्थ्यांचे क्रीडा यश
@@ -1425,19 +1014,15 @@ body{
             </h2>
 
             <p class="lang-mr">
-
                 अभ्यासासोबतच क्रीडा क्षेत्रातही
                 विद्यार्थ्यांना संधी आणि व्यासपीठ
                 मिळवून देण्याचा प्रयत्न.
-
             </p>
 
             <p class="lang-en">
-
                 Along with education, students receive
                 opportunities to participate and excel
                 in sports.
-
             </p>
 
         </div>
@@ -1464,4 +1049,53 @@ body{
                     </h3>
 
                     <p class="lang-mr">
-               
+                        मेहनत, शिस्त आणि संघभावनेतून
+                        विद्यार्थ्यांनी क्रीडा क्षेत्रात
+                        उल्लेखनीय कामगिरी केली आहे.
+                    </p>
+
+                    <p class="lang-en">
+                        Through hard work, discipline
+                        and teamwork, students have
+                        achieved notable success in sports.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="achievement-card">
+
+                <img
+                    src="sports-team.jpg"
+                    alt="Sports Team"
+                    loading="lazy">
+
+                <div class="achievement-content">
+
+                    <h3 class="lang-mr">
+                        संघभावना
+                    </h3>
+
+                    <h3 class="lang-en">
+                        Team Spirit
+                    </h3>
+
+                    <p class="lang-mr">
+                        मैदानावर एकत्र खेळणे,
+                        एकमेकांना साथ देणे आणि
+                        विजयासाठी प्रयत्न करणे.
+                    </p>
+
+                    <p class="lang-en">
+                        Playing together, supporting
+                        one another and striving for success.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+                   
