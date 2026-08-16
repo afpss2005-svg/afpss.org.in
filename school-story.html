@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>प्रश्नचिन्ह — शाळेचा प्रवास</title>
+<style>
+:root{--bg:#f7f4ed;--ink:#1f2937;--accent:#b91c1c;--gold:#d69e2e;--card:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+.hero{padding:56px 20px;text-align:center;background:linear-gradient(135deg,#7f1d1d,#b91c1c);color:#fff}
+.hero h1{margin:0 0 8px;font-size:clamp(30px,5vw,56px)} .hero p{margin:0 auto;max-width:850px;font-size:18px}
+.container{max-width:1180px;margin:auto;padding:36px 18px}
+.section-title{text-align:center;margin-bottom:28px}.section-title small{letter-spacing:2px;font-weight:700;color:var(--accent)}
+.section-title h2{margin:6px 0;font-size:clamp(27px,4vw,42px)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.card{background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.09);border:1px solid #eadfce}
+.card img{width:100%;display:block;cursor:pointer}
+.card-body{padding:20px}.card h3{margin:0 0 6px;color:var(--accent);font-size:24px}.card p{margin:0}
+.needs{margin-top:36px;background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 28px rgba(0,0,0,.07)}
+.needs h2{text-align:center;color:var(--accent)} .needs ul{columns:2;padding-left:24px}
+.note{text-align:center;margin-top:26px;font-size:15px;color:#5b6470}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:20;padding:20px;align-items:center;justify-content:center}
+.modal.open{display:flex}.modal img{max-width:95vw;max-height:90vh;border-radius:10px}.close{position:fixed;top:12px;right:20px;color:#fff;font-size:40px;cursor:pointer}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.needs ul{columns:1}.hero{padding:40px 16px}.container{padding:28px 14px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>❓ प्रश्नचिन्हचा प्रवास</h1>
+  <p>१८८ मुलांपासून हजारो स्वप्नांपर्यंत — शिक्षण, संघर्ष, विद्यार्थी आणि शाळेचा चित्रमय प्रवास.</p>
+</header>
+
+<main class="container">
+  <section>
+    <div class="section-title">
+      <small>OUR SCHOOL • OUR JOURNEY</small>
+      <h2>प्रश्नचिन्ह — चित्रमय कहाणी</h2>
+      <p>शाळेचा प्रवास, विद्यार्थ्यांचे जीवन आणि बदल घडवणारे उपक्रम.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <img src="prashnachinh-pravas.jpg" alt="प्रश्नचिन्हकडून उत्तरेकडे — शाळेचा चित्रमय प्रवास" onclick="openImg(this.src)">
+        <div class="card-body">
+          <h3>प्रश्नचिन्हकडून उत्तरेकडे...</h3>
+          <p>सुरुवातीच्या संघर्षापासून नव्या शाळेपर्यंतचा आणि विद्यार्थ्यांच्या बदलाचा चित्रमय प्रवास.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="school-students.jpg" alt="प्रश्नचिन्ह शाळेतील विद्यार्थी आणि शिक्षक" onclick="openImg(this.src)">
+        <div class="card-body">
+          <h3>आमची शाळा — आमचे विद्यार्थी</h3>
+          <p>विद्यार्थी, शिक्षक आणि शाळेचे एकत्रित कुटुंब.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="school-activity.jpg" alt="शाळेतील सामूहिक उपक्रम" onclick="openImg(this.src)">
+        <div class="card-body">
+          <h3>शाळेतील सामूहिक उपक्रम</h3>
+          <p>विद्यार्थ्यांचा सहभाग, शिस्त, संस्कार आणि सर्वांगीण विकास.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="school-needs.jpg" alt="प्रश्नचिन्ह शाळेच्या आवश्यक गरजा" onclick="openImg(this.src)">
+        <div class="card-body">
+          <h3>आमच्या शाळेच्या गरजा</h3>
+          <p>विद्यार्थ्यांच्या निवास, शिक्षण, आरोग्य, पाणी आणि इतर मूलभूत सुविधांसाठी आवश्यक मदत.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="needs">
+    <h2>🏫 प्रमुख गरजा</h2>
+    <ul>
+      <li>मुलांचे वसतिगृह — ५०० मुलांच्या निवासासाठी</li>
+      <li>गाद्या, ब्लँकेट, चादरी — ६००</li>
+      <li>डबल बेड — ३००</li>
+      <li>डेस्क-बेंच — ३००</li>
+      <li>शालेय गणवेश व बूट — ५००</li>
+      <li>सोलर लाईट पोल — ४ संच</li>
+      <li>ARO मशीन — १,००० लोकांची क्षमता</li>
+      <li>पाण्याची टाकी — २० नळांसह</li>
+      <li>वैद्यकीय सुविधेसह उपचार कक्ष — २</li>
+      <li>ॲम्ब्युलन्स — १</li>
+      <li>सांस्कृतिक सभागृह</li>
+      <li>क्रीडा साहित्य व खेळणी</li>
+      <li>गेस्ट रूम — महिला/पुरुष २</li>
+      <li>किचन सुविधा व इतर आवश्यक साहित्य</li>
+    </ul>
+  </section>
+
+  <p class="note">टीप: नवीन फोटो, बातम्या, विद्यार्थ्यांचे यश, YouTube व्हिडिओ आणि भविष्यातील प्रकल्प याच रचनेत पुढे सहज जोडता येतील.</p>
+</main>
+
+<div class="modal" id="modal" onclick="closeImg()">
+  <span class="close" aria-label="Close">×</span>
+  <img id="modalImg" alt="">
+</div>
+<script>
+function openImg(src){document.getElementById('modalImg').src=src;document.getElementById('modal').classList.add('open')}
+function closeImg(){document.getElementById('modal').classList.remove('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeImg()});
+</script>
+</body>
+</html>
