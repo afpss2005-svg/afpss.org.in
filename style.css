@@ -4418,66 +4418,127 @@ button {
 
 }
 /* =========================================
-   PREMIUM HERO SLIDER
-========================================= */
+/* =========================================================
+   AFPSS PREMIUM HERO SLIDER — FINAL
+   4 PHOTOS | 3 SECONDS | PREMIUM FADE
+========================================================= */
 
-.hero-slider{
+.premium-hero{
+    position:relative;
+    min-height:78vh;
+    overflow:hidden;
+    isolation:isolate;
+}
+
+/* PHOTO SLIDER */
+.premium-hero .hero-slider{
     position:absolute;
     inset:0;
     width:100%;
     height:100%;
     overflow:hidden;
+    z-index:0;
 }
 
-.hero-slide{
+/* EACH PHOTO */
+.premium-hero .hero-slide{
     position:absolute;
     inset:0;
     width:100%;
     height:100%;
 
     background-size:cover;
-    background-position:center;
+    background-position:center center;
+    background-repeat:no-repeat;
 
     opacity:0;
     visibility:hidden;
 
     transition:
-        opacity 1.2s ease,
-        visibility 1.2s ease;
+        opacity 1.2s ease-in-out,
+        visibility 1.2s ease-in-out;
 
+    z-index:0;
+}
+
+/* ACTIVE PHOTO */
+.premium-hero .hero-slide.active{
+    opacity:1;
+    visibility:visible;
     z-index:1;
 }
 
-.hero-slide.active{
-    opacity:1;
-    visibility:visible;
+/* DARK PREMIUM OVERLAY */
+.premium-hero .premium-hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,35,25,.82) 0%,
+            rgba(0,50,35,.55) 48%,
+            rgba(0,0,0,.20) 100%
+        );
+
     z-index:2;
+    pointer-events:none;
 }
-/* =========================================
-   AFPSS PREMIUM HERO SLIDER
-   4 Photos - Every 3 Seconds
-========================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+/* HERO CONTENT */
+.premium-hero .premium-hero-content{
+    position:relative;
+    z-index:3;
+}
 
-    const slides = document.querySelectorAll(".hero-slide");
+/* LANGUAGE BUTTON */
+.premium-hero .hero-language{
+    position:relative;
+    z-index:4;
+}
 
-    if (slides.length < 2) return;
+/* DONATE BUTTON */
+.premium-hero .premium-donate-btn{
+    position:relative;
+    z-index:4;
+}
 
-    let current = 0;
+/* SMOOTH PHOTO CHANGE */
+@keyframes premiumHeroZoom{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.04);
+    }
+}
 
-    slides.forEach((slide, index) => {
-        slide.classList.toggle("active", index === 0);
-    });
+.premium-hero .hero-slide.active{
+    animation:premiumHeroZoom 4s ease-out forwards;
+}
 
-    setInterval(() => {
 
-        slides[current].classList.remove("active");
+/* =========================================================
+   MOBILE
+========================================================= */
 
-        current = (current + 1) % slides.length;
+@media(max-width:768px){
 
-        slides[current].classList.add("active");
+    .premium-hero{
+        min-height:78vh;
+    }
 
-    }, 3000);
+    .premium-hero .hero-slide{
+        background-position:center center;
+    }
 
-});
+    .premium-hero .premium-hero-overlay{
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,35,25,.72) 0%,
+                rgba(0,35,25,.48) 55%,
+                rgba(0,0,0,.35) 100%
+            );
+    }
+}
