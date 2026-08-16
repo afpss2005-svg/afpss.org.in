@@ -4542,3 +4542,368 @@ button {
             );
     }
 }
+/* =====================================================
+   PREMIUM IMPACT SECTION
+   AFPSs - Premium Digital NGO Website
+===================================================== */
+
+.premium-impact{
+    position:relative;
+    padding:100px 20px;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(7,91,59,.10), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(243,180,42,.10), transparent 30%),
+        linear-gradient(135deg,#f7fbf9 0%,#ffffff 50%,#f5faf7 100%);
+    overflow:hidden;
+}
+
+.premium-impact::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:rgba(7,91,59,.05);
+    top:-220px;
+    left:-180px;
+}
+
+.premium-impact::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(243,180,42,.06);
+    bottom:-180px;
+    right:-150px;
+}
+
+.premium-impact-container{
+    position:relative;
+    z-index:2;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.premium-impact .premium-title{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto 55px;
+}
+
+.premium-impact .premium-title small{
+    display:inline-block;
+    margin-bottom:12px;
+    padding:7px 16px;
+    border-radius:50px;
+    background:#e8f4ee;
+    color:#075b3b;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.premium-impact .premium-title h2{
+    margin:0 0 14px;
+    color:#073f2d;
+    font-family:"Playfair Display","Noto Sans Devanagari",serif;
+    font-size:42px;
+    line-height:1.2;
+    font-weight:800;
+}
+
+.premium-impact .premium-title p{
+    margin:0;
+    color:#66766f;
+    font-size:17px;
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   IMPACT GRID
+===================================================== */
+
+.premium-impact .impact-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+
+/* =====================================================
+   IMPACT CARD
+===================================================== */
+
+.premium-impact .impact-card{
+    position:relative;
+    text-align:center;
+    padding:38px 24px 34px;
+    background:rgba(255,255,255,.90);
+    border:1px solid #dfece5;
+    border-radius:26px;
+    box-shadow:0 15px 40px rgba(0,70,40,.08);
+    overflow:hidden;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.premium-impact .impact-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:4px;
+    background:linear-gradient(90deg,#075b3b,#f3b42a);
+    transform:scaleX(.25);
+    transform-origin:center;
+    transition:transform .35s ease;
+}
+
+.premium-impact .impact-card:hover{
+    transform:translateY(-10px);
+    border-color:#bcdacc;
+    box-shadow:0 25px 55px rgba(0,70,40,.15);
+}
+
+.premium-impact .impact-card:hover::before{
+    transform:scaleX(1);
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.premium-impact .impact-icon{
+    width:70px;
+    height:70px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:20px;
+    background:#edf7f2;
+    font-size:32px;
+    box-shadow:inset 0 0 0 1px #d8ebe2;
+    transition:transform .35s ease;
+}
+
+.premium-impact .impact-card:hover .impact-icon{
+    transform:scale(1.08) rotate(-3deg);
+}
+
+
+/* =====================================================
+   BIG NUMBER
+===================================================== */
+
+.premium-impact .impact-card strong{
+    display:block;
+    margin-bottom:8px;
+    color:#075b3b;
+    font-family:"Inter",sans-serif;
+    font-size:42px;
+    line-height:1;
+    font-weight:900;
+}
+
+.premium-impact .impact-card h3{
+    margin:12px 0 8px;
+    color:#183f32;
+    font-size:18px;
+    font-weight:800;
+}
+
+.premium-impact .impact-card p{
+    margin:0;
+    color:#718078;
+    font-size:14px;
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   BOTTOM IMPACT MESSAGE
+===================================================== */
+
+.premium-impact .impact-message{
+    max-width:900px;
+    margin:55px auto 0;
+    padding:32px 38px;
+    text-align:center;
+    background:linear-gradient(
+        135deg,
+        #075b3b,
+        #063f2b
+    );
+    border-radius:24px;
+    box-shadow:0 20px 45px rgba(0,70,40,.18);
+    position:relative;
+    overflow:hidden;
+}
+
+.premium-impact .impact-message::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.12);
+    top:-90px;
+    right:-40px;
+}
+
+.premium-impact .impact-message h3{
+    position:relative;
+    margin:0 0 10px;
+    color:#ffffff;
+    font-size:23px;
+    font-weight:800;
+}
+
+.premium-impact .impact-message p{
+    position:relative;
+    max-width:720px;
+    margin:auto;
+    color:rgba(255,255,255,.82);
+    font-size:15px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   ENGLISH / MARATHI
+===================================================== */
+
+.premium-impact .lang-mr,
+.premium-impact .lang-en{
+    transition:opacity .25s ease;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:900px){
+
+    .premium-impact{
+        padding:80px 20px;
+    }
+
+    .premium-impact .impact-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .premium-impact .premium-title h2{
+        font-size:36px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .premium-impact{
+        padding:65px 16px;
+    }
+
+    .premium-impact .premium-title{
+        margin-bottom:35px;
+    }
+
+    .premium-impact .premium-title small{
+        font-size:10px;
+        letter-spacing:1.5px;
+    }
+
+    .premium-impact .premium-title h2{
+        font-size:29px;
+        line-height:1.35;
+    }
+
+    .premium-impact .premium-title p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .premium-impact .impact-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .premium-impact .impact-card{
+        padding:25px 12px 24px;
+        border-radius:20px;
+    }
+
+    .premium-impact .impact-icon{
+        width:55px;
+        height:55px;
+        margin-bottom:15px;
+        border-radius:16px;
+        font-size:25px;
+    }
+
+    .premium-impact .impact-card strong{
+        font-size:31px;
+    }
+
+    .premium-impact .impact-card h3{
+        font-size:15px;
+        margin-top:10px;
+    }
+
+    .premium-impact .impact-card p{
+        font-size:12px;
+    }
+
+    .premium-impact .impact-message{
+        margin-top:35px;
+        padding:25px 20px;
+        border-radius:20px;
+    }
+
+    .premium-impact .impact-message h3{
+        font-size:18px;
+        line-height:1.5;
+    }
+
+    .premium-impact .impact-message p{
+        font-size:13px;
+        line-height:1.7;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:380px){
+
+    .premium-impact .impact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .premium-impact .premium-title h2{
+        font-size:26px;
+    }
+
+}
