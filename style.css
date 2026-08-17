@@ -5182,3 +5182,452 @@ button {
     }
 
 }
+/* =========================================================
+   PREMIUM WORLD-CLASS AWARDS & RECOGNITION
+   AFPSS - Matin Bhosale
+   ========================================================= */
+
+#awards {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 5%;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(212,175,55,.14), transparent 28%),
+    radial-gradient(circle at 85% 80%, rgba(212,175,55,.10), transparent 30%),
+    linear-gradient(135deg, #07111f 0%, #0b1628 48%, #050a12 100%);
+  color: #fff;
+}
+
+/* Decorative premium glow */
+#awards::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -220px;
+  left: -180px;
+  border-radius: 50%;
+  background: rgba(212,175,55,.08);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+#awards::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  right: -160px;
+  bottom: -180px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.035);
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+#awards .premium-title {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+#awards .premium-title small {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 18px;
+  border: 1px solid rgba(212,175,55,.55);
+  border-radius: 50px;
+  color: #e7c65a;
+  background: rgba(212,175,55,.07);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#awards .premium-title h2 {
+  margin: 0 0 20px;
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+
+  background: linear-gradient(
+    90deg,
+    #fff,
+    #f5d76e,
+    #fff,
+    #cda93d
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#awards .premium-title p {
+  max-width: 850px;
+  margin: 12px auto;
+  color: rgba(255,255,255,.76);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   AWARDS PHOTO GALLERY
+   ========================================================= */
+
+#awards .awards-gallery {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+
+/* Photo card */
+
+#awards .award-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+
+  border: 1px solid rgba(212,175,55,.38);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025));
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,255,255,.08);
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    border-color .45s ease;
+}
+
+
+/* Gold inner frame */
+
+#awards .award-photo::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(255,215,90,.25);
+  border-radius: 15px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/* Image */
+
+#awards .award-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+
+  object-fit: cover;
+
+  transition:
+    transform .8s cubic-bezier(.2,.7,.2,1),
+    filter .5s ease;
+}
+
+
+/* Hover */
+
+#awards .award-photo:hover {
+  transform: translateY(-10px) scale(1.015);
+
+  border-color: rgba(240,205,90,.9);
+
+  box-shadow:
+    0 25px 65px rgba(0,0,0,.55),
+    0 0 35px rgba(212,175,55,.12);
+}
+
+#awards .award-photo:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.08) saturate(1.08);
+}
+
+
+/* =========================================================
+   FEATURED / LARGE PHOTO EFFECT
+   ========================================================= */
+
+#awards .award-photo:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: 580px;
+}
+
+#awards .award-photo:nth-child(1) img {
+  min-height: 580px;
+}
+
+
+/* =========================================================
+   VIDEO SECTION
+   ========================================================= */
+
+#awards .awards-video-title {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1100px;
+  margin: 100px auto 45px;
+  text-align: center;
+}
+
+#awards .awards-video-title small {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  color: #e7c65a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+#awards .awards-video-title h2 {
+  margin: 0;
+
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+
+  color: #fff;
+}
+
+
+/* Video grid */
+
+#awards .awards-videos {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+
+/* Video card */
+
+#awards .award-video {
+  padding: 10px;
+
+  border: 1px solid rgba(212,175,55,.35);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.025)
+    );
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.40),
+    inset 0 1px 0 rgba(255,255,255,.08);
+
+  transition:
+    transform .4s ease,
+    border-color .4s ease,
+    box-shadow .4s ease;
+}
+
+#awards .award-video:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(240,205,90,.8);
+
+  box-shadow:
+    0 28px 70px rgba(0,0,0,.55),
+    0 0 35px rgba(212,175,55,.10);
+}
+
+
+/* Video ratio */
+
+#awards .video-wrapper {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  border-radius: 17px;
+
+  background: #000;
+}
+
+
+/* YouTube iframe */
+
+#awards .video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
+/* =========================================================
+   PREMIUM GOLD DIVIDER
+   ========================================================= */
+
+#awards .awards-video-title::after {
+  content: "";
+  display: block;
+
+  width: 110px;
+  height: 3px;
+
+  margin: 22px auto 0;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4af37,
+    #ffe98a,
+    #d4af37,
+    transparent
+  );
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  #awards {
+    padding: 80px 4%;
+  }
+
+  #awards .awards-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #awards .award-photo:nth-child(1) {
+    grid-column: span 2;
+    min-height: 450px;
+  }
+
+  #awards .award-photo:nth-child(1) img {
+    min-height: 450px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  #awards {
+    padding: 65px 18px;
+  }
+
+  #awards .premium-title {
+    margin-bottom: 42px;
+  }
+
+  #awards .premium-title h2 {
+    font-size: 34px;
+  }
+
+  #awards .premium-title p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  #awards .awards-gallery {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  #awards .award-photo,
+  #awards .award-photo:nth-child(1) {
+    grid-column: span 1;
+    grid-row: auto;
+
+    min-height: 300px;
+  }
+
+  #awards .award-photo img,
+  #awards .award-photo:nth-child(1) img {
+    min-height: 300px;
+  }
+
+  #awards .awards-videos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #awards .award-video {
+    padding: 7px;
+    border-radius: 18px;
+  }
+
+  #awards .video-wrapper {
+    border-radius: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  #awards {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  #awards .premium-title h2 {
+    font-size: 29px;
+  }
+
+  #awards .award-photo,
+  #awards .award-photo:nth-child(1) {
+    min-height: 260px;
+  }
+
+  #awards .award-photo img,
+  #awards .award-photo:nth-child(1) img {
+    min-height: 260px;
+  }
+
+}
