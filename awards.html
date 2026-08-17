@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AFPSS | Awards & Recognition</title>
 
 <meta name="description"
-content="Awards and Recognition of Adivasi Fase Pardhi Sudhar Samiti and Prashnachinha Adivasi Ashram School.">
+content="Awards and Recognition of Adivasi Fase Pardhi Sudhar Samiti, Prashnachinha Adivasi Ashram School and Prof. Matin Bhosale's social and educational journey.">
 
 <meta name="author"
 content="Adivasi Fase Pardhi Sudhar Samiti">
@@ -22,1361 +23,1298 @@ rel="stylesheet">
 
 /* =========================================================
    AFPSS PREMIUM AWARDS PAGE
-   4 PHOTOS + 1 AWARD VIDEO + 4 YOUTUBE VIDEOS
+   FINAL LOCK VERSION
    ========================================================= */
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:
-    Inter,
-    "Noto Sans Devanagari",
-    Arial,
-    sans-serif;
+    font-family:
+        Inter,
+        "Noto Sans Devanagari",
+        Arial,
+        sans-serif;
 
-  background:#06111d;
-  color:#fff;
-  line-height:1.7;
+    background:#050c15;
+    color:#fff;
+    line-height:1.7;
 }
 
-/* ================= HEADER ================= */
+img,
+video{
+    max-width:100%;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .header{
-  position:sticky;
-  top:0;
-  z-index:9999;
+    position:sticky;
+    top:0;
+    z-index:9999;
 
-  background:rgba(3,13,24,.94);
-  backdrop-filter:blur(18px);
+    background:rgba(3,12,22,.92);
+    backdrop-filter:blur(18px);
 
-  border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .header-inner{
-  width:min(1250px,92%);
-  min-height:76px;
-  margin:auto;
+    width:min(1200px,92%);
+    min-height:72px;
+    margin:auto;
 
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
+    display:flex;
+    align-items:center;
+    gap:11px;
 
-  color:#fff;
-  text-decoration:none;
+    color:#fff;
+    text-decoration:none;
 }
 
 .logo img{
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  object-fit:cover;
+    width:46px;
+    height:46px;
+
+    border-radius:50%;
+    object-fit:cover;
 }
 
 .logo strong{
-  display:block;
-  font-size:20px;
-  font-weight:900;
+    display:block;
+
+    font-size:19px;
+    font-weight:900;
 }
 
 .logo span{
-  display:block;
-  font-size:10px;
-  color:#aab8b3;
+    display:block;
+
+    font-size:9px;
+    color:#aab8b3;
 }
 
 .nav{
-  display:flex;
-  align-items:center;
-  gap:18px;
+    display:flex;
+    align-items:center;
+    gap:18px;
 }
 
 .nav a{
-  color:#dbe6e1;
-  text-decoration:none;
+    color:#dce7e2;
+    text-decoration:none;
 
-  font-size:13px;
-  font-weight:700;
+    font-size:12px;
+    font-weight:800;
 
-  transition:.3s;
+    transition:.3s ease;
 }
 
 .nav a:hover{
-  color:#f2cf61;
+    color:#f0d36b;
 }
 
-/* ================= HERO ================= */
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .hero{
-  position:relative;
-  overflow:hidden;
+    position:relative;
+    overflow:hidden;
 
-  padding:105px 20px 85px;
+    padding:90px 20px 75px;
 
-  text-align:center;
+    text-align:center;
 
-  background:
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(212,175,55,.18),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 85% 80%,
-      rgba(255,255,255,.05),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      #061525,
-      #0a1d30 50%,
-      #030911
-    );
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(212,175,55,.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(255,255,255,.05),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #061525 0%,
+            #0a1d30 50%,
+            #030911 100%
+        );
 }
 
 .hero::before{
-  content:"";
+    content:"";
 
-  position:absolute;
+    position:absolute;
 
-  width:520px;
-  height:520px;
+    width:420px;
+    height:420px;
 
-  left:-280px;
-  top:-270px;
+    left:-220px;
+    top:-220px;
 
-  border-radius:50%;
+    border-radius:50%;
 
-  background:rgba(212,175,55,.08);
+    background:rgba(212,175,55,.08);
 
-  filter:blur(18px);
+    filter:blur(15px);
+
+    pointer-events:none;
 }
 
 .hero-inner{
-  position:relative;
-  z-index:2;
+    position:relative;
+    z-index:2;
 
-  width:min(950px,92%);
-  margin:auto;
+    width:min(900px,92%);
+
+    margin:auto;
 }
 
 .hero-badge{
-  display:inline-block;
+    display:inline-block;
 
-  padding:8px 20px;
+    padding:7px 19px;
 
-  border-radius:50px;
+    border:1px solid rgba(225,194,78,.55);
+    border-radius:50px;
 
-  border:1px solid rgba(225,194,78,.55);
+    background:rgba(212,175,55,.07);
 
-  color:#e8c95b;
+    color:#e8c95b;
 
-  font-size:11px;
-  font-weight:900;
+    font-size:11px;
+    font-weight:900;
 
-  letter-spacing:3px;
-
-  background:rgba(212,175,55,.07);
+    letter-spacing:3px;
 }
 
 .hero h1{
-  margin:22px 0 16px;
+    margin:20px 0 15px;
 
-  font-size:clamp(40px,6vw,70px);
+    font-size:clamp(38px,6vw,68px);
 
-  line-height:1.08;
+    line-height:1.08;
 
-  font-weight:900;
+    font-weight:900;
 
-  background:
-    linear-gradient(
-      90deg,
-      #fff,
-      #f4d66b,
-      #fff,
-      #caa33a
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #f4d66b,
+            #fff,
+            #caa33a
+        );
 
-  -webkit-background-clip:text;
-  background-clip:text;
+    -webkit-background-clip:text;
+    background-clip:text;
 
-  color:transparent;
+    color:transparent;
 }
 
 .hero p{
-  max-width:780px;
-  margin:auto;
+    max-width:760px;
 
-  color:rgba(255,255,255,.74);
+    margin:auto;
 
-  font-size:16px;
+    color:rgba(255,255,255,.74);
+
+    font-size:16px;
 }
 
-/* ================= LANGUAGE ================= */
 
-.language{
-  margin-top:25px;
-
-  display:flex;
-  justify-content:center;
-  gap:8px;
-}
-
-.language button{
-  border:1px solid rgba(255,255,255,.2);
-
-  background:rgba(255,255,255,.07);
-
-  color:#fff;
-
-  padding:8px 18px;
-
-  border-radius:30px;
-
-  font-weight:800;
-
-  cursor:pointer;
-
-  transition:.3s;
-}
-
-.language button:hover{
-  border-color:#e8c95b;
-}
-
-.language button.active{
-  background:#fff;
-  color:#075b3b;
-}
-
-/* ================= GENERAL ================= */
-
-.section{
-  padding:85px 0;
-}
+/* =========================================================
+   COMMON
+   ========================================================= */
 
 .container{
-  width:min(1250px,92%);
-  margin:auto;
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+.section{
+    padding:80px 0;
 }
 
 .section-heading{
-  text-align:center;
+    max-width:850px;
 
-  max-width:850px;
+    margin:0 auto 42px;
 
-  margin:0 auto 45px;
+    text-align:center;
 }
 
 .section-heading small{
-  color:#e5c65b;
+    color:#e5c65b;
 
-  font-weight:900;
+    font-size:11px;
+    font-weight:900;
 
-  letter-spacing:3px;
-
-  font-size:11px;
+    letter-spacing:3px;
 }
 
 .section-heading h2{
-  margin:10px 0;
+    margin:10px 0 12px;
 
-  font-size:clamp(30px,4vw,48px);
+    color:#fff;
 
-  font-weight:900;
+    font-size:clamp(30px,4vw,46px);
+
+    line-height:1.15;
+
+    font-weight:900;
 }
 
 .section-heading p{
-  color:#9baaa4;
+    color:#9baaa4;
 
-  font-size:15px;
+    font-size:15px;
 }
 
-/* ================= AWARD PHOTOS ================= */
 
-.awards-section{
-  background:
-    linear-gradient(
-      180deg,
-      #06111d,
-      #081624
-    );
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
+
+.lang-en{
+    display:none;
+}
+
+.language{
+    margin-top:25px;
+
+    display:flex;
+    justify-content:center;
+    gap:8px;
+}
+
+.language button{
+    border:1px solid rgba(255,255,255,.18);
+
+    background:rgba(255,255,255,.06);
+
+    color:#fff;
+
+    padding:8px 17px;
+
+    border-radius:30px;
+
+    font-weight:800;
+
+    cursor:pointer;
+}
+
+.language button.active{
+    background:#fff;
+    color:#075b3b;
+}
+
+
+/* =========================================================
+   AWARDS GALLERY
+   ========================================================= */
+
+.awards{
+    padding:80px 0 90px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #06111d,
+            #081624
+        );
 }
 
 .award-gallery{
-  display:grid;
+    display:grid;
 
-  grid-template-columns:
-    repeat(4,1fr);
+    grid-template-columns:
+        repeat(4,1fr);
 
-  gap:20px;
+    gap:18px;
 }
 
 .award-card{
-  position:relative;
+    position:relative;
 
-  overflow:hidden;
+    overflow:hidden;
 
-  min-height:320px;
+    height:330px;
 
-  border-radius:24px;
+    border-radius:22px;
 
-  border:1px solid
-    rgba(212,175,55,.35);
+    border:1px solid rgba(212,175,55,.35);
 
-  background:#0b1725;
+    background:#0b1725;
 
-  box-shadow:
-    0 25px 60px rgba(0,0,0,.38);
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.40);
 
-  transition:
-    transform .45s ease,
-    box-shadow .45s ease,
-    border-color .45s ease;
-}
-
-.award-card:first-child{
-  grid-column:span 2;
-  grid-row:span 2;
-
-  min-height:660px;
-}
-
-.award-card img{
-  display:block;
-
-  width:100%;
-  height:100%;
-
-  min-height:320px;
-
-  object-fit:cover;
-
-  transition:
-    transform .8s ease;
-}
-
-.award-card:first-child img{
-  min-height:660px;
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
 }
 
 .award-card:hover{
-  transform:translateY(-8px);
+    transform:translateY(-8px);
 
-  border-color:
-    rgba(244,210,91,.9);
+    border-color:rgba(244,210,91,.9);
 
-  box-shadow:
-    0 35px 80px rgba(0,0,0,.55),
-    0 0 35px rgba(212,175,55,.12);
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.55),
+        0 0 30px rgba(212,175,55,.12);
+}
+
+.award-card img{
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform .8s ease;
 }
 
 .award-card:hover img{
-  transform:scale(1.06);
+    transform:scale(1.06);
 }
 
 .award-overlay{
-  position:absolute;
+    position:absolute;
 
-  left:0;
-  right:0;
-  bottom:0;
+    left:0;
+    right:0;
+    bottom:0;
 
-  padding:55px 22px 22px;
+    padding:45px 18px 18px;
 
-  background:
-    linear-gradient(
-      transparent,
-      rgba(0,0,0,.9)
-    );
-
-  z-index:2;
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.88)
+        );
 }
 
 .award-overlay span{
-  color:#f0d36b;
+    color:#f0d36b;
 
-  font-size:11px;
+    font-size:10px;
 
-  font-weight:900;
+    font-weight:900;
 
-  letter-spacing:2px;
+    letter-spacing:2px;
 }
 
 .award-overlay h3{
-  margin-top:5px;
+    margin-top:3px;
 
-  font-size:19px;
+    color:#fff;
 
-  font-weight:900;
+    font-size:17px;
+
+    font-weight:900;
 }
 
-/* ================= AWARD VIDEO ================= */
+
+/* =========================================================
+   JOURNEY
+   ========================================================= */
+
+.journey{
+    padding:80px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071321,
+            #0b1827
+        );
+}
+
+.journey-card{
+    width:min(1000px,100%);
+
+    margin:auto;
+
+    padding:45px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(212,175,55,.28);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.025)
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.35);
+}
+
+.journey-card h3{
+    margin-bottom:20px;
+
+    color:#f0d36b;
+
+    font-size:28px;
+
+    font-weight:900;
+}
+
+.journey-card p{
+    margin-bottom:12px;
+
+    color:#c5d0cb;
+
+    font-size:15px;
+
+    line-height:1.85;
+}
+
+.journey-highlight{
+    margin-top:25px;
+
+    padding:20px;
+
+    border-left:4px solid #d4af37;
+
+    border-radius:12px;
+
+    background:rgba(212,175,55,.07);
+
+    color:#f4d66b;
+
+    font-size:17px;
+
+    font-weight:800;
+}
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
 
 .video-section{
-  background:#081624;
+    padding:80px 0;
+
+    background:#06111d;
 }
 
-.video-card{
-  max-width:1050px;
+.video-box{
+    width:min(950px,100%);
 
-  margin:auto;
+    margin:auto;
 
-  padding:10px;
+    padding:9px;
 
-  border-radius:28px;
+    border-radius:27px;
 
-  border:1px solid
-    rgba(212,175,55,.35);
+    border:1px solid rgba(212,175,55,.35);
 
-  background:
-    rgba(255,255,255,.035);
+    background:rgba(255,255,255,.035);
 
-  box-shadow:
-    0 30px 80px rgba(0,0,0,.45);
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.45);
 }
 
 .video-wrapper{
-  position:relative;
+    position:relative;
 
-  width:100%;
+    width:100%;
 
-  aspect-ratio:16/9;
+    aspect-ratio:16/9;
 
-  overflow:hidden;
+    overflow:hidden;
 
-  border-radius:20px;
+    border-radius:19px;
 
-  background:#000;
+    background:#000;
 }
 
 .video-wrapper video{
-  position:absolute;
+    position:absolute;
 
-  inset:0;
+    inset:0;
 
-  width:100%;
-  height:100%;
+    width:100%;
+    height:100%;
 
-  object-fit:contain;
-
-  background:#000;
+    object-fit:cover;
 }
 
-/* ================= YOUTUBE ================= */
+
+/* =========================================================
+   YOUTUBE
+   ========================================================= */
 
 .youtube-section{
-  background:
-    linear-gradient(
-      180deg,
-      #081624,
-      #06111d
-    );
+    padding:80px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #071321,
+            #050c15
+        );
 }
 
 .youtube-grid{
-  display:grid;
+    display:grid;
 
-  grid-template-columns:
-    repeat(2,1fr);
+    grid-template-columns:
+        repeat(2,1fr);
 
-  gap:28px;
+    gap:24px;
 }
 
 .youtube-card{
-  overflow:hidden;
+    overflow:hidden;
 
-  border-radius:25px;
+    border-radius:22px;
 
-  background:#0b1725;
+    border:1px solid rgba(212,175,55,.28);
 
-  border:1px solid
-    rgba(212,175,55,.28);
+    background:#0b1725;
 
-  box-shadow:
-    0 20px 55px rgba(0,0,0,.35);
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.35);
 
-  transition:.4s;
+    transition:.4s ease;
 }
 
 .youtube-card:hover{
-  transform:translateY(-7px);
+    transform:translateY(-7px);
 
-  border-color:
-    rgba(240,210,95,.8);
-
-  box-shadow:
-    0 28px 65px rgba(0,0,0,.48);
+    border-color:
+        rgba(240,210,95,.8);
 }
 
 .youtube-wrapper{
-  position:relative;
+    position:relative;
 
-  aspect-ratio:16/9;
+    width:100%;
 
-  background:#000;
+    aspect-ratio:16/9;
+
+    background:#000;
 }
 
 .youtube-wrapper iframe{
-  position:absolute;
+    position:absolute;
 
-  inset:0;
+    inset:0;
 
-  width:100%;
-  height:100%;
+    width:100%;
+    height:100%;
 
-  border:0;
+    border:0;
 }
 
 .youtube-info{
-  padding:18px 20px 20px;
+    padding:15px 18px;
 }
 
 .youtube-info h3{
-  font-size:17px;
+    color:#fff;
 
-  font-weight:900;
+    font-size:16px;
+
+    font-weight:900;
 }
 
 .youtube-info p{
-  margin-top:3px;
+    margin-top:2px;
 
-  font-size:12px;
+    color:#8f9e98;
 
-  color:#9baaa4;
+    font-size:12px;
 }
 
-/* ================= BUTTON ================= */
 
-.back-section{
-  padding:70px 20px;
+/* =========================================================
+   SINGLE HOME BUTTON
+   ========================================================= */
 
-  text-align:center;
+.back-home{
+    padding:65px 20px;
 
-  background:#06111d;
+    text-align:center;
+
+    background:#050c15;
 }
 
-.premium-button{
-  display:inline-flex;
+.home-button{
+    display:inline-flex;
 
-  align-items:center;
-  justify-content:center;
+    align-items:center;
+    justify-content:center;
 
-  padding:14px 28px;
+    padding:14px 28px;
 
-  border-radius:50px;
+    border-radius:50px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #d4af37,
-      #f2d56b
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #d4af37,
+            #f2d56b
+        );
 
-  color:#111;
+    color:#111;
 
-  text-decoration:none;
+    text-decoration:none;
 
-  font-weight:900;
+    font-weight:900;
 
-  box-shadow:
-    0 12px 35px
-    rgba(212,175,55,.18);
+    box-shadow:
+        0 12px 35px rgba(212,175,55,.18);
 
-  transition:.3s;
+    transition:.3s ease;
 }
 
-.premium-button:hover{
-  transform:translateY(-3px);
+.home-button:hover{
+    transform:translateY(-3px);
 
-  box-shadow:
-    0 18px 45px
-    rgba(212,175,55,.28);
+    box-shadow:
+        0 18px 45px rgba(212,175,55,.28);
 }
 
-/* ================= FOOTER ================= */
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 footer{
-  padding:45px 20px;
+    padding:42px 20px 28px;
 
-  background:#02070d;
+    background:#02070d;
 
-  text-align:center;
+    text-align:center;
 
-  border-top:
-    1px solid
-    rgba(255,255,255,.08);
+    border-top:
+        1px solid rgba(255,255,255,.08);
 }
 
 footer strong{
-  font-size:18px;
+    font-size:17px;
 }
 
 footer p{
-  margin-top:7px;
+    margin-top:6px;
 
-  font-size:12px;
+    color:#899891;
 
-  color:#899891;
+    font-size:12px;
 }
 
-/* ================= LANGUAGE CONTENT ================= */
 
-.lang-en{
-  display:none;
-}
-
-/* ================= TABLET ================= */
+/* =========================================================
+   TABLET
+   ========================================================= */
 
 @media(max-width:900px){
 
-  .nav{
-    display:none;
-  }
+    .nav{
+        display:none;
+    }
 
-  .award-gallery{
-    grid-template-columns:
-      repeat(2,1fr);
-  }
+    .award-gallery{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 
-  .award-card:first-child{
-    grid-column:span 2;
-
-    min-height:480px;
-  }
-
-  .award-card:first-child img{
-    min-height:480px;
-  }
-
-  .youtube-grid{
-    grid-template-columns:1fr;
-  }
+    .youtube-grid{
+        grid-template-columns:1fr;
+    }
 
 }
 
-/* ================= MOBILE ================= */
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media(max-width:600px){
 
-  .header-inner{
-    min-height:68px;
-  }
+    .header-inner{
+        min-height:65px;
+    }
 
-  .logo img{
-    width:42px;
-    height:42px;
-  }
+    .logo img{
+        width:40px;
+        height:40px;
+    }
 
-  .logo strong{
-    font-size:17px;
-  }
+    .logo strong{
+        font-size:17px;
+    }
 
-  .logo span{
-    font-size:8px;
-  }
+    .logo span{
+        font-size:8px;
+    }
 
-  .hero{
-    padding:75px 18px;
-  }
+    .hero{
+        padding:70px 18px 60px;
+    }
 
-  .hero h1{
-    font-size:38px;
-  }
+    .hero h1{
+        font-size:38px;
+    }
 
-  .hero p{
-    font-size:14px;
-  }
+    .hero p{
+        font-size:14px;
+    }
 
-  .section{
-    padding:65px 0;
-  }
+    .section,
+    .awards,
+    .journey,
+    .video-section,
+    .youtube-section{
+        padding:65px 0;
+    }
 
-  .award-gallery{
-    grid-template-columns:1fr;
-  }
+    .award-gallery{
+        grid-template-columns:1fr;
 
-  .award-card,
-  .award-card:first-child{
-    grid-column:span 1;
-    grid-row:auto;
+        gap:16px;
+    }
 
-    min-height:330px;
-  }
+    .award-card{
+        height:300px;
+    }
 
-  .award-card img,
-  .award-card:first-child img{
-    min-height:330px;
-  }
+    .journey-card{
+        padding:25px 20px;
+    }
 
-  .section-heading{
-    margin-bottom:35px;
-  }
+    .journey-card h3{
+        font-size:24px;
+    }
 
-  .youtube-section{
-    padding-top:65px;
-  }
+    .journey-card p{
+        font-size:14px;
+    }
+
+    .youtube-grid{
+        gap:18px;
+    }
 
 }
 
-/* ================= ACCESSIBILITY ================= */
 
-img{
-  max-width:100%;
-}
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
 
-a,
-button{
-  -webkit-tap-highlight-color:transparent;
+@media(prefers-reduced-motion:reduce){
+
+    *{
+        scroll-behavior:auto !important;
+        transition:none !important;
+        animation:none !important;
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
-<!-- =====================================================
+
+<!-- =======================================================
      HEADER
-     ===================================================== -->
+     ======================================================= -->
 
 <header class="header">
 
-  <div class="header-inner">
+<div class="header-inner">
 
-    <a href="index.html" class="logo">
+<a href="index.html" class="logo">
 
-      <img
-        src="logo.jpg"
-        alt="AFPSS Logo">
+<img
+src="logo.jpg"
+alt="AFPSS Logo">
 
-      <div>
-        <strong>AFPSS</strong>
+<div>
 
-        <span>
-          Adivasi Fase Pardhi Sudhar Samiti
-        </span>
-      </div>
+<strong>AFPSS</strong>
 
-    </a>
+<span>
+Adivasi Fase Pardhi Sudhar Samiti
+</span>
+
+</div>
+
+</a>
 
 
-    <nav class="nav">
+<nav class="nav">
 
-      <a href="index.html">Home</a>
+<a href="index.html">Home</a>
 
-      <a href="index.html#about">About</a>
+<a href="index.html#about">About</a>
 
-      <a href="index.html#founder">Founder</a>
+<a href="index.html#founder">Founder</a>
 
-      <a href="awards.html">Awards</a>
+<a href="awards.html">Awards</a>
 
-      <a href="media.html">Media</a>
+<a href="media.html">Media</a>
 
-      <a href="sports.html">Sports</a>
+<a href="sports.html">Sports</a>
 
-      <a href="index.html#gallery">Gallery</a>
+<a href="index.html#gallery">Gallery</a>
 
-      <a href="index.html#contact">Contact</a>
+<a href="index.html#contact">Contact</a>
 
-    </nav>
+</nav>
 
-  </div>
+</div>
 
 </header>
 
 
-<!-- =====================================================
+
+<!-- =======================================================
      HERO
-     ===================================================== -->
+     ======================================================= -->
 
 <section class="hero">
 
-  <div class="hero-inner">
+<div class="hero-inner">
 
-    <span class="hero-badge">
-      AWARDS & RECOGNITION
-    </span>
-
-
-    <div class="lang-mr">
-
-      <h1>
-        🏆 पुरस्कार व सन्मान
-      </h1>
-
-      <p>
-        सामाजिक कार्य, शिक्षण आणि
-        फासेपारधी समाजातील मुलांसाठी
-        केलेल्या कार्याची विविध स्तरांवर
-        झालेली दखल.
-      </p>
-
-    </div>
+<span class="hero-badge">
+AWARDS & RECOGNITION
+</span>
 
 
-    <div class="lang-en">
+<div class="lang-mr">
 
-      <h1>
-        🏆 Awards & Recognition
-      </h1>
+<h1>
+🏆 पुरस्कार व सन्मान
+</h1>
 
-      <p>
-        Recognition for social service,
-        education and dedicated work
-        for children and communities.
-      </p>
+<p>
+प्रश्नचिन्ह आदिवासी आश्रम शाळा,
+आदिवासी फासे पारधी सुधार समिती
+आणि प्रा. मतीन भोसले सरांच्या
+कार्याची दखल घेणारे सन्मान.
+</p>
 
-    </div>
-
-
-    <div class="language">
-
-      <button
-        id="mrBtn"
-        class="active"
-        onclick="setLanguage('mr')">
-
-        🇮🇳 मराठी
-
-      </button>
+</div>
 
 
-      <button
-        id="enBtn"
-        onclick="setLanguage('en')">
+<div class="lang-en">
 
-        🇬🇧 English
+<h1>
+🏆 Awards & Recognition
+</h1>
 
-      </button>
+<p>
+Recognition of the social, educational
+and humanitarian work of AFPSS,
+Prashnachinha Adivasi Ashram School
+and Prof. Matin Bhosale.
+</p>
 
-    </div>
+</div>
 
-  </div>
+
+<div class="language">
+
+<button
+id="mrBtn"
+class="active"
+onclick="setLanguage('mr')">
+
+🇮🇳 मराठी
+
+</button>
+
+
+<button
+id="enBtn"
+onclick="setLanguage('en')">
+
+🇬🇧 English
+
+</button>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =====================================================
-     4 AWARD PHOTOS
-     ===================================================== -->
 
-<section class="section awards-section">
+<!-- =======================================================
+     FOUR FINAL AWARD PHOTOS
+     ======================================================= -->
 
-  <div class="container">
+<section class="awards">
 
-    <div class="section-heading">
-
-      <small>
-        RECOGNITION
-      </small>
+<div class="container">
 
 
-      <div class="lang-mr">
+<div class="section-heading">
 
-        <h2>
-          सन्मानाच्या चार आठवणी
-        </h2>
-
-        <p>
-          प्रत्येक सन्मानामागे सामाजिक बांधिलकी,
-          शिक्षणासाठीचा संघर्ष आणि विद्यार्थ्यांच्या
-          उज्ज्वल भविष्यासाठी केलेल्या कार्याची
-          एक प्रेरणादायी कहाणी आहे.
-        </p>
-
-      </div>
+<small>
+RECOGNITION
+</small>
 
 
-      <div class="lang-en">
+<div class="lang-mr">
 
-        <h2>
-          Four Moments of Recognition
-        </h2>
+<h2>
+आमचे पुरस्कार
+</h2>
 
-        <p>
-          Each recognition reflects commitment,
-          service and a journey dedicated to
-          education and a better future for children.
-        </p>
+<p>
+प्रत्येक सन्मानामागे संघर्ष,
+सेवा आणि विद्यार्थ्यांच्या भविष्यासाठीची
+अखंड बांधिलकी आहे.
+</p>
 
-      </div>
-
-    </div>
+</div>
 
 
-    <div class="award-gallery">
+<div class="lang-en">
+
+<h2>
+Our Recognition
+</h2>
+
+<p>
+Every recognition represents years of
+struggle, service and commitment
+to the future of children.
+</p>
+
+</div>
+
+</div>
 
 
-      <!-- PHOTO 01 -->
 
-      <div class="award-card">
-
-        <img
-          src="award-01.jpg"
-          alt="AFPSS Award Recognition 01"
-          loading="lazy">
-
-        <div class="award-overlay">
-
-          <span>
-            AWARD 01
-          </span>
-
-          <h3>
-            सन्मान व गौरव
-          </h3>
-
-        </div>
-
-      </div>
+<div class="award-gallery">
 
 
-      <!-- PHOTO 02 -->
+<!-- PHOTO 01 -->
 
-      <div class="award-card">
+<div class="award-card">
 
-        <img
-          src="award-02.jpg"
-          alt="AFPSS Award Recognition 02"
-          loading="lazy">
+<img
+src="award-01.jpg"
+alt="Matin Bhosale Award Recognition"
+loading="lazy">
 
-        <div class="award-overlay">
+<div class="award-overlay">
 
-          <span>
-            AWARD 02
-          </span>
+<span>
+AWARD 01
+</span>
 
-          <h3>
-            सामाजिक कार्याचा सन्मान
-          </h3>
+<h3>
+Matin Bhosale Award Recognition
+</h3>
 
-        </div>
+</div>
 
-      </div>
-
-
-      <!-- PHOTO 03 -->
-
-      <div class="award-card">
-
-        <img
-          src="award-03.jpg"
-          alt="AFPSS Award Recognition 03"
-          loading="lazy">
-
-        <div class="award-overlay">
-
-          <span>
-            AWARD 03
-          </span>
-
-          <h3>
-            कार्याची दखल
-          </h3>
-
-        </div>
-
-      </div>
+</div>
 
 
-      <!-- PHOTO 04 -->
 
-      <div class="award-card">
+<!-- PHOTO 02 -->
 
-        <img
-          src="award-04.jpeg"
-          alt="AFPSS Award Recognition 04"
-          loading="lazy">
+<div class="award-card">
 
-        <div class="award-overlay">
+<img
+src="award-02.jpg"
+alt="Matin Bhosale Award Recognition"
+loading="lazy">
 
-          <span>
-            AWARD 04
-          </span>
+<div class="award-overlay">
 
-          <h3>
-            समाजसेवेचा गौरव
-          </h3>
+<span>
+AWARD 02
+</span>
 
-        </div>
+<h3>
+Social & Educational Recognition
+</h3>
 
-      </div>
+</div>
+
+</div>
 
 
-    </div>
 
-  </div>
+<!-- PHOTO 03 -->
+
+<div class="award-card">
+
+<img
+src="award-03.jpg"
+alt="Matin Bhosale Social Service Recognition"
+loading="lazy">
+
+<div class="award-overlay">
+
+<span>
+AWARD 03
+</span>
+
+<h3>
+Social Service Recognition
+</h3>
+
+</div>
+
+</div>
+
+
+
+<!-- PHOTO 04 -->
+
+<div class="award-card">
+
+<img
+src="award-04.jpeg"
+alt="Matin Bhosale Award Recognition"
+loading="lazy">
+
+<div class="award-overlay">
+
+<span>
+AWARD 04
+</span>
+
+<h3>
+Honour & Recognition
+</h3>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =====================================================
+
+<!-- =======================================================
+     MATIN BHOSALE JOURNEY
+     ======================================================= -->
+
+<section class="journey">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<small>
+THE JOURNEY BEHIND THE RECOGNITION
+</small>
+
+
+<div class="lang-mr">
+
+<h2>
+पुरस्कारामागचा संघर्षमय प्रवास
+</h2>
+
+<p>
+हा सन्मान एका व्यक्तीपुरता मर्यादित नाही;
+तो एका संपूर्ण सामाजिक प्रवासाची दखल आहे.
+</p>
+
+</div>
+
+
+<div class="lang-en">
+
+<h2>
+The Journey Behind the Recognition
+</h2>
+
+<p>
+These honours represent more than one person;
+they reflect a long journey of social commitment.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="journey-card">
+
+
+<div class="lang-mr">
+
+<h3>
+प्रा. मतीन शंकरराव भोसले सरांचा प्रवास
+</h3>
+
+<p>
+प्रा. मतीन शंकरराव भोसले सरांचा प्रवास हा केवळ पुरस्कारांचा प्रवास नाही; तो संघर्ष, त्याग आणि शिक्षणाच्या ध्यासाचा प्रवास आहे.
+</p>
+
+<p>
+फासेपारधी समाजातील मुलांना शिक्षणाची संधी मिळावी, हे स्वप्न त्यांनी मनाशी बाळगले आणि अत्यंत प्रतिकूल परिस्थितीतही त्यासाठी प्रयत्न सुरू ठेवले.
+</p>
+
+<p>
+ज्या मुलांच्या हातात कधी पुस्तक नव्हते, त्या मुलांच्या हातात शिक्षणाची संधी आणि सन्मानाचे भविष्य यावे, यासाठी त्यांनी काम केले.
+</p>
+
+<p>
+२२ सप्टेंबर २०११ रोजी १८८ विद्यार्थ्यांपासून प्रश्नचिन्ह आदिवासी आश्रम शाळेचा प्रवास सुरू झाला.
+</p>
+
+<p>
+शिक्षणाबरोबरच निवास, अन्न, आरोग्य, संस्कार आणि सुरक्षित वातावरण देण्याचे मोठे आव्हान त्यांनी स्वीकारले.
+</p>
+
+<p>
+या वाटचालीत आर्थिक अडचणी, सामाजिक अडथळे आणि अनेक संकटांचा सामना करावा लागला; मात्र मुलांचे शिक्षण थांबू नये, हा निर्धार कायम राहिला.
+</p>
+
+<p>
+या प्रवासाने हजारो विद्यार्थ्यांच्या आयुष्यात शिक्षणाची नवी दिशा निर्माण करण्याचे काम केले आहे.
+</p>
+
+<p>
+या कार्यामागे मतीन सरांचा एकट्याचा संघर्ष नाही. श्री. ओमकार पवार यांनी दिलेली साथ आणि सहकार्य या प्रवासात महत्त्वाचे राहिले आहे.
+</p>
+
+<p>
+श्रीमती सीमा भोसले यांनीही या सामाजिक कार्याच्या प्रवासात मोलाची साथ दिली आहे. कुटुंबीय, सहकारी, शिक्षक, मित्र आणि शुभचिंतक यांच्या सहकार्याने हा प्रवास पुढे जात राहिला.
+</p>
+
+<p>
+आज मिळणारा प्रत्येक पुरस्कार हा केवळ एका व्यक्तीचा सन्मान नसून विद्यार्थ्यांची स्वप्ने, शिक्षकांची मेहनत आणि अनेक सहकाऱ्यांच्या योगदानाचा सन्मान आहे.
+</p>
+
+<div class="journey-highlight">
+“एका मुलाच्या हातात पुस्तक दिले, तर एका पिढीचे भविष्य बदलू शकते.”
+</div>
+
+</div>
+
+
+
+<div class="lang-en">
+
+<h3>
+The Journey of Prof. Matin Shankarrao Bhosale
+</h3>
+
+<p>
+The journey of Prof. Matin Shankarrao Bhosale is not merely a journey of awards; it is a journey of struggle, sacrifice and an unwavering commitment to education.
+</p>
+
+<p>
+He dreamed of creating educational opportunities for children from the Fase Pardhi community and continued to pursue that vision despite difficult circumstances.
+</p>
+
+<p>
+He worked to create opportunities for children who once had very limited access to books, education and a secure future.
+</p>
+
+<p>
+On 22 September 2011, Prashnachinha Adivasi Ashram School began its journey with 188 students.
+</p>
+
+<p>
+The mission went beyond education to include residential care, food, healthcare, values and a safe environment for children.
+</p>
+
+<p>
+The journey faced financial difficulties, social barriers and many challenges, but the determination to keep children's education moving forward remained strong.
+</p>
+
+<p>
+Over the years, this journey has helped create new educational opportunities and a brighter direction for thousands of students.
+</p>
+
+<p>
+This work has never been the effort of one person alone. Shri Omkar Pawar has provided valuable support and cooperation throughout the journey.
+</p>
+
+<p>
+Mrs. Seema Bhosale has also been a valued source of support in this social mission. Family members, colleagues, teachers, friends and well-wishers have all contributed to the journey.
+</p>
+
+<p>
+Every recognition received today represents more than an individual's achievement; it reflects the dreams of students, the dedication of teachers and the contribution of many supporters.
+</p>
+
+<div class="journey-highlight">
+“Give a child a book, and you can change the future of a generation.”
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =======================================================
      30 SECOND AWARD VIDEO
-     ===================================================== -->
+     ======================================================= -->
 
-<section class="section video-section">
+<section class="video-section">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-heading">
 
-      <small>
-        AWARD MOMENT
-      </small>
+<div class="section-heading">
 
+<small>
+AWARD MOMENT
+</small>
 
-      <div class="lang-mr">
 
-        <h2>
-          🎬 पुरस्कार स्वीकारतानाचा क्षण
-        </h2>
-
-        <p>
-          आपल्या पुरस्कार आणि सन्मानाच्या
-          प्रवासातील एक विशेष क्षण.
-        </p>
-
-      </div>
-
-
-      <div class="lang-en">
-
-        <h2>
-          🎬 Award Recognition Moment
-        </h2>
-
-        <p>
-          A special moment from the
-          Awards & Recognition journey.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div class="video-card">
-
-      <div class="video-wrapper">
-
-        <video
-          controls
-          playsinline
-          preload="metadata">
-
-          <source
-            src="award-video.mp4"
-            type="video/mp4">
-
-          Your browser does not support
-          video playback.
-
-        </video>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     4 YOUTUBE VIDEOS
-     ===================================================== -->
-
-<section class="section youtube-section">
-
-  <div class="container">
-
-    <div class="section-heading">
-
-      <small>
-        YOUTUBE
-      </small>
-
-
-      <div class="lang-mr">
-
-        <h2>
-          🎥 निवडक व्हिडिओ
-        </h2>
-
-        <p>
-          सामाजिक कार्य, शाळा आणि
-          पुरस्कारांच्या प्रवासाशी संबंधित
-          निवडक YouTube videos.
-        </p>
-
-      </div>
-
-
-      <div class="lang-en">
-
-        <h2>
-          🎥 Featured Videos
-        </h2>
-
-        <p>
-          Selected videos related to
-          social work, education and recognition.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div class="youtube-grid">
-
-
-      <!-- YOUTUBE 01 -->
-
-      <div class="youtube-card">
-
-        <div class="youtube-wrapper">
-
-          <iframe
-            src="https://www.youtube.com/embed/y0lSyM1sB9E"
-            title="AFPSS YouTube Video 01"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-
-        </div>
-
-        <div class="youtube-info">
-
-          <h3>
-            YouTube Video 01
-          </h3>
-
-          <p>
-            Watch the story on YouTube
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- YOUTUBE 02 -->
-
-      <div class="youtube-card">
-
-        <div class="youtube-wrapper">
-
-          <iframe
-            src="https://www.youtube.com/embed/ci5IfwUyXyY"
-            title="AFPSS YouTube Video 02"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-
-        </div>
-
-        <div class="youtube-info">
-
-          <h3>
-            YouTube Video 02
-          </h3>
-
-          <p>
-            Watch the story on YouTube
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- YOUTUBE 03 -->
-
-      <div class="youtube-card">
-
-        <div class="youtube-wrapper">
-
-          <iframe
-            src="https://www.youtube.com/embed/NteWscB-STg"
-            title="AFPSS YouTube Video 03"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-
-        </div>
-
-        <div class="youtube-info">
-
-          <h3>
-            YouTube Video 03
-          </h3>
-
-          <p>
-            Watch the story on YouTube
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- YOUTUBE 04 -->
-
-      <div class="youtube-card">
-
-        <div class="youtube-wrapper">
-
-          <iframe
-            src="https://www.youtube.com/embed/0z0XXzaoaMs"
-            title="AFPSS YouTube Video 04"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-
-        </div>
-
-        <div class="youtube-info">
-
-          <h3>
-            YouTube Video 04
-          </h3>
-
-          <p>
-            Watch the story on YouTube
-          </p>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =====================================================
-     BACK TO HOME
-     ===================================================== -->
-
-<section class="back-section">
-
-  <a
-    href="index.html"
-    class="premium-button">
-
-    🏠 मुख्यपृष्ठावर जा
-
-  </a>
-
-</section>
-
-
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
-
-<footer>
-
-  <strong>
-    ADIVASI FASE PARDHI SUDHAR SAMITI
-  </strong>
-
-  <p>
-    Prashnachinha Adivasi Ashram School
-  </p>
-
-  <p>
-    Mangrul Chavala • District Amravati • Maharashtra
-  </p>
-
-  <p>
-    © 2026 AFPSS. All Rights Reserved.
-  </p>
-
-</footer>
-
-
-<!-- =====================================================
-     LANGUAGE SCRIPT
-     ===================================================== -->
-
-<script>
-
-function setLanguage(language){
-
-  const mr =
-    document.querySelectorAll('.lang-mr');
-
-  const en =
-    document.querySelectorAll('.lang-en');
-
-  const mrBtn =
-    document.getElementById('mrBtn');
-
-  const enBtn =
-    document.getElementById('enBtn');
-
-
-  if(language === 'en'){
-
-    mr.forEach(function(el){
-      el.style.display = 'none';
-    });
-
-    en.forEach(function(el){
-      el.style.display = 'block';
-    });
-
-    mrBtn.classList.remove('active');
-
-    enBtn.classList.add('active');
-
-    document.documentElement.lang = 'en';
-
-  }else{
-
-    en.forEach(function(el){
-      el.style.display = 'none';
-    });
-
-    mr.forEach(function(el){
-      el.style.display = 'block';
-    });
-
-    enBtn.classList.remove('active');
-
-    mrBtn.classList.add('active');
-
-    document.documentElement.lang = 'mr';
-
-  }
-
-}
-
-</script>
-
-</body>
-</html>
+<div class
