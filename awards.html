@@ -9,6 +9,9 @@
 <meta name="description"
 content="Awards and Recognition of Adivasi Fase Pardhi Sudhar Samiti and Prashnachinha Adivasi Ashram School.">
 
+<meta name="author"
+content="Adivasi Fase Pardhi Sudhar Samiti">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -17,1229 +20,1363 @@ rel="stylesheet">
 
 <style>
 
+/* =========================================================
+   AFPSS PREMIUM AWARDS PAGE
+   4 PHOTOS + 1 AWARD VIDEO + 4 YOUTUBE VIDEOS
+   ========================================================= */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-font-family:
-Inter,
-"Noto Sans Devanagari",
-Arial,
-sans-serif;
+  font-family:
+    Inter,
+    "Noto Sans Devanagari",
+    Arial,
+    sans-serif;
 
-background:#06111d;
-color:#fff;
-line-height:1.7;
+  background:#06111d;
+  color:#fff;
+  line-height:1.7;
 }
 
-/* =========================
-HEADER
-========================= */
+/* ================= HEADER ================= */
 
 .header{
-position:sticky;
-top:0;
-z-index:999;
+  position:sticky;
+  top:0;
+  z-index:9999;
 
-background:rgba(3,13,24,.92);
-backdrop-filter:blur(18px);
+  background:rgba(3,13,24,.94);
+  backdrop-filter:blur(18px);
 
-border-bottom:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .header-inner{
-width:min(1250px,92%);
-margin:auto;
+  width:min(1250px,92%);
+  min-height:76px;
+  margin:auto;
 
-min-height:76px;
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
+  display:flex;
+  align-items:center;
+  gap:12px;
 
-color:#fff;
-text-decoration:none;
+  color:#fff;
+  text-decoration:none;
 }
 
 .logo img{
-width:48px;
-height:48px;
-border-radius:50%;
-object-fit:cover;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover;
 }
 
 .logo strong{
-display:block;
-font-size:20px;
-font-weight:900;
+  display:block;
+  font-size:20px;
+  font-weight:900;
 }
 
 .logo span{
-display:block;
-font-size:10px;
-color:#aab8b3;
+  display:block;
+  font-size:10px;
+  color:#aab8b3;
 }
 
 .nav{
-display:flex;
-align-items:center;
-gap:20px;
-flex-wrap:wrap;
+  display:flex;
+  align-items:center;
+  gap:18px;
 }
 
 .nav a{
-color:#dbe6e1;
-text-decoration:none;
-font-size:13px;
-font-weight:700;
-transition:.3s;
+  color:#dbe6e1;
+  text-decoration:none;
+
+  font-size:13px;
+  font-weight:700;
+
+  transition:.3s;
 }
 
 .nav a:hover{
-color:#f2cf61;
+  color:#f2cf61;
 }
 
-/* =========================
-HERO
-========================= */
+/* ================= HERO ================= */
 
 .hero{
-position:relative;
-overflow:hidden;
+  position:relative;
+  overflow:hidden;
 
-padding:105px 20px 90px;
+  padding:105px 20px 85px;
 
-text-align:center;
+  text-align:center;
 
-background:
-radial-gradient(
-circle at 20% 20%,
-rgba(212,175,55,.18),
-transparent 30%
-),
-radial-gradient(
-circle at 80% 80%,
-rgba(255,255,255,.05),
-transparent 30%
-),
-linear-gradient(
-135deg,
-#061525,
-#0a1d30 50%,
-#030911
-);
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(212,175,55,.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(255,255,255,.05),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #061525,
+      #0a1d30 50%,
+      #030911
+    );
 }
 
 .hero::before{
-content:"";
-position:absolute;
-width:500px;
-height:500px;
-left:-260px;
-top:-250px;
+  content:"";
 
-border-radius:50%;
+  position:absolute;
 
-background:rgba(212,175,55,.08);
-filter:blur(15px);
+  width:520px;
+  height:520px;
+
+  left:-280px;
+  top:-270px;
+
+  border-radius:50%;
+
+  background:rgba(212,175,55,.08);
+
+  filter:blur(18px);
 }
 
 .hero-inner{
-position:relative;
-z-index:2;
+  position:relative;
+  z-index:2;
 
-width:min(950px,92%);
-margin:auto;
+  width:min(950px,92%);
+  margin:auto;
 }
 
 .hero-badge{
-display:inline-block;
+  display:inline-block;
 
-padding:8px 20px;
+  padding:8px 20px;
 
-border-radius:50px;
+  border-radius:50px;
 
-border:1px solid rgba(225,194,78,.55);
+  border:1px solid rgba(225,194,78,.55);
 
-color:#e8c95b;
+  color:#e8c95b;
 
-font-size:11px;
-font-weight:900;
-letter-spacing:3px;
+  font-size:11px;
+  font-weight:900;
 
-background:rgba(212,175,55,.07);
+  letter-spacing:3px;
+
+  background:rgba(212,175,55,.07);
 }
 
 .hero h1{
-margin:22px 0 15px;
+  margin:22px 0 16px;
 
-font-size:clamp(40px,6vw,70px);
+  font-size:clamp(40px,6vw,70px);
 
-line-height:1.08;
+  line-height:1.08;
 
-font-weight:900;
+  font-weight:900;
 
-background:
-linear-gradient(
-90deg,
-#fff,
-#f4d66b,
-#fff,
-#caa33a
-);
+  background:
+    linear-gradient(
+      90deg,
+      #fff,
+      #f4d66b,
+      #fff,
+      #caa33a
+    );
 
--webkit-background-clip:text;
-background-clip:text;
+  -webkit-background-clip:text;
+  background-clip:text;
 
-color:transparent;
+  color:transparent;
 }
 
 .hero p{
-max-width:760px;
-margin:auto;
+  max-width:780px;
+  margin:auto;
 
-color:rgba(255,255,255,.72);
+  color:rgba(255,255,255,.74);
 
-font-size:16px;
+  font-size:16px;
 }
 
-/* =========================
-LANGUAGE
-========================= */
+/* ================= LANGUAGE ================= */
 
 .language{
-margin-top:25px;
+  margin-top:25px;
 
-display:flex;
-justify-content:center;
-gap:8px;
+  display:flex;
+  justify-content:center;
+  gap:8px;
 }
 
 .language button{
-border:1px solid rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.2);
 
-background:rgba(255,255,255,.07);
+  background:rgba(255,255,255,.07);
 
-color:#fff;
+  color:#fff;
 
-padding:8px 18px;
+  padding:8px 18px;
 
-border-radius:30px;
+  border-radius:30px;
 
-font-weight:800;
+  font-weight:800;
 
-cursor:pointer;
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.language button:hover{
+  border-color:#e8c95b;
 }
 
 .language button.active{
-background:#fff;
-color:#075b3b;
+  background:#fff;
+  color:#075b3b;
 }
 
-/* =========================
-AWARD SECTION
-========================= */
+/* ================= GENERAL ================= */
 
-.awards{
-padding:90px 0 110px;
-
-background:
-linear-gradient(
-180deg,
-#06111d,
-#081624
-);
+.section{
+  padding:85px 0;
 }
 
 .container{
-width:min(1300px,92%);
-margin:auto;
+  width:min(1250px,92%);
+  margin:auto;
 }
 
 .section-heading{
-text-align:center;
-max-width:850px;
+  text-align:center;
 
-margin:0 auto 50px;
+  max-width:850px;
+
+  margin:0 auto 45px;
 }
 
 .section-heading small{
-color:#e5c65b;
+  color:#e5c65b;
 
-font-weight:900;
-letter-spacing:3px;
-font-size:11px;
+  font-weight:900;
+
+  letter-spacing:3px;
+
+  font-size:11px;
 }
 
 .section-heading h2{
-font-size:clamp(30px,4vw,48px);
-margin:10px 0;
+  margin:10px 0;
 
-font-weight:900;
+  font-size:clamp(30px,4vw,48px);
+
+  font-weight:900;
 }
 
 .section-heading p{
-color:#9baaa4;
+  color:#9baaa4;
+
+  font-size:15px;
 }
 
-/* =========================
-AWARD GALLERY
-========================= */
+/* ================= AWARD PHOTOS ================= */
+
+.awards-section{
+  background:
+    linear-gradient(
+      180deg,
+      #06111d,
+      #081624
+    );
+}
 
 .award-gallery{
-display:grid;
+  display:grid;
 
-grid-template-columns:
-repeat(4,1fr);
+  grid-template-columns:
+    repeat(4,1fr);
 
-gap:20px;
+  gap:20px;
 }
 
 .award-card{
-position:relative;
+  position:relative;
 
-overflow:hidden;
+  overflow:hidden;
 
-min-height:310px;
+  min-height:320px;
 
-border-radius:24px;
+  border-radius:24px;
 
-border:1px solid
-rgba(212,175,55,.35);
+  border:1px solid
+    rgba(212,175,55,.35);
 
-background:#0b1725;
+  background:#0b1725;
 
-box-shadow:
-0 25px 60px rgba(0,0,0,.38);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.38);
 
-transition:
-transform .45s ease,
-box-shadow .45s ease,
-border-color .45s ease;
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    border-color .45s ease;
 }
 
 .award-card:first-child{
-grid-column:span 2;
-grid-row:span 2;
+  grid-column:span 2;
+  grid-row:span 2;
 
-min-height:640px;
-}
-
-.award-card:hover{
-transform:translateY(-9px);
-
-border-color:
-rgba(244,210,91,.9);
-
-box-shadow:
-0 35px 80px rgba(0,0,0,.55),
-0 0 35px rgba(212,175,55,.12);
+  min-height:660px;
 }
 
 .award-card img{
-width:100%;
-height:100%;
+  display:block;
 
-min-height:310px;
+  width:100%;
+  height:100%;
 
-object-fit:cover;
+  min-height:320px;
 
-display:block;
+  object-fit:cover;
 
-transition:
-transform .8s ease;
+  transition:
+    transform .8s ease;
 }
 
 .award-card:first-child img{
-min-height:640px;
+  min-height:660px;
+}
+
+.award-card:hover{
+  transform:translateY(-8px);
+
+  border-color:
+    rgba(244,210,91,.9);
+
+  box-shadow:
+    0 35px 80px rgba(0,0,0,.55),
+    0 0 35px rgba(212,175,55,.12);
 }
 
 .award-card:hover img{
-transform:scale(1.07);
+  transform:scale(1.06);
 }
 
 .award-overlay{
-position:absolute;
-inset:auto 0 0 0;
+  position:absolute;
 
-padding:50px 22px 22px;
+  left:0;
+  right:0;
+  bottom:0;
 
-background:
-linear-gradient(
-transparent,
-rgba(0,0,0,.88)
-);
+  padding:55px 22px 22px;
 
-z-index:2;
-}
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,.9)
+    );
 
-.award-overlay h3{
-font-size:20px;
-font-weight:900;
+  z-index:2;
 }
 
 .award-overlay span{
-font-size:12px;
-color:#f0d36b;
-font-weight:800;
+  color:#f0d36b;
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
 }
 
-/* =========================
-VIEW BUTTON
-========================= */
+.award-overlay h3{
+  margin-top:5px;
 
-.view-all{
-text-align:center;
-margin-top:45px;
+  font-size:19px;
+
+  font-weight:900;
 }
 
-.gold-button{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-
-padding:14px 30px;
-
-border-radius:50px;
-
-background:
-linear-gradient(
-135deg,
-#d4af37,
-#f2d56b
-);
-
-color:#111;
-
-text-decoration:none;
-
-font-weight:900;
-
-box-shadow:
-0 12px 35px rgba(212,175,55,.18);
-
-transition:.3s;
-}
-
-.gold-button:hover{
-transform:translateY(-3px);
-box-shadow:
-0 18px 45px rgba(212,175,55,.28);
-}
-
-/* =========================
-AWARD VIDEO
-========================= */
+/* ================= AWARD VIDEO ================= */
 
 .video-section{
-padding-top:110px;
+  background:#081624;
 }
 
-.video-box{
-max-width:1050px;
-margin:auto;
+.video-card{
+  max-width:1050px;
 
-padding:10px;
+  margin:auto;
 
-border-radius:28px;
+  padding:10px;
 
-border:1px solid
-rgba(212,175,55,.35);
+  border-radius:28px;
 
-background:
-rgba(255,255,255,.035);
+  border:1px solid
+    rgba(212,175,55,.35);
 
-box-shadow:
-0 30px 80px rgba(0,0,0,.45);
+  background:
+    rgba(255,255,255,.035);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.45);
 }
 
 .video-wrapper{
-position:relative;
+  position:relative;
 
-width:100%;
+  width:100%;
 
-aspect-ratio:16/9;
+  aspect-ratio:16/9;
 
-overflow:hidden;
+  overflow:hidden;
 
-border-radius:20px;
+  border-radius:20px;
 
-background:#000;
+  background:#000;
 }
 
 .video-wrapper video{
-position:absolute;
+  position:absolute;
 
-inset:0;
+  inset:0;
 
-width:100%;
-height:100%;
+  width:100%;
+  height:100%;
 
-object-fit:cover;
+  object-fit:contain;
+
+  background:#000;
 }
 
-/* =========================
-YOUTUBE
-========================= */
+/* ================= YOUTUBE ================= */
 
 .youtube-section{
-padding-top:110px;
+  background:
+    linear-gradient(
+      180deg,
+      #081624,
+      #06111d
+    );
 }
 
 .youtube-grid{
-display:grid;
+  display:grid;
 
-grid-template-columns:
-repeat(2,1fr);
+  grid-template-columns:
+    repeat(2,1fr);
 
-gap:28px;
+  gap:28px;
 }
 
 .youtube-card{
-overflow:hidden;
+  overflow:hidden;
 
-border-radius:25px;
+  border-radius:25px;
 
-background:#0b1725;
+  background:#0b1725;
 
-border:1px solid
-rgba(212,175,55,.28);
+  border:1px solid
+    rgba(212,175,55,.28);
 
-box-shadow:
-0 20px 55px rgba(0,0,0,.35);
+  box-shadow:
+    0 20px 55px rgba(0,0,0,.35);
 
-transition:.4s;
+  transition:.4s;
 }
 
 .youtube-card:hover{
-transform:translateY(-8px);
+  transform:translateY(-7px);
 
-border-color:
-rgba(240,210,95,.8);
+  border-color:
+    rgba(240,210,95,.8);
+
+  box-shadow:
+    0 28px 65px rgba(0,0,0,.48);
 }
 
 .youtube-wrapper{
-position:relative;
+  position:relative;
 
-aspect-ratio:16/9;
+  aspect-ratio:16/9;
 
-background:#000;
+  background:#000;
 }
 
 .youtube-wrapper iframe{
-position:absolute;
+  position:absolute;
 
-inset:0;
+  inset:0;
 
-width:100%;
-height:100%;
+  width:100%;
+  height:100%;
 
-border:0;
+  border:0;
 }
 
 .youtube-info{
-padding:18px 20px;
+  padding:18px 20px 20px;
 }
 
 .youtube-info h3{
-font-size:18px;
-font-weight:900;
+  font-size:17px;
+
+  font-weight:900;
 }
 
 .youtube-info p{
-font-size:13px;
-color:#9baaa4;
+  margin-top:3px;
+
+  font-size:12px;
+
+  color:#9baaa4;
 }
 
-/* =========================
-BACK
-========================= */
+/* ================= BUTTON ================= */
 
-.back{
-padding:70px 0;
+.back-section{
+  padding:70px 20px;
 
-text-align:center;
+  text-align:center;
+
+  background:#06111d;
 }
 
-.back a{
-display:inline-flex;
+.premium-button{
+  display:inline-flex;
 
-padding:13px 28px;
+  align-items:center;
+  justify-content:center;
 
-border-radius:50px;
+  padding:14px 28px;
 
-background:#fff;
+  border-radius:50px;
 
-color:#075b3b;
+  background:
+    linear-gradient(
+      135deg,
+      #d4af37,
+      #f2d56b
+    );
 
-text-decoration:none;
+  color:#111;
 
-font-weight:900;
+  text-decoration:none;
+
+  font-weight:900;
+
+  box-shadow:
+    0 12px 35px
+    rgba(212,175,55,.18);
+
+  transition:.3s;
 }
 
-/* =========================
-FOOTER
-========================= */
+.premium-button:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 18px 45px
+    rgba(212,175,55,.28);
+}
+
+/* ================= FOOTER ================= */
 
 footer{
-padding:45px 20px;
+  padding:45px 20px;
 
-background:#02070d;
+  background:#02070d;
 
-text-align:center;
+  text-align:center;
 
-border-top:1px solid
-rgba(255,255,255,.08);
+  border-top:
+    1px solid
+    rgba(255,255,255,.08);
 }
 
 footer strong{
-font-size:18px;
+  font-size:18px;
 }
 
 footer p{
-margin-top:7px;
+  margin-top:7px;
 
-font-size:12px;
+  font-size:12px;
 
-color:#899891;
+  color:#899891;
 }
 
-/* =========================
-LANGUAGE CONTENT
-========================= */
+/* ================= LANGUAGE CONTENT ================= */
 
 .lang-en{
-display:none;
+  display:none;
 }
 
-/* =========================
-MOBILE
-========================= */
+/* ================= TABLET ================= */
 
 @media(max-width:900px){
 
-.nav{
-display:none;
+  .nav{
+    display:none;
+  }
+
+  .award-gallery{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .award-card:first-child{
+    grid-column:span 2;
+
+    min-height:480px;
+  }
+
+  .award-card:first-child img{
+    min-height:480px;
+  }
+
+  .youtube-grid{
+    grid-template-columns:1fr;
+  }
+
 }
 
-.award-gallery{
-grid-template-columns:
-repeat(2,1fr);
-}
-
-.award-card:first-child{
-grid-column:span 2;
-min-height:480px;
-}
-
-.award-card:first-child img{
-min-height:480px;
-}
-
-.youtube-grid{
-grid-template-columns:1fr;
-}
-
-}
+/* ================= MOBILE ================= */
 
 @media(max-width:600px){
 
-.hero{
-padding:75px 18px;
+  .header-inner{
+    min-height:68px;
+  }
+
+  .logo img{
+    width:42px;
+    height:42px;
+  }
+
+  .logo strong{
+    font-size:17px;
+  }
+
+  .logo span{
+    font-size:8px;
+  }
+
+  .hero{
+    padding:75px 18px;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .section{
+    padding:65px 0;
+  }
+
+  .award-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .award-card,
+  .award-card:first-child{
+    grid-column:span 1;
+    grid-row:auto;
+
+    min-height:330px;
+  }
+
+  .award-card img,
+  .award-card:first-child img{
+    min-height:330px;
+  }
+
+  .section-heading{
+    margin-bottom:35px;
+  }
+
+  .youtube-section{
+    padding-top:65px;
+  }
+
 }
 
-.hero h1{
-font-size:38px;
+/* ================= ACCESSIBILITY ================= */
+
+img{
+  max-width:100%;
 }
 
-.awards{
-padding:65px 0 80px;
-}
-
-.award-gallery{
-grid-template-columns:1fr;
-}
-
-.award-card,
-.award-card:first-child{
-grid-column:span 1;
-grid-row:auto;
-
-min-height:330px;
-}
-
-.award-card img,
-.award-card:first-child img{
-min-height:330px;
-}
-
-.youtube-section,
-.video-section{
-padding-top:75px;
-}
-
+a,
+button{
+  -webkit-tap-highlight-color:transparent;
 }
 
 </style>
 </head>
 
+
 <body>
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
 <header class="header">
 
-<div class="header-inner">
+  <div class="header-inner">
 
-<a href="index.html" class="logo">
+    <a href="index.html" class="logo">
 
-<img src="logo.jpg" alt="AFPSS Logo">
+      <img
+        src="logo.jpg"
+        alt="AFPSS Logo">
 
-<div>
-<strong>AFPSS</strong>
-<span>Adivasi Fase Pardhi Sudhar Samiti</span>
-</div>
+      <div>
+        <strong>AFPSS</strong>
 
-</a>
+        <span>
+          Adivasi Fase Pardhi Sudhar Samiti
+        </span>
+      </div>
 
-<nav class="nav">
+    </a>
 
-<a href="index.html">Home</a>
-<a href="index.html#about">About</a>
-<a href="index.html#founder">Founder</a>
-<a href="awards.html">Awards</a>
-<a href="media.html">Media</a>
-<a href="sports.html">Sports</a>
-<a href="index.html#gallery">Gallery</a>
-<a href="index.html#contact">Contact</a>
 
-</nav>
+    <nav class="nav">
 
-</div>
+      <a href="index.html">Home</a>
+
+      <a href="index.html#about">About</a>
+
+      <a href="index.html#founder">Founder</a>
+
+      <a href="awards.html">Awards</a>
+
+      <a href="media.html">Media</a>
+
+      <a href="sports.html">Sports</a>
+
+      <a href="index.html#gallery">Gallery</a>
+
+      <a href="index.html#contact">Contact</a>
+
+    </nav>
+
+  </div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
 <section class="hero">
 
-<div class="hero-inner">
+  <div class="hero-inner">
 
-<span class="hero-badge">
-AWARDS & RECOGNITION
-</span>
-
-<div class="lang-mr">
-
-<h1>🏆 पुरस्कार व सन्मान</h1>
-
-<p>
-प्रश्नचिन्ह आदिवासी आश्रम शाळा आणि
-आदिवासी फासे पारधी सुधार समितीच्या
-कार्याची दखल घेणारे सन्मान.
-</p>
-
-</div>
-
-<div class="lang-en">
-
-<h1>🏆 Awards & Recognition</h1>
-
-<p>
-Recognition received for the social,
-educational and humanitarian work of
-AFPSS and Prashnachinha Adivasi Ashram School.
-</p>
-
-</div>
+    <span class="hero-badge">
+      AWARDS & RECOGNITION
+    </span>
 
 
-<div class="language">
+    <div class="lang-mr">
 
-<button
-id="mrBtn"
-class="active"
-onclick="setLanguage('mr')">
-🇮🇳 मराठी
-</button>
+      <h1>
+        🏆 पुरस्कार व सन्मान
+      </h1>
 
-<button
-id="enBtn"
-onclick="setLanguage('en')">
-🇬🇧 English
-</button>
+      <p>
+        सामाजिक कार्य, शिक्षण आणि
+        फासेपारधी समाजातील मुलांसाठी
+        केलेल्या कार्याची विविध स्तरांवर
+        झालेली दखल.
+      </p>
 
-</div>
+    </div>
 
-</div>
+
+    <div class="lang-en">
+
+      <h1>
+        🏆 Awards & Recognition
+      </h1>
+
+      <p>
+        Recognition for social service,
+        education and dedicated work
+        for children and communities.
+      </p>
+
+    </div>
+
+
+    <div class="language">
+
+      <button
+        id="mrBtn"
+        class="active"
+        onclick="setLanguage('mr')">
+
+        🇮🇳 मराठी
+
+      </button>
+
+
+      <button
+        id="enBtn"
+        onclick="setLanguage('en')">
+
+        🇬🇧 English
+
+      </button>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- AWARDS -->
+<!-- =====================================================
+     4 AWARD PHOTOS
+     ===================================================== -->
 
-<section class="awards">
+<section class="section awards-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<small>RECOGNITION</small>
-
-<div class="lang-mr">
-
-<h2>आमचे पुरस्कार</h2>
-
-<p>
-प्रत्येक सन्मानामागे अनेक वर्षांचा
-संघर्ष, सेवा आणि विद्यार्थ्यांसाठीची बांधिलकी आहे.
-</p>
-
-</div>
-
-<div class="lang-en">
-
-<h2>Our Recognition</h2>
-
-<p>
-Every recognition represents years of service,
-commitment and work for students and communities.
-</p>
-
-</div>
-
-</div>
+      <small>
+        RECOGNITION
+      </small>
 
 
-<div class="award-gallery">
+      <div class="lang-mr">
+
+        <h2>
+          सन्मानाच्या चार आठवणी
+        </h2>
+
+        <p>
+          प्रत्येक सन्मानामागे सामाजिक बांधिलकी,
+          शिक्षणासाठीचा संघर्ष आणि विद्यार्थ्यांच्या
+          उज्ज्वल भविष्यासाठी केलेल्या कार्याची
+          एक प्रेरणादायी कहाणी आहे.
+        </p>
+
+      </div>
 
 
-<!-- AWARD 1 -->
+      <div class="lang-en">
 
-<div class="award-card">
+        <h2>
+          Four Moments of Recognition
+        </h2>
 
-<img
-src="award-baba-amte.jpg"
-alt="Baba Amte Humanitarian Award"
-loading="lazy">
+        <p>
+          Each recognition reflects commitment,
+          service and a journey dedicated to
+          education and a better future for children.
+        </p>
 
-<div class="award-overlay">
+      </div>
 
-<span>AWARD 01</span>
-
-<h3>
-Baba Amte Humanitarian Award
-</h3>
-
-</div>
-
-</div>
+    </div>
 
 
-<!-- AWARD 2 -->
-
-<div class="award-card">
-
-<img
-src="award-lokmat.jpg"
-alt="Lokmat Social Service Award"
-loading="lazy">
-
-<div class="award-overlay">
-
-<span>AWARD 02</span>
-
-<h3>
-Lokmat Social Service Award
-</h3>
-
-</div>
-
-</div>
+    <div class="award-gallery">
 
 
-<!-- AWARD 3 -->
+      <!-- PHOTO 01 -->
 
-<div class="award-card">
+      <div class="award-card">
 
-<img
-src="award-03.jpg"
-alt="Award Recognition 03"
-loading="lazy">
+        <img
+          src="award-01.jpg"
+          alt="AFPSS Award Recognition 01"
+          loading="lazy">
 
-<div class="award-overlay">
+        <div class="award-overlay">
 
-<span>AWARD 03</span>
+          <span>
+            AWARD 01
+          </span>
 
-<h3>
-Award Recognition
-</h3>
+          <h3>
+            सन्मान व गौरव
+          </h3>
 
-</div>
+        </div>
 
-</div>
-
-
-<!-- AWARD 4 -->
-
-<div class="award-card">
-
-<img
-src="award-04.jpg"
-alt="Award Recognition 04"
-loading="lazy">
-
-<div class="award-overlay">
-
-<span>AWARD 04</span>
-
-<h3>
-Award Recognition
-</h3>
-
-</div>
-
-</div>
+      </div>
 
 
-</div>
+      <!-- PHOTO 02 -->
+
+      <div class="award-card">
+
+        <img
+          src="award-02.jpg"
+          alt="AFPSS Award Recognition 02"
+          loading="lazy">
+
+        <div class="award-overlay">
+
+          <span>
+            AWARD 02
+          </span>
+
+          <h3>
+            सामाजिक कार्याचा सन्मान
+          </h3>
+
+        </div>
+
+      </div>
 
 
-<div class="view-all">
+      <!-- PHOTO 03 -->
 
-<a
-href="index.html#awards"
-class="gold-button">
+      <div class="award-card">
 
-🏠 Home Awards Section
+        <img
+          src="award-03.jpg"
+          alt="AFPSS Award Recognition 03"
+          loading="lazy">
 
-</a>
+        <div class="award-overlay">
 
-</div>
+          <span>
+            AWARD 03
+          </span>
 
-</div>
+          <h3>
+            कार्याची दखल
+          </h3>
+
+        </div>
+
+      </div>
+
+
+      <!-- PHOTO 04 -->
+
+      <div class="award-card">
+
+        <img
+          src="award-04.jpeg"
+          alt="AFPSS Award Recognition 04"
+          loading="lazy">
+
+        <div class="award-overlay">
+
+          <span>
+            AWARD 04
+          </span>
+
+          <h3>
+            समाजसेवेचा गौरव
+          </h3>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- 30 SECOND AWARD VIDEO -->
+<!-- =====================================================
+     30 SECOND AWARD VIDEO
+     ===================================================== -->
 
-<section class="video-section">
+<section class="section video-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<small>AWARD MOMENT</small>
-
-<div class="lang-mr">
-
-<h2>🎬 पुरस्कार स्वीकारतानाचा क्षण</h2>
-
-<p>
-हा विशेष क्षण आपल्या Awards & Recognition
-प्रवासाचा महत्त्वाचा भाग आहे.
-</p>
-
-</div>
-
-<div class="lang-en">
-
-<h2>🎬 Award Recognition Moment</h2>
-
-<p>
-A special moment from the Awards & Recognition journey.
-</p>
-
-</div>
-
-</div>
+      <small>
+        AWARD MOMENT
+      </small>
 
 
-<div class="video-box">
+      <div class="lang-mr">
 
-<div class="video-wrapper">
+        <h2>
+          🎬 पुरस्कार स्वीकारतानाचा क्षण
+        </h2>
 
-<!--
-तुमचा 30 सेकंदांचा Award Video
-award-video.mp4 या नावाने upload करा.
--->
+        <p>
+          आपल्या पुरस्कार आणि सन्मानाच्या
+          प्रवासातील एक विशेष क्षण.
+        </p>
 
-<video
-controls
-playsinline
-preload="metadata"
-poster="award-video-poster.jpg">
+      </div>
 
-<source
-src="award-video.mp4"
-type="video/mp4">
 
-Your browser does not support video playback.
+      <div class="lang-en">
 
-</video>
+        <h2>
+          🎬 Award Recognition Moment
+        </h2>
 
-</div>
+        <p>
+          A special moment from the
+          Awards & Recognition journey.
+        </p>
 
-</div>
+      </div>
 
-</div>
+    </div>
+
+
+    <div class="video-card">
+
+      <div class="video-wrapper">
+
+        <video
+          controls
+          playsinline
+          preload="metadata">
+
+          <source
+            src="award-video.mp4"
+            type="video/mp4">
+
+          Your browser does not support
+          video playback.
+
+        </video>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- YOUTUBE -->
+<!-- =====================================================
+     4 YOUTUBE VIDEOS
+     ===================================================== -->
 
-<section class="youtube-section">
+<section class="section youtube-section">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading">
 
-<small>YOUTUBE</small>
-
-<div class="lang-mr">
-
-<h2>🎥 YouTube Videos</h2>
-
-<p>
-शाळा, सामाजिक कार्य आणि पुरस्कारांशी संबंधित
-निवडक व्हिडिओ.
-</p>
-
-</div>
-
-<div class="lang-en">
-
-<h2>🎥 YouTube Videos</h2>
-
-<p>
-Selected videos featuring the school,
-social work and recognition journey.
-</p>
-
-</div>
-
-</div>
+      <small>
+        YOUTUBE
+      </small>
 
 
-<div class="youtube-grid">
+      <div class="lang-mr">
+
+        <h2>
+          🎥 निवडक व्हिडिओ
+        </h2>
+
+        <p>
+          सामाजिक कार्य, शाळा आणि
+          पुरस्कारांच्या प्रवासाशी संबंधित
+          निवडक YouTube videos.
+        </p>
+
+      </div>
 
 
-<!-- VIDEO 1 -->
+      <div class="lang-en">
 
-<div class="youtube-card">
+        <h2>
+          🎥 Featured Videos
+        </h2>
 
-<div class="youtube-wrapper">
+        <p>
+          Selected videos related to
+          social work, education and recognition.
+        </p>
 
-<iframe
-src="https://www.youtube.com/embed/y0lSyM1sB9E"
-title="AFPSS YouTube Video 1"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
+      </div>
 
-</div>
-
-<div class="youtube-info">
-
-<h3>YouTube Video 01</h3>
-
-<p>Watch on YouTube</p>
-
-</div>
-
-</div>
+    </div>
 
 
-<!-- VIDEO 2 -->
-
-<div class="youtube-card">
-
-<div class="youtube-wrapper">
-
-<iframe
-src="https://www.youtube.com/embed/ci5IfwUyXyY"
-title="AFPSS YouTube Video 2"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="youtube-info">
-
-<h3>YouTube Video 02</h3>
-
-<p>Watch on YouTube</p>
-
-</div>
-
-</div>
+    <div class="youtube-grid">
 
 
-<!-- VIDEO 3 -->
+      <!-- YOUTUBE 01 -->
 
-<div class="youtube-card">
+      <div class="youtube-card">
 
-<div class="youtube-wrapper">
+        <div class="youtube-wrapper">
 
-<iframe
-src="https://www.youtube.com/embed/NteWscB-STg"
-title="AFPSS YouTube Video 3"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
+          <iframe
+            src="https://www.youtube.com/embed/y0lSyM1sB9E"
+            title="AFPSS YouTube Video 01"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
 
-</div>
+        </div>
 
-<div class="youtube-info">
+        <div class="youtube-info">
 
-<h3>YouTube Video 03</h3>
+          <h3>
+            YouTube Video 01
+          </h3>
 
-<p>Watch on YouTube</p>
+          <p>
+            Watch the story on YouTube
+          </p>
 
-</div>
+        </div>
 
-</div>
-
-
-<!-- VIDEO 4 -->
-
-<div class="youtube-card">
-
-<div class="youtube-wrapper">
-
-<iframe
-src="https://www.youtube.com/embed/0z0XXzaoaMs"
-title="AFPSS YouTube Video 4"
-loading="lazy"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="youtube-info">
-
-<h3>YouTube Video 04</h3>
-
-<p>Watch on YouTube</p>
-
-</div>
-
-</div>
+      </div>
 
 
-</div>
+      <!-- YOUTUBE 02 -->
 
-</div>
+      <div class="youtube-card">
+
+        <div class="youtube-wrapper">
+
+          <iframe
+            src="https://www.youtube.com/embed/ci5IfwUyXyY"
+            title="AFPSS YouTube Video 02"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+        <div class="youtube-info">
+
+          <h3>
+            YouTube Video 02
+          </h3>
+
+          <p>
+            Watch the story on YouTube
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- YOUTUBE 03 -->
+
+      <div class="youtube-card">
+
+        <div class="youtube-wrapper">
+
+          <iframe
+            src="https://www.youtube.com/embed/NteWscB-STg"
+            title="AFPSS YouTube Video 03"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+        <div class="youtube-info">
+
+          <h3>
+            YouTube Video 03
+          </h3>
+
+          <p>
+            Watch the story on YouTube
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- YOUTUBE 04 -->
+
+      <div class="youtube-card">
+
+        <div class="youtube-wrapper">
+
+          <iframe
+            src="https://www.youtube.com/embed/0z0XXzaoaMs"
+            title="AFPSS YouTube Video 04"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+        <div class="youtube-info">
+
+          <h3>
+            YouTube Video 04
+          </h3>
+
+          <p>
+            Watch the story on YouTube
+          </p>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- BACK -->
+<!-- =====================================================
+     BACK TO HOME
+     ===================================================== -->
 
-<section class="back">
+<section class="back-section">
 
-<a href="index.html">
-🏠 मुख्यपृष्ठावर जा
-</a>
+  <a
+    href="index.html"
+    class="premium-button">
+
+    🏠 मुख्यपृष्ठावर जा
+
+  </a>
 
 </section>
 
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
 
 <footer>
 
-<strong>
-ADIWASI FASE PARADHI SUDHAR SAMITI
-</strong>
+  <strong>
+    ADIVASI FASE PARDHI SUDHAR SAMITI
+  </strong>
 
-<p>
-Prashnachinha Adivasi Ashram School
-</p>
+  <p>
+    Prashnachinha Adivasi Ashram School
+  </p>
 
-<p>
-Mangrul Chavala • District Amravati • Maharashtra
-</p>
+  <p>
+    Mangrul Chavala • District Amravati • Maharashtra
+  </p>
 
-<p>
-© 2026 AFPSS. All Rights Reserved.
-</p>
+  <p>
+    © 2026 AFPSS. All Rights Reserved.
+  </p>
 
 </footer>
 
+
+<!-- =====================================================
+     LANGUAGE SCRIPT
+     ===================================================== -->
 
 <script>
 
 function setLanguage(language){
 
-const mr =
-document.querySelectorAll('.lang-mr');
+  const mr =
+    document.querySelectorAll('.lang-mr');
 
-const en =
-document.querySelectorAll('.lang-en');
+  const en =
+    document.querySelectorAll('.lang-en');
 
-const mrBtn =
-document.getElementById('mrBtn');
+  const mrBtn =
+    document.getElementById('mrBtn');
 
-const enBtn =
-document.getElementById('enBtn');
+  const enBtn =
+    document.getElementById('enBtn');
 
 
-if(language === 'en'){
+  if(language === 'en'){
 
-mr.forEach(el =>
-el.style.display = 'none'
-);
+    mr.forEach(function(el){
+      el.style.display = 'none';
+    });
 
-en.forEach(el =>
-el.style.display = 'block'
-);
+    en.forEach(function(el){
+      el.style.display = 'block';
+    });
 
-mrBtn.classList.remove('active');
+    mrBtn.classList.remove('active');
 
-enBtn.classList.add('active');
+    enBtn.classList.add('active');
 
-document.documentElement.lang='en';
+    document.documentElement.lang = 'en';
 
-}else{
+  }else{
 
-en.forEach(el =>
-el.style.display = 'none'
-);
+    en.forEach(function(el){
+      el.style.display = 'none';
+    });
 
-mr.forEach(el =>
-el.style.display = 'block'
-);
+    mr.forEach(function(el){
+      el.style.display = 'block';
+    });
 
-enBtn.classList.remove('active');
+    enBtn.classList.remove('active');
 
-mrBtn.classList.add('active');
+    mrBtn.classList.add('active');
 
-document.documentElement.lang='mr';
+    document.documentElement.lang = 'mr';
 
-}
+  }
 
 }
 
 </script>
 
 </body>
-  </html>
+</html>
