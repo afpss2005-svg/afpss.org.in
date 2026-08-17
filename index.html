@@ -7,17 +7,22 @@
 <title>AFPSS | Awards & School Information</title>
 
 <meta name="description"
-content="Adivasi Fase Pardhi Sudhar Samiti - Prashnachinh Adivasi Ashram School, Amravati. Awards, School Information, Media Recognition and Social Work.">
+content="आदिवासी फासे पारधी सुधार समिती आणि प्रश्नचिन्ह आदिवासी आश्रमशाळेची शाळा, पुरस्कार, मीडिया आणि YouTube माहिती.">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial, "Noto Sans Devanagari", sans-serif;
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
     background:#f5f7f6;
     color:#222;
     line-height:1.7;
@@ -30,554 +35,822 @@ body{
 }
 
 /* HEADER */
+
 header{
-    background:linear-gradient(135deg,#075e45,#0b7a58);
+    background:linear-gradient(135deg,#075e45,#0b7a59);
     color:white;
-    padding:35px 15px;
     text-align:center;
+    padding:40px 15px;
 }
 
 header h1{
-    font-size:32px;
-    margin-bottom:8px;
+    font-size:clamp(28px,5vw,48px);
+    line-height:1.3;
 }
 
 header p{
-    font-size:17px;
+    font-size:clamp(16px,2.8vw,22px);
+    margin-top:6px;
 }
 
 /* NAVIGATION */
+
 nav{
-    background:#063f30;
     position:sticky;
     top:0;
     z-index:1000;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-nav li a{
-    color:white;
-    text-decoration:none;
-    display:block;
-    padding:13px 18px;
-    font-weight:bold;
-}
-
-nav li a:hover{
-    background:#0b7a58;
-}
-
-/* SECTIONS */
-section{
-    padding:55px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:35px;
-}
-
-.section-title h2{
-    color:#075e45;
-    font-size:30px;
-    margin-bottom:8px;
-}
-
-.section-title p{
-    color:#666;
-}
-
-/* INTRO */
-.intro{
     background:white;
-    padding:35px;
-    border-radius:14px;
-    box-shadow:0 4px 18px rgba(0,0,0,.08);
+    box-shadow:0 2px 12px rgba(0,0,0,.12);
 }
 
-.intro h3{
+nav .container{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding:10px 0;
+}
+
+nav a{
     color:#075e45;
-    margin-bottom:12px;
+    text-decoration:none;
+    font-weight:bold;
+    padding:8px 15px;
+    border-radius:22px;
+    white-space:nowrap;
 }
 
-/* AWARDS */
-.awards-grid{
+nav a:hover{
+    background:#e7f3ee;
+}
+
+/* SECTION */
+
+section{
+    padding:50px 0;
+}
+
+h2{
+    color:#075e45;
+    text-align:center;
+    font-size:clamp(26px,4vw,38px);
+    margin-bottom:25px;
+}
+
+.lead{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 30px;
+    font-size:18px;
+}
+
+/* CARDS */
+
+.card-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:22px;
+    gap:20px;
 }
 
-.award-card{
+.card{
     background:white;
-    border-radius:14px;
-    padding:24px;
-    box-shadow:0 4px 16px rgba(0,0,0,.08);
-    border-top:5px solid #075e45;
-}
-
-.award-card h3{
-    color:#075e45;
-    font-size:20px;
-    margin-bottom:8px;
-}
-
-.award-card .year{
-    display:inline-block;
-    background:#e7f4ef;
-    color:#075e45;
-    padding:4px 12px;
-    border-radius:20px;
-    font-weight:bold;
-    margin-bottom:10px;
-}
-
-/* MEDIA */
-.media-box{
-    background:white;
-    padding:28px;
-    border-radius:14px;
+    border-radius:15px;
+    padding:25px;
     box-shadow:0 4px 18px rgba(0,0,0,.08);
-    text-align:center;
+    border-top:4px solid #075e45;
 }
 
-.media-box h3{
+.card h3{
     color:#075e45;
     margin-bottom:10px;
 }
 
-/* VIDEOS */
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
-
-.video-card{
-    background:white;
-    border-radius:14px;
-    overflow:hidden;
-    box-shadow:0 4px 18px rgba(0,0,0,.09);
-}
-
-.video-card iframe{
-    width:100%;
-    height:220px;
-    border:0;
-}
-
-.video-content{
-    padding:20px;
-}
-
-.video-content h3{
-    color:#075e45;
-    margin-bottom:7px;
-}
-
-.video-content a{
+.badge,
+.year{
     display:inline-block;
-    margin-top:10px;
     background:#075e45;
     color:white;
-    text-decoration:none;
-    padding:8px 15px;
-    border-radius:7px;
+    padding:4px 12px;
+    border-radius:18px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
 /* SCHOOL */
-.school-box{
+
+.school-list{
+    max-width:900px;
+    margin:auto;
     background:white;
-    padding:35px;
-    border-radius:14px;
+    border-radius:15px;
+    overflow:hidden;
     box-shadow:0 4px 18px rgba(0,0,0,.08);
 }
 
-.school-box ul{
-    padding-left:25px;
+.school-list div{
+    padding:16px 20px;
+    border-bottom:1px solid #e3e3e3;
 }
 
-.school-box li{
+.school-list div:last-child{
+    border-bottom:0;
+}
+
+.school-list strong{
+    color:#075e45;
+}
+
+/* AWARDS */
+
+.award-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.award{
+    background:white;
+    border-radius:15px;
+    padding:23px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+    border-left:5px solid #075e45;
+}
+
+.award h3{
+    color:#075e45;
     margin-bottom:8px;
 }
 
+/* MEDIA */
+
+.media-card{
+    max-width:950px;
+    margin:auto;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
+
+.media-card h3{
+    color:#075e45;
+    margin-bottom:10px;
+}
+
+/* YOUTUBE */
+
+.video-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.video{
+    background:white;
+    padding:12px;
+    border-radius:15px;
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
+
+.video h3{
+    color:#075e45;
+    padding:8px 5px 12px;
+}
+
+.video iframe{
+    display:block;
+    width:100%;
+    aspect-ratio:16/9;
+    border:0;
+    border-radius:10px;
+}
+
+.video p{
+    padding:10px 5px;
+}
+
+.btn{
+    display:inline-block;
+    background:#075e45;
+    color:white;
+    text-decoration:none;
+    padding:9px 18px;
+    border-radius:22px;
+    font-weight:bold;
+    margin:5px;
+}
+
+.btn:hover{
+    background:#0b7a59;
+}
+
 /* FOOTER */
+
 footer{
     background:#063f30;
     color:white;
     text-align:center;
-    padding:30px 15px;
+    padding:35px 15px;
 }
 
-footer p{
-    margin:5px 0;
+footer h3{
+    margin-bottom:5px;
+}
+
+.small{
+    font-size:14px;
+    opacity:.9;
 }
 
 /* MOBILE */
+
 @media(max-width:600px){
 
-    header h1{
-        font-size:25px;
-    }
-
-    header p{
-        font-size:15px;
-    }
-
-    nav li a{
-        padding:10px 11px;
-        font-size:14px;
-    }
-
     section{
-        padding:38px 0;
+        padding:35px 0;
     }
 
-    .section-title h2{
-        font-size:25px;
+    .container{
+        width:94%;
     }
 
-    .intro,
-    .school-box,
-    .media-box{
-        padding:22px;
+    header{
+        padding:30px 12px;
     }
 
-    .video-card iframe{
-        height:210px;
+    .card,
+    .award,
+    .media-card{
+        padding:20px;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <!-- HEADER -->
-<header>
-    <div class="container">
-        <h1>आदिवासी फासे पारधी सुधार समिती</h1>
-        <p>Adivasi Fase Pardhi Sudhar Samiti</p>
-        <p>प्रश्नचिन्ह आदिवासी आश्रमशाळा, मंगरूळ चव्हाळा, जि. अमरावती</p>
-    </div>
+
+<header id="home">
+
+<div class="container">
+
+<h1>
+आदिवासी फासे पारधी सुधार समिती
+</h1>
+
+<p>
+Adivasi Fase Pardhi Sudhar Samiti
+</p>
+
+<p>
+प्रश्नचिन्ह आदिवासी आश्रमशाळा,
+मंगरूळ चव्हाळा, जि. अमरावती
+</p>
+
+</div>
+
 </header>
 
+
 <!-- NAVIGATION -->
+
 <nav>
-    <ul>
-        <li><a href="#home">मुख्यपृष्ठ</a></li>
-        <li><a href="#school">शाळा</a></li>
-        <li><a href="#awards">पुरस्कार</a></li>
-        <li><a href="#media">मीडिया</a></li>
-        <li><a href="#videos">YouTube</a></li>
-    </ul>
+
+<div class="container">
+
+<a href="#home">मुख्यपृष्ठ</a>
+
+<a href="#school">शाळा</a>
+
+<a href="#awards">पुरस्कार</a>
+
+<a href="#media">मीडिया</a>
+
+<a href="#youtube">YouTube</a>
+
+</div>
+
 </nav>
 
 
-<!-- INTRO -->
-<section id="home">
+<main>
+
+
+<!-- OUR JOURNEY -->
+
+<section>
+
 <div class="container">
 
-    <div class="section-title">
-        <h2>आमचा प्रवास</h2>
-        <p>Our Journey</p>
-    </div>
+<h2>
+आमचा प्रवास
+</h2>
 
-    <div class="intro">
 
-        <h3>मराठी</h3>
+<div class="card-grid">
 
-        <p>
-        आदिवासी फासे पारधी सुधार समितीच्या माध्यमातून
-        वंचित आणि गरजू विद्यार्थ्यांसाठी शिक्षण, निवास,
-        अन्न, संस्कार आणि सर्वांगीण विकासासाठी कार्य केले जात आहे.
-        </p>
 
-        <p>
-        प्रश्नचिन्ह आदिवासी आश्रमशाळा ही फासे पारधी समाजातील
-        विद्यार्थ्यांना शिक्षणाच्या मुख्य प्रवाहात आणण्यासाठी
-        सातत्याने कार्यरत आहे.
-        </p>
+<div class="card">
 
-        <br>
+<span class="badge">
+मराठी
+</span>
 
-        <h3>English</h3>
+<p>
 
-        <p>
-        Adivasi Fase Pardhi Sudhar Samiti works for the education,
-        welfare and overall development of underprivileged children.
-        </p>
+आदिवासी फासे पारधी सुधार समितीच्या माध्यमातून
+वंचित आणि गरजू विद्यार्थ्यांसाठी शिक्षण,
+निवास, अन्न, संस्कार आणि सर्वांगीण विकासासाठी
+कार्य केले जात आहे.
 
-        <p>
-        Prashnachinh Adivasi Ashram School provides education,
-        residential support and opportunities for children from
-        the Fase Pardhi community.
-        </p>
+</p>
 
-    </div>
+<p style="margin-top:10px;">
+
+प्रश्नचिन्ह आदिवासी आश्रमशाळा ही फासे पारधी
+समाजातील विद्यार्थ्यांना शिक्षणाच्या मुख्य
+प्रवाहात आणण्यासाठी सातत्याने कार्यरत आहे.
+
+</p>
 
 </div>
+
+
+
+<div class="card">
+
+<span class="badge">
+English
+</span>
+
+<p>
+
+Adivasi Fase Pardhi Sudhar Samiti works for
+the education, welfare and overall development
+of underprivileged children.
+
+</p>
+
+<p style="margin-top:10px;">
+
+Prashnachinh Adivasi Ashram School provides
+education, residential support and opportunities
+for children from the Fase Pardhi community.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- SCHOOL INFORMATION -->
+
+<!-- SCHOOL -->
+
 <section id="school">
+
 <div class="container">
 
-    <div class="section-title">
-        <h2>प्रश्नचिन्ह आदिवासी आश्रमशाळा</h2>
-        <p>Prashnachinh Adivasi Ashram School</p>
-    </div>
+<h2>
+प्रश्नचिन्ह आदिवासी आश्रमशाळा
+</h2>
 
-    <div class="school-box">
+<h3 style="text-align:center;
+margin-bottom:20px;
+color:#075e45;">
 
-        <h3>शाळेची माहिती</h3>
+शाळेची माहिती
 
-        <ul>
-            <li>आश्रमशाळेची सुरुवात : 2011</li>
-            <li>शिक्षण : इयत्ता 1 ली ते 10 वी</li>
-            <li>निवासी शिक्षण व्यवस्था</li>
-            <li>फासे पारधी समाजातील विद्यार्थ्यांसाठी शिक्षणाची संधी</li>
-            <li>विद्यार्थ्यांच्या शैक्षणिक व सर्वांगीण विकासावर भर</li>
-            <li>शिक्षणासोबत संस्कार, क्रीडा आणि विविध उपक्रम</li>
-        </ul>
+</h3>
 
-        <br>
 
-        <h3>English</h3>
+<div class="school-list">
 
-        <p>
-        The school was established in 2011 to provide educational
-        opportunities and residential support to children from
-        the Fase Pardhi community.
-        </p>
 
-    </div>
+<div>
+<strong>आश्रमशाळेची सुरुवात :</strong>
+2011
+</div>
+
+
+<div>
+<strong>शिक्षण :</strong>
+इयत्ता 1 ली ते 10 वी
+</div>
+
+
+<div>
+<strong>व्यवस्था :</strong>
+निवासी शिक्षण व्यवस्था
+</div>
+
+
+<div>
+<strong>विद्यार्थी :</strong>
+फासे पारधी समाजातील विद्यार्थ्यांसाठी
+शिक्षणाची संधी
+</div>
+
+
+<div>
+<strong>उद्देश :</strong>
+विद्यार्थ्यांच्या शैक्षणिक व सर्वांगीण
+विकासावर भर
+</div>
+
+
+<div>
+<strong>उपक्रम :</strong>
+शिक्षणासोबत संस्कार, क्रीडा आणि
+विविध उपक्रम
+</div>
+
 
 </div>
+
+</div>
+
 </section>
+
 
 
 <!-- AWARDS -->
+
 <section id="awards">
+
 <div class="container">
 
-    <div class="section-title">
-        <h2>पुरस्कार व सन्मान</h2>
-        <p>Awards & Recognitions</p>
-    </div>
+<h2>
+पुरस्कार व सन्मान
+</h2>
 
-    <div class="awards-grid">
+<p class="lead">
 
-        <div class="award-card">
-            <h3>शैक्षणिक व सामाजिक कार्यासाठी सन्मान</h3>
-            <p>
-            शिक्षण आणि सामाजिक कार्यातील उल्लेखनीय योगदानासाठी
-            प्राप्त झालेला सन्मान.
-            </p>
-        </div>
+शैक्षणिक आणि सामाजिक कार्यासाठी उपलब्ध
+छायाचित्रांमधून स्पष्टपणे ओळखता आलेले
+सन्मान.
 
-        <div class="award-card">
-            <h3>श्रीगुरुदेव सेवा मंडळ, नागपूर</h3>
-            <span class="year">30 एप्रिल 2024</span>
-            <p>
-            आदिवासी उपेक्षित मुलांच्या शिक्षणासाठी केलेल्या
-            कार्याची दखल घेऊन प्रदान केलेला सन्मानपत्र.
-            </p>
-        </div>
+</p>
 
-        <div class="award-card">
-            <h3>सामाजिक सेवा पुरस्कार</h3>
-            <span class="year">2024</span>
-            <p>
-            सामाजिक कार्यातील योगदानाबद्दल प्राप्त झालेला
-            पुरस्कार व सन्मान.
-            </p>
-        </div>
 
-        <div class="award-card">
-            <h3>गुणवंत विद्यार्थी सत्कार सोहळा</h3>
-            <span class="year">2018</span>
-            <p>
-            प्रश्नचिन्ह आश्रमशाळेतील विद्यार्थ्यांच्या
-            शैक्षणिक कार्याशी संबंधित विशेष सन्मान कार्यक्रम.
-            </p>
-        </div>
+<div class="award-grid">
 
-        <div class="award-card">
-            <h3>आदिम शिक्षण क्षेत्रातील योगदान</h3>
-            <span class="year">2021</span>
-            <p>
-            आदिवासी विद्यार्थ्यांच्या शिक्षणासाठी केलेल्या
-            कार्याची दखल घेऊन सन्मान.
-            </p>
-        </div>
 
-        <div class="award-card">
-            <h3>सामाजिक कार्यातील विशेष गौरव</h3>
-            <p>
-            समाजातील वंचित घटकांसाठी केलेल्या कार्याबद्दल
-            विविध संस्थांकडून प्राप्त सन्मान.
-            </p>
-        </div>
+<article class="award">
 
-    </div>
+<span class="year">
+30 एप्रिल 2024
+</span>
+
+<h3>
+श्रीगुरुदेव सेवा मंडळ, नागपूर
+</h3>
+
+<p>
+
+आदिवासी उपेक्षित मुलांच्या शिक्षणासाठी
+केलेल्या कार्याची दखल घेऊन प्रदान केलेले
+सन्मानपत्र.
+
+</p>
+
+</article>
+
+
+
+<article class="award">
+
+<span class="year">
+2024
+</span>
+
+<h3>
+सामाजिक सेवा पुरस्कार
+</h3>
+
+<p>
+
+सामाजिक कार्यातील योगदानाबद्दल
+प्राप्त झालेला पुरस्कार व सन्मान.
+
+</p>
+
+</article>
+
+
+
+<article class="award">
+
+<span class="year">
+2018
+</span>
+
+<h3>
+गुणवंत विद्यार्थी सत्कार सोहळा
+</h3>
+
+<p>
+
+प्रश्नचिन्ह आश्रमशाळेतील विद्यार्थ्यांच्या
+शैक्षणिक कार्याशी संबंधित विशेष सन्मान
+कार्यक्रम.
+
+</p>
+
+</article>
+
+
+
+<article class="award">
+
+<span class="year">
+2021
+</span>
+
+<h3>
+आदिम शिक्षण क्षेत्रातील योगदान
+</h3>
+
+<p>
+
+आदिवासी विद्यार्थ्यांच्या शिक्षणासाठी
+केलेल्या कार्याची दखल घेऊन सन्मान.
+
+</p>
+
+</article>
+
+
+
+<article class="award">
+
+<span class="year">
+विशेष गौरव
+</span>
+
+<h3>
+सामाजिक कार्यातील विशेष गौरव
+</h3>
+
+<p>
+
+समाजातील वंचित घटकांसाठी केलेल्या
+कार्याबद्दल विविध संस्थांकडून प्राप्त
+सन्मान.
+
+</p>
+
+</article>
+
+
+
+<article class="award">
+
+<span class="year">
+शैक्षणिक सेवा
+</span>
+
+<h3>
+शैक्षणिक व सामाजिक कार्यासाठी सन्मान
+</h3>
+
+<p>
+
+शिक्षण आणि सामाजिक कार्यातील
+उल्लेखनीय योगदानासाठी प्राप्त झालेला
+सन्मान.
+
+</p>
+
+</article>
+
 
 </div>
+
+</div>
+
 </section>
 
 
-<!-- MEDIA RECOGNITION -->
+
+<!-- MEDIA -->
+
 <section id="media">
+
 <div class="container">
 
-    <div class="section-title">
-        <h2>मीडिया Recognition</h2>
-        <p>Media & Press Recognition</p>
-    </div>
+<h2>
+मीडिया Recognition
+</h2>
 
-    <div class="media-box">
 
-        <h3>‘प्रश्नचिन्ह’ नव्हे, प्रश्नांचे उत्तर!</h3>
+<div class="media-card">
 
-        <p>
-        प्रश्नचिन्ह आश्रमशाळेच्या कार्याची आणि विद्यार्थ्यांच्या
-        शैक्षणिक प्रवासाची माध्यमांनी घेतलेली दखल.
-        </p>
+<h3>
+‘प्रश्नचिन्ह’ नव्हे, प्रश्नांचे उत्तर!
+</h3>
 
-        <p>
-        शाळेच्या कार्याची माहिती देणारे प्रसिद्धी माध्यमातील
-        लेख व विशेष वृत्तांकन हे संस्थेच्या कार्याचा महत्त्वाचा
-        दस्तऐवज आहे.
-        </p>
+<p>
 
-    </div>
+प्रश्नचिन्ह आश्रमशाळेच्या कार्याची आणि
+विद्यार्थ्यांच्या शैक्षणिक प्रवासाची
+माध्यमांनी घेतलेली दखल.
+
+</p>
+
+<p style="margin-top:10px;">
+
+शाळेच्या कार्याची माहिती देणारे प्रसिद्धी
+माध्यमातील लेख व विशेष वृत्तांकन हे
+संस्थेच्या कार्याचा महत्त्वाचा दस्तऐवज आहे.
+
+</p>
 
 </div>
+
+</div>
+
 </section>
 
 
-<!-- YOUTUBE VIDEOS -->
-<section id="videos">
+
+<!-- YOUTUBE -->
+
+<section id="youtube">
+
 <div class="container">
 
-    <div class="section-title">
-        <h2>पुरस्कार + शाळेची माहिती</h2>
-        <p>Awards + School Information – YouTube Videos</p>
-    </div>
+<h2>
+पुरस्कार + शाळेची माहिती
+</h2>
 
-    <div class="video-grid">
+<p class="lead">
 
-        <!-- VIDEO 01 -->
-        <div class="video-card">
+Awards + School Information – YouTube Videos
 
-            <iframe
-                src="https://www.youtube.com/embed/y0lSyM1sB9E"
-                title="Awards and School Information Video 01"
-                allowfullscreen>
-            </iframe>
-
-            <div class="video-content">
-
-                <h3>Video 01</h3>
-
-                <p>
-                पुरस्कार आणि प्रश्नचिन्ह आश्रमशाळेच्या कार्याची
-                माहिती देणारा व्हिडिओ.
-                </p>
-
-                <a
-                href="https://youtu.be/y0lSyM1sB9E"
-                target="_blank">
-                YouTube वर पाहा
-                </a>
-
-            </div>
-
-        </div>
+</p>
 
 
-        <!-- VIDEO 02 -->
-        <div class="video-card">
-
-            <iframe
-                src="https://www.youtube.com/embed/ci5IfwUyXyY"
-                title="Awards and School Information Video 02"
-                allowfullscreen>
-            </iframe>
-
-            <div class="video-content">
-
-                <h3>Video 02</h3>
-
-                <p>
-                शाळेच्या कार्याची आणि विद्यार्थ्यांच्या
-                प्रवासाची माहिती देणारा व्हिडिओ.
-                </p>
-
-                <a
-                href="https://youtu.be/ci5IfwUyXyY"
-                target="_blank">
-                YouTube वर पाहा
-                </a>
-
-            </div>
-
-        </div>
+<div class="video-grid">
 
 
-        <!-- VIDEO 03 -->
-        <div class="video-card">
+<!-- VIDEO 01 -->
 
-            <iframe
-                src="https://www.youtube.com/embed/NteWscB-STg"
-                title="Awards and School Information Video 03"
-                allowfullscreen>
-            </iframe>
+<article class="video">
 
-            <div class="video-content">
+<h3>
+Video 01
+</h3>
 
-                <h3>Video 03</h3>
+<iframe
+src="https://www.youtube.com/embed/y0lSyM1sB9E"
+title="Awards and School Information Video 01"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
 
-                <p>
-                सामाजिक कार्य, पुरस्कार आणि आश्रमशाळेच्या
-                कार्याची माहिती देणारा व्हिडिओ.
-                </p>
+<p>
 
-                <a
-                href="https://youtu.be/NteWscB-STg"
-                target="_blank">
-                YouTube वर पाहा
-                </a>
+पुरस्कार आणि प्रश्नचिन्ह आश्रमशाळेच्या
+कार्याची माहिती देणारा व्हिडिओ.
 
-            </div>
+</p>
 
-        </div>
+<a
+class="btn"
+href="https://youtu.be/y0lSyM1sB9E"
+target="_blank"
+rel="noopener">
 
-    </div>
+YouTube वर पाहा
+
+</a>
+
+</article>
+
+
+
+<!-- VIDEO 02 -->
+
+<article class="video">
+
+<h3>
+Video 02
+</h3>
+
+<iframe
+src="https://www.youtube.com/embed/ci5IfwUyXyY"
+title="Awards and School Information Video 02"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+<p>
+
+शाळेच्या कार्याची आणि विद्यार्थ्यांच्या
+प्रवासाची माहिती देणारा व्हिडिओ.
+
+</p>
+
+<a
+class="btn"
+href="https://youtu.be/ci5IfwUyXyY"
+target="_blank"
+rel="noopener">
+
+YouTube वर पाहा
+
+</a>
+
+</article>
+
+
+
+<!-- VIDEO 03 -->
+
+<article class="video">
+
+<h3>
+Video 03
+</h3>
+
+<iframe
+src="https://www.youtube.com/embed/NteWscB-STg"
+title="Awards and School Information Video 03"
+loading="lazy"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+<p>
+
+सामाजिक कार्य, पुरस्कार आणि
+आश्रमशाळेच्या कार्याची माहिती देणारा
+व्हिडिओ.
+
+</p>
+
+<a
+class="btn"
+href="https://youtu.be/NteWscB-STg"
+target="_blank"
+rel="noopener">
+
+YouTube वर पाहा
+
+</a>
+
+</article>
+
 
 </div>
+
+</div>
+
 </section>
+
+
+</main>
+
 
 
 <!-- FOOTER -->
+
 <footer>
 
-    <p>
-    © 2026 Adivasi Fase Pardhi Sudhar Samiti
-    </p>
+<div class="container">
 
-    <p>
-    Prashnachinh Adivasi Ashram School
-    </p>
+<h3>
+आदिवासी फासे पारधी सुधार समिती
+</h3>
 
-    <p>
-    Mangrul Chavala, District Amravati, Maharashtra
-    </p>
+<p>
+Prashnachinh Adivasi Ashram School
+</p>
+
+<p class="small">
+Mangrul Chavala, District Amravati, Maharashtra
+</p>
+
+<p class="small" style="margin-top:8px;">
+© 2026 Adivasi Fase Pardhi Sudhar Samiti
+</p>
+
+</div>
 
 </footer>
 
