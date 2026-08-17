@@ -1,1 +1,644 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>AF PSS | Awards & Recognition</title>
+
+  <meta
+    name="description"
+    content="ADIWASI FASE PARADHI SUDHAR SAMITI - Awards and Recognition"
+  >
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      background: #f5f7f6;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #075e46;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 13px;
+      color: #777;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #08734f;
+    }
+
+    /* LANGUAGE */
+    .language-box {
+      text-align: center;
+      margin: 28px auto 0;
+    }
+
+    .language-btn {
+      border: 1px solid #08734f;
+      background: white;
+      color: #08734f;
+      padding: 8px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .language-btn.active {
+      background: #08734f;
+      color: white;
+    }
+
+    /* MAIN */
+    .container {
+      width: 92%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .hero-title {
+      text-align: center;
+      padding: 45px 15px 20px;
+    }
+
+    .hero-title h1 {
+      color: #075e46;
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero-title h1 span {
+      color: #f1b400;
+    }
+
+    .hero-title p {
+      color: #666;
+      font-size: 17px;
+    }
+
+    /* AWARDS GRID */
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin: 35px auto 55px;
+    }
+
+    .award-card {
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #e3e9e6;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .award-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+    }
+
+    .award-image {
+      width: 100%;
+      height: 330px;
+      background: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .award-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .award-content {
+      padding: 25px;
+      text-align: center;
+    }
+
+    .award-icon {
+      font-size: 38px;
+      margin-bottom: 8px;
+    }
+
+    .award-content h2 {
+      color: #075e46;
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .award-content p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* NOTE */
+    .note {
+      background: #fff8df;
+      border-left: 6px solid #d6a000;
+      border-radius: 12px;
+      padding: 22px 25px;
+      margin: 0 auto 50px;
+      max-width: 1000px;
+    }
+
+    .note strong {
+      color: #9a7100;
+    }
+
+    /* BACK BUTTON */
+    .back-section {
+      text-align: center;
+      margin: 20px 0 55px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background: #075e46;
+      color: white;
+      text-decoration: none;
+      padding: 13px 26px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .back-btn:hover {
+      background: #064b39;
+    }
+
+    .media-btn {
+      background: #444;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #075e46;
+      color: white;
+      text-align: center;
+      padding: 28px 15px;
+    }
+
+    footer strong {
+      font-size: 18px;
+    }
+
+    footer p {
+      margin-top: 6px;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* ENGLISH HIDDEN */
+    .english {
+      display: none;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .brand {
+        justify-content: center;
+      }
+
+      .hero-title {
+        padding-top: 30px;
+      }
+
+      .hero-title h1 {
+        font-size: 31px;
+      }
+
+      .awards-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .award-image {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .brand-text strong {
+        font-size: 19px;
+      }
+
+      .brand-text span {
+        font-size: 11px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero-title h1 {
+        font-size: 27px;
+      }
+
+      .hero-title p {
+        font-size: 14px;
+      }
+
+      .award-image {
+        height: 270px;
+      }
+
+      .award-content h2 {
+        font-size: 20px;
+      }
+
+      .award-content p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <img src="logo.jpg" alt="AF PSS Logo">
+
+        <div class="brand-text">
+          <strong>AFPSS</strong>
+          <span>Adivasi Fase Pardhi Sudhar Samiti</span>
+        </div>
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#school">School Activities</a>
+        <a href="index.html#story">Our Story</a>
+        <a href="index.html#founder">Founder</a>
+        <a href="awards.html">Awards</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="media-news.html">Media</a>
+        <a href="documents.html">Documents</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- LANGUAGE -->
+  <div class="language-box">
+    <button
+      id="mrBtn"
+      class="language-btn active"
+      onclick="showMarathi()"
+    >
+      🇮🇳 मराठी
+    </button>
+
+    <button
+      id="enBtn"
+      class="language-btn"
+      onclick="showEnglish()"
+    >
+      🇬🇧 English
+    </button>
+  </div>
+
+
+  <!-- MARATHI -->
+  <main id="marathiContent">
+
+    <section class="hero-title">
+      <h1>🏆 <span>पुरस्कार</span> व सन्मान</h1>
+
+      <p>
+        सामाजिक कार्यासाठी मिळालेल्या महत्त्वपूर्ण पुरस्कारांची नोंद
+      </p>
+    </section>
+
+
+    <div class="container">
+
+      <section class="awards-grid">
+
+        <!-- AWARD 1 -->
+        <article class="award-card">
+
+          <div class="award-image">
+            <img
+              src="award-baba-amte.jpg"
+              alt="श्रद्धेय बाबा आमटे मानवता पुरस्कार"
+            >
+          </div>
+
+          <div class="award-content">
+
+            <div class="award-icon">🏆</div>
+
+            <h2>
+              श्रद्धेय बाबा आमटे मानवता पुरस्कार
+            </h2>
+
+            <p>
+              फासेपारधी समाजातील मुलांच्या शिक्षणासाठी
+              आणि सामाजिक कार्यासाठी दिलेला सन्मान.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- AWARD 2 -->
+        <article class="award-card">
+
+          <div class="award-image">
+            <img
+              src="award-lokmat.jpg"
+              alt="लोकमत समाजसेवा पुरस्कार"
+            >
+          </div>
+
+          <div class="award-content">
+
+            <div class="award-icon">🏆</div>
+
+            <h2>
+              लोकमत समाजसेवा पुरस्कार
+            </h2>
+
+            <p>
+              शिक्षण आणि सामाजिक परिवर्तनासाठी केलेल्या
+              कार्याची दखल घेऊन मिळालेला सन्मान.
+            </p>
+
+          </div>
+
+        </article>
+
+      </section>
+
+
+      <div class="note">
+        <strong>महत्त्वाची नोंद:</strong>
+        या पृष्ठावर सध्या केवळ उपलब्ध छायाचित्रे व माहितीच्या आधारे
+        स्पष्टपणे ओळखता येणारे पुरस्कार दाखवले आहेत.
+        अस्पष्ट किंवा अपूर्ण माहिती असलेले पुरस्कार येथे समाविष्ट केलेले नाहीत.
+      </div>
+
+
+      <div class="back-section">
+
+        <a href="index.html" class="back-btn">
+          🏠 मुख्यपृष्ठावर जा
+        </a>
+
+        <a href="media-news.html" class="back-btn media-btn">
+          📰 Media Recognition
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- ENGLISH -->
+  <main id="englishContent" class="english">
+
+    <section class="hero-title">
+      <h1>🏆 <span>Awards</span> & Recognition</h1>
+
+      <p>
+        Important recognitions received for social and educational work
+      </p>
+    </section>
+
+
+    <div class="container">
+
+      <section class="awards-grid">
+
+        <!-- AWARD 1 -->
+        <article class="award-card">
+
+          <div class="award-image">
+            <img
+              src="award-baba-amte.jpg"
+              alt="Shraddheya Baba Amte Manavata Puraskar"
+            >
+          </div>
+
+          <div class="award-content">
+
+            <div class="award-icon">🏆</div>
+
+            <h2>
+              Shraddheya Baba Amte Manavata Puraskar
+            </h2>
+
+            <p>
+              Recognition for educational and social work
+              for children from the Fase Pardhi community.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- AWARD 2 -->
+        <article class="award-card">
+
+          <div class="award-image">
+            <img
+              src="award-lokmat.jpg"
+              alt="Lokmat Samajseva Puraskar"
+            >
+          </div>
+
+          <div class="award-content">
+
+            <div class="award-icon">🏆</div>
+
+            <h2>
+              Lokmat Samajseva Puraskar
+            </h2>
+
+            <p>
+              Recognition for educational work and
+              social transformation.
+            </p>
+
+          </div>
+
+        </article>
+
+      </section>
+
+
+      <div class="note">
+        <strong>Important Note:</strong>
+        This page currently displays only awards that can be clearly
+        identified from the available photographs and information.
+        Awards with unclear or incomplete information have not been included.
+      </div>
+
+
+      <div class="back-section">
+
+        <a href="index.html" class="back-btn">
+          🏠 Back to Home
+        </a>
+
+        <a href="media-news.html" class="back-btn media-btn">
+          📰 Media Recognition
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <strong>
+      ADIWASI FASE PARADHI SUDHAR SAMITI
+    </strong>
+
+    <p>
+      Prashnachinh Adivasi Ashram School, Mangrul Chavala,
+      District Amravati, Maharashtra
+    </p>
+
+    <p>
+      © 2026 AFPSS. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- LANGUAGE SCRIPT -->
+  <script>
+
+    function showMarathi() {
+
+      document.getElementById("marathiContent").style.display = "block";
+      document.getElementById("englishContent").style.display = "none";
+
+      document.getElementById("mrBtn").classList.add("active");
+      document.getElementById("enBtn").classList.remove("active");
+
+      localStorage.setItem("afpssLanguage", "mr");
+    }
+
+
+    function showEnglish() {
+
+      document.getElementById("marathiContent").style.display = "none";
+      document.getElementById("englishContent").style.display = "block";
+
+      document.getElementById("enBtn").classList.add("active");
+      document.getElementById("mrBtn").classList.remove("active");
+
+      localStorage.setItem("afpssLanguage", "en");
+    }
+
+
+    window.addEventListener("DOMContentLoaded", function() {
+
+      const language =
+        localStorage.getItem("afpssLanguage") || "mr";
+
+      if (language === "en") {
+        showEnglish();
+      } else {
+        showMarathi();
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
