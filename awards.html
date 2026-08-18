@@ -311,17 +311,14 @@ img{
 
 .award-gallery{
   display:grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap:18px;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+  align-items:stretch;
 }
 
 .award-card{
   position:relative;
-
-  height:310px;
+  height:300px;
 
   overflow:hidden;
 
@@ -700,8 +697,12 @@ footer p{
   }
 
   .award-gallery{
-    grid-template-columns:
-      repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .award-card:first-child{
+    grid-column:auto;
+    height:310px;
   }
 
   .youtube-grid{
@@ -742,7 +743,9 @@ footer p{
     gap:15px;
   }
 
-  .award-card{
+  .award-card,
+  .award-card:first-child{
+    grid-column:auto;
     height:300px;
   }
 
@@ -954,7 +957,7 @@ to the future of children.
 
 <img
 src="award-01.jpg"
-alt="AFPSS Award Recognition 01"
+alt="AFPSS Featured Award Recognition"
 loading="lazy">
 
 <div class="award-overlay">
