@@ -2,46 +2,62 @@
   "use strict";
 
   const LANGUAGE_KEY = "afpssLanguage";
+  const SUPPORTED_LANGUAGES = ["mr", "en"];
 
   // --------------------------------------------------
-  // 1. भाषा ठरवणे
+  // 1. भाषा शोधणे
   // --------------------------------------------------
   function getLanguage() {
+
     const params = new URLSearchParams(window.location.search);
     const urlLanguage = params.get("lang");
 
-    // URL मध्ये भाषा असेल तर ती save करा
-    if (urlLanguage === "mr" || urlLanguage === "en") {
+    if (SUPPORTED_LANGUAGES.includes(urlLanguage)) {
       localStorage.setItem(LANGUAGE_KEY, urlLanguage);
       return urlLanguage;
     }
 
-    // आधी निवडलेली भाषा वापरा
-    return localStorage.getItem(LANGUAGE_KEY) || "mr";
+    const savedLanguage =
+      localStorage.getItem(LANGUAGE_KEY);
+
+    if (SUPPORTED_LANGUAGES.includes(savedLanguage)) {
+      return savedLanguage;
+    }
+
+    return "mr";
   }
 
 
   // --------------------------------------------------
-  // 2. पूर्ण Page वर भाषा लागू करणे
+  // 2. Language लागू करणे
   // --------------------------------------------------
   function applyLanguage(language) {
 
-    language = language === "en" ? "en" : "mr";
+    language =
+      SUPPORTED_LANGUAGES.includes(language)
+        ? language
+        : "mr";
 
-    // भाषा कायमची save
-    localStorage.setItem(LANGUAGE_KEY, language);
+    localStorage.setItem(
+      LANGUAGE_KEY,
+      language
+    );
 
-    // HTML language
-    document.documentElement.lang = language;
+    document.documentElement.lang =
+      language;
 
 
     // ------------------------------------------------
     // Marathi content
     // ------------------------------------------------
-    document.querySelectorAll(".lang-mr").forEach(function (element) {
+    document.querySelectorAll(
+      ".lang-mr"
+    ).forEach(function (element) {
 
       element.style.display =
-        language === "mr" ? "" : "none";
+        language === "mr"
+          ? ""
+          : "none";
 
     });
 
@@ -49,24 +65,32 @@
     // ------------------------------------------------
     // English content
     // ------------------------------------------------
-    document.querySelectorAll(".lang-en").forEach(function (element) {
+    document.querySelectorAll(
+      ".lang-en"
+    ).forEach(function (element) {
 
       element.style.display =
-        language === "en" ? "" : "none";
+        language === "en"
+          ? ""
+          : "none";
 
     });
 
 
     // ------------------------------------------------
-    // Home Page language button
+    // Single language switch button
     // ------------------------------------------------
     const languageButton =
-      document.getElementById("languageButton");
+      document.getElementById(
+        "languageButton"
+      );
 
     if (languageButton) {
 
       languageButton.textContent =
-        language === "en" ? "मराठी" : "English";
+        language === "en"
+          ? "मराठी"
+          : "English";
 
       languageButton.setAttribute(
         "aria-label",
@@ -75,18 +99,20 @@
           : "Switch to English"
       );
 
+      languageButton.setAttribute(
+        "title",
+        language === "en"
+          ? "मराठी निवडा"
+          : "Select English"
+      );
     }
 
 
     // ------------------------------------------------
-    // जर page वर दोन buttons असतील
+    // Marathi button
     // ------------------------------------------------
     const mrButton =
       document.getElementById("mrBtn");
-
-    const enButton =
-      document.getElementById("enBtn");
-
 
     if (mrButton) {
 
@@ -95,8 +121,20 @@
         language === "mr"
       );
 
+      mrButton.setAttribute(
+        "aria-pressed",
+        language === "mr"
+          ? "true"
+          : "false"
+      );
     }
 
+
+    // ------------------------------------------------
+    // English button
+    // ------------------------------------------------
+    const enButton =
+      document.getElementById("enBtn");
 
     if (enButton) {
 
@@ -105,15 +143,24 @@
         language === "en"
       );
 
+      enButton.setAttribute(
+        "aria-pressed",
+        language === "en"
+          ? "true"
+          : "false"
+      );
     }
 
 
     // ------------------------------------------------
-    // 3. पुढील सर्व HTML pages मध्ये भाषा घेऊन जा
+    // 3. पुढील website pages मध्ये language कायम ठेवा
     // ------------------------------------------------
-    document.querySelectorAll("a[href]").forEach(function (link) {
+    document.querySelectorAll(
+      "a[href]"
+    ).forEach(function (link) {
 
-      const href = link.getAttribute("href");
+      const href =
+        link.getAttribute("href");
 
       if (!href) return;
 
@@ -129,30 +176,36 @@
         return;
       }
 
-
       try {
 
         const url =
-          new URL(href, window.location.href);
+          new URL(
+            href,
+            window.location.href
+          );
 
-
-        // फक्त आपल्या website च्या HTML pages साठी
-        if (url.origin !== window.location.origin) {
+        // फक्त आपल्या website चे pages
+        if (
+          url.origin !==
+          window.location.origin
+        ) {
           return;
         }
 
-
-        if (!/\.html$/i.test(url.pathname)) {
+        // HTML pages साठी
+        if (
+          !/\.html$/i.test(
+            url.pathname
+          )
+        ) {
           return;
         }
 
-
-        // भाषा पुढच्या page ला पाठवा
+        // पुढच्या page ला language द्या
         url.searchParams.set(
           "lang",
           language
         );
-
 
         link.setAttribute(
           "href",
@@ -176,22 +229,14 @@
 
 
   // --------------------------------------------------
-  // 4. Page सुरू झाल्यावर भाषा लागू करा
+  // 4. Language buttons
   // --------------------------------------------------
-  function initializeLanguage() {
+  function setupLanguageButtons() {
 
-    const language =
-      getLanguage();
-
-    applyLanguage(language);
-
-
-    // ------------------------------------------------
-    // Home Page single language button
-    // ------------------------------------------------
     const languageButton =
-      document.getElementById("languageButton");
-
+      document.getElementById(
+        "languageButton"
+      );
 
     if (languageButton) {
 
@@ -209,20 +254,19 @@
               ? "mr"
               : "en";
 
-          applyLanguage(newLanguage);
+          applyLanguage(
+            newLanguage
+          );
 
         }
       );
-
     }
 
 
-    // ------------------------------------------------
-    // Marathi button
-    // ------------------------------------------------
     const mrButton =
-      document.getElementById("mrBtn");
-
+      document.getElementById(
+        "mrBtn"
+      );
 
     if (mrButton) {
 
@@ -236,16 +280,13 @@
 
         }
       );
-
     }
 
 
-    // ------------------------------------------------
-    // English button
-    // ------------------------------------------------
     const enButton =
-      document.getElementById("enBtn");
-
+      document.getElementById(
+        "enBtn"
+      );
 
     if (enButton) {
 
@@ -259,17 +300,32 @@
 
         }
       );
-
     }
 
   }
 
 
   // --------------------------------------------------
-  // 5. DOM तयार झाल्यावर सुरू करा
+  // 5. Page सुरू करणे
+  // --------------------------------------------------
+  function initializeLanguage() {
+
+    const language =
+      getLanguage();
+
+    applyLanguage(language);
+
+    setupLanguageButtons();
+
+  }
+
+
+  // --------------------------------------------------
+  // 6. DOM Ready
   // --------------------------------------------------
   if (
-    document.readyState === "loading"
+    document.readyState ===
+    "loading"
   ) {
 
     document.addEventListener(
