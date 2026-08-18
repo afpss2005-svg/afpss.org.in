@@ -342,6 +342,109 @@
 .organisation-preview-side span{margin-top:18px;color:#c5d0cb;font-size:13px}
 @media(max-width:850px){.organisation-preview-inner{grid-template-columns:1fr}.organisation-preview-side{min-height:230px}}
 
+
+.social-mission{
+  padding:96px 0;
+  background:
+    radial-gradient(circle at 12% 10%,rgba(212,175,55,.10),transparent 28%),
+    linear-gradient(135deg,#07131f,#0b2029);
+  color:#fff;
+}
+.social-mission-heading{
+  width:min(1050px,92%);
+  margin:0 auto 42px;
+  text-align:center;
+}
+.social-mission-heading small{
+  color:#e5c65b;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:3px;
+}
+.social-mission-heading h2{
+  margin:14px 0 14px;
+  color:#fff;
+  font-size:clamp(34px,4.5vw,56px);
+  line-height:1.12;
+}
+.social-mission-heading p{
+  max-width:820px;
+  margin:auto;
+  color:#bdcbc5;
+  line-height:1.8;
+}
+.social-mission-grid{
+  width:min(1100px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+.mission-card{
+  position:relative;
+  padding:38px 34px 34px;
+  border-radius:28px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(212,175,55,.30);
+  box-shadow:0 25px 65px rgba(0,0,0,.24);
+  overflow:hidden;
+}
+.mission-card:before{
+  content:"";
+  position:absolute;
+  left:0;top:0;right:0;height:3px;
+  background:linear-gradient(90deg,#d4af37,transparent);
+}
+.mission-number{
+  position:absolute;
+  right:25px;
+  top:20px;
+  color:rgba(229,198,91,.22);
+  font-size:42px;
+  font-weight:900;
+}
+.mission-icon{
+  font-size:42px;
+  margin-bottom:18px;
+}
+.mission-card h3{
+  margin:0 0 10px;
+  color:#fff;
+  font-size:25px;
+  line-height:1.35;
+}
+.mission-card span{
+  display:block;
+  color:#e5c65b;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  margin-bottom:16px;
+}
+.mission-card p{
+  color:#c3d0cb;
+  line-height:1.85;
+  min-height:108px;
+}
+.mission-card a{
+  display:inline-flex;
+  margin-top:8px;
+  padding:12px 20px;
+  border-radius:40px;
+  background:#f2d56b;
+  color:#111;
+  text-decoration:none;
+  font-weight:900;
+}
+@media(max-width:850px){
+  .social-mission-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .social-mission{padding:70px 0}
+  .mission-card{padding:30px 24px}
+  .mission-card h3{font-size:22px}
+}
+
 </style>
 </head>
 
@@ -573,54 +676,53 @@
   </div>
 </section>
 
-
-<section class="social-justice-preview" id="social-justice-preview">
-  <div class="sj-inner">
-    <div class="sj-copy">
-      <small>SOCIAL JUSTICE • ADVOCACY • COMMUNITY VOICE</small>
-      <div class="lang-mr">
-        <h2>हक्कांसाठी आवाज • समाजासाठी संघटन</h2>
-        <p><strong>श्री दादाजी आदिवासी फासेपारधी समाज संघटना, महाराष्ट्र राज्य</strong> ही फासेपारधी समाजाच्या प्रश्नांना संघटितपणे मांडणारी आणि सामाजिक न्याय, सन्मान व मूलभूत हक्कांसाठी आवाज उठवणारी चळवळ आहे.</p>
-        <p>अध्यक्ष <strong>श्री. मतीन शंकरराव भोसले</strong> यांच्या नेतृत्वाखाली समाजातील कागदपत्रे, शासकीय योजनांपर्यंत पोहोच, घरकुल, उपजीविका, बचत गट, आर्थिक विकास आणि अन्यायाच्या प्रश्नांबाबत पाठपुरावा व जनजागृती करण्याची दिशा पुढे नेली जाते.</p>
-        <a href="social-justice-advocacy.html">संघटनेचा संपूर्ण प्रवास वाचा →</a>
-      </div>
-      <div class="lang-en" style="display:none">
-        <h2>A Voice for Rights • A Community United</h2>
-        <p><strong>Shri Dadaji Adivasi Fase Pardhi Samaj Sanghatana, Maharashtra</strong> is a community organisation working to bring collective attention to questions of social justice, dignity and access to basic rights for the Fase Pardhi community.</p>
-        <p>Under the leadership of <strong>President Shri Matin Shankarrao Bhosale</strong>, its direction includes advocacy and follow-up around identity documents, access to eligible government schemes, housing, livelihoods, self-help groups, economic development and community grievances.</p>
-        <a href="social-justice-advocacy.html">Explore the Organisation's Journey →</a>
-      </div>
+<section class="social-mission" id="social-mission">
+  <div class="social-mission-heading">
+    <small>OUR SOCIAL MISSION</small>
+    <div class="lang-mr">
+      <h2>शिक्षणातून परिवर्तन • हक्कांसाठी आवाज</h2>
+      <p>शिक्षण, विद्यार्थी कल्याण आणि समाजपरिवर्तनासोबत फासेपारधी समाजाच्या हक्कांसाठी संघटितपणे काम करण्याची आमची व्यापक दिशा.</p>
     </div>
-    <div class="sj-side">
-      <div class="sj-badge">JUSTICE<br><span>•</span><br>DIGNITY</div>
-      <div><b>Advocacy • Awareness • Action</b><small>Future updates, news, photos & videos</small></div>
+    <div class="lang-en" style="display:none">
+      <h2>Transformation through Education • A Voice for Rights</h2>
+      <p>Our wider mission combines education, student welfare and community transformation with a collective voice for the rights and dignity of the Fase Pardhi community.</p>
     </div>
   </div>
-</section>
 
-
-<section class="organisation-preview" id="organisation-preview">
-  <div class="organisation-preview-inner">
-    <div>
-      <small>OUR ORGANISATIONS • COMMUNITY • SOCIAL JUSTICE</small>
-
+  <div class="social-mission-grid">
+    <article class="mission-card">
+      <div class="mission-number">01</div>
+      <div class="mission-icon">🏫</div>
       <div class="lang-mr">
-        <h2>शिक्षणातून परिवर्तन • हक्कांसाठी आवाज</h2>
-        <p>आदिवासी फासेपारधी सुधार समितीच्या माध्यमातून शिक्षण, विद्यार्थी कल्याण आणि समाजपरिवर्तनासाठी काम केले जाते. त्यासोबत श्री दादाजी आदिवासी फासेपारधी समाज संघटना, महाराष्ट्र राज्य यांच्या माध्यमातून समाजाच्या हक्कांचे आणि सामाजिक न्यायाचे प्रश्न संघटितपणे मांडले जातात.</p>
-        <a href="social-justice-advocacy.html">संघटनेचे संपूर्ण कार्य वाचा →</a>
+        <h3>आदिवासी फासेपारधी सुधार समिती</h3>
+        <span>शिक्षण • विद्यार्थी कल्याण • समाजपरिवर्तन</span>
+        <p>प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या माध्यमातून शिक्षण, सुरक्षित निवास, अन्न, आरोग्य, सर्वांगीण विकास आणि समाजाच्या पुढील पिढीसाठी संधी निर्माण करण्याच्या दिशेने कार्य.</p>
+        <a href="community-transformation.html">संस्थेचे कार्य वाचा →</a>
       </div>
-
       <div class="lang-en" style="display:none">
-        <h2>Transformation through Education • A Voice for Rights</h2>
-        <p>Through Adivasi Fase Pardhi Sudhar Samiti, we work for education, student welfare and community transformation. Through Shri Dadaji Adivasi Fase Pardhi Samaj Sanghatana, Maharashtra State, community concerns, rights and social justice issues are brought forward collectively.</p>
-        <a href="social-justice-advocacy.html">Explore the Organisation's Work →</a>
+        <h3>Adivasi Fase Pardhi Sudhar Samiti</h3>
+        <span>Education • Student Welfare • Community Transformation</span>
+        <p>Working through Prashnachinha Adivasi Ashram School towards education, safe residential care, nutrition, healthcare, holistic development and wider opportunities for the next generation.</p>
+        <a href="community-transformation.html">Explore the Institution →</a>
       </div>
-    </div>
+    </article>
 
-    <div class="organisation-preview-side">
-      <strong>COMMUNITY<br>VOICE</strong>
-      <span>Education • Rights • Dignity • Opportunity</span>
-    </div>
+    <article class="mission-card">
+      <div class="mission-number">02</div>
+      <div class="mission-icon">⚖️</div>
+      <div class="lang-mr">
+        <h3>श्री दादाजी आदिवासी फासेपारधी समाज संघटना, महाराष्ट्र राज्य</h3>
+        <span>सामाजिक न्याय • हक्क • संघटन</span>
+        <p>समाजातील कागदपत्रे, घरकुल, शासकीय योजनांपर्यंत पोहोच, उपजीविका, बचत गट आणि अन्यायाच्या प्रश्नांना संघटितपणे मांडण्याची दिशा.</p>
+        <a href="social-justice-advocacy.html">संघटनेचा प्रवास वाचा →</a>
+      </div>
+      <div class="lang-en" style="display:none">
+        <h3>Shri Dadaji Adivasi Fase Pardhi Samaj Sanghatana, Maharashtra</h3>
+        <span>Social Justice • Rights • Advocacy</span>
+        <p>A collective platform for raising community concerns around documentation, housing, eligible government schemes, livelihoods, self-help groups and social justice.</p>
+        <a href="social-justice-advocacy.html">Explore the Organisation →</a>
+      </div>
+    </article>
   </div>
 </section>
 
