@@ -360,6 +360,159 @@ section, .container, .content, .grid, .hero, .hero-grid {
 }
 
 </style>
+<style>
+/* ===== HOME STEP 2: STORY + HERO PREMIUM POLISH ===== */
+.hero-copy .eyebrow{
+  font-size:13px !important;
+  letter-spacing:2.4px !important;
+  line-height:1.5 !important;
+  margin-bottom:16px !important;
+  font-weight:800 !important;
+}
+.story-unified{
+  width:min(1120px,92%);
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);
+  gap:26px;
+  padding:28px;
+  border:1px solid rgba(6,92,67,.12);
+  border-radius:28px;
+  background:rgba(255,255,255,.78);
+  box-shadow:0 18px 50px rgba(4,48,37,.09);
+}
+.story-unified-copy{
+  padding:28px;
+  border-radius:22px;
+  background:linear-gradient(145deg,#fff,#f5faf7);
+  border:1px solid rgba(6,92,67,.10);
+}
+.story-unified-copy h3{
+  margin:0 0 18px;
+  color:#075b43;
+  font-size:28px;
+  line-height:1.25;
+}
+.story-unified-copy p{
+  margin:0 0 13px;
+  line-height:1.75;
+}
+.story-unified-quote{
+  margin:20px 0;
+  padding:16px 18px;
+  border-left:4px solid #d6a928;
+  border-radius:12px;
+  background:#fff9e8;
+  color:#174b3b;
+  font-weight:700;
+  line-height:1.55;
+}
+.story-unified-gallery{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.story-unified-gallery .story-photo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.story-unified-gallery .story-photo-grid img{
+  width:100%;
+  height:145px;
+  object-fit:cover;
+  border-radius:14px;
+  display:block;
+}
+.story-gallery-label{
+  text-align:center;
+  margin:14px 0 8px;
+  color:#426156;
+  font-size:12px;
+  font-weight:700;
+}
+.story-gallery-actions{
+  text-align:center;
+}
+.story-read-btn{margin-top:4px !important;}
+.hero-lang .language-switcher{
+  transform:scale(.88);
+  transform-origin:left top;
+}
+@media(max-width:900px){
+  .story-unified{grid-template-columns:1fr;padding:18px;border-radius:24px;}
+  .story-unified-copy{padding:22px;}
+  .story-unified-copy h3{font-size:24px;}
+  .story-unified-gallery .story-photo-grid img{height:130px;}
+}
+@media(max-width:600px){
+  .hero-copy .eyebrow{font-size:11px !important;letter-spacing:1.6px !important;}
+  .story-unified{width:calc(100% - 20px);gap:18px;}
+  .story-unified-gallery .story-photo-grid{grid-template-columns:1fr 1fr;}
+  .story-unified-gallery .story-photo-grid img{height:105px;border-radius:11px;}
+}
+</style>
+
+<style id="afpss-home-final-polish">
+/* FINAL HOME ONLY — story/gallery + compact language controls */
+.language-switcher{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:2px !important;
+  padding:3px !important;
+  border:1px solid rgba(214,169,40,.85) !important;
+  border-radius:999px !important;
+  background:rgba(255,255,255,.96) !important;
+  box-shadow:0 6px 20px rgba(0,0,0,.08) !important;
+}
+.language-switcher button{
+  border:0 !important;
+  border-radius:999px !important;
+  padding:7px 12px !important;
+  min-width:58px !important;
+  min-height:30px !important;
+  background:transparent !important;
+  color:#075b43 !important;
+  font-weight:800 !important;
+  font-size:12px !important;
+}
+.language-switcher button.active{
+  background:#075b43 !important;
+  color:#fff !important;
+}
+.story-unified{
+  align-items:stretch;
+}
+.story-unified-gallery .story-photo-grid img{
+  height:150px !important;
+  object-fit:cover !important;
+}
+.media-card img{
+  height:220px !important;
+  object-fit:cover !important;
+}
+.hero-copy .eyebrow{
+  font-size:clamp(14px,1.25vw,18px) !important;
+  font-weight:800 !important;
+  letter-spacing:1.8px !important;
+}
+@media(max-width:760px){
+  .language-switcher button{
+    font-size:10px !important;
+    min-width:48px !important;
+    min-height:27px !important;
+    padding:6px 9px !important;
+  }
+  .story-unified-gallery .story-photo-grid img{
+    height:115px !important;
+  }
+  .media-card img{
+    height:190px !important;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -394,7 +547,7 @@ section, .container, .content, .grid, .hero, .hero-grid {
 <section class="hero" id="home">
 <div class="hero-slider">
 <div class="hero-slide active" style="background-image:url('hero.JPG')"></div>
-<div class="hero-slide" style="background-image:url('hero4.jpg')"></div>
+<div class="hero-slide" style="background-image:url('gallery-collage.jpg')"></div>
 <div class="hero-slide" style="background-image:url('hero5.jpg')"></div>
 <div class="hero-slide" style="background-image:url('gallery-school.jpg')"></div>
 </div>
@@ -482,42 +635,61 @@ section, .container, .content, .grid, .hero, .hero-grid {
 <section class="section alt" id="story">
 <div class="section-title">
 <small>OUR STORY • SCHOOL GALLERY</small>
-<div class="lang-mr"><h2>❓ प्रश्नचिन्हचा प्रवास</h2><p>शाळेचा प्रवास आणि त्या प्रवासातील खरे क्षण — एकाच ठिकाणी.</p></div>
-<div class="lang-en"><h2>❓ Our Story • School Gallery</h2><p>The school journey and real moments from that journey — together in one place.</p></div>
-</div>
-<div class="story-gallery-wrap">
-<div class="story-box">
 <div class="lang-mr">
-<h2>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष!</h2>
-<p>कधीकाळी या मुलांच्या हातात पुस्तक नव्हते, शाळा नव्हती आणि सुरक्षित भविष्याची हमी नव्हती.</p>
-<p>फासेपारधी समाजातील मुलांच्या आयुष्यात शिक्षणाचा प्रकाश आणण्याचे स्वप्न प्रा. मतीन भोसले सरांनी पाहिले.</p>
-<p>२२ सप्टेंबर २०११ रोजी १८८ विद्यार्थ्यांपासून प्रश्नचिन्ह आदिवासी आश्रम शाळेचा शिक्षणाचा प्रवास सुरू झाला.</p>
-<p>शिक्षणासाठी संघर्ष झाला. निवासासाठी संघर्ष झाला. अन्नासाठी संघर्ष झाला. पण प्रश्नचिन्ह थांबले नाही.</p>
-<p>आज या प्रवासाने हजारो विद्यार्थ्यांच्या आयुष्याला शिक्षणाची दिशा दिली आहे.</p>
-<div class="story-quote">एका मुलाचे आयुष्य बदलले, तर एका कुटुंबाचे भविष्य बदलते.</div>
-<a href="our-story.html" class="hero-btn" style="margin-top:18px;display:inline-flex">संपूर्ण प्रवास वाचा →</a>
+<h2>❓ प्रश्नचिन्हचा प्रवास</h2>
+<p>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा शिक्षण, संघर्ष आणि परिवर्तनाचा एकसंध प्रवास.</p>
 </div>
 <div class="lang-en">
-<h2>From 188 Children to Thousands of Dreams</h2>
-<p>There was a time when many children did not have books, schools or the security of a better future.</p>
-<p>Prof. Matin Bhosale dreamed of bringing the light of education to children from the Fase Pardhi community.</p>
-<p>On 22 September 2011, Prashnachinha Adivasi Ashram School began its journey with 188 students.</p>
-<p>There were challenges around education, residential care and food, but the mission continued.</p>
-<p>The journey has since helped thousands of students move towards education and a brighter future.</p>
-<div class="story-quote">Change one child's life, and you change the future of a family.</div>
-<a href="our-story.html" class="hero-btn" style="margin-top:18px;display:inline-flex">Read the Full Journey →</a>
+<h2>❓ The Prashnachinha Journey</h2>
+<p>One complete journey of education, struggle and transformation — from 188 children to thousands of dreams.</p>
 </div>
 </div>
-<div>
-<div class="story-photo-grid">
-<img src="school1.jpg" alt="AFPSS School Life" loading="lazy"><img src="school2.jpg" alt="AFPSS Education" loading="lazy">
-<img src="school3.jpg" alt="AFPSS School Activities" loading="lazy"><img src="school4.jpg" alt="AFPSS Students" loading="lazy">
-<img src="school5.jpg" alt="AFPSS Education" loading="lazy"><img src="school6.jpg" alt="AFPSS Student Activity" loading="lazy">
-</div>
-<div style="text-align:center;margin-top:20px">
-<a href="gallery.html" class="gold-btn"><span class="lang-mr">शाळेचे सर्व फोटो पहा →</span><span class="lang-en">View the Full School Gallery →</span></a>
-</div>
-</div>
+
+<div class="story-unified">
+  <div class="story-unified-copy">
+    <div class="lang-mr">
+      <h3>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष!</h3>
+      <p>कधीकाळी या मुलांच्या हातात पुस्तक नव्हते, शाळा नव्हती आणि सुरक्षित भविष्याची हमी नव्हती.</p>
+      <p>फासेपारधी समाजातील मुलांच्या आयुष्यात शिक्षणाचा प्रकाश आणण्याचे स्वप्न प्रा. मतीन शंकरराव भोसले सरांनी पाहिले.</p>
+      <p><strong>२२ सप्टेंबर २०११ रोजी १८८ विद्यार्थ्यांपासून</strong> प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या शिक्षणाच्या प्रवासाला सुरुवात झाली.</p>
+      <p>शिक्षणासाठी संघर्ष झाला. निवासासाठी संघर्ष झाला. अन्नासाठी संघर्ष झाला. अनेक अडचणी आल्या; पण प्रश्नचिन्ह थांबले नाही.</p>
+      <p>आज या प्रवासाने हजारो विद्यार्थ्यांच्या आयुष्याला शिक्षणाची दिशा दिली आहे. शाळा म्हणजे केवळ इमारत नाही; ती एका पिढीला स्वाभिमान, संधी आणि भविष्य देण्याचा प्रयत्न आहे.</p>
+      <div class="story-unified-quote">“एका मुलाचे आयुष्य बदलले, तर एका कुटुंबाचे भविष्य बदलते.”</div>
+      <a href="our-story.html" class="hero-btn story-read-btn">संपूर्ण प्रवास वाचा →</a>
+    </div>
+
+    <div class="lang-en">
+      <h3>From 188 Children to Thousands of Dreams</h3>
+      <p>There was a time when many children did not have books, a school or the security of a better future.</p>
+      <p>Prof. Matin Shankarrao Bhosale dreamed of bringing the light of education to children from the Fase Pardhi community.</p>
+      <p><strong>On 22 September 2011, the journey began with 188 students</strong> at Prashnachinha Adivasi Ashram School.</p>
+      <p>There were struggles for education, residential care and food. Many challenges came, but the mission did not stop.</p>
+      <p>Today, this journey has helped thousands of students move towards education. The school is not merely a building; it is an effort to give a generation dignity, opportunity and a future.</p>
+      <div class="story-unified-quote">“Change one child's life, and you change the future of a family.”</div>
+      <a href="our-story.html" class="hero-btn story-read-btn">Read the Full Journey →</a>
+    </div>
+  </div>
+
+  <div class="story-unified-gallery">
+    <div class="story-photo-grid">
+      <img src="prashnachinh-pravas.jpg" alt="AFPSS School Life" loading="lazy">
+      <img src="gallery-school.jpg" alt="AFPSS Education" loading="lazy">
+      <img src="gallery-children.jpg" alt="AFPSS School Activities" loading="lazy">
+      <img src="gallery-event.jpg" alt="AFPSS Students" loading="lazy">
+      <img src="school-activity.jpg" alt="AFPSS Education" loading="lazy">
+      <img src="school-development.jpg" alt="AFPSS Student Activity" loading="lazy">
+    </div>
+    <div class="story-gallery-label">
+      <span class="lang-mr">प्रश्नचिन्हच्या प्रवासातील काही क्षण</span>
+      <span class="lang-en">Moments from the Prashnachinha journey</span>
+    </div>
+    <div class="story-gallery-actions">
+      <a href="gallery.html" class="gold-btn">
+        <span class="lang-mr">शाळेचे सर्व फोटो पहा →</span>
+        <span class="lang-en">View the Full School Gallery →</span>
+      </a>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -528,9 +700,9 @@ section, .container, .content, .grid, .hero, .hero-grid {
 <div class="lang-en"><h2>Media • News • Videos</h2><p>School stories, school news, social work and videos — now directly accessible from the Home Page.</p></div>
 </div>
 <div class="media-grid">
-<article class="media-card"><img src="school7.jpg" alt="School Programme" loading="lazy"><div class="media-body"><div class="lang-mr"><h3>शाळेचा प्रवास</h3><p>शाळा कशी सुरू झाली, संघर्ष आणि आजपर्यंतची वाटचाल.</p><a href="media-news.html" class="gold-btn">बातम्या वाचा →</a></div><div class="lang-en"><h3>School Journey</h3><p>How the school began, the challenges and the journey to today.</p><a href="media-news.html" class="gold-btn">Read the News →</a></div></div></article>
-<article class="media-card"><img src="school8.jpg" alt="School Activities" loading="lazy"><div class="media-body"><div class="lang-mr"><h3>शाळेचे उपक्रम</h3><p>विद्यार्थी, क्रीडा, सांस्कृतिक कार्यक्रम आणि शैक्षणिक उपक्रमांच्या बातम्या.</p><a href="media-news.html" class="gold-btn">सर्व मीडिया पहा →</a></div><div class="lang-en"><h3>School Activities</h3><p>News about students, sports, cultural programmes and educational activities.</p><a href="media-news.html" class="gold-btn">Explore All Media →</a></div></div></article>
-<article class="media-card"><img src="school9.jpg" alt="AFPSS Community" loading="lazy"><div class="media-body"><div class="lang-mr"><h3>सामाजिक कार्य</h3><p>फासेपारधी समाजासाठी संस्था आणि संघटनेच्या कार्याची नोंद.</p><a href="media-news.html" class="gold-btn">सामाजिक बातम्या पहा →</a></div><div class="lang-en"><h3>Social Work</h3><p>Stories documenting the organisation and community advocacy work.</p><a href="media-news.html" class="gold-btn">View Social News →</a></div></div></article>
+<article class="media-card"><img src="media11.jpeg" alt="School Programme" loading="lazy"><div class="media-body"><div class="lang-mr"><h3>शाळेचा प्रवास</h3><p>शाळा कशी सुरू झाली, संघर्ष आणि आजपर्यंतची वाटचाल.</p><a href="media-news.html" class="gold-btn">बातम्या वाचा →</a></div><div class="lang-en"><h3>School Journey</h3><p>How the school began, the challenges and the journey to today.</p><a href="media-news.html" class="gold-btn">Read the News →</a></div></div></article>
+<article class="media-card"><img src="media13.jpeg" alt="School Activities" loading="lazy"><div class="media-body"><div class="lang-mr"><h3>शाळेचे उपक्रम</h3><p>विद्यार्थी, क्रीडा, सांस्कृतिक कार्यक्रम आणि शैक्षणिक उपक्रमांच्या बातम्या.</p><a href="media-news.html" class="gold-btn">सर्व मीडिया पहा →</a></div><div class="lang-en"><h3>School Activities</h3><p>News about students, sports, cultural programmes and educational activities.</p><a href="media-news.html" class="gold-btn">Explore All Media →</a></div></div></article>
+<article class="media-card"><img src="media14.jpeg" alt="AFPSS Community" loading="lazy"><div class="media-body"><div class="lang-mr"><h3>सामाजिक कार्य</h3><p>फासेपारधी समाजासाठी संस्था आणि संघटनेच्या कार्याची नोंद.</p><a href="media-news.html" class="gold-btn">सामाजिक बातम्या पहा →</a></div><div class="lang-en"><h3>Social Work</h3><p>Stories documenting the organisation and community advocacy work.</p><a href="media-news.html" class="gold-btn">View Social News →</a></div></div></article>
 </div>
 <div style="text-align:center;margin-top:28px"><a href="media-news.html" class="hero-btn"><span class="lang-mr">संपूर्ण मीडिया विभाग पहा →</span><span class="lang-en">Visit the Full Media Section →</span></a></div>
 </section>
@@ -706,37 +878,84 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 </script>
 
 
-<script id="afpss-language-button-bridge">
+
+
+
+<script id="afpss-home-language-final">
 (function(){
+  "use strict";
   const KEY="afpssLanguage";
-  function apply(){
-    const lang=localStorage.getItem(KEY)||"mr";
+
+  function current(){
+    const q=new URLSearchParams(location.search).get("lang");
+    if(q==="mr"||q==="en"){
+      localStorage.setItem(KEY,q);
+      return q;
+    }
+    return localStorage.getItem(KEY)||"mr";
+  }
+
+  function apply(lang){
+    lang=(lang==="en")?"en":"mr";
+    localStorage.setItem(KEY,lang);
     document.documentElement.lang=lang;
-    document.querySelectorAll(".lang-mr").forEach(e=>e.style.display=lang==="mr"?"":"none");
-    document.querySelectorAll(".lang-en").forEach(e=>e.style.display=lang==="en"?"":"none");
-    const mr=document.getElementById("marathiBtn"), en=document.getElementById("englishBtn");
-    if(mr) mr.classList.toggle("active",lang==="mr");
-    if(en) en.classList.toggle("active",lang==="en");
-    document.querySelectorAll("a[href]").forEach(a=>{
-      const h=a.getAttribute("href");
-      if(!h || h.startsWith("#") || h.startsWith("http") || h.startsWith("mailto:") || h.startsWith("tel:")) return;
-      if(!/\.html(?:$|[?#])/i.test(h)) return;
+
+    document.querySelectorAll(".lang-mr").forEach(function(el){
+      el.style.display=(lang==="mr")?"":"none";
+    });
+    document.querySelectorAll(".lang-en").forEach(function(el){
+      el.style.display=(lang==="en")?"":"none";
+    });
+
+    ["marathiBtn","heroMr"].forEach(function(id){
+      const b=document.getElementById(id);
+      if(b) b.classList.toggle("active",lang==="mr");
+    });
+    ["englishBtn","heroEn"].forEach(function(id){
+      const b=document.getElementById(id);
+      if(b) b.classList.toggle("active",lang==="en");
+    });
+
+    // Carry selected language to every internal HTML page.
+    document.querySelectorAll('a[href]').forEach(function(a){
+      const raw=a.getAttribute("href");
+      if(!raw || raw.startsWith("#") || raw.startsWith("http") ||
+         raw.startsWith("mailto:") || raw.startsWith("tel:") ||
+         raw.startsWith("javascript:")) return;
       try{
-        const u=new URL(h,location.href);
+        const u=new URL(raw,location.href);
+        if(u.origin!==location.origin || !/\.html$/i.test(u.pathname)) return;
         u.searchParams.set("lang",lang);
-        a.href=u.pathname+u.search+u.hash;
+        a.setAttribute("href",u.pathname+u.search+u.hash);
       }catch(e){}
     });
   }
+
   function init(){
-    const mr=document.getElementById("marathiBtn"), en=document.getElementById("englishBtn");
-    if(mr) mr.onclick=function(e){e.preventDefault();localStorage.setItem(KEY,"mr");apply();};
-    if(en) en.onclick=function(e){e.preventDefault();localStorage.setItem(KEY,"en");apply();};
-    const q=new URLSearchParams(location.search).get("lang");
-    if(q==="mr"||q==="en") localStorage.setItem(KEY,q);
-    apply();
+    const mr=document.getElementById("marathiBtn");
+    const en=document.getElementById("englishBtn");
+    const hmr=document.getElementById("heroMr");
+    const hen=document.getElementById("heroEn");
+
+    [mr,hmr].forEach(function(b){
+      if(b) b.addEventListener("click",function(e){
+        e.preventDefault(); apply("mr");
+      });
+    });
+    [en,hen].forEach(function(b){
+      if(b) b.addEventListener("click",function(e){
+        e.preventDefault(); apply("en");
+      });
+    });
+
+    apply(current());
   }
-  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",init); else init();
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",init);
+  }else{
+    init();
+  }
 })();
 </script>
 
