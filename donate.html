@@ -83,8 +83,10 @@ footer{background:#02291c;color:#fff;padding:43px 0 23px}.footer-grid{display:gr
 .floating{position:fixed;right:19px;bottom:19px;z-index:999;background:#df2b2b;color:#fff;padding:13px 21px;border-radius:999px;font-weight:900;box-shadow:0 10px 30px rgba(0,0,0,.25);animation:pulse 2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,43,43,.42)}70%{box-shadow:0 0 0 13px rgba(224,43,43,0)}100%{box-shadow:0 0 0 0 rgba(224,43,43,0)}}
 
-.only-mr{display:none}.lang-active .only-mr{display:block}.lang-active .only-en{display:none}
-[data-en],[data-mr]{transition:opacity .15s}
+/* LANGUAGE VISIBILITY */
+[data-mr]{display:none !important}
+.lang-active [data-en]{display:none !important}
+.lang-active [data-mr]{display:revert !important}
 @media(max-width:950px){.impact-grid{grid-template-columns:repeat(2,1fr)}.donation-grid{grid-template-columns:repeat(2,1fr)}.photo-grid{grid-template-columns:repeat(2,1fr)}.payment-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.nav{min-height:68px}.brand img{width:45px;height:45px}.brand-title{font-size:19px}.brand-sub{font-size:10px}.nav-actions{gap:5px}.lang button,.home{padding:8px 11px;font-size:12px}.home{display:none}.hero{min-height:620px}.hero-content{padding:60px 0}.hero h1{font-size:47px}.hero p{font-size:16px}section{padding:58px 0}.story{padding:28px 21px}.story h3{font-size:28px}.impact-grid,.video-grid,.donation-grid,.partner-grid{grid-template-columns:1fr}.photo-grid{grid-template-columns:1fr 1fr;gap:11px}.photo-card,.photo-card img{min-height:200px}.notice{padding:28px 20px}.notice-head h2{font-size:28px}.sponsor{padding:29px 19px}.sponsor h2{font-size:30px}.monthly{font-size:27px}.box{padding:24px 19px}.floating{left:14px;right:14px;text-align:center;bottom:14px}}
 </style>
