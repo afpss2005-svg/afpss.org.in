@@ -3,1260 +3,524 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AFPSS | Education, Dignity & Opportunity</title>
-<meta name="description" content="Adivasi Fase Pardhi Sudhar Samiti works for the education, residential care, nutrition and brighter future of tribal children through Prashnachinha Adivasi Ashram School.">
-<meta name="keywords" content="AFPSS, Adivasi Fase Pardhi Sudhar Samiti, Fase Pardhi, Tribal Children Education, Amravati NGO, Prashnachinha Adivasi Ashram School">
-<meta name="author" content="Adivasi Fase Pardhi Sudhar Samiti">
-<link rel="canonical" href="https://afpss.org.in/">
+<title>AFPSS | Adivasi Fase Pardhi Sudhar Samiti</title>
+<meta name="description" content="Adivasi Fase Pardhi Sudhar Samiti — Education, dignity, community transformation and social justice.">
+<meta name="theme-color" content="#07131f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
 
 <style>
-.language-switcher{display:flex;align-items:center;gap:4px;padding:5px;border:1px solid rgba(255,255,255,.35);border-radius:30px;background:rgba(0,0,0,.25);backdrop-filter:blur(12px)}
-.language-switcher button{border:0;background:transparent;color:#fff;padding:7px 12px;border-radius:20px;font-weight:800;cursor:pointer}
-.language-switcher button.active{background:#fff;color:#075b3b}
-.premium-hero{position:relative;min-height:82vh;overflow:hidden;isolation:isolate;background:#043d2a}
-.hero-slider{position:absolute;inset:0;z-index:0}
-.hero-slide{position:absolute;inset:0;width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;visibility:hidden;transition:opacity 1.2s ease,transform 4s ease;transform:scale(1.04)}
-.hero-slide.active{opacity:1;visibility:visible;transform:scale(1)}
-.premium-hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,30,20,.88),rgba(0,50,35,.55),rgba(0,0,0,.15))}
-.premium-hero-content{position:relative;z-index:3;width:min(1200px,92%);margin:auto;min-height:82vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;color:#fff}
-.hero-language{position:absolute;right:0;top:25px}
-.hero-small-text{color:#ffd45b;font-weight:800;font-size:17px;margin-bottom:18px}
-.premium-hero h1{font-size:clamp(45px,6vw,82px);line-height:1.08;margin:0;font-weight:900;letter-spacing:-2px}
-.premium-hero h1 span{color:#ffd45b}
-.hero-message{font-size:18px;font-weight:600;margin-top:8px}
-.premium-donate-btn{display:inline-flex;align-items:center;justify-content:center;margin-top:28px;padding:16px 32px;background:#ef3340;color:#fff;border-radius:50px;text-decoration:none;font-size:17px;font-weight:900;box-shadow:0 15px 40px rgba(0,0,0,.28)}
-.premium-section,.premium-about{padding:90px 0}
-.premium-title{text-align:center;max-width:850px;margin:0 auto 45px}
-.premium-title small{color:#b27709;font-weight:900;letter-spacing:2px}
-.premium-title h2{color:#075b3b;font-size:42px;margin:12px 0}
-.premium-title p{color:#687870;line-height:1.7}
-.premium-impact{padding:90px 0;background:linear-gradient(135deg,#f3faf6,#fff)}
-.impact-grid,.activities-grid,.awards-grid,.media-preview,.documents-grid,.gallery-grid{width:min(1100px,92%);margin:auto;display:grid;gap:20px}
-.impact-grid{grid-template-columns:repeat(4,1fr)}
-.impact-card,.activity-box,.award-card,.document-card{background:#fff;border:1px solid #e1ece7;border-radius:22px;box-shadow:0 15px 40px rgba(0,60,40,.08)}
-.impact-card{padding:32px 20px;text-align:center}
-.impact-card .impact-icon,.activity-box .icon{font-size:38px}
-.impact-card strong{display:block;color:#075b3b;font-size:38px;font-weight:900}
-.impact-card h3,.activity-box h3,.award-card-content h3,.document-card h3{color:#075b3b}
-.impact-card p,.activity-box p,.award-card-content p,.document-card p{color:#687870}
-.about-premium-grid,.founder-premium-grid,.success-grid{width:min(1150px,92%);margin:auto;display:grid;gap:60px;align-items:center}
-.about-premium-grid{grid-template-columns:1fr 1fr}
-.about-premium-image img,.founder-premium-grid img,.success-grid img{width:100%;display:block;border-radius:28px;box-shadow:0 25px 60px rgba(0,60,40,.16)}
-.about-premium-content h2,.founder-content h2,.success-content h2{color:#075b3b;font-size:42px;line-height:1.15}
-.about-premium-content p,.founder-content p,.success-content p{color:#53665d;line-height:1.85}
-.about-highlight,.founder-quote{margin-top:25px;padding:18px;background:#f4faf7;border-left:4px solid #e8a81d;border-radius:12px;color:#075b3b;font-weight:800}
-.activities-grid{grid-template-columns:repeat(4,1fr)}
-.activity-box{padding:28px 20px;text-align:center}
-.story-box{width:min(1050px,92%);margin:auto;padding:45px;background:linear-gradient(135deg,#f5faf7,#fff);border-radius:28px;border:1px solid #e0ece6;box-shadow:0 20px 50px rgba(0,60,40,.08)}
-.story-box h2{color:#075b3b;font-size:40px}.story-box p{color:#52655c;font-size:16px;line-height:1.9}
-.story-quote{margin-top:25px;padding:22px;background:#075b3b;color:#fff;border-radius:16px;font-size:18px;font-weight:800}
-.success-section{padding:90px 0;background:#f7faf8}.success-grid{grid-template-columns:1fr 1fr}.success-grid img{object-fit:cover}
-.awards-grid{grid-template-columns:repeat(3,1fr)}
-.award-card{overflow:hidden}.award-card img{width:100%;height:250px;object-fit:cover}.award-card-content{padding:22px}
-.awards-more{padding:30px;text-align:center;background:#075b3b;color:#fff;border-radius:22px}.awards-more-btn{display:inline-block;margin-top:15px;padding:12px 22px;border-radius:30px;background:#fff;color:#075b3b;text-decoration:none;font-weight:900}
-.gallery-grid{grid-template-columns:repeat(5,1fr);gap:14px}.gallery-grid img{width:100%;height:190px;object-fit:cover;border-radius:16px}
-.documents-grid{grid-template-columns:repeat(4,1fr)}.document-card{padding:28px 20px;text-align:center;text-decoration:none}.document-card span{font-size:35px}.document-card strong{color:#b27709}
-.donation-cta{padding:75px 20px;background:linear-gradient(135deg,#075b3b,#033c28);color:#fff;text-align:center}.donation-cta h2{font-size:42px}.donation-cta a{display:inline-block;margin-top:20px;padding:15px 30px;border-radius:40px;background:#ef3340;color:#fff;text-decoration:none;font-weight:900}
-.location-section{padding:90px 0;background:#f4faf7;text-align:center}.map-button{display:inline-flex;gap:8px;margin-top:20px;padding:15px 28px;border-radius:40px;background:#075b3b;color:#fff;text-decoration:none;font-weight:900}
-.footer{background:#062d20;color:#fff;padding:55px 0 20px}.footer-grid{width:min(1100px,92%);margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:35px}.footer h3{color:#ffd45b}.footer a{display:block;color:#dbe9e2;text-decoration:none;margin:8px 0}.footer p{color:#b8cbc2;line-height:1.7}.footer-bottom{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.15);text-align:center;color:#a9bbb3}
-.whatsapp{position:fixed;right:20px;bottom:20px;width:58px;height:58px;display:flex;align-items:center;justify-content:center;background:#25d366;color:#fff;border-radius:50%;font-size:28px;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:999}
-@media(max-width:900px){.impact-grid,.activities-grid{grid-template-columns:repeat(2,1fr)}.about-premium-grid,.founder-premium-grid,.success-grid{grid-template-columns:1fr}.awards-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(3,1fr)}.documents-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.premium-hero,.premium-hero-content{min-height:88vh}.hero-language{top:15px}.premium-hero h1{font-size:43px;letter-spacing:-1px}.hero-message{font-size:15px}.premium-donate-btn{width:100%;max-width:280px}.impact-grid,.activities-grid,.awards-grid,.documents-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid img{height:160px}.premium-title h2,.about-premium-content h2,.founder-content h2,.success-content h2,.donation-cta h2{font-size:32px}.story-box{padding:25px}.footer-grid{grid-template-columns:1fr}}
+:root{
+  --navy:#07131f;
+  --navy2:#0b2029;
+  --green:#075b3b;
+  --green2:#0c7250;
+  --gold:#e8c95e;
+  --gold2:#d4af37;
+  --cream:#fff9e8;
+  --light:#f5f8f6;
+  --text:#183229;
+  --muted:#63736d;
+  --white:#fff;
+  --border:#dce8e2;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);background:var(--light);font-family:Inter,"Noto Sans Devanagari",sans-serif;line-height:1.75}
+a{text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+.lang-en{display:none}
 
-.school-info-grid{
-  width:min(1100px,92%);
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.45fr .75fr;
-  gap:28px;
-  align-items:stretch;
+/* HEADER */
+.site-header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid #e8eeeb;
 }
-.school-info-content{
-  padding:42px;
-  border-radius:28px;
-  background:linear-gradient(135deg,#f5faf7,#fff);
-  border:1px solid #e0ece6;
-  box-shadow:0 20px 50px rgba(0,60,40,.08);
+.nav{
+  min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px
 }
-.school-info-content h3{
-  color:#075b3b;
-  font-size:30px;
-  margin-bottom:18px;
-}
-.school-info-content p{
-  color:#53665d;
-  line-height:1.9;
-  margin-bottom:14px;
-}
-.school-youtube-btn,.school-youtube-side-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  margin-top:12px;
-  padding:13px 22px;
-  border-radius:40px;
-  background:#075b3b;
-  color:#fff;
-  text-decoration:none;
-  font-weight:900;
-  box-shadow:0 10px 25px rgba(0,60,40,.16);
-}
-.school-youtube-card{
-  padding:34px 28px;
-  border-radius:28px;
-  color:#fff;
-  background:linear-gradient(145deg,#071321,#0b2530);
-  border:1px solid rgba(212,175,55,.35);
-  box-shadow:0 22px 55px rgba(0,0,0,.18);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:flex-start;
-}
-.school-youtube-label{
-  color:#e5c65b;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:2px;
-}
-.school-youtube-play{
-  width:64px;
-  height:64px;
-  margin:20px 0 15px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#ff1744;
-  color:#fff;
-  font-size:25px;
-  padding-left:4px;
-}
-.school-youtube-card h3{
-  font-size:25px;
-  margin-bottom:7px;
-}
-.school-youtube-card p{
-  color:#b9c7c2;
-  line-height:1.7;
-}
-.school-youtube-side-btn{
-  background:linear-gradient(135deg,#d4af37,#f2d56b);
-  color:#111;
-  margin-top:18px;
-}
-@media(max-width:900px){
-  .school-info-grid{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  .school-info-content{padding:27px 20px}
-  .school-info-content h3{font-size:25px}
-  .school-youtube-card{padding:28px 22px}
+.brand{display:flex;align-items:center;gap:12px;color:#173229}
+.brand img{width:48px;height:48px;object-fit:contain;border-radius:50%}
+.brand strong{display:block;font-size:18px;line-height:1.1}
+.brand small{display:block;color:#72817b;font-size:10px;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:#34443e;font-size:13px;font-weight:700}
+.nav-links a:hover{color:var(--green)}
+.nav-lang{
+  border:1px solid var(--gold2);background:#fff9df;color:#222;
+  padding:7px 12px;border-radius:30px;font-weight:800;cursor:pointer
 }
 
-
-.premium-activities-four{
-  grid-template-columns:repeat(4,1fr);
-  width:min(1100px,92%);
-  margin:auto;
-}
-.premium-activities-four .activity-box{
-  min-height:245px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-}
-.premium-activities-four .activity-box p{
-  line-height:1.75;
-}
-@media(max-width:900px){
-  .premium-activities-four{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:600px){
-  .premium-activities-four{grid-template-columns:1fr}
-}
-
-
-.school-updates-preview{
-  width:min(1100px,92%);
-  margin:34px auto 0;
-  padding:30px 34px;
-  border-radius:24px;
-  background:linear-gradient(135deg,#f8fbf9,#eef7f2);
-  border:1px solid #dceae3;
-  box-shadow:0 15px 40px rgba(0,60,40,.07);
-  text-align:center;
-}
-.school-updates-preview span{
-  color:#b27709;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:2px;
-}
-.school-updates-preview h3{
-  margin:10px auto;
-  color:#075b3b;
-  font-size:25px;
-}
-.school-updates-preview p{
-  max-width:800px;
-  margin:0 auto;
-  color:#687870;
-  line-height:1.75;
-}
-.school-updates-preview a{
-  display:inline-flex;
-  margin-top:18px;
-  padding:12px 22px;
-  border-radius:40px;
-  background:#075b3b;
-  color:#fff;
-  text-decoration:none;
-  font-weight:900;
-}
-
-
-.community-preview{
-  padding:95px 0;
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
   background:
-    radial-gradient(circle at 82% 25%,rgba(212,175,55,.14),transparent 28%),
-    linear-gradient(135deg,#06111d,#0a1827);
-  color:#fff;
-  overflow:hidden;
+    radial-gradient(circle at 82% 18%,rgba(232,201,94,.18),transparent 27%),
+    radial-gradient(circle at 8% 85%,rgba(11,114,80,.18),transparent 30%),
+    linear-gradient(135deg,var(--navy),var(--navy2));
+  padding:105px 0 120px;
 }
-.community-preview-inner{
-  width:min(1150px,92%);
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.35fr .65fr;
-  gap:55px;
-  align-items:center;
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+.eyebrow{font-size:11px;letter-spacing:3px;color:var(--gold);font-weight:900}
+.hero h1{font-size:clamp(42px,6vw,78px);line-height:1.05;margin:16px 0 22px}
+.hero p{font-size:18px;color:#c7d2ce;max-width:760px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:13px 21px;border-radius:50px;font-weight:900;font-size:13px;
+  transition:.2s
 }
-.community-preview-copy small{
-  color:#e5c65b;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:3px;
+.btn-gold{background:linear-gradient(135deg,#f3d66b,#dfbc3f);color:#111;box-shadow:0 10px 28px rgba(212,175,55,.2)}
+.btn-outline{border:1px solid rgba(232,201,94,.7);color:#fff;background:rgba(255,255,255,.03)}
+.btn:hover{transform:translateY(-2px)}
+.hero-orbit{
+  min-height:370px;border:1px solid rgba(232,201,94,.38);
+  border-radius:34px;background:rgba(255,255,255,.035);
+  display:flex;align-items:center;justify-content:center;position:relative
 }
-.community-preview-copy h2{
-  margin:14px 0 20px;
-  font-size:clamp(34px,4vw,52px);
-  line-height:1.12;
-  font-weight:900;
+.hero-orbit:before{
+  content:"";width:210px;height:210px;border:1px solid rgba(232,201,94,.65);
+  border-radius:50%;position:absolute
 }
-.community-preview-copy p{
-  color:#c4d0cb;
-  line-height:1.9;
-  font-size:16px;
-  max-width:760px;
-}
-.community-preview-btn{
-  display:inline-flex;
-  margin-top:20px;
-  padding:14px 25px;
-  border-radius:50px;
-  background:linear-gradient(135deg,#d4af37,#f2d56b);
-  color:#111;
-  text-decoration:none;
-  font-weight:900;
-  box-shadow:0 14px 35px rgba(212,175,55,.18);
-}
-.community-preview-side{
-  min-height:380px;
-  border:1px solid rgba(212,175,55,.32);
-  border-radius:32px;
-  background:rgba(255,255,255,.035);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  box-shadow:0 25px 70px rgba(0,0,0,.28);
-}
-.community-orbit{
-  width:210px;
-  height:210px;
-  border-radius:50%;
-  border:1px solid rgba(229,198,91,.55);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  color:#f2d56b;
-  font-size:15px;
-  font-weight:900;
-  letter-spacing:3px;
-  line-height:1.6;
-}
-.community-orbit span{font-size:24px}
-.community-side-note{
-  margin-top:25px;
-  display:flex;
-  flex-direction:column;
-  gap:7px;
-  color:#c4d0cb;
-  font-size:13px;
-  line-height:1.6;
-}
-.community-side-note strong{color:#fff}
-@media(max-width:900px){
-  .community-preview-inner{grid-template-columns:1fr}
-  .community-preview-side{min-height:300px}
-}
-@media(max-width:600px){
-  .community-preview{padding:70px 0}
-  .community-preview-copy h2{font-size:34px}
-  .community-preview-copy p{font-size:15px}
-  .community-preview-side{min-height:270px}
-  .community-orbit{width:175px;height:175px}
+.orbit-text{text-align:center;position:relative;z-index:2;color:var(--gold);font-weight:900;letter-spacing:2px}
+.orbit-text b{display:block;font-size:28px;margin:8px 0}
+.hero-wave{
+  position:absolute;bottom:-100px;left:-5%;width:110%;height:190px;background:var(--light);
+  border-radius:50% 50% 0 0/100% 100% 0 0
 }
 
+/* GENERIC */
+.section{padding:88px 0}
+.section.alt{background:#edf4f0}
+.section-head{text-align:center;max-width:900px;margin:0 auto 42px}
+.section-head small{font-size:11px;letter-spacing:3px;color:#a87508;font-weight:900}
+.section-head h2{color:var(--green);font-size:clamp(32px,4.5vw,52px);line-height:1.18;margin:12px 0}
+.section-head p{color:var(--muted);max-width:820px;margin:auto}
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:#fff;border:1px solid var(--border);border-radius:26px;
+  padding:30px;box-shadow:0 18px 45px rgba(0,55,40,.06)
+}
+.card .icon{font-size:34px}
+.card h3{color:var(--green);font-size:21px;line-height:1.35;margin:12px 0 7px}
+.card p{color:#61716b;font-size:15px}
+.link-btn{display:inline-flex;margin-top:10px;color:#76590a;font-weight:900}
 
-.social-justice-preview{padding:95px 0;background:linear-gradient(135deg,#08131f,#0d2028);color:#fff}
-.sj-inner{width:min(1150px,92%);margin:auto;display:grid;grid-template-columns:1.35fr .65fr;gap:55px;align-items:center}
-.sj-copy small{color:#e5c65b;font-size:11px;font-weight:900;letter-spacing:3px}
-.sj-copy h2{font-size:clamp(32px,4vw,52px);line-height:1.15;margin:15px 0 20px}
-.sj-copy p{color:#c6d1cd;line-height:1.9;max-width:800px}
-.sj-copy a{display:inline-flex;margin-top:18px;padding:14px 24px;border-radius:50px;background:linear-gradient(135deg,#d4af37,#f2d56b);color:#111;text-decoration:none;font-weight:900}
-.sj-side{min-height:350px;border:1px solid rgba(212,175,55,.32);border-radius:30px;background:rgba(255,255,255,.035);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 25px 65px rgba(0,0,0,.25)}
-.sj-badge{width:190px;height:190px;border:1px solid rgba(229,198,91,.6);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#f2d56b;font-weight:900;letter-spacing:3px;line-height:1.5}
-.sj-badge span{font-size:24px}
-.sj-side div:last-child{margin-top:22px;display:flex;flex-direction:column;gap:5px;color:#fff}
-.sj-side small{color:#aebdb7}
-@media(max-width:900px){.sj-inner{grid-template-columns:1fr}.sj-side{min-height:280px}}
+/* STORY */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.story-card{
+  background:#fff;border:1px solid var(--border);border-radius:30px;
+  padding:38px;box-shadow:0 18px 45px rgba(0,55,40,.06)
+}
+.story-card h3{font-size:28px;color:var(--green);line-height:1.3;margin-top:0}
+.story-card p{color:#586a63}
+.quote{
+  margin-top:22px;padding:20px 22px;border-left:4px solid var(--gold2);
+  background:var(--cream);color:#66521b;font-weight:700;border-radius:0 16px 16px 0
+}
 
-
-.organisation-preview{padding:88px 0;background:linear-gradient(135deg,#07131f,#0b2029);color:#fff}
-.organisation-preview-inner{width:min(1120px,92%);margin:auto;display:grid;grid-template-columns:1.4fr .6fr;gap:45px;align-items:center}
-.organisation-preview small{color:#e5c65b;font-size:11px;font-weight:900;letter-spacing:3px}
-.organisation-preview h2{font-size:clamp(32px,4vw,50px);line-height:1.15;margin:15px 0 20px}
-.organisation-preview p{color:#c6d1cd;line-height:1.9;max-width:800px}
-.organisation-preview a{display:inline-flex;margin-top:18px;padding:14px 24px;border-radius:50px;background:linear-gradient(135deg,#d4af37,#f2d56b);color:#111;text-decoration:none;font-weight:900}
-.organisation-preview-side{min-height:300px;border:1px solid rgba(212,175,55,.35);border-radius:30px;background:rgba(255,255,255,.035);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 25px 60px rgba(0,0,0,.25)}
-.organisation-preview-side strong{font-size:27px;letter-spacing:4px;line-height:1.4;color:#f2d56b}
-.organisation-preview-side span{margin-top:18px;color:#c5d0cb;font-size:13px}
-@media(max-width:850px){.organisation-preview-inner{grid-template-columns:1fr}.organisation-preview-side{min-height:230px}}
-
-
+/* SOCIAL MISSION — LOCKED */
 .social-mission{
-  padding:96px 0;
+  padding:100px 0;color:#fff;
   background:
-    radial-gradient(circle at 12% 10%,rgba(212,175,55,.10),transparent 28%),
+    radial-gradient(circle at 15% 12%,rgba(212,175,55,.09),transparent 28%),
     linear-gradient(135deg,#07131f,#0b2029);
-  color:#fff;
 }
-.social-mission-heading{
-  width:min(1050px,92%);
-  margin:0 auto 42px;
-  text-align:center;
-}
-.social-mission-heading small{
-  color:#e5c65b;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:3px;
-}
-.social-mission-heading h2{
-  margin:14px 0 14px;
-  color:#fff;
-  font-size:clamp(34px,4.5vw,56px);
-  line-height:1.12;
-}
-.social-mission-heading p{
-  max-width:820px;
-  margin:auto;
-  color:#bdcbc5;
-  line-height:1.8;
-}
-.social-mission-grid{
-  width:min(1100px,92%);
-  margin:auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
+.social-head{text-align:center;max-width:900px;margin:0 auto 44px}
+.social-head small{color:var(--gold);font-size:11px;letter-spacing:3px;font-weight:900}
+.social-head h2{font-size:clamp(34px,4.5vw,58px);line-height:1.12;margin:13px 0;color:#fff}
+.social-head p{color:#bfcdc8;max-width:820px;margin:auto}
+.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .mission-card{
-  position:relative;
-  padding:38px 34px 34px;
-  border-radius:28px;
-  background:rgba(255,255,255,.045);
-  border:1px solid rgba(212,175,55,.30);
-  box-shadow:0 25px 65px rgba(0,0,0,.24);
-  overflow:hidden;
+  position:relative;overflow:hidden;padding:38px 34px;border-radius:28px;
+  background:rgba(255,255,255,.045);border:1px solid rgba(212,175,55,.3);
+  box-shadow:0 25px 65px rgba(0,0,0,.22)
 }
 .mission-card:before{
-  content:"";
-  position:absolute;
-  left:0;top:0;right:0;height:3px;
-  background:linear-gradient(90deg,#d4af37,transparent);
+  content:"";position:absolute;left:0;right:0;top:0;height:3px;
+  background:linear-gradient(90deg,var(--gold2),transparent)
 }
-.mission-number{
-  position:absolute;
-  right:25px;
-  top:20px;
-  color:rgba(229,198,91,.22);
-  font-size:42px;
-  font-weight:900;
-}
-.mission-icon{
-  font-size:42px;
-  margin-bottom:18px;
-}
-.mission-card h3{
-  margin:0 0 10px;
-  color:#fff;
-  font-size:25px;
-  line-height:1.35;
-}
-.mission-card span{
-  display:block;
-  color:#e5c65b;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:1.5px;
-  margin-bottom:16px;
-}
-.mission-card p{
-  color:#c3d0cb;
-  line-height:1.85;
-  min-height:108px;
-}
-.mission-card a{
-  display:inline-flex;
-  margin-top:8px;
-  padding:12px 20px;
-  border-radius:40px;
-  background:#f2d56b;
-  color:#111;
-  text-decoration:none;
-  font-weight:900;
-}
-@media(max-width:850px){
-  .social-mission-grid{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  .social-mission{padding:70px 0}
-  .mission-card{padding:30px 24px}
-  .mission-card h3{font-size:22px}
-}
+.mission-number{position:absolute;right:24px;top:17px;font-size:44px;font-weight:900;color:rgba(232,201,94,.2)}
+.mission-icon{font-size:42px}
+.mission-card h3{font-size:25px;line-height:1.35;color:#fff;margin:12px 0 8px}
+.mission-card span{color:var(--gold);font-size:11px;font-weight:900;letter-spacing:1.5px}
+.mission-card p{color:#c1cfca;min-height:110px}
+.mission-card .btn{margin-top:6px}
 
+/* AWARDS */
+.awards-preview{background:#07131f;color:#fff}
+.award-images{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:920px;margin:0 auto}
+.award-box{overflow:hidden;border-radius:25px;border:1px solid rgba(212,175,55,.35);background:#111}
+.award-box img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.awards-preview .section-head h2{color:#fff}
+.awards-preview .section-head p{color:#bac8c3}
+
+/* FOUNDER */
+.founder{
+  background:linear-gradient(135deg,#fffdf4,#f7f9f6)
+}
+.founder-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:38px;align-items:center}
+.founder-photo{
+  min-height:430px;border-radius:30px;border:1px solid var(--border);
+  background:#e9efec;display:flex;align-items:center;justify-content:center;
+  color:#7a8983;font-weight:800;text-align:center;padding:25px
+}
+.founder-copy h2{font-size:clamp(32px,4vw,52px);color:var(--green);line-height:1.15;margin:0 0 18px}
+.founder-copy p{color:#5d6e67}
+
+/* FOOTER */
+footer{background:#06111a;color:#c7d1cd;padding:60px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:35px}
+footer h3{color:#fff}
+footer a{color:#c7d1cd}
+footer a:hover{color:var(--gold)}
+.footer-bottom{margin-top:40px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:#7f8f89}
+
+/* MOBILE */
+@media(max-width:950px){
+  .nav{align-items:flex-start;padding:15px 0}
+  .nav-links{gap:12px}
+  .hero-grid,.story-grid,.founder-grid{grid-template-columns:1fr}
+  .hero-orbit{min-height:300px}
+  .card-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+  .nav{display:block}
+  .nav-links{margin-top:12px;justify-content:flex-start}
+  .brand{margin-bottom:8px}
+  .hero{padding:75px 0 105px}
+  .hero h1{font-size:43px}
+  .hero p{font-size:16px}
+  .section{padding:65px 0}
+  .card-grid,.mission-grid,.award-images,.footer-grid{grid-template-columns:1fr}
+  .mission-card{padding:30px 24px}
+  .story-card{padding:28px 23px}
+}
 </style>
 </head>
 
 <body>
 
 <header class="site-header">
-<div class="nav-container">
-<a href="index.html" class="brand"><img src="logo.jpg" alt="AFPSS Logo"><div><strong>AFPSS</strong><span>Adivasi Fase Pardhi Sudhar Samiti</span></div></a>
-<button class="menu-toggle" id="menuToggle" aria-label="Open Menu">☰</button>
-<nav id="mainNav">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#activities">School Activities</a>
-<a href="school-story.html">Our Story</a>
-<a href="#founder">Founder</a>
-<a href="#awards">Awards</a>
-<a href="#gallery">Gallery</a>
-<a href="media.html">Media</a>
-<a href="#documents">Documents</a>
-<a href="#contact">Contact</a>
-</nav>
+<div class="container nav">
+  <a class="brand" href="index.html">
+    <img src="logo.jpg" alt="AFPSS Logo">
+    <span><strong>AFPSS</strong><small>Adivasi Fase Pardhi Sudhar Samiti</small></span>
+  </a>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="school-activities.html">School Activities</a>
+    <a href="our-story.html">Our Story</a>
+    <a href="founder.html">Founder</a>
+    <a href="awards.html">Awards</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="media-news.html">Media</a>
+    <a href="documents.html">Documents</a>
+    <a href="contact.html">Contact</a>
+    <button class="nav-lang" id="languageButton">English</button>
+  </nav>
 </div>
 </header>
 
-<section class="premium-hero" id="home">
-<div class="hero-slider">
-<div class="hero-slide active" style="background-image:url('hero.JPG');"></div>
-<div class="hero-slide" style="background-image:url('hero4.jpg');"></div>
-<div class="hero-slide" style="background-image:url('hero5.jpg');"></div>
-<div class="hero-slide" style="background-image:url('gallery-school.jpg');"></div>
-</div>
-<div class="premium-hero-overlay"></div>
-<div class="premium-hero-content">
-<div class="hero-language"><div class="language-switcher"><button id="marathiBtn" class="active">मराठी</button><span>|</span><button id="englishBtn">English</button></div></div>
+<main>
 
-<div class="lang-mr">
-<span class="hero-small-text">❤️ वंचित आदिवासी मुलांच्या शिक्षणासाठी</span>
-<h1>एक हात मदतीचा...<br><span>वंचितांच्या शिक्षणाला...</span></h1>
-<p class="hero-message">शिक्षणातून स्वाभिमान, संधीमधून परिवर्तन</p>
-<a href="donate.html" class="premium-donate-btn">❤️ देणगी द्या</a>
-</div>
+<!-- HERO -->
+<section class="hero">
+<div class="container hero-grid">
+  <div>
+    <div class="eyebrow">EDUCATION • DIGNITY • COMMUNITY TRANSFORMATION</div>
 
-<div class="lang-en" style="display:none;">
-<span class="hero-small-text">❤️ Empowering Tribal Children Through Education</span>
-<h1>A Helping Hand...<br><span>For the Education of the Deprived...</span></h1>
-<p class="hero-message">Education • Care • Opportunity • Dignity</p>
-<a href="donate.html" class="premium-donate-btn">❤️ Donate Now</a>
-</div>
-</div>
-</section>
-
-<section class="premium-impact" id="impact">
-<div class="premium-title">
-<small>OUR IMPACT</small>
-<div class="lang-mr"><h2>दोन दशकांचा परिवर्तनाचा प्रवास</h2><p>एका मुलाचे आयुष्य बदलले तर एका कुटुंबाचे भविष्य बदलते.</p></div>
-<div class="lang-en" style="display:none;"><h2>Two Decades of Transformation</h2><p>When we change a child's life, we change the future of a family.</p></div>
-</div>
-<div class="impact-grid">
-<div class="impact-card"><div class="impact-icon">🎓</div><strong>451+</strong><h3 class="lang-mr">विद्यार्थी</h3><p class="lang-mr">निवासी शिक्षण</p><h3 class="lang-en" style="display:none">Students</h3><p class="lang-en" style="display:none">Residential Education</p></div>
-<div class="impact-card"><div class="impact-icon">🏛️</div><strong>2005</strong><h3 class="lang-mr">संस्थेची स्थापना</h3><p class="lang-mr">सामाजिक कार्याचा प्रवास</p><h3 class="lang-en" style="display:none">Organisation Founded</h3><p class="lang-en" style="display:none">Beginning of Social Service</p></div>
-<div class="impact-card"><div class="impact-icon">🏫</div><strong>2011</strong><h3 class="lang-mr">आश्रमशाळेचा प्रवास</h3><p class="lang-mr">१८८ विद्यार्थ्यांपासून सुरुवात</p><h3 class="lang-en" style="display:none">Ashram School Journey</h3><p class="lang-en" style="display:none">Started with 188 children</p></div>
-<div class="impact-card"><div class="impact-icon">🏆</div><strong>50+</strong><h3 class="lang-mr">पुरस्कार</h3><p class="lang-mr">विविध स्तरांवरील सन्मान</p><h3 class="lang-en" style="display:none">Awards</h3><p class="lang-en" style="display:none">Recognition & Honours</p></div>
-</div>
-</section>
-
-<section class="premium-about" id="about">
-<div class="about-premium-grid">
-<div class="about-premium-image"><img src="tribal-children-education.jpg" alt="Prashnachinha Adivasi Ashram School Students" loading="lazy"></div>
-<div class="about-premium-content">
-<small>ABOUT AFPSS</small>
-<div class="lang-mr">
-<h2>शिक्षणातून स्वाभिमान,<br>संधीतून परिवर्तन</h2>
-<p>फासेपारधी समाजातील अनेक मुले सामाजिक, आर्थिक आणि शैक्षणिक अडचणींमुळे मुख्य प्रवाहापासून दूर राहिली.</p>
-<p>आदिवासी फासे पारधी सुधार समितीने 2005 पासून सातत्याने या मुलांना शिक्षणाच्या मुख्य प्रवाहात आणण्यासाठी कार्य सुरू ठेवले आहे.</p>
-<p>प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या माध्यमातून विद्यार्थ्यांना शिक्षण, निवास, अन्न, आरोग्य, संगणक शिक्षण, क्रीडा आणि संस्कारांची संधी दिली जात आहे.</p>
-<div class="about-highlight">❤️ शिक्षण • निवास • पोषण • संधी • स्वाभिमान</div>
-</div>
-<div class="lang-en" style="display:none">
-<h2>Education, Dignity,<br>Transformative Change</h2>
-<p>Many children from the Fase Pardhi community have faced social, economic and educational barriers.</p>
-<p>Adivasi Fase Pardhi Sudhar Samiti has worked since 2005 to bring children into the mainstream of education.</p>
-<p>Through Prashnachinha Adivasi Ashram School, students receive education, residential care, nutrition, healthcare, digital learning, sports and values-based development.</p>
-<div class="about-highlight">❤️ Education • Care • Opportunity • Dignity</div>
-</div>
-</div>
-</div>
-</section>
-
-<section class="premium-section" id="activities">
-<div class="premium-title">
-  <small>SCHOOL ACTIVITIES & UPDATES</small>
-  <h2 class="lang-mr">आमच्या शाळेतील उपक्रम</h2>
-  <h2 class="lang-en" style="display:none">School Activities & Updates</h2>
-  <p class="lang-mr">वर्गाच्या पलीकडील शिक्षण, विद्यार्थ्यांचा सर्वांगीण विकास आणि शाळेतील सततच्या उपक्रमांची माहिती.</p>
-  <p class="lang-en" style="display:none">Learning beyond the classroom, holistic student development and a growing record of school activities.</p>
-</div>
-
-<div class="activities-grid premium-activities-four">
-  <div class="activity-box">
-    <div class="icon">📚</div>
-    <h3 class="lang-mr">शिक्षण</h3>
-    <h3 class="lang-en" style="display:none">Education</h3>
-    <p class="lang-mr">शैक्षणिक उपक्रम, अध्ययन साहित्य आणि विद्यार्थ्यांच्या प्रगतीवर भर.</p>
-    <p class="lang-en" style="display:none">Academic activities, learning resources and student progress.</p>
-  </div>
-
-  <div class="activity-box">
-    <div class="icon">🏠</div>
-    <h3 class="lang-mr">निवासी काळजी</h3>
-    <h3 class="lang-en" style="display:none">Residential Care</h3>
-    <p class="lang-mr">निवास, अन्न, आरोग्य, सुरक्षितता आणि विद्यार्थ्यांची दैनंदिन काळजी.</p>
-    <p class="lang-en" style="display:none">Residential care, nutrition, healthcare, safety and daily student support.</p>
-  </div>
-
-  <div class="activity-box">
-    <div class="icon">⚽</div>
-    <h3 class="lang-mr">क्रीडा व यश</h3>
-    <h3 class="lang-en" style="display:none">Sports & Achievements</h3>
-    <p class="lang-mr">क्रीडा, स्पर्धा, पदके, ट्रॉफी आणि विद्यार्थ्यांच्या उल्लेखनीय यशाचा प्रवास.</p>
-    <p class="lang-en" style="display:none">Sports, competitions, medals, trophies and student achievements.</p>
-    <a href="sports.html" style="display:inline-block;margin-top:12px;text-decoration:none">
-      <span class="lang-mr">क्रीडा प्रवास पाहा →</span>
-      <span class="lang-en" style="display:none">Explore Sports →</span>
-    </a>
-  </div>
-
-  <div class="activity-box">
-    <div class="icon">💻</div>
-    <h3 class="lang-mr">डिजिटल शिक्षण</h3>
-    <h3 class="lang-en" style="display:none">Digital Learning</h3>
-    <p class="lang-mr">संगणक, तंत्रज्ञान आणि भविष्यासाठी आवश्यक कौशल्यांच्या संधी.</p>
-    <p class="lang-en" style="display:none">Computer education, technology and future-ready learning opportunities.</p>
-  </div>
-</div>
-
-<div class="school-updates-preview">
-  <div class="lang-mr">
-    <span>📰 SCHOOL UPDATES</span>
-    <h3>शाळेतील नवीन उपक्रम आणि घडामोडी लवकरच येथे पाहता येतील.</h3>
-    <p>भविष्यातील शाळेचे कार्यक्रम, विद्यार्थ्यांचे यश, नवीन उपक्रम, सूचना आणि विशेष बातम्या या विभागातून नियमितपणे अपडेट करता येतील.</p>
-    <a href="school-updates.html">सर्व शाळा अपडेट्स पहा →</a>
-  </div>
-  <div class="lang-en" style="display:none">
-    <span>📰 SCHOOL UPDATES</span>
-    <h3>Latest school activities and updates will appear here.</h3>
-    <p>Future events, student achievements, new initiatives, notices and special school stories can be updated regularly in this section.</p>
-    <a href="school-updates.html">View All School Updates →</a>
-  </div>
-</div>
-</section>
-
-<section class="premium-section" id="story">
-<div class="premium-title"><small>OUR STORY</small><h2 class="lang-mr">❓ प्रश्नचिन्हचा प्रवास</h2><h2 class="lang-en" style="display:none">❓ The Prashnachinha Journey</h2></div>
-<div class="story-box">
-<div class="lang-mr">
-<h2>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष!</h2>
-<p>कधीकाळी या मुलांच्या हातात पुस्तक नव्हते, शाळा नव्हती आणि सुरक्षित भविष्याची हमी नव्हती.</p>
-<p>फासेपारधी समाजातील मुलांच्या आयुष्यात शिक्षणाचा प्रकाश आणण्याचे स्वप्न प्रा. मतीन भोसले सरांनी पाहिले.</p>
-<p>२२ सप्टेंबर २०११ रोजी १८८ विद्यार्थ्यांपासून प्रश्नचिन्ह आदिवासी आश्रम शाळेचा शिक्षणाचा प्रवास सुरू झाला.</p>
-<p>शिक्षणासाठी संघर्ष झाला. निवासासाठी संघर्ष झाला. अन्नासाठी संघर्ष झाला. पण प्रश्नचिन्ह थांबले नाही.</p>
-<p>आज या प्रवासाने हजारो विद्यार्थ्यांच्या आयुष्याला शिक्षणाची दिशा दिली आहे.</p>
-<div class="story-quote">एका मुलाचे आयुष्य बदलले, तर एका कुटुंबाचे भविष्य बदलते.</div>
-</div>
-<div class="lang-en" style="display:none">
-<h2>From 188 Children to Thousands of Dreams</h2>
-<p>There was a time when many children did not have books, schools or the security of a better future.</p>
-<p>Prof. Matin Bhosale dreamed of bringing the light of education to children from the Fase Pardhi community.</p>
-<p>On 22 September 2011, Prashnachinha Adivasi Ashram School began its journey with 188 students.</p>
-<p>There were challenges around education, residential care and food, but the mission continued.</p>
-<p>The journey has since helped thousands of students move towards education and a brighter future.</p>
-<div class="story-quote">Change one child's life, and you change the future of a family.</div>
-</div>
-</div>
-</section>
-
-
-<section class="community-preview" id="community">
-  <div class="community-preview-inner">
-    <div class="community-preview-copy">
-      <small>BEYOND EDUCATION • COMMUNITY TRANSFORMATION</small>
-
-      <div class="lang-mr">
-        <h2>शिक्षणासोबत समाजपरिवर्तन</h2>
-        <p>
-          प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या माध्यमातून शिक्षणाची वाट
-          उघडताना, आदिवासी फासेपारधी समाजाच्या मूलभूत हक्क, ओळख,
-          सन्मान आणि सामाजिक समावेशनासाठीही कार्य करण्याची आमची विचारधारा आहे.
-        </p>
-        <p>
-          अनेक कुटुंबांना जात प्रमाणपत्र, रेशन कार्ड, शासकीय योजना आणि
-          मूलभूत सुविधांपर्यंत पोहोच मिळण्यात अडचणी येतात. काही कुटुंबे
-          आजही अस्थिर जीवन जगत आहेत आणि उपजीविकेसाठी मोठ्या शहरांकडे
-          स्थलांतर करतात. या वास्तवातून शिक्षणासोबत समाजपरिवर्तनाची
-          दिशा उभी करण्याची गरज आम्ही मानतो.
-        </p>
-        <a href="institution.html" class="community-preview-btn">
-          आमचे समाजपरिवर्तन कार्य वाचा →
-        </a>
-      </div>
-
-      <div class="lang-en" style="display:none">
-        <h2>Education with Community Transformation</h2>
-        <p>
-          While opening pathways to education through Prashnachinha Adivasi
-          Ashram School, our mission also seeks to support the dignity,
-          identity, inclusion and access to basic rights of the Fase Pardhi community.
-        </p>
-        <p>
-          Many families face barriers in accessing caste certificates,
-          ration cards, government schemes and basic facilities. Some
-          continue to live an unstable life and migrate to major cities
-          in search of livelihood. We believe education must go hand in hand
-          with a long-term direction for community transformation.
-        </p>
-        <a href="community-transformation.html" class="community-preview-btn">
-          Explore Our Community Mission →
-        </a>
+    <div class="lang-mr">
+      <h1>शिक्षणातून परिवर्तन.<br>सन्मानाने भविष्य.</h1>
+      <p>आदिवासी फासेपारधी समाजातील मुलांसाठी शिक्षणाची वाट उघडताना, त्यांच्या कुटुंबांच्या आणि समाजाच्या सामाजिक परिवर्तनासाठीही सातत्याने काम करणारी आमची वाटचाल.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#social-mission">आमचे कार्य जाणून घ्या →</a>
+        <a class="btn btn-outline" href="institution.html">संस्थेचे कार्य →</a>
       </div>
     </div>
 
-    <div class="community-preview-side">
-      <div class="community-orbit">COMMUNITY<br><span>•</span><br>TRANSFORMATION</div>
-      <div class="community-side-note">
-        <strong>Education • Identity • Dignity • Opportunity</strong>
-        <span class="lang-mr">समाजाच्या परिवर्तनासाठी दीर्घकालीन वाटचाल</span>
-        <span class="lang-en" style="display:none">A long-term journey towards social inclusion</span>
+    <div class="lang-en">
+      <h1>Transformation through Education.<br>A Dignified Future.</h1>
+      <p>Opening pathways to education for children from the Fase Pardhi community while working towards social transformation for families and the wider community.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#social-mission">Explore Our Mission →</a>
+        <a class="btn btn-outline" href="institution.html">Our Institution →</a>
       </div>
     </div>
   </div>
+
+  <div class="hero-orbit">
+    <div class="orbit-text">
+      <span>EDUCATION</span>
+      <b>•</b>
+      <span>DIGNITY</span>
+      <b>•</b>
+      <span>OPPORTUNITY</span>
+    </div>
+  </div>
+</div>
+<div class="hero-wave"></div>
 </section>
 
+<!-- SCHOOL -->
+<section class="section" id="school">
+<div class="container">
+  <div class="section-head">
+    <small>OUR SCHOOL</small>
+    <div class="lang-mr">
+      <h2>प्रश्नचिन्ह आदिवासी आश्रम शाळा</h2>
+      <p>शिक्षण, सुरक्षित निवास आणि विद्यार्थ्यांच्या सर्वांगीण विकासाची वाट.</p>
+    </div>
+    <div class="lang-en">
+      <h2>Prashnachinha Adivasi Ashram School</h2>
+      <p>Education, residential care and holistic development for students.</p>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <article class="card">
+      <div class="icon">📚</div>
+      <div class="lang-mr"><h3>शिक्षणाची संधी</h3><p>वंचित विद्यार्थ्यांना शिक्षणाच्या मुख्य प्रवाहात आणण्यासाठी सातत्यपूर्ण प्रयत्न.</p></div>
+      <div class="lang-en"><h3>Access to Education</h3><p>Consistent efforts to bring students from disadvantaged backgrounds into the mainstream of education.</p></div>
+    </article>
+    <article class="card">
+      <div class="icon">🏠</div>
+      <div class="lang-mr"><h3>निवास व विद्यार्थी कल्याण</h3><p>निवास, अन्न, आरोग्य, शैक्षणिक वातावरण आणि सुरक्षिततेकडे लक्ष.</p></div>
+      <div class="lang-en"><h3>Residential Student Welfare</h3><p>Attention to residential care, food, healthcare, learning environment and safety.</p></div>
+    </article>
+    <article class="card">
+      <div class="icon">🌱</div>
+      <div class="lang-mr"><h3>सर्वांगीण विकास</h3><p>क्रीडा, संस्कार, सांस्कृतिक उपक्रम, जीवनकौशल्य आणि आत्मविश्वास वाढविण्याच्या संधी.</p></div>
+      <div class="lang-en"><h3>Holistic Development</h3><p>Opportunities through sports, values, cultural activities, life skills and confidence-building.</p></div>
+    </article>
+  </div>
+
+  <div style="text-align:center;margin-top:28px">
+    <a class="btn btn-gold" href="school-activities.html">School Activities →</a>
+  </div>
+</div>
+</section>
+
+<!-- STORY -->
+<section class="section alt" id="story">
+<div class="container story-grid">
+  <article class="story-card">
+    <div class="lang-mr">
+      <h3>❓ प्रश्नचिन्हचा प्रवास</h3>
+      <p>अत्यंत प्रतिकूल परिस्थितीतून आलेल्या विद्यार्थ्यांना शिक्षण, निवास, अन्न आणि सुरक्षित वातावरण देत त्यांच्या भविष्याला नवी दिशा देण्याचा हा प्रवास आहे.</p>
+      <p>एका विद्यार्थ्याच्या आयुष्यातील बदलातून एका कुटुंबात आणि पुढे संपूर्ण समाजात परिवर्तनाची शक्यता निर्माण होऊ शकते.</p>
+      <div class="quote">“शिक्षणाची एक संधी म्हणजे भविष्याची एक नवी शक्यता.”</div>
+    </div>
+    <div class="lang-en">
+      <h3>❓ The Prashnachinha Journey</h3>
+      <p>A journey of creating a new direction for students who come from difficult circumstances through education, residential care, nutrition and a safe environment.</p>
+      <p>A change in one student's life can create new possibilities for a family and, over time, for the wider community.</p>
+      <div class="quote">“One opportunity for education can open a new possibility for the future.”</div>
+    </div>
+  </article>
+
+  <article class="story-card">
+    <div class="lang-mr">
+      <h3>आमची व्यापक विचारधारा</h3>
+      <p>शिक्षण हे परिवर्तनाचे पहिले पाऊल आहे. त्यासोबत सामाजिक जागृती, हक्कांची जाणीव, संधी, स्वावलंबन आणि सन्मानाचे जीवन यांची जोड आवश्यक आहे.</p>
+      <p>म्हणूनच संस्थेचे कार्य शाळेपुरते मर्यादित न राहता समाजपरिवर्तनाशी जोडलेले आहे.</p>
+    </div>
+    <div class="lang-en">
+      <h3>Our Wider Vision</h3>
+      <p>Education is the first step towards transformation. It must be connected with social awareness, rights, opportunity, self-reliance and a life of dignity.</p>
+      <p>That is why the organisation's work extends beyond the school and connects with wider community transformation.</p>
+    </div>
+  </article>
+</div>
+</section>
+
+<!-- SCHOOL ACTIVITIES -->
+<section class="section" id="activities">
+<div class="container">
+  <div class="section-head">
+    <small>SCHOOL ACTIVITIES</small>
+    <div class="lang-mr">
+      <h2>आमच्या शाळेतील उपक्रम</h2>
+      <p>वर्गाच्या पलीकडील शिक्षण आणि सर्वांगीण विकास.</p>
+    </div>
+    <div class="lang-en">
+      <h2>Our School Activities</h2>
+      <p>Learning beyond the classroom and opportunities for holistic development.</p>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <article class="card"><div class="icon">🏃</div><div class="lang-mr"><h3>क्रीडा व आरोग्य</h3><p>विद्यार्थ्यांच्या शारीरिक विकासासाठी क्रीडा आणि आरोग्यविषयक उपक्रम.</p></div><div class="lang-en"><h3>Sports & Health</h3><p>Sports and health-oriented activities supporting students' physical development.</p></div></article>
+    <article class="card"><div class="icon">🎭</div><div class="lang-mr"><h3>सांस्कृतिक उपक्रम</h3><p>कला, संस्कृती आणि विद्यार्थ्यांच्या आत्मविश्वासाला व्यासपीठ.</p></div><div class="lang-en"><h3>Cultural Activities</h3><p>Platforms for arts, culture and confidence-building.</p></div></article>
+    <article class="card"><div class="icon">💻</div><div class="lang-mr"><h3>डिजिटल व कौशल्य शिक्षण</h3><p>बदलत्या काळाशी जुळवून घेण्यासाठी डिजिटल शिक्षण आणि कौशल्यविकासाची दिशा.</p></div><div class="lang-en"><h3>Digital & Skill Learning</h3><p>A future-ready direction through digital learning and skill development.</p></div></article>
+  </div>
+</div>
+</section>
+
+<!-- LOCKED SOCIAL MISSION -->
 <section class="social-mission" id="social-mission">
-  <div class="social-mission-heading">
+<div class="container">
+  <div class="social-head">
     <small>OUR SOCIAL MISSION</small>
     <div class="lang-mr">
       <h2>शिक्षणातून परिवर्तन • हक्कांसाठी आवाज</h2>
       <p>शिक्षण, विद्यार्थी कल्याण आणि समाजपरिवर्तनासोबत फासेपारधी समाजाच्या हक्कांसाठी संघटितपणे काम करण्याची आमची व्यापक दिशा.</p>
     </div>
-    <div class="lang-en" style="display:none">
+    <div class="lang-en">
       <h2>Transformation through Education • A Voice for Rights</h2>
       <p>Our wider mission combines education, student welfare and community transformation with a collective voice for the rights and dignity of the Fase Pardhi community.</p>
     </div>
   </div>
 
-  <div class="social-mission-grid">
+  <div class="mission-grid">
     <article class="mission-card">
-      <div class="mission-number">01</div>
-      <div class="mission-icon">🏫</div>
+      <div class="mission-number">01</div><div class="mission-icon">🏫</div>
       <div class="lang-mr">
         <h3>आदिवासी फासेपारधी सुधार समिती</h3>
         <span>शिक्षण • विद्यार्थी कल्याण • समाजपरिवर्तन</span>
         <p>प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या माध्यमातून शिक्षण, सुरक्षित निवास, अन्न, आरोग्य, सर्वांगीण विकास आणि समाजाच्या पुढील पिढीसाठी संधी निर्माण करण्याच्या दिशेने कार्य.</p>
-        <a href="community-transformation.html">संस्थेचे कार्य वाचा →</a>
+        <a class="btn btn-gold" href="institution.html">संस्थेचे कार्य वाचा →</a>
       </div>
-      <div class="lang-en" style="display:none">
+      <div class="lang-en">
         <h3>Adivasi Fase Pardhi Sudhar Samiti</h3>
         <span>Education • Student Welfare • Community Transformation</span>
         <p>Working through Prashnachinha Adivasi Ashram School towards education, safe residential care, nutrition, healthcare, holistic development and wider opportunities for the next generation.</p>
-        <a href="community-transformation.html">Explore the Institution →</a>
+        <a class="btn btn-gold" href="institution.html">Explore the Institution →</a>
       </div>
     </article>
 
     <article class="mission-card">
-      <div class="mission-number">02</div>
-      <div class="mission-icon">⚖️</div>
+      <div class="mission-number">02</div><div class="mission-icon">⚖️</div>
       <div class="lang-mr">
         <h3>श्री दादाजी आदिवासी फासेपारधी समाज संघटना, महाराष्ट्र राज्य</h3>
         <span>सामाजिक न्याय • हक्क • संघटन</span>
         <p>समाजातील कागदपत्रे, घरकुल, शासकीय योजनांपर्यंत पोहोच, उपजीविका, बचत गट आणि अन्यायाच्या प्रश्नांना संघटितपणे मांडण्याची दिशा.</p>
-        <a href="social-justice-advocacy.html">संघटनेचा प्रवास वाचा →</a>
+        <a class="btn btn-gold" href="justice-advocacy.html">संघटनेचा प्रवास वाचा →</a>
       </div>
-      <div class="lang-en" style="display:none">
+      <div class="lang-en">
         <h3>Shri Dadaji Adivasi Fase Pardhi Samaj Sanghatana, Maharashtra</h3>
         <span>Social Justice • Rights • Advocacy</span>
         <p>A collective platform for raising community concerns around documentation, housing, eligible government schemes, livelihoods, self-help groups and social justice.</p>
-        <a href="social-justice-advocacy.html">Explore the Organisation →</a>
+        <a class="btn btn-gold" href="justice-advocacy.html">Explore the Organisation →</a>
       </div>
     </article>
   </div>
-</section>
-
-<section class="premium-section" id="founder">
-<div class="premium-title"><small>THE FOUNDER • THE JOURNEY • THE MISSION</small></div>
-<div class="founder-premium-grid">
-<img src="founder.jpg" alt="मतीन शंकराव भोसले सर" loading="lazy">
-<div class="founder-content">
-<div class="lang-mr">
-<h2>मतीन शंकराव भोसले सर</h2>
-<h3>संघर्षातून शिक्षणक्रांतीकडे...</h3>
-<p>फासेपारधी समाजातील वंचित मुलांना शिक्षण, सुरक्षित निवारा, अन्न आणि सन्मानाचे जीवन मिळावे या ध्येयाने मतीन शंकराव भोसले सरांनी आपल्या जीवनाचा मोठा भाग समाजकार्याला समर्पित केला.</p>
-<p>स्वतः अत्यंत प्रतिकूल परिस्थितीतून पुढे आलेल्या मतीन सरांनी शिक्षणाची ताकद अनुभवली आणि त्याच शिक्षणाच्या माध्यमातून आपल्या समाजातील मुलांचे भविष्य बदलण्याचा संकल्प केला.</p>
-<div class="founder-quote">“एका मुलाच्या हातात पुस्तक दिले, तर आपण एका पिढीचे भविष्य बदलू शकतो.”</div>
-<a href="founder.html" class="premium-donate-btn">पूर्ण जीवनप्रवास वाचा →</a>
-</div>
-<div class="lang-en" style="display:none">
-<h2>Matin Shankarrao Bhosale Sir</h2>
-<h3>From Struggle to an Educational Revolution...</h3>
-<p>With the vision of providing education, safe shelter, food and a dignified life to deprived children from the Phanse Pardhi community, Matin Shankarrao Bhosale Sir dedicated a major part of his life to social work.</p>
-<p>Having grown up in extremely difficult circumstances, Matin Sir experienced the power of education and resolved to transform the future of children from his community through education.</p>
-<div class="founder-quote">“Give a book to one child, and we can change the future of an entire generation.”</div>
-<a href="founder.html" class="premium-donate-btn">Read Full Journey →</a>
-</div>
-</div>
 </div>
 </section>
 
-<section class="success-section">
-<div class="success-grid">
-<div><img src="students.jpg" alt="AFPSS Student" loading="lazy"></div>
-<div class="success-content">
-<small>SUCCESS STORY</small>
-<h2 class="lang-mr">एका विद्यार्थ्याची प्रेरणादायी वाटचाल</h2>
-<h2 class="lang-en" style="display:none">An Inspiring Student Journey</h2>
-<h3>प्रा. योगेश पवार</h3>
-<p>Assistant Professor | Seloo, Wardha</p>
-<p class="lang-mr">शिक्षणाची संधी मिळाल्याने एका विद्यार्थ्याचे जीवन कसे बदलू शकते याचे प्रेरणादायी उदाहरण.</p>
-<p class="lang-en" style="display:none">An inspiring example of how education, guidance and opportunity can transform a student's life.</p>
-</div>
-</div>
-</section>
-
-<!-- =========================================================
-     AFPSS PREMIUM HOME AWARDS PREVIEW
-     FINAL LOCK
-     ========================================================= -->
-
-<section class="home-awards" id="awards">
-
-  <div class="home-awards-container">
-
-    <div class="home-awards-heading">
-
-      <small>RECOGNITION</small>
-
-      <div class="lang-mr">
-        <h2>🏆 पुरस्कार व सन्मान</h2>
-
-        <p>
-          प्रा. मतीन शंकरराव भोसले सरांच्या सामाजिक कार्याची,
-          शिक्षणाच्या ध्यासाची आणि प्रश्नचिन्ह आदिवासी आश्रम
-          शाळेच्या कार्याची विविध स्तरांवर घेतलेली दखल.
-        </p>
-      </div>
-
-      <div class="lang-en" style="display:none;">
-
-        <h2>🏆 Awards & Recognition</h2>
-
-        <p>
-          Recognition of Prof. Matin Shankarrao Bhosale's
-          social commitment, educational mission and the
-          work of Prashnachinha Adivasi Ashram School.
-        </p>
-
-      </div>
-
-    </div> 
-    <!-- TWO PREMIUM PHOTOS -->
-    <div class="home-awards-grid">
-      <div class="home-award-card">
-        <img src="award-01.jpg" alt="AFPSS Award Recognition 01" loading="lazy">
-      </div>
-      <div class="home-award-card">
-        <img src="award-02.jpg" alt="AFPSS Award Recognition 02" loading="lazy">
-      </div>
-    </div>
-
-    <!-- SHORT MESSAGE -->
-
-    <div class="home-awards-message">
-
-      <div class="lang-mr">
-
-        <p>
-          १८८ विद्यार्थ्यांपासून सुरू झालेला प्रश्नचिन्हचा
-          प्रवास आज हजारो स्वप्नांना शिक्षणाची दिशा देत आहे.
-          या पुरस्कारांमागे संघर्ष, सेवा आणि असंख्य
-          सहकाऱ्यांची साथ आहे.
-        </p>
-
-      </div>
-
-      <div class="lang-en" style="display:none;">
-
-        <p>
-          What began with 188 students has grown into a journey
-          that continues to give direction to thousands of dreams.
-          Behind these recognitions are years of struggle,
-          service and the support of many people.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- ONE BUTTON -->
-
-    <div class="home-awards-button">
-
-      <a href="awards.html">
-
-        🏆
-        <span class="lang-mr">
-          सर्व पुरस्कार व सन्मान पहा →
-        </span>
-
-        <span class="lang-en" style="display:none;">
-          Explore All Awards & Recognition →
-        </span>
-
-      </a>
-
-    </div>
-
+<!-- AWARDS -->
+<section class="section awards-preview">
+<div class="container">
+  <div class="section-head">
+    <small>RECOGNITION</small>
+    <div class="lang-mr"><h2>पुरस्कार व सन्मान</h2><p>समाजकार्य, शिक्षण आणि परिवर्तनाच्या प्रवासाला मिळालेल्या काही महत्त्वाच्या मान्यतांची झलक.</p></div>
+    <div class="lang-en"><h2>Awards & Recognition</h2><p>A glimpse of recognition received along the journey of social work, education and transformation.</p></div>
   </div>
 
+  <div class="award-images">
+    <div class="award-box"><img src="award-01.jpg" alt="Award recognition"></div>
+    <div class="award-box"><img src="award-02.jpg" alt="Award recognition"></div>
+  </div>
+
+  <div style="text-align:center;margin-top:30px">
+    <a class="btn btn-gold" href="awards.html">🏆 <span class="lang-mr">सर्व पुरस्कार व सन्मान पहा →</span><span class="lang-en">View All Awards & Recognition →</span></a>
+  </div>
+</div>
 </section>
 
-
-<style>
-
-/* =========================================================
-   HOME AWARDS — PREMIUM
-   ========================================================= */
-
-.home-awards{
-  position:relative;
-  padding:85px 0;
-
-  background:
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(212,175,55,.10),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      #06111d,
-      #0a1827
-    );
-
-  overflow:hidden;
-}
-
-.home-awards-container{
-  width:min(1200px,92%);
-  margin:auto;
-}
-
-.home-awards-heading{
-  max-width:850px;
-  margin:0 auto 38px;
-  text-align:center;
-}
-
-.home-awards-heading small{
-  color:#e5c65b;
-
-  font-size:11px;
-  font-weight:900;
-
-  letter-spacing:3px;
-}
-
-.home-awards-heading h2{
-  margin:10px 0 12px;
-
-  color:#fff;
-
-  font-size:clamp(30px,4vw,46px);
-
-  line-height:1.15;
-  font-weight:900;
-}
-
-.home-awards-heading p{
-  max-width:760px;
-  margin:auto;
-
-  color:#9baaa4;
-
-  font-size:15px;
-  line-height:1.75;
-}
-
-
-/* FOUR PHOTOS */
-
-.home-awards-grid{
-  display:grid;
-
-  grid-template-columns:
-    repeat(4,1fr);
-
-  gap:16px;
-}
-
-.home-award-card{
-  position:relative;
-
-  height:270px;
-
-  overflow:hidden;
-
-  border-radius:20px;
-
-  border:1px solid
-    rgba(212,175,55,.32);
-
-  background:#0b1725;
-
-  box-shadow:
-    0 18px 45px rgba(0,0,0,.35);
-
-  transition:
-    transform .4s ease,
-    border-color .4s ease,
-    box-shadow .4s ease;
-}
-
-.home-award-card:hover{
-  transform:translateY(-7px);
-
-  border-color:
-    rgba(244,210,91,.85);
-
-  box-shadow:
-    0 25px 60px rgba(0,0,0,.5);
-}
-
-.home-award-card img{
-  display:block;
-
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  transition:
-    transform .7s ease;
-}
-
-.home-award-card:hover img{
-  transform:scale(1.06);
-}
-
-
-/* SHORT MESSAGE */
-
-.home-awards-message{
-  max-width:850px;
-
-  margin:32px auto 0;
-
-  text-align:center;
-}
-
-.home-awards-message p{
-  color:#c2cec9;
-
-  font-size:15px;
-
-  line-height:1.8;
-}
-
-
-/* BUTTON */
-
-.home-awards-button{
-  margin-top:28px;
-
-  text-align:center;
-}
-
-.home-awards-button a{
-  display:inline-flex;
-
-  align-items:center;
-  justify-content:center;
-
-  gap:8px;
-
-  padding:14px 28px;
-
-  border-radius:50px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #d4af37,
-      #f2d56b
-    );
-
-  color:#111;
-
-  text-decoration:none;
-
-  font-size:14px;
-
-  font-weight:900;
-
-  box-shadow:
-    0 12px 35px
-    rgba(212,175,55,.20);
-
-  transition:.3s ease;
-}
-
-.home-awards-button a:hover{
-  transform:translateY(-3px);
-
-  box-shadow:
-    0 18px 45px
-    rgba(212,175,55,.30);
-}
-
-
-/* TABLET */
-
-@media(max-width:900px){
-
-  .home-awards-grid{
-    grid-template-columns:
-      repeat(2,1fr);
-  }
-
-}
-
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-  .home-awards{
-    padding:65px 0;
-  }
-
-  .home-awards-grid{
-    grid-template-columns:1fr;
-    gap:14px;
-  }
-
-  .home-award-card{
-    height:260px;
-  }
-
-  .home-awards-heading h2{
-    font-size:32px;
-  }
-
-  .home-awards-heading p,
-  .home-awards-message p{
-    font-size:14px;
-  }
-
-  .home-awards-button a{
-    width:100%;
-    max-width:320px;
-  }
-
-}
-
-  </style>
-
-<section class="premium-section school-info-section" id="gallery">
-  <div class="premium-title">
-    <small>OUR SCHOOL</small>
-
+<!-- FOUNDER -->
+<section class="section founder" id="founder-preview">
+<div class="container founder-grid">
+  <div class="founder-photo">
+    <div>
+      <div style="font-size:44px">👤</div>
+      <div class="lang-mr">संस्थापक / सामाजिक कार्याचा प्रवास</div>
+      <div class="lang-en">Founder / Social Work Journey</div>
+    </div>
+  </div>
+  <div class="founder-copy">
+    <div class="eyebrow">FOUNDER • SOCIAL WORK • COMMUNITY</div>
     <div class="lang-mr">
-      <h2>🏫 आमच्या कार्याची प्रेरणादायी झलक</h2>
-      <p>प्रश्नचिन्ह आदिवासी आश्रम शाळेचा प्रवास, विद्यार्थ्यांचे शिक्षण आणि त्यांच्या उज्ज्वल भविष्याची वाटचाल.</p>
+      <h2>श्री. मतीन शंकरराव भोसले</h2>
+      <p>शिक्षण, विद्यार्थी कल्याण आणि फासेपारधी समाजाच्या प्रश्नांसाठी सातत्याने काम करणाऱ्या सामाजिक कार्याचा प्रवास.</p>
+      <p>प्रश्नचिन्ह आदिवासी आश्रम शाळेपासून समाजातील व्यापक परिवर्तनाच्या दिशेने ही वाटचाल पुढे जात आहे.</p>
+      <a class="btn btn-gold" href="founder.html">जीवनप्रवास वाचा →</a>
     </div>
-
-    <div class="lang-en" style="display:none">
-      <h2>🏫 Our School Journey</h2>
-      <p>A glimpse into Prashnachinha Adivasi Ashram School, its students, education and journey towards a brighter future.</p>
-    </div>
-  </div>
-
-  <div class="school-info-grid">
-    <div class="school-info-content">
-      <div class="lang-mr">
-        <h3>प्रश्नचिन्ह आदिवासी आश्रम शाळा</h3>
-        <p>
-          फासेपारधी समाजातील वंचित मुलांना शिक्षण, निवास, अन्न, आरोग्य,
-          संस्कार आणि सुरक्षित वातावरण मिळावे या उद्देशाने प्रश्नचिन्ह
-          आदिवासी आश्रम शाळा कार्यरत आहे.
-        </p>
-        <p>
-          २२ सप्टेंबर २०११ रोजी १८८ विद्यार्थ्यांपासून सुरू झालेला हा
-          प्रवास आज शेकडो विद्यार्थ्यांच्या शिक्षणाला आणि स्वप्नांना दिशा देत आहे.
-        </p>
-        <a href="https://youtu.be/E45uYsnHUnQ?si=J3kLmN9pQrStUvWx"
-           target="_blank" rel="noopener" class="school-youtube-btn">
-          ▶️ शाळेचा प्रवास YouTube वर पहा →
-        </a>
-      </div>
-
-      <div class="lang-en" style="display:none">
-        <h3>Prashnachinha Adivasi Ashram School</h3>
-        <p>
-          Prashnachinha Adivasi Ashram School works to provide children from
-          the Fase Pardhi community with education, residential care, food,
-          healthcare, values and a safe environment.
-        </p>
-        <p>
-          Beginning with 188 students on 22 September 2011, the journey
-          continues to create educational opportunities and brighter futures
-          for hundreds of children.
-        </p>
-        <a href="https://youtu.be/E45uYsnHUnQ?si=J3kLmN9pQrStUvWx"
-           target="_blank" rel="noopener" class="school-youtube-btn">
-          ▶️ Watch the School Journey on YouTube →
-        </a>
-      </div>
-    </div>
-
-    <div class="school-youtube-card">
-      <div class="school-youtube-label">SCHOOL JOURNEY • YOUTUBE</div>
-      <div class="school-youtube-play">▶</div>
-      <h3 class="lang-mr">शाळेचा प्रवास</h3>
-      <h3 class="lang-en" style="display:none">School Journey</h3>
-      <p class="lang-mr">शाळेचे कार्य आणि विद्यार्थ्यांचा प्रेरणादायी प्रवास पाहा.</p>
-      <p class="lang-en" style="display:none">Watch the inspiring journey of the school and its students.</p>
-      <a href="https://youtu.be/E45uYsnHUnQ?si=J3kLmN9pQrStUvWx"
-         target="_blank" rel="noopener" class="school-youtube-side-btn">
-        YouTube ↗
-      </a>
+    <div class="lang-en">
+      <h2>Shri Matin Shankarrao Bhosale</h2>
+      <p>A journey of social work focused on education, student welfare and community concerns affecting the Fase Pardhi community.</p>
+      <p>The work continues from Prashnachinha Adivasi Ashram School towards wider community transformation.</p>
+      <a class="btn btn-gold" href="founder.html">Read the Journey →</a>
     </div>
   </div>
-</section>
-
-<section class="premium-section" id="documents">
-
-<div class="premium-title"><small>TRANSPARENCY</small><h2 class="lang-mr">विश्वास आणि पारदर्शकता</h2><h2 class="lang-en" style="display:none">Trust & Transparency</h2><p>Our documents and registrations.</p></div>
-<div class="documents-grid">
-<a href="80G.pdf" target="_blank" class="document-card"><span>📄</span><h3>80G Certificate</h3><p>Income Tax document</p><strong>View PDF →</strong></a>
-<a href="12A.pdf" target="_blank" class="document-card"><span>📄</span><h3>12A Registration</h3><p>Registration document</p><strong>View PDF →</strong></a>
-<a href="Society-Registration.pdf" target="_blank" class="document-card"><span>🏢</span><h3>Registration</h3><p>Society Registration</p><strong>View PDF →</strong></a>
-<a href="Audit-Report.pdf" target="_blank" class="document-card"><span>📊</span><h3>Audit Report</h3><p>Financial transparency</p><strong>View Report →</strong></a>
 </div>
 </section>
 
-<section class="donation-cta">
-<div class="premium-container">
-<span>HELP BUILD A BRIGHTER FUTURE</span>
-<div class="lang-mr"><h2>एका मुलाचे शिक्षण...<br>एका पिढीचे भविष्य.</h2><p>आपली मदत शिक्षण, अन्न, निवास आणि विद्यार्थी कल्याणासाठी महत्त्वाची आहे.</p></div>
-<div class="lang-en" style="display:none"><h2>One Child's Education...<br>A Generation's Future.</h2><p>Your support helps provide education, care, nutrition and opportunity.</p></div>
-<a href="donate.html">❤️ <span class="lang-mr">देणगी द्या</span><span class="lang-en" style="display:none">Donate Now</span></a>
+<!-- CONTACT CTA -->
+<section class="section" style="background:#075b3b;color:#fff;text-align:center">
+<div class="container">
+  <div class="lang-mr">
+    <small style="letter-spacing:3px;color:#e8c95e;font-weight:900">JOIN THE JOURNEY</small>
+    <h2 style="font-size:clamp(30px,4vw,48px);line-height:1.2">शिक्षण • हक्क • सन्मान • सामाजिक परिवर्तन</h2>
+    <p style="color:#c7d5d0">समाजाच्या परिवर्तनाच्या या प्रवासाबद्दल अधिक जाणून घ्या.</p>
+    <a class="btn btn-gold" href="contact.html">संपर्क करा →</a>
+  </div>
+  <div class="lang-en">
+    <small style="letter-spacing:3px;color:#e8c95e;font-weight:900">JOIN THE JOURNEY</small>
+    <h2 style="font-size:clamp(30px,4vw,48px);line-height:1.2">Education • Rights • Dignity • Social Transformation</h2>
+    <p style="color:#c7d5d0">Learn more about the journey of community transformation.</p>
+    <a class="btn btn-gold" href="contact.html">Contact Us →</a>
+  </div>
 </div>
 </section>
 
-<section class="location-section" id="contact">
-<div class="premium-title">
-<small>OUR LOCATION</small>
-<h2 class="lang-mr">आमच्याशी संपर्क साधा</h2><h2 class="lang-en" style="display:none">Visit & Contact Us</h2>
-<p class="lang-mr">📍 प्रश्नचिन्ह आदिवासी आश्रम शाळा<br>मंगरूळ चव्हाळा,<br>ता. नांदगाव खंडेश्वर,<br>जि. अमरावती, महाराष्ट्र</p>
-<p class="lang-en" style="display:none">📍 Prashnachinha Adivasi Ashram School<br>Mangrul Chawala,<br>Tal. Nandgaon Khandeshwar,<br>Dist. Amravati, Maharashtra, India</p>
-<p>📞 +91 9096364529<br>📞 +91 9764239458</p><p>✉️ afpss2005@gmail.com</p>
-<a href="https://maps.app.goo.gl/nMU4ecoQZBkDD9Wr8" target="_blank" rel="noopener" class="map-button">📍 <span class="lang-mr">Google Maps वर मार्ग पहा</span><span class="lang-en" style="display:none">View Location on Google Maps</span></a>
-</div>
-</section>
+</main>
 
-<footer class="footer">
-<div class="footer-grid">
-<div><a href="index.html" class="brand footer-brand"><img src="logo.jpg" alt="AFPSS Logo"><div><strong>AFPSS</strong><span>Adivasi Fase Pardhi Sudhar Samiti</span></div></a><p>Transforming Lives Through Education Since 2005.</p></div>
-<div><h3>Explore</h3><a href="#about">About</a><a href="#activities">School Activities</a><a href="school-story.html">Our Story</a><a href="#founder">Founder</a></div>
-<div><h3>Connect</h3><a href="media.html">Media</a><a href="#documents">Documents</a><a href="#contact">Contact</a></div>
-<div><h3>Support</h3><a href="donate.html">Donation Information</a><p>Your support helps create opportunities for tribal children.</p></div>
+<footer>
+<div class="container">
+  <div class="footer-grid">
+    <div>
+      <h3>AFPSS</h3>
+      <p>Adivasi Fase Pardhi Sudhar Samiti</p>
+      <p>Education • Dignity • Community Transformation</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <p><a href="institution.html">Institution</a></p>
+      <p><a href="justice-advocacy.html">Social Justice & Advocacy</a></p>
+      <p><a href="awards.html">Awards</a></p>
+    </div>
+    <div>
+      <h3>Website</h3>
+      <p><a href="gallery.html">Gallery</a></p>
+      <p><a href="media-news.html">Media & News</a></p>
+      <p><a href="contact.html">Contact</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">© AFPSS • Adivasi Fase Pardhi Sudhar Samiti • All Rights Reserved.</div>
 </div>
-<div class="footer-bottom">© 2026 Adivasi Fase Pardhi Sudhar Samiti. All Rights Reserved.</div>
 </footer>
 
-<a href="https://wa.me/919764239458" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
-
 <script>
-const menuToggle=document.getElementById("menuToggle"),mainNav=document.getElementById("mainNav");
-if(menuToggle&&mainNav){
-menuToggle.addEventListener("click",()=>mainNav.classList.toggle("open"));
-document.querySelectorAll("#mainNav a").forEach(link=>link.addEventListener("click",()=>mainNav.classList.remove("open")));
-}
+const languageButton=document.getElementById("languageButton");
+const mr=document.querySelectorAll(".lang-mr");
+const en=document.querySelectorAll(".lang-en");
+let english=false;
 
-const heroSlides=document.querySelectorAll(".hero-slide");
-let currentHeroSlide=0;
-if(heroSlides.length>1){
-setInterval(()=>{
-heroSlides[currentHeroSlide].classList.remove("active");
-currentHeroSlide=(currentHeroSlide+1)%heroSlides.length;
-heroSlides[currentHeroSlide].classList.add("active");
-},3000);
+function setLanguage(isEnglish){
+  english=isEnglish;
+  mr.forEach(el=>el.style.display=isEnglish?"none":"");
+  en.forEach(el=>el.style.display=isEnglish?"":"none");
+  languageButton.textContent=isEnglish?"मराठी":"English";
+  document.documentElement.lang=isEnglish?"en":"mr";
 }
-
-const marathiBtn=document.getElementById("marathiBtn"),englishBtn=document.getElementById("englishBtn");
-const marathiContent=document.querySelectorAll(".lang-mr"),englishContent=document.querySelectorAll(".lang-en");
-function setLanguage(language){
-if(language==="en"){
-marathiContent.forEach(el=>el.style.display="none");
-englishContent.forEach(el=>el.style.display="");
-englishBtn.classList.add("active");marathiBtn.classList.remove("active");
-document.documentElement.lang="en";localStorage.setItem("afpssLanguage","en");
-}else{
-englishContent.forEach(el=>el.style.display="none");
-marathiContent.forEach(el=>el.style.display="");
-marathiBtn.classList.add("active");englishBtn.classList.remove("active");
-document.documentElement.lang="mr";localStorage.setItem("afpssLanguage","mr");
-}}
-if(marathiBtn&&englishBtn){
-marathiBtn.addEventListener("click",()=>setLanguage("mr"));
-englishBtn.addEventListener("click",()=>setLanguage("en"));
-setLanguage(localStorage.getItem("afpssLanguage")||"mr");
-}
+languageButton.addEventListener("click",()=>setLanguage(!english));
+setLanguage(false);
 </script>
 
 </body>
