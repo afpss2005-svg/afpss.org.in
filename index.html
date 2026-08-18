@@ -443,14 +443,14 @@ const enContent=document.querySelectorAll(".lang-en");
 function setLanguage(language){
 if(language==="en"){
 mrContent.forEach(el=>el.style.display="none");
-enContent.forEach(el=>el.style.display="");
+enContent.forEach(el=>el.style.display="block");
 mrButtons.forEach(btn=>btn.classList.remove("active"));
 enButtons.forEach(btn=>btn.classList.add("active"));
 document.documentElement.lang="en";
 localStorage.setItem("afpssLanguage","en");
 }else{
 enContent.forEach(el=>el.style.display="none");
-mrContent.forEach(el=>el.style.display="");
+mrContent.forEach(el=>el.style.display="block");
 enButtons.forEach(btn=>btn.classList.remove("active"));
 mrButtons.forEach(btn=>btn.classList.add("active"));
 document.documentElement.lang="mr";
