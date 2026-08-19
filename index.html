@@ -362,30 +362,9 @@ content="https://afpss.org.in/logo.jpg">
  </style>
 
  <style>
-/* HOME SCHOOL JOURNEY VIDEOS */
-.home-video-section{
-  width:100%;
-  margin:28px 0 0;
-  padding:24px 0 0;
-  background:transparent;
-  border:0;
-  border-radius:0;
-  box-shadow:none;
-}
-.story-section-title{text-align:left;margin-bottom:18px}
-.story-section-title span{display:block;color:#d69e2e;font-size:12px;font-weight:800;letter-spacing:2px;margin-bottom:6px}
-.story-section-title h2{margin:0;color:#075b3b;font-size:clamp(22px,2.6vw,30px);font-weight:800;line-height:1.25}
-.story-section-title p{margin:7px 0 0;color:#687870;max-width:680px;line-height:1.6;font-size:14px}
-.home-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.home-video-card{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e1e8e3;box-shadow:0 6px 18px rgba(0,0,0,.07)}
-.home-video-card iframe{width:100%;aspect-ratio:16/9;display:block;border:0}
-.home-video-card h3{margin:0;padding:10px 12px;color:#075b3b;font-size:14px;line-height:1.4}
-.story-full-button{display:inline-flex;align-items:center;justify-content:center;margin-top:18px;padding:11px 18px;border-radius:999px;background:#075b3b;color:#fff;text-decoration:none;font-weight:900;font-size:13px;box-shadow:0 8px 20px rgba(7,91,59,.15)}
 .social-mission-grid{grid-template-columns:repeat(2,1fr) !important}
 @media(max-width:900px){.social-mission-grid{grid-template-columns:1fr !important}}
 @media(max-width:720px){
-  .home-video-grid{grid-template-columns:1fr}
-  .home-video-section{padding-top:20px}
 }
 .story-full-button{
   display:inline-flex;
@@ -405,64 +384,109 @@ content="https://afpss.org.in/logo.jpg">
 .story-full-button:hover{
   opacity:.92;
   transform:translateY(-1px);
-}  /* HOME PAGE - REMOVE EMPTY RIGHT COLUMN */
-
+}  /* FINAL HOME PAGE CLEANUP */
 .story-step2{
-  display:block !important;
+  width:min(1180px,92%) !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr) !important;
+  gap:34px !important;
+  align-items:center !important;
+}
+
+.story-step2-copy,.story-step2-gallery{
   width:100% !important;
   max-width:none !important;
 }
 
-.story-step2-copy,
-.story-step2-gallery{
-  width:100% !important;
-  max-width:none !important;
+.story-step2-copy > .lang-mr > h2,
+.story-step2-copy > .lang-en > h2{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .story-step2-gallery{
-  grid-column:auto !important;
+  align-self:center !important;
 }
 
 .story-step2-photos{
   width:100% !important;
-}.
-  .story-step2-more{
-  display:block !important;
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:14px !important;
+}
+
+.story-step2-photos img{
   width:100% !important;
+  height:250px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  background:#f4f8f6;
+  border-radius:16px;
+  display:block;
+}
+
+.story-step2-caption{
+  text-align:center;
+  margin-top:12px;
+}
+
+.story-step2-more{
   height:auto !important;
   min-height:0 !important;
-  max-height:none !important;
-  margin:8px 0 !important;
-  padding:10px 14px !important;
-  align-self:flex-start !important;
-  box-sizing:border-box !important;
+  margin-top:18px !important;
+  padding:14px 16px !important;
 }
 
-.story-step2-more strong{
-  display:block !important;
-  margin:0 !important;
-  padding:0 !important;
+.founder-premium-grid > img{
+  width:min(420px,100%) !important;
+  max-height:520px;
+  height:auto;
+  object-fit:contain !important;
+  margin:0 auto;
 }
-/* DESKTOP - REMOVE EMPTY RIGHT SPACE */
-@media(min-width:851px){
-  #story .story-step2{
-    display:block !important;
-    width:100% !important;
-    max-width:none !important;
+
+.gallery-grid img{
+  height:220px !important;
+  object-fit:contain !important;
+  background:#f4f8f6;
+}
+
+@media(max-width:850px){
+  .story-step2{
+    width:min(94%,700px) !important;
     grid-template-columns:1fr !important;
+    gap:24px !important;
+    padding:22px !important;
   }
+  .story-step2-photos img{
+    height:210px !important;
+  }
+}
 
-  #story .story-step2-copy,
-  #story .story-step2-gallery,
-  #story .story-step2-photos{
-    width:100% !important;
-    max-width:none !important;
+@media(max-width:600px){
+  .story-step2{
+    padding:17px !important;
+    border-radius:22px;
   }
-
-  #story .story-step2-gallery{
-    grid-column:1 !important;
+  .story-step2-photos{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:8px !important;
   }
-}    
+  .story-step2-photos img{
+    height:150px !important;
+    border-radius:12px;
+  }
+  .founder-premium-grid > img{
+    width:min(330px,100%) !important;
+    max-height:430px;
+  }
+  .gallery-grid img{
+    height:170px !important;
+  }
+}
 </style>
 </head>
 
@@ -617,87 +641,27 @@ content="https://afpss.org.in/logo.jpg">
         <div class="story-step2-quote">“When one child's life changes, the future of a family can change.”</div>
       </div>
 
-      
-      <section class="home-video-section" aria-label="School Journey Videos">
-        <div class="story-section-title">
-          <span>🎥 SCHOOL JOURNEY</span>
-          <div class="lang-mr">
-            <h2>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष</h2>
-            <p>प्रश्नचिन्ह शाळेचा प्रवास, विद्यार्थी, संघर्ष आणि परिवर्तनाची प्रेरणादायी कहाणी.</p>
-          </div>
-          <div class="lang-en">
-            <h2>From 188 Children to Thousands of Dreams</h2>
-            <p>The inspiring journey of Prashnachinha School, its students, struggles and transformation.</p>
-          </div>
-        </div>
-
-      </section>
-
       <div class="story-step2-more">
         <strong>
           <span class="lang-mr">अधिक माहितीसाठी</span>
           <span class="lang-en">More Information</span>
         </strong>
-               <!-- ONE FULL SCHOOL JOURNEY BUTTON -->
-        <div style="text-align:center;margin:18px 0 14px;">
-
-          <a href="school-story.html"
-             class="story-full-button">
-
-            <span class="lang-mr">
-              📖 शाळेचा पूर्ण प्रवास →
-            </span>
-
-            <span class="lang-en">
-              📖 Explore the Full School Journey →
-            </span>
-
+        <div style="text-align:center;margin:14px 0 0;">
+          <a href="school-story.html" class="story-full-button">
+            <span class="lang-mr">📖 शाळेचा पूर्ण प्रवास →</span>
+            <span class="lang-en">📖 Explore the Full School Journey →</span>
           </a>
-
         </div>
-
       </div>
 
+    </div>
 
-      <!-- HOME PAGE — ONLY 4 SCHOOL PHOTOS -->
-      <div class="story-step2-gallery">
-
-        <div class="story-step2-photos">
-
-          <img
-            src="school1.jpg"
-            alt="प्रश्नचिन्ह आदिवासी आश्रम शाळा"
-            loading="lazy">
-
-          <img
-            src="school2.jpg"
-            alt="प्रश्नचिन्ह आदिवासी आश्रम शाळा"
-            loading="lazy">
-
-          <img
-            src="school3.jpg"
-            alt="प्रश्नचिन्ह आदिवासी आश्रम शाळा"
-            loading="lazy">
-
-          <img
-            src="school4.jpg"
-            alt="प्रश्नचिन्ह आदिवासी आश्रम शाळा"
-            loading="lazy">
-
-        </div>
-
-        <div class="story-step2-caption">
-
-          <span class="lang-mr">
-            प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या प्रवासातील निवडक क्षण
-          </span>
-
-          <span class="lang-en">
-            Selected moments from the Prashnachinha Adivasi Ashram School journey
-          </span>
-
-        </div>
-
+    <div class="story-step2-gallery">
+      <div class="story-step2-photos">
+        <img src="school1.jpg" alt="प्रश्नचिन्ह आदिवासी आश्रम शाळेतील विद्यार्थी" loading="lazy">
+        <img src="school2.jpg" alt="प्रश्नचिन्ह आदिवासी आश्रम शाळेतील विद्यार्थी" loading="lazy">
+        <img src="school3.jpg" alt="प्रश्नचिन्ह आदिवासी आश्रम शाळेतील विद्यार्थी" loading="lazy">
+        <img src="school4.jpg" alt="प्रश्नचिन्ह आदिवासी आश्रम शाळेतील विद्यार्थी" loading="lazy">
       </div>
       <div class="story-step2-caption">
         <span class="lang-mr">प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या प्रवासातील निवडक क्षण</span>
@@ -707,6 +671,7 @@ content="https://afpss.org.in/logo.jpg">
 
   </div>
 </section>
+
 <section class="premium-section" id="social-mission">
   <div class="premium-title">
     <small>OUR SOCIAL MISSION</small>
