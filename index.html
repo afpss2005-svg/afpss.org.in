@@ -384,7 +384,68 @@ content="https://afpss.org.in/logo.jpg">
 .story-full-button:hover{
   opacity:.92;
   transform:translateY(-1px);
-}  /* FINAL HOME PAGE CLEANUP */
+}  /* PREMIUM JOURNEY — FINAL REFINEMENT */
+.story-step2{
+  position:relative;
+}
+.story-step2-heading{
+  grid-column:1 / -1;
+  text-align:center;
+  padding:2px 10px 4px;
+}
+.story-step2-heading h2{
+  color:#075b3b;
+  font-size:clamp(30px,3.2vw,46px);
+  line-height:1.18;
+  margin:0 auto;
+  font-weight:900;
+  letter-spacing:-.4px;
+  max-width:950px;
+}
+.story-step2-heading .lang-en h2{
+  color:#075b3b;
+}
+.story-step2-copy{
+  align-self:start !important;
+}
+.story-step2-photos img{
+  height:auto !important;
+  min-height:0 !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  background:#f4f8f6;
+}
+.founder-premium-grid{
+  grid-template-columns:minmax(260px,360px) minmax(0,1fr) !important;
+  gap:48px !important;
+}
+.founder-premium-grid > img{
+  width:min(360px,100%) !important;
+  max-height:460px !important;
+}
+@media(max-width:850px){
+  .story-step2-heading{
+    grid-column:auto;
+  }
+  .story-step2-heading h2{
+    font-size:clamp(28px,6vw,38px);
+  }
+  .founder-premium-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+@media(max-width:600px){
+  .story-step2-heading h2{
+    font-size:27px;
+  }
+  .founder-premium-grid > img{
+    width:min(320px,100%) !important;
+    max-height:420px !important;
+  }
+}
+
+/* FINAL HOME PAGE CLEANUP */
 .story-step2{
   width:min(1180px,92%) !important;
   max-width:1180px !important;
@@ -615,10 +676,18 @@ content="https://afpss.org.in/logo.jpg">
 
   <div class="story-step2">
 
+    <div class="story-step2-heading">
+      <div class="lang-mr">
+        <h2>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष!</h2>
+      </div>
+      <div class="lang-en">
+        <h2>From 188 Children to Thousands of Dreams</h2>
+      </div>
+    </div>
+
     <div class="story-step2-copy">
 
       <div class="lang-mr">
-        <h2>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष!</h2>
 
         <p>कधीकाळी या मुलांच्या हातात पुस्तक नव्हते, शाळा नव्हती आणि सुरक्षित भविष्याची हमी नव्हती.</p>
         <p>फासेपारधी समाजातील मुलांच्या आयुष्यात शिक्षणाचा प्रकाश आणण्याचे स्वप्न प्रा. मतीन भोसले सरांनी पाहिले.</p>
@@ -630,7 +699,6 @@ content="https://afpss.org.in/logo.jpg">
       </div>
 
       <div class="lang-en">
-        <h2>From 188 Children to Thousands of Dreams</h2>
 
         <p>There was a time when these children had no books, no school and no assurance of a secure future.</p>
         <p>Prof. Matin Bhosale dreamed of bringing the light of education into the lives of children from the Fase Pardhi community.</p>
