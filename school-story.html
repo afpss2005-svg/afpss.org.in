@@ -3,107 +3,1218 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>प्रश्नचिन्ह — शाळेचा प्रवास</title>
+
+<title>प्रश्नचिन्ह शाळेचा प्रवास | AFPSS</title>
+
+<meta name="description" content="प्रश्नचिन्ह आदिवासी आश्रमशाळेचा संघर्ष, शिक्षण, विद्यार्थी, उपक्रम, बातम्या, फोटो आणि YouTube प्रवास.">
+<meta name="keywords" content="प्रश्नचिन्ह आदिवासी आश्रमशाळा, Adivasi Fase Pardhi Sudhar Samiti, AFPSS, school journey">
+
 <style>
-:root{--bg:#f7f4ed;--ink:#1f2937;--accent:#b91c1c;--gold:#d69e2e;--card:#fff}
-*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
-.hero{padding:56px 20px;text-align:center;background:linear-gradient(135deg,#7f1d1d,#b91c1c);color:#fff}
-.hero h1{margin:0 0 8px;font-size:clamp(30px,5vw,56px)} .hero p{margin:0 auto;max-width:850px;font-size:18px}
-.container{max-width:1180px;margin:auto;padding:36px 18px}
-.section-title{text-align:center;margin-bottom:28px}.section-title small{letter-spacing:2px;font-weight:700;color:var(--accent)}
-.section-title h2{margin:6px 0;font-size:clamp(27px,4vw,42px)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.card{background:var(--card);border-radius:18px;overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.09);border:1px solid #eadfce}
-.card img{width:100%;display:block;cursor:pointer}
-.card-body{padding:20px}.card h3{margin:0 0 6px;color:var(--accent);font-size:24px}.card p{margin:0}
-.needs{margin-top:36px;background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 28px rgba(0,0,0,.07)}
-.needs h2{text-align:center;color:var(--accent)} .needs ul{columns:2;padding-left:24px}
-.note{text-align:center;margin-top:26px;font-size:15px;color:#5b6470}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:20;padding:20px;align-items:center;justify-content:center}
-.modal.open{display:flex}.modal img{max-width:95vw;max-height:90vh;border-radius:10px}.close{position:fixed;top:12px;right:20px;color:#fff;font-size:40px;cursor:pointer}
-@media(max-width:720px){.grid{grid-template-columns:1fr}.needs ul{columns:1}.hero{padding:40px 16px}.container{padding:28px 14px}}
+:root{
+  --green:#075b3b;
+  --green2:#0b7650;
+  --red:#b91c1c;
+  --gold:#d69e2e;
+  --cream:#f7f4ed;
+  --white:#fff;
+  --ink:#24312d;
+  --muted:#687870;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Noto Sans Devanagari",
+  "Noto Sans",sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.75;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
+  box-shadow:0 3px 15px rgba(0,0,0,.06);
+}
+
+.nav{
+  width:min(1180px,94%);
+  margin:auto;
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  color:var(--green);
+}
+
+.brand img{
+  width:52px;
+  height:52px;
+  object-fit:contain;
+  border-radius:50%;
+}
+
+.brand-text strong{
+  display:block;
+  font-size:21px;
+}
+
+.brand-text span{
+  display:block;
+  font-size:12px;
+  color:#748078;
+}
+
+.lang{
+  display:flex;
+  gap:8px;
+}
+
+.lang button{
+  border:1px solid #d8e2dc;
+  background:#fff;
+  color:var(--green);
+  border-radius:30px;
+  padding:9px 18px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.lang button.active{
+  background:var(--green);
+  color:#fff;
+}
+
+.hero{
+  background:
+  linear-gradient(rgba(4,77,49,.88),rgba(7,91,59,.92)),
+  url("prashnachinh-pravas.jpg") center/cover;
+  color:#fff;
+  text-align:center;
+  padding:85px 20px;
+}
+
+.hero small{
+  color:#ffd96a;
+  letter-spacing:3px;
+  font-weight:800;
+}
+
+.hero h1{
+  margin:10px auto;
+  font-size:clamp(34px,6vw,62px);
+  line-height:1.2;
+  max-width:1000px;
+}
+
+.hero p{
+  max-width:850px;
+  margin:18px auto 0;
+  font-size:18px;
+}
+
+.container{
+  width:min(1180px,94%);
+  margin:auto;
+  padding:55px 0;
+}
+
+.section{
+  margin-bottom:65px;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.title small{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-weight:900;
+}
+
+.title h2{
+  color:var(--green);
+  font-size:clamp(28px,4vw,44px);
+  line-height:1.25;
+  margin:7px 0;
+}
+
+.title p{
+  color:var(--muted);
+  max-width:800px;
+  margin:auto;
+}
+
+.story{
+  background:#fff;
+  border-radius:24px;
+  padding:35px;
+  box-shadow:0 10px 35px rgba(0,0,0,.08);
+  border:1px solid #eadfce;
+}
+
+.story p{
+  font-size:17px;
+  margin:0 0 17px;
+}
+
+.highlight{
+  margin:28px 0;
+  padding:24px;
+  background:#eff8f3;
+  border-left:6px solid var(--gold);
+  border-radius:15px;
+  color:var(--green);
+  font-size:20px;
+  font-weight:800;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin:30px 0;
+}
+
+.stat{
+  background:#fff;
+  padding:25px 15px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.stat strong{
+  display:block;
+  font-size:34px;
+  color:var(--green);
+}
+
+.stat span{
+  color:var(--muted);
+  font-weight:700;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.photo{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.photo img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  display:block;
+  cursor:pointer;
+}
+
+.photo p{
+  padding:14px 17px;
+  margin:0;
+  color:var(--green);
+  font-weight:700;
+}
+
+.news{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+.news-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 28px rgba(0,0,0,.08);
+}
+
+.news-card img{
+  width:100%;
+  display:block;
+  cursor:pointer;
+}
+
+.news-card div{
+  padding:20px;
+}
+
+.news-card h3{
+  color:var(--red);
+  margin:0 0 7px;
+}
+
+.youtube{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+.video{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.video iframe{
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  display:block;
+}
+
+.video h3{
+  margin:0;
+  padding:15px 18px;
+  color:var(--green);
+  font-size:18px;
+}
+
+.contact{
+  background:linear-gradient(135deg,var(--green),var(--green2));
+  color:#fff;
+  border-radius:25px;
+  padding:45px 30px;
+  text-align:center;
+}
+
+.contact h2{
+  margin-top:0;
+  font-size:36px;
+}
+
+.contact p{
+  margin:8px 0;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:25px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 25px;
+  border-radius:30px;
+  font-weight:800;
+  background:#fff;
+  color:var(--green);
+}
+
+.btn.gold{
+  background:#f2c94c;
+  color:#24312d;
+}
+
+.btn.red{
+  background:#ef4444;
+  color:#fff;
+}
+
+.back{
+  text-align:center;
+  margin-top:35px;
+}
+
+.back a{
+  color:var(--green);
+  font-weight:800;
+}
+
+.footer{
+  background:#064c35;
+  color:#fff;
+  text-align:center;
+  padding:35px 20px;
+}
+
+.footer p{
+  margin:5px;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:rgba(0,0,0,.92);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.open{
+  display:flex;
+}
+
+.modal img{
+  max-width:95vw;
+  max-height:90vh;
+  border-radius:12px;
+}
+
+.close{
+  position:fixed;
+  top:15px;
+  right:25px;
+  color:#fff;
+  font-size:45px;
+  cursor:pointer;
+}
+
+.en{
+  display:none;
+}
+
+@media(max-width:850px){
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .youtube{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:600px){
+  .nav{
+    min-height:65px;
+  }
+
+  .brand img{
+    width:45px;
+    height:45px;
+  }
+
+  .brand-text strong{
+    font-size:18px;
+  }
+
+  .hero{
+    padding:60px 16px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .container{
+    width:92%;
+    padding:40px 0;
+  }
+
+  .story{
+    padding:23px;
+  }
+
+  .story p{
+    font-size:16px;
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .stat strong{
+    font-size:27px;
+  }
+
+  .gallery,
+  .news{
+    grid-template-columns:1fr;
+  }
+
+  .photo img{
+    height:auto;
+    max-height:400px;
+  }
+
+  .lang button{
+    padding:7px 12px;
+  }
+}
 </style>
 </head>
+
 <body>
-<header class="hero">
-  <h1>❓ प्रश्नचिन्हचा प्रवास</h1>
-  <p>१८८ मुलांपासून हजारो स्वप्नांपर्यंत — शिक्षण, संघर्ष, विद्यार्थी आणि शाळेचा चित्रमय प्रवास.</p>
+
+<header class="topbar">
+  <div class="nav">
+
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="AFPSS Logo">
+      <div class="brand-text">
+        <strong>AFPSS</strong>
+        <span>Adivasi Fase Pardhi Sudhar Samiti</span>
+      </div>
+    </a>
+
+    <div class="lang">
+      <button id="mrBtn" class="active" onclick="showLang('mr')">मराठी</button>
+      <button id="enBtn" onclick="showLang('en')">English</button>
+    </div>
+
+  </div>
 </header>
 
+<section class="hero">
+
+  <div class="mr">
+    <small>प्रश्नचिन्ह आदिवासी आश्रमशाळा</small>
+    <h1>प्रश्नचिन्ह शाळेचा प्रवास</h1>
+    <p>
+      १८८ मुलांपासून आजच्या विद्यार्थ्यांच्या उज्ज्वल भविष्यापर्यंत —
+      शिक्षण, संघर्ष, संस्कार आणि परिवर्तनाची प्रेरणादायी कहाणी.
+    </p>
+  </div>
+
+  <div class="en">
+    <small>PRASHNACHINH TRIBAL ASHRAM SCHOOL</small>
+    <h1>The Journey of Prashnachinh School</h1>
+    <p>
+      From 188 children to a journey of education, dignity,
+      opportunity and a brighter future.
+    </p>
+  </div>
+
+</section>
+
 <main class="container">
-  <section>
-    <div class="section-title">
-      <small>OUR SCHOOL • OUR JOURNEY</small>
-      <h2>प्रश्नचिन्ह — चित्रमय कहाणी</h2>
-      <p>शाळेचा प्रवास, विद्यार्थ्यांचे जीवन आणि बदल घडवणारे उपक्रम.</p>
+
+<!-- STORY -->
+
+<section class="section">
+
+  <div class="title">
+    <small>OUR JOURNEY</small>
+
+    <div class="mr">
+      <h2>प्रश्नचिन्ह — संघर्षातून परिवर्तनाकडे</h2>
+      <p>एका शाळेचा, हजारो स्वप्नांचा आणि शिक्षणातून घडलेल्या परिवर्तनाचा प्रवास.</p>
     </div>
 
-    <div class="grid">
-      <article class="card">
-        <img src="prashnachinh-pravas.jpg" alt="प्रश्नचिन्हकडून उत्तरेकडे — शाळेचा चित्रमय प्रवास" onclick="openImg(this.src)">
-        <div class="card-body">
-          <h3>प्रश्नचिन्हकडून उत्तरेकडे...</h3>
-          <p>सुरुवातीच्या संघर्षापासून नव्या शाळेपर्यंतचा आणि विद्यार्थ्यांच्या बदलाचा चित्रमय प्रवास.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="school-students.jpg" alt="प्रश्नचिन्ह शाळेतील विद्यार्थी आणि शिक्षक" onclick="openImg(this.src)">
-        <div class="card-body">
-          <h3>आमची शाळा — आमचे विद्यार्थी</h3>
-          <p>विद्यार्थी, शिक्षक आणि शाळेचे एकत्रित कुटुंब.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="school-activity.jpg" alt="शाळेतील सामूहिक उपक्रम" onclick="openImg(this.src)">
-        <div class="card-body">
-          <h3>शाळेतील सामूहिक उपक्रम</h3>
-          <p>विद्यार्थ्यांचा सहभाग, शिस्त, संस्कार आणि सर्वांगीण विकास.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="school-needs.jpg" alt="प्रश्नचिन्ह शाळेच्या आवश्यक गरजा" onclick="openImg(this.src)">
-        <div class="card-body">
-          <h3>आमच्या शाळेच्या गरजा</h3>
-          <p>विद्यार्थ्यांच्या निवास, शिक्षण, आरोग्य, पाणी आणि इतर मूलभूत सुविधांसाठी आवश्यक मदत.</p>
-        </div>
-      </article>
+    <div class="en">
+      <h2>Prashnachinh — From Struggle to Transformation</h2>
+      <p>The journey of a school, thousands of dreams and transformation through education.</p>
     </div>
-  </section>
+  </div>
 
-  <section class="needs">
-    <h2>🏫 प्रमुख गरजा</h2>
-    <ul>
-      <li>मुलांचे वसतिगृह — ५०० मुलांच्या निवासासाठी</li>
-      <li>गाद्या, ब्लँकेट, चादरी — ६००</li>
-      <li>डबल बेड — ३००</li>
-      <li>डेस्क-बेंच — ३००</li>
-      <li>शालेय गणवेश व बूट — ५००</li>
-      <li>सोलर लाईट पोल — ४ संच</li>
-      <li>ARO मशीन — १,००० लोकांची क्षमता</li>
-      <li>पाण्याची टाकी — २० नळांसह</li>
-      <li>वैद्यकीय सुविधेसह उपचार कक्ष — २</li>
-      <li>ॲम्ब्युलन्स — १</li>
-      <li>सांस्कृतिक सभागृह</li>
-      <li>क्रीडा साहित्य व खेळणी</li>
-      <li>गेस्ट रूम — महिला/पुरुष २</li>
-      <li>किचन सुविधा व इतर आवश्यक साहित्य</li>
-    </ul>
-  </section>
+  <div class="story">
 
-  <p class="note">टीप: नवीन फोटो, बातम्या, विद्यार्थ्यांचे यश, YouTube व्हिडिओ आणि भविष्यातील प्रकल्प याच रचनेत पुढे सहज जोडता येतील.</p>
+    <div class="mr">
+
+      <p>
+      आदिवासी फासे पारधी समाजातील अनेक मुले सामाजिक, आर्थिक आणि
+      शैक्षणिक अडचणींमुळे शिक्षणाच्या मुख्य प्रवाहापासून दूर होती.
+      त्यांच्या जीवनात शिक्षणाची नवी दिशा निर्माण करण्याचा संकल्प
+      आदिवासी फासे पारधी सुधार समितीने केला.
+      </p>
+
+      <p>
+      सन २००५ पासून संस्थेने समाजातील मुलांच्या शिक्षणासाठी सातत्याने
+      काम सुरू केले. शिक्षण हे केवळ अक्षरज्ञान नसून आत्मविश्वास,
+      स्वाभिमान आणि चांगल्या भविष्याची वाट आहे, या विचारातून
+      संस्थेचा प्रवास पुढे गेला.
+      </p>
+
+      <p>
+      प्रश्नचिन्ह आदिवासी आश्रमशाळेच्या माध्यमातून विद्यार्थ्यांना
+      शिक्षणासोबतच निवास, अन्न, आरोग्य, कपडे, शैक्षणिक साहित्य,
+      संगणक शिक्षण, क्रीडा आणि संस्कारांची संधी उपलब्ध करून देण्याचा
+      प्रयत्न सातत्याने केला जात आहे.
+      </p>
+
+      <p>
+      शाळेच्या सुरुवातीच्या काळात अनेक अडचणी होत्या. मर्यादित साधने,
+      अपुऱ्या सुविधा आणि विद्यार्थ्यांच्या विविध सामाजिक परिस्थिती
+      यांच्यातून शाळेचा प्रवास सुरू झाला.
+      </p>
+
+      <p>
+      सुरुवातीला १८८ विद्यार्थ्यांपासून सुरू झालेला हा प्रवास
+      आज अनेक विद्यार्थ्यांच्या शिक्षणाचे आणि भविष्याचे माध्यम बनला आहे.
+      प्रत्येक विद्यार्थ्यामध्ये क्षमता आहे आणि योग्य संधी मिळाल्यास
+      तो स्वतःचे आयुष्य बदलू शकतो, हा विश्वास या कार्यामागे आहे.
+      </p>
+
+      <p>
+      शाळेत विद्यार्थ्यांना पुस्तकातील शिक्षणासोबत प्रत्यक्ष अनुभवातून
+      शिकण्याच्या विविध संधी दिल्या जातात. कला, संस्कृती, विज्ञान,
+      संगणक, क्रीडा, पर्यावरण, स्वच्छता आणि सामाजिक जाणीव यांसारख्या
+      उपक्रमांमध्ये विद्यार्थ्यांचा सहभाग वाढवला जातो.
+      </p>
+
+      <p>
+      विद्यार्थ्यांच्या व्यक्तिमत्त्व विकासासाठी शिस्त, स्वावलंबन,
+      सहकार्य, नेतृत्व आणि सामाजिक जबाबदारी यांना महत्त्व दिले जाते.
+      शाळेतील प्रत्येक उपक्रम विद्यार्थ्यांच्या आत्मविश्वासाला बळ
+      देण्याचा प्रयत्न करतो.
+      </p>
+
+      <p>
+      काळानुसार शाळेच्या गरजाही वाढत गेल्या. विद्यार्थ्यांसाठी चांगले
+      निवासस्थान, पुरेसे बेड, शैक्षणिक साहित्य, संगणक सुविधा,
+      स्वच्छ पिण्याचे पाणी, आरोग्य सुविधा आणि क्रीडा साहित्य यांची
+      आवश्यकता निर्माण झाली.
+      </p>
+
+      <p>
+      समाजातील दाते, स्वयंसेवी संस्था, मित्रपरिवार आणि संवेदनशील
+      नागरिकांच्या सहकार्यामुळे अनेक उपक्रमांना बळ मिळाले.
+      छोट्या छोट्या मदतीतून विद्यार्थ्यांच्या जीवनात मोठे बदल घडू लागले.
+      </p>
+
+      <p>
+      आज प्रश्नचिन्ह शाळेचा प्रवास हा केवळ एका संस्थेचा प्रवास राहिलेला
+      नाही. तो शिक्षणापासून दूर राहिलेल्या मुलांना मुख्य प्रवाहात आणण्याचा,
+      त्यांच्या स्वप्नांना दिशा देण्याचा आणि समाजात स्वाभिमानाने उभे
+      करण्याचा प्रयत्न आहे.
+      </p>
+
+      <p>
+      पुढील काळात डिजिटल शिक्षण, संगणक प्रयोगशाळा, वाचनालय, क्रीडा,
+      आरोग्य, कौशल्य विकास आणि विद्यार्थ्यांसाठी अधिक चांगल्या
+      निवासी सुविधा निर्माण करण्याचे उद्दिष्ट आहे.
+      </p>
+
+      <p>
+      प्रत्येक मुलाला शिक्षणाचा अधिकार, सुरक्षित निवास, पौष्टिक अन्न,
+      आरोग्य आणि स्वतःचे भविष्य घडवण्याची संधी मिळावी, हीच या
+      प्रवासाची खरी दिशा आहे.
+      </p>
+
+      <div class="highlight">
+        ❤️ शिक्षण • निवास • पोषण • संधी • स्वाभिमान • परिवर्तन
+      </div>
+
+      <p>
+      प्रश्नचिन्ह शाळेची ही कहाणी अजून पूर्ण झालेली नाही.
+      प्रत्येक नवीन विद्यार्थी, प्रत्येक नवीन वर्ग, प्रत्येक नवीन
+      उपक्रम आणि प्रत्येक नवीन स्वप्न या प्रवासाचा पुढचा अध्याय आहे.
+      </p>
+
+    </div>
+
+
+    <div class="en">
+
+      <p>
+      Many children from the Fase Pardhi tribal community remained away
+      from mainstream education because of social, economic and educational
+      challenges. Adivasi Fase Pardhi Sudhar Samiti began working to create
+      a new direction through education.
+      </p>
+
+      <p>
+      Since 2005, the organisation has continuously worked for the education
+      of children from the community. The belief has always been that
+      education is not only literacy, but also confidence, dignity and a
+      pathway towards a better future.
+      </p>
+
+      <p>
+      Through Prashnachinh Tribal Ashram School, students receive education
+      along with residential care, food, healthcare, clothing, educational
+      materials, computer education, sports and opportunities for character
+      development.
+      </p>
+
+      <p>
+      The school journey began with many challenges. Limited resources,
+      basic facilities and difficult social circumstances were part of the
+      early journey.
+      </p>
+
+      <p>
+      What began with 188 students has grown into an educational journey
+      supporting many students and their dreams. The core belief is that
+      every child has potential and the right opportunity can transform
+      that child's life.
+      </p>
+
+      <p>
+      Students learn not only from textbooks but also through practical
+      activities. Art, culture, science, computers, sports, environment,
+      cleanliness and social awareness are part of their learning journey.
+      </p>
+
+      <p>
+      Discipline, self-reliance, teamwork, leadership and social responsibility
+      are encouraged to support the overall development of every student.
+      </p>
+
+      <p>
+      As the school grew, its needs also increased. Better residential
+      facilities, beds, educational materials, computers, safe drinking
+      water, healthcare and sports equipment became increasingly important.
+      </p>
+
+      <p>
+      Support from donors, organisations, friends and compassionate citizens
+      has strengthened several initiatives. Small contributions have helped
+      create meaningful changes in the lives of students.
+      </p>
+
+      <p>
+      Today, the journey of Prashnachinh is more than the journey of a school.
+      It is an effort to bring children into mainstream education, give
+      direction to their dreams and help them stand in society with dignity.
+      </p>
+
+      <p>
+      The future vision includes digital education, computer facilities,
+      a library, sports, healthcare, skill development and better residential
+      facilities for students.
+      </p>
+
+      <p>
+      Every child deserves education, safe shelter, nutritious food,
+      healthcare and an opportunity to build a better future.
+      </p>
+
+      <div class="highlight">
+        ❤️ Education • Shelter • Nutrition • Opportunity • Dignity • Transformation
+      </div>
+
+      <p>
+      The story of Prashnachinh is still being written. Every new student,
+      every classroom, every activity and every new dream becomes another
+      chapter in this continuing journey.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="section">
+
+  <div class="title">
+    <small>OUR SCHOOL</small>
+
+    <div class="mr">
+      <h2>प्रवासातील काही टप्पे</h2>
+    </div>
+
+    <div class="en">
+      <h2>Milestones of Our Journey</h2>
+    </div>
+  </div>
+
+  <div class="stats">
+
+    <div class="stat">
+      <strong>2005</strong>
+      <span class="mr">संस्थेचा सामाजिक प्रवास</span>
+      <span class="en">Organisation's journey</span>
+    </div>
+
+    <div class="stat">
+      <strong>2011</strong>
+      <span class="mr">शाळेच्या प्रवासाची सुरुवात</span>
+      <span class="en">School journey began</span>
+    </div>
+
+    <div class="stat">
+      <strong>188+</strong>
+      <span class="mr">सुरुवातीचे विद्यार्थी</span>
+      <span class="en">Students at the beginning</span>
+    </div>
+
+    <div class="stat">
+      <strong>450+</strong>
+      <span class="mr">आजच्या प्रवासातील विद्यार्थी</span>
+      <span class="en">Students today</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SCHOOL PHOTOS -->
+
+<section class="section">
+
+  <div class="title">
+    <small>PHOTO JOURNEY</small>
+
+    <div class="mr">
+      <h2>📸 प्रश्नचिन्ह शाळेचा चित्रमय प्रवास</h2>
+      <p>शाळा, विद्यार्थी आणि विविध उपक्रमांच्या आठवणी.</p>
+    </div>
+
+    <div class="en">
+      <h2>📸 Photo Journey of Our School</h2>
+      <p>School, students and activities through photographs.</p>
+    </div>
+
+  </div>
+
+  <div class="gallery">
+
+    <article class="photo">
+      <img src="prashnachinh-pravas.jpg"
+           alt="प्रश्नचिन्ह शाळेचा प्रवास"
+           onclick="openImg(this.src)">
+      <p class="mr">प्रश्नचिन्ह शाळेचा प्रवास</p>
+      <p class="en">Journey of Prashnachinh School</p>
+    </article>
+
+    <article class="photo">
+      <img src="school-students.jpg"
+           alt="प्रश्नचिन्ह शाळेतील विद्यार्थी"
+           onclick="openImg(this.src)">
+      <p class="mr">आमचे विद्यार्थी</p>
+      <p class="en">Our Students</p>
+    </article>
+
+    <article class="photo">
+      <img src="school-activity.jpg"
+           alt="शाळेतील उपक्रम"
+           onclick="openImg(this.src)">
+      <p class="mr">शाळेतील उपक्रम</p>
+      <p class="en">School Activities</p>
+    </article>
+
+    <article class="photo">
+      <img src="school-needs.jpg"
+           alt="शाळेच्या गरजा"
+           onclick="openImg(this.src)">
+      <p class="mr">शाळेच्या गरजा</p>
+      <p class="en">School Needs</p>
+    </article>
+
+    <article class="photo">
+      <img src="school1.jpg"
+           alt="प्रश्नचिन्ह शाळा"
+           onclick="openImg(this.src)">
+      <p class="mr">शाळेचे परिसर</p>
+      <p class="en">School Campus</p>
+    </article>
+
+    <article class="photo">
+      <img src="school10.jpg"
+           alt="विद्यार्थी"
+           onclick="openImg(this.src)">
+      <p class="mr">विद्यार्थ्यांचे क्षण</p>
+      <p class="en">Student Moments</p>
+    </article>
+
+    <article class="photo">
+      <img src="school11.jpg"
+           alt="शाळेतील विद्यार्थी"
+           onclick="openImg(this.src)">
+      <p class="mr">विद्यार्थी आणि शिक्षण</p>
+      <p class="en">Students and Education</p>
+    </article>
+
+    <article class="photo">
+      <img src="school12.jpg"
+           alt="शाळेतील उपक्रम"
+           onclick="openImg(this.src)">
+      <p class="mr">उपक्रम आणि सहभाग</p>
+      <p class="en">Activities and Participation</p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- NEWS -->
+
+<section class="section">
+
+  <div class="title">
+    <small>NEWS & MEDIA</small>
+
+    <div class="mr">
+      <h2>📰 शाळेच्या बातम्या</h2>
+      <p>प्रश्नचिन्ह शाळेच्या कार्याची माध्यमांमधून झालेली दखल.</p>
+    </div>
+
+    <div class="en">
+      <h2>📰 School News</h2>
+      <p>Media coverage of the work and journey of Prashnachinh School.</p>
+    </div>
+
+  </div>
+
+  <div class="news">
+
+    <article class="news-card">
+
+      <img src="news-35.jpg"
+           alt="प्रश्नचिन्ह शाळेची बातमी"
+           onclick="openImg(this.src)">
+
+      <div>
+        <h3 class="mr">फासे पारधी मुलांच्या शिक्षणाची प्रेरणादायी कहाणी</h3>
+        <h3 class="en">An inspiring story of education</h3>
+
+        <p class="mr">
+          विद्यार्थ्यांच्या शिक्षणासाठी आणि उज्ज्वल भविष्यासाठी सुरू असलेल्या
+          कार्याची माध्यमांमधून झालेली दखल.
+        </p>
+
+        <p class="en">
+          Media coverage highlighting the educational journey and work
+          for the brighter future of students.
+        </p>
+      </div>
+
+    </article>
+
+
+    <article class="news-card">
+
+      <img src="news-36.jpg"
+           alt="प्रश्नचिन्ह शाळेची बातमी"
+           onclick="openImg(this.src)">
+
+      <div>
+        <h3 class="mr">शिक्षण, अन्न, निवास आणि परिवर्तनाचा प्रवास</h3>
+        <h3 class="en">A journey of education and transformation</h3>
+
+        <p class="mr">
+          समाजातील वंचित मुलांना शिक्षणाच्या मुख्य प्रवाहात आणण्याच्या
+          प्रयत्नांची बातमी.
+        </p>
+
+        <p class="en">
+          A media story about efforts to bring disadvantaged children
+          into mainstream education.
+        </p>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- YOUTUBE -->
+
+<section class="section">
+
+  <div class="title">
+    <small>YOUTUBE JOURNEY</small>
+
+    <div class="mr">
+      <h2>🎥 आमचा YouTube प्रवास</h2>
+      <p>शाळेचा प्रवास, विद्यार्थी, उपक्रम आणि कार्याचे व्हिडिओ.</p>
+    </div>
+
+    <div class="en">
+      <h2>🎥 Our YouTube Journey</h2>
+      <p>Videos of our school, students, activities and journey.</p>
+    </div>
+
+  </div>
+
+  <div class="youtube">
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/Klz1ZtE2g6Q"
+      title="Prashnachinh School Journey" allowfullscreen></iframe>
+      <h3>🎥 Prashnachinh School Journey</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/hkRQf4bt-CI"
+      title="School Journey" allowfullscreen></iframe>
+      <h3>🎥 School Journey</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/B73WNW-Hgjc"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 School Activities</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/pjGWGyX6U9I"
+      title="School Short Video" allowfullscreen></iframe>
+      <h3>🎥 School Short</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/WKfI9MHOITI"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 Our School</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/b1Jyp2Aat-M"
+      title="School Activity" allowfullscreen></iframe>
+      <h3>🎥 School Activity</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/tEDVQkloehE"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 Students and Activities</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/dIDqojBD4tA"
+      title="School Short" allowfullscreen></iframe>
+      <h3>🎥 School Short</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/qaK1HQ7hAs8"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 School Journey</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/FcBKe15u7VA"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 School Activities</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/dPjm-E0WxXc"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 Our Students</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/wEML_FWtv64"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 School Memories</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/1-1ETYxU3P8"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 School Journey</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/EhR0QCwquc8"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 Education Journey</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/TYbRmsXophY"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 School Activities</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/n--CPW1_REw"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 Student Journey</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/v6pPH-9bGas"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 School Memories</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/Dzmny2BpRxE"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 Our School</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/PqKVBQaqEUk"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 School Journey</h3>
+    </article>
+
+    <article class="video">
+      <iframe src="https://www.youtube.com/embed/P2s_dQ3xD2c"
+      title="School Video" allowfullscreen></iframe>
+      <h3>🎥 Prashnachinh School</h3>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section">
+
+  <div class="contact">
+
+    <div class="mr">
+      <h2>📞 प्रश्नचिन्ह शाळेशी संपर्क</h2>
+
+      <p>आदिवासी फासे पारधी सुधार समिती</p>
+      <p>मंगरूळ चव्हाळा, ता. नांदगाव खंडेश्वर, जि. अमरावती, महाराष्ट्र</p>
+      <p>📞 9096364529</p>
+      <p>📞 9764239458</p>
+      <p>✉️ adiwasi fasepardhisudharsamiti@gmail.com</p>
+    </div>
+
+    <div class="en">
+      <h2>📞 Contact Prashnachinh School</h2>
+
+      <p>Adivasi Fase Pardhi Sudhar Samiti</p>
+      <p>Mangrul Chawhala, Taluka Nandgaon Khandeshwar, District Amravati, Maharashtra</p>
+      <p>📞 9096364529</p>
+      <p>📞 9764239458</p>
+      <p>✉️ adiwasi fasepardhisudharsamiti@gmail.com</p>
+    </div>
+
+    <div class="buttons">
+
+      <a class="btn" href="tel:+919096364529">
+        📞 Call
+      </a>
+
+      <a class="btn" href="https://wa.me/919764239458" target="_blank">
+        💬 WhatsApp
+      </a>
+
+      <a class="btn gold" href="https://www.youtube.com/" target="_blank">
+        ▶ YouTube
+      </a>
+
+      <a class="btn red" href="donate.html">
+        ❤️ Donate
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="back">
+  <a href="index.html">← मुख्य वेबसाइटवर परत जा</a>
+</div>
+
 </main>
 
+
+<footer class="footer">
+
+  <p><strong>AFPSS — Adivasi Fase Pardhi Sudhar Samiti</strong></p>
+
+  <p class="mr">
+    शिक्षणातून स्वाभिमान, संधीतून परिवर्तन.
+  </p>
+
+  <p class="en">
+    Education, opportunity and transformation.
+  </p>
+
+  <p>© 2026 Adivasi Fase Pardhi Sudhar Samiti</p>
+
+</footer>
+
+
+<!-- IMAGE MODAL -->
+
 <div class="modal" id="modal" onclick="closeImg()">
-  <span class="close" aria-label="Close">×</span>
-  <img id="modalImg" alt="">
+
+  <span class="close">×</span>
+
+  <img id="modalImg" src="" alt="School Photo">
+
 </div>
+
+
 <script>
-function openImg(src){document.getElementById('modalImg').src=src;document.getElementById('modal').classList.add('open')}
-function closeImg(){document.getElementById('modal').classList.remove('open')}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeImg()});
+
+function showLang(lang){
+
+  const mr=document.querySelectorAll(".mr");
+  const en=document.querySelectorAll(".en");
+
+  if(lang==="mr"){
+
+    mr.forEach(x=>x.style.display="block");
+    en.forEach(x=>x.style.display="none");
+
+    document.getElementById("mrBtn").classList.add("active");
+    document.getElementById("enBtn").classList.remove("active");
+
+  }else{
+
+    mr.forEach(x=>x.style.display="none");
+    en.forEach(x=>x.style.display="block");
+
+    document.getElementById("enBtn").classList.add("active");
+    document.getElementById("mrBtn").classList.remove("active");
+
+  }
+
+}
+
+function openImg(src){
+
+  document.getElementById("modalImg").src=src;
+  document.getElementById("modal").classList.add("open");
+
+}
+
+function closeImg(){
+
+  document.getElementById("modal").classList.remove("open");
+
+}
+
+document.addEventListener("keydown",function(e){
+
+  if(e.key==="Escape") closeImg();
+
+});
+
 </script>
+
 </body>
 </html>
