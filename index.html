@@ -432,8 +432,76 @@ content="https://afpss.org.in/logo.jpg">
     margin-bottom:22px !important;
   }
 }   
-</style>
+ </style>
+/* HOME SCHOOL JOURNEY */
+.home-video-section{
+  max-width:1100px;
+  margin:40px auto;
+  padding:30px 20px;
+  background:#fff;
+  border:1px solid #dce8df;
+  border-radius:22px;
+  box-shadow:0 8px 28px rgba(0,0,0,.08);
+}
 
+.story-section-title{
+  text-align:center;
+  margin-bottom:26px;
+}
+
+.story-section-title span{
+  display:block;
+  color:#d69e2e;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.story-section-title h2{
+  margin:0;
+  color:#075b3b;
+  font-size:clamp(28px,4vw,42px);
+  font-weight:800;
+}
+
+.story-section-title p{
+  margin:8px auto 0;
+  color:#687870;
+  max-width:700px;
+}
+
+.home-video-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+}
+
+.home-video-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid #e1e8e3;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.home-video-card iframe{
+  width:100%;
+  aspect-ratio:16/9;
+  display:block;
+  border:0;
+}
+
+@media(max-width:720px){
+  .home-video-grid{
+    grid-template-columns:1fr;
+  }
+
+  .home-video-section{
+    margin:28px 14px;
+    padding:24px 14px;
+  }
+}
 <style>
 @media(max-width:900px){
   .social-mission-grid{grid-template-columns:1fr !important;}
@@ -695,22 +763,62 @@ content="https://afpss.org.in/logo.jpg">
           </span>
 
         </a>
+         
+<section class="home-video-section">
+<div class="story-section-title">
 
+    <span>🎥 SCHOOL JOURNEY</span>
+    <h2>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष</h2>
+    <p>प्रश्नचिन्ह शाळेचा प्रवास, विद्यार्थी, संघर्ष आणि परिवर्तनाची प्रेरणादायी कहाणी.</p>
+  </div>
 
-        <!-- SCHOOL VIDEOS -->
+  <div class="home-video-grid">
 
-        <a href="media-news.html" class="dark">
+    <article class="home-video-card">
+      <iframe
+        src="https://www.youtube.com/embed/Klz1ZtE2g6Q"
+        title="Prashnachinh School Journey"
+        allowfullscreen>
+      </iframe>
+      <h3>प्रश्नचिन्ह शाळेचा प्रवास</h3>
+    </article>
 
-          <span class="lang-mr">
-            ▶️ शाळेचे व्हिडिओ पहा →
-          </span>
+    <article class="home-video-card">
+      <iframe
+        src="https://www.youtube.com/embed/Dmzmy2BpRXE"
+        title="School Journey"
+        allowfullscreen>
+      </iframe>
+      <h3>शाळेचा संघर्ष आणि प्रवास</h3>
+    </article>
 
-          <span class="lang-en">
-            ▶️ Watch School Videos →
-          </span>
+    <article class="home-video-card">
+      <iframe
+        src="https://www.youtube.com/embed/PqKVBQaqEUK"
+        title="School Video"
+        allowfullscreen>
+      </iframe>
+      <h3>प्रश्नचिन्ह शाळा</h3>
+    </article>
 
-        </a>
+    <article class="home-video-card">
+      <iframe
+        src="https://www.youtube.com/embed/P2s_dQ3xD2c"
+        title="Prashnachinh School"
+        allowfullscreen>
+      </iframe>
+      <h3>आमची शाळा — आमचे विद्यार्थी</h3>
+    </article>
 
+  </div>
+
+  <div class="story-more-button">
+    <a href="school-story.html">
+      📖 संपूर्ण प्रवास वाचा →
+    </a>
+  </div>
+
+</section>
 
         <!-- SCHOOL NEWS -->
 
