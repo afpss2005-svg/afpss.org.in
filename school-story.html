@@ -35,7 +35,38 @@ a{text-decoration:none;color:inherit}
 .en{display:none}
 @media(max-width:850px){.stats{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.youtube,.news,.info-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.nav{min-height:65px}.brand img{width:45px;height:45px}.brand-text strong{font-size:18px}.hero{padding:60px 16px}.hero p{font-size:16px}.container{width:92%;padding:40px 0}.story,.info-card{padding:23px}.story p{font-size:16px}.stats{grid-template-columns:1fr 1fr;gap:12px}.stat strong{font-size:27px}.gallery{grid-template-columns:1fr}.photo img{height:auto;max-height:400px}.lang button{padding:7px 12px}}
-</style>
+/* FINAL SCHOOL STORY WIDTH FIX */
+body{
+  width:100%;
+  margin:0;
+  padding:0;
+}
+
+.story,
+.story-step2,
+.home-video-section{
+  width:calc(100% - 40px) !important;
+  max-width:1280px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  box-sizing:border-box;
+}
+
+.story-step2-copy,
+.story-step2-gallery,
+.story-step2-photos{
+  width:100% !important;
+  box-sizing:border-box;
+}
+
+@media (max-width:900px){
+  .story,
+  .story-step2,
+  .home-video-section{
+    width:calc(100% - 24px) !important;
+  }
+}
+style>
 </head>
 
 <body>
