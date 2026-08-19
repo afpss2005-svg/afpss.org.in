@@ -433,6 +433,26 @@ content="https://afpss.org.in/logo.jpg">
   padding:10px 14px !important;
   box-sizing:border-box !important;
 }
+/* DESKTOP - REMOVE EMPTY RIGHT SPACE */
+@media(min-width:851px){
+  #story .story-step2{
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    grid-template-columns:1fr !important;
+  }
+
+  #story .story-step2-copy,
+  #story .story-step2-gallery,
+  #story .story-step2-photos{
+    width:100% !important;
+    max-width:none !important;
+  }
+
+  #story .story-step2-gallery{
+    grid-column:1 !important;
+  }
+}    
 </style>
 </head>
 
