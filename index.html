@@ -235,72 +235,6 @@ content="https://afpss.org.in/logo.jpg">
 
 
 /* =========================
-   BUTTONS
-   ========================= */
-
-.story-step2-actions{
-  display:grid;
-
-  grid-template-columns:
-    repeat(2,minmax(0,1fr));
-
-  gap:11px;
-
-  margin-top:22px;
-}
-
-.story-step2-actions a{
-  min-height:46px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  text-align:center;
-
-  padding:11px 15px;
-
-  border-radius:999px;
-
-  text-decoration:none;
-
-  font-weight:900;
-  font-size:13px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f3d66b,
-      #dfbc3f
-    );
-
-  color:#111;
-
-  box-shadow:
-    0 8px 20px rgba(180,140,35,.16);
-
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease;
-}
-
-.story-step2-actions a:hover{
-  transform:translateY(-2px);
-
-  box-shadow:
-    0 12px 25px rgba(180,140,35,.22);
-}
-
-.story-step2-actions a.dark{
-  background:#075b3b;
-  color:#fff;
-
-  box-shadow:
-    0 8px 20px rgba(7,91,59,.16);
-}
-
-
-/* =========================
    MORE INFORMATION
    ========================= */
 
@@ -375,13 +309,6 @@ content="https://afpss.org.in/logo.jpg">
     border-radius:12px;
   }
 
-  .story-step2-actions{
-    grid-template-columns:1fr;
-  }
-
-  .story-step2-actions a{
-    width:100%;
-  }
 
 }
 /* STEP 2 - FINAL SPACING FIX */
@@ -435,80 +362,31 @@ content="https://afpss.org.in/logo.jpg">
  </style>
 
  <style>
-/* HOME SCHOOL JOURNEY */
+/* HOME SCHOOL JOURNEY VIDEOS */
 .home-video-section{
-  max-width:1100px;
-  margin:40px auto;
-  padding:30px 20px;
-  background:#fff;
-  border:1px solid #dce8df;
-  border-radius:22px;
-  box-shadow:0 8px 28px rgba(0,0,0,.08);
-}
-
-.story-section-title{
-  text-align:center;
-  margin-bottom:26px;
-}
-
-.story-section-title span{
-  display:block;
-  color:#d69e2e;
-  font-size:13px;
-  font-weight:800;
-  letter-spacing:2px;
-  margin-bottom:8px;
-}
-
-.story-section-title h2{
-  margin:0;
-  color:#075b3b;
-  font-size:clamp(28px,4vw,42px);
-  font-weight:800;
-}
-
-.story-section-title p{
-  margin:8px auto 0;
-  color:#687870;
-  max-width:700px;
-}
-
-.home-video-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:22px;
-}
-
-.home-video-card{
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid #e1e8e3;
-  box-shadow:0 6px 20px rgba(0,0,0,.08);
-}
-
-.home-video-card iframe{
   width:100%;
-  aspect-ratio:16/9;
-  display:block;
+  margin:28px 0 0;
+  padding:24px 0 0;
+  background:transparent;
   border:0;
+  border-radius:0;
+  box-shadow:none;
 }
-
+.story-section-title{text-align:left;margin-bottom:18px}
+.story-section-title span{display:block;color:#d69e2e;font-size:12px;font-weight:800;letter-spacing:2px;margin-bottom:6px}
+.story-section-title h2{margin:0;color:#075b3b;font-size:clamp(22px,2.6vw,30px);font-weight:800;line-height:1.25}
+.story-section-title p{margin:7px 0 0;color:#687870;max-width:680px;line-height:1.6;font-size:14px}
+.home-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.home-video-card{background:#fff;border-radius:14px;overflow:hidden;border:1px solid #e1e8e3;box-shadow:0 6px 18px rgba(0,0,0,.07)}
+.home-video-card iframe{width:100%;aspect-ratio:16/9;display:block;border:0}
+.home-video-card h3{margin:0;padding:10px 12px;color:#075b3b;font-size:14px;line-height:1.4}
+.story-full-button{display:inline-flex;align-items:center;justify-content:center;margin-top:18px;padding:11px 18px;border-radius:999px;background:#075b3b;color:#fff;text-decoration:none;font-weight:900;font-size:13px;box-shadow:0 8px 20px rgba(7,91,59,.15)}
+.social-mission-grid{grid-template-columns:repeat(2,1fr) !important}
+@media(max-width:900px){.social-mission-grid{grid-template-columns:1fr !important}}
 @media(max-width:720px){
-  .home-video-grid{
-    grid-template-columns:1fr;
-  }
-
-  .home-video-section{
-    margin:28px 14px;
-    padding:24px 14px;
-  }
+  .home-video-grid{grid-template-columns:1fr}
+  .home-video-section{padding-top:20px}
 }
-<style>
-@media(max-width:900px){
-  .social-mission-grid{grid-template-columns:1fr !important;}
-}
-</style>
 </style>
 </head>
 
@@ -619,7 +497,6 @@ content="https://afpss.org.in/logo.jpg">
 <section class="section alt" id="story">
 
   <div class="section-title">
-
     <small>
       <span class="lang-mr">आमचा प्रवास</span>
       <span class="lang-en">OUR JOURNEY</span>
@@ -634,310 +511,131 @@ content="https://afpss.org.in/logo.jpg">
       <h2>❓ The Prashnachinha Journey</h2>
       <p>From struggle to education, and from education to transformation...</p>
     </div>
-
   </div>
-
 
   <div class="story-step2">
 
-    <!-- =========================
-         STORY CONTENT
-         ========================= -->
-
     <div class="story-step2-copy">
 
-      <!-- MARATHI -->
-
       <div class="lang-mr">
-
         <h2>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष!</h2>
 
-        <p>
-          कधीकाळी या मुलांच्या हातात पुस्तक नव्हते,
-          शाळा नव्हती आणि सुरक्षित भविष्याची हमी नव्हती.
-        </p>
+        <p>कधीकाळी या मुलांच्या हातात पुस्तक नव्हते, शाळा नव्हती आणि सुरक्षित भविष्याची हमी नव्हती.</p>
+        <p>फासेपारधी समाजातील मुलांच्या आयुष्यात शिक्षणाचा प्रकाश आणण्याचे स्वप्न प्रा. मतीन भोसले सरांनी पाहिले.</p>
+        <p>२२ सप्टेंबर २०११ रोजी १८८ विद्यार्थ्यांपासून प्रश्नचिन्ह आदिवासी आश्रम शाळेचा शिक्षणाचा प्रवास सुरू झाला.</p>
+        <p>शिक्षणासाठी संघर्ष झाला. निवासासाठी संघर्ष झाला. अन्नासाठी संघर्ष झाला. पण प्रश्नचिन्ह थांबले नाही.</p>
+        <p>आज हा प्रवास विद्यार्थ्यांच्या शिक्षण, स्वाभिमान, संधी आणि सर्वांगीण विकासाच्या दिशेने पुढे जात आहे.</p>
 
-        <p>
-          फासेपारधी समाजातील मुलांच्या आयुष्यात शिक्षणाचा
-          प्रकाश आणण्याचे स्वप्न प्रा. मतीन भोसले सरांनी पाहिले.
-        </p>
-
-        <p>
-          २२ सप्टेंबर २०११ रोजी १८८ विद्यार्थ्यांपासून
-          प्रश्नचिन्ह आदिवासी आश्रम शाळेचा शिक्षणाचा
-          प्रवास सुरू झाला.
-        </p>
-
-        <p>
-          शिक्षणासाठी संघर्ष झाला.
-          निवासासाठी संघर्ष झाला.
-          अन्नासाठी संघर्ष झाला.
-          पण प्रश्नचिन्ह थांबले नाही.
-        </p>
-
-        <p>
-          आज हा प्रवास विद्यार्थ्यांच्या शिक्षण,
-          स्वाभिमान, संधी आणि सर्वांगीण विकासाच्या
-          दिशेने पुढे जात आहे.
-        </p>
-
-        <div class="story-step2-quote">
-          “एका मुलाचे आयुष्य बदलले,
-          तर एका कुटुंबाचे भविष्य बदलते.”
-        </div>
-
+        <div class="story-step2-quote">“एका मुलाचे आयुष्य बदलले, तर एका कुटुंबाचे भविष्य बदलते.”</div>
       </div>
-
-
-      <!-- ENGLISH -->
 
       <div class="lang-en">
-
         <h2>From 188 Children to Thousands of Dreams</h2>
 
-        <p>
-          There was a time when these children had no books,
-          no school and no assurance of a secure future.
-        </p>
+        <p>There was a time when these children had no books, no school and no assurance of a secure future.</p>
+        <p>Prof. Matin Bhosale dreamed of bringing the light of education into the lives of children from the Fase Pardhi community.</p>
+        <p>On 22 September 2011, the educational journey of Prashnachinha Adivasi Ashram School began with 188 students.</p>
+        <p>There were struggles for education, residential facilities and food. But Prashnachinha never stopped.</p>
+        <p>Today, the journey continues towards education, dignity, opportunity and the holistic development of students.</p>
 
-        <p>
-          Prof. Matin Bhosale dreamed of bringing the light
-          of education into the lives of children from the
-          Fase Pardhi community.
-        </p>
+        <div class="story-step2-quote">“When one child's life changes, the future of a family can change.”</div>
+      </div>
 
-        <p>
-          On 22 September 2011, the educational journey of
-          Prashnachinha Adivasi Ashram School began with
-          188 students.
-        </p>
+      <a href="school-story.html" class="story-full-button">
+        <span class="lang-mr">📖 संपूर्ण प्रवास वाचा →</span>
+        <span class="lang-en">📖 Read the Full Journey →</span>
+      </a>
 
-        <p>
-          There were struggles for education, residential
-          facilities and food. But Prashnachinha never stopped.
-        </p>
-
-        <p>
-          Today, the journey continues towards education,
-          dignity, opportunity and the holistic development
-          of students.
-        </p>
-
-        <div class="story-step2-quote">
-          “When one child's life changes,
-          the future of a family can change.”
+      <section class="home-video-section" aria-label="School Journey Videos">
+        <div class="story-section-title">
+          <span>🎥 SCHOOL JOURNEY</span>
+          <div class="lang-mr">
+            <h2>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष</h2>
+            <p>प्रश्नचिन्ह शाळेचा प्रवास, विद्यार्थी, संघर्ष आणि परिवर्तनाची प्रेरणादायी कहाणी.</p>
+          </div>
+          <div class="lang-en">
+            <h2>From 188 Children to Thousands of Dreams</h2>
+            <p>The inspiring journey of Prashnachinha School, its students, struggles and transformation.</p>
+          </div>
         </div>
 
-      </div>
+        <div class="home-video-grid">
 
+          <article class="home-video-card">
+            <iframe src="https://www.youtube.com/embed/Klz1ZtE2g6Q"
+              title="Prashnachinh School Journey"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+            <h3><span class="lang-mr">प्रश्नचिन्ह शाळेचा प्रवास</span><span class="lang-en">Prashnachinha School Journey</span></h3>
+          </article>
 
-      <!-- =========================
-           FOUR BUTTONS
-           ========================= -->
+          <article class="home-video-card">
+            <iframe src="https://www.youtube.com/embed/Dmzmy2BpRXE"
+              title="School Journey"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+            <h3><span class="lang-mr">शाळेचा संघर्ष आणि प्रवास</span><span class="lang-en">School Struggle and Journey</span></h3>
+          </article>
 
-      <div class="story-step2-actions">
+          <article class="home-video-card">
+            <iframe src="https://www.youtube.com/embed/PqKVBQaqEUK"
+              title="Prashnachinha School Video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+            <h3><span class="lang-mr">प्रश्नचिन्ह शाळा</span><span class="lang-en">Prashnachinha School</span></h3>
+          </article>
 
-        <!-- SCHOOL PHOTOS -->
+          <article class="home-video-card">
+            <iframe src="https://www.youtube.com/embed/P2s_dQ3xD2c"
+              title="Prashnachinha School Students"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+            <h3><span class="lang-mr">आमची शाळा — आमचे विद्यार्थी</span><span class="lang-en">Our School — Our Students</span></h3>
+          </article>
 
-        <a href="gallery.html">
-
-          <span class="lang-mr">
-            📸 शाळेचे फोटो पहा →
-          </span>
-
-          <span class="lang-en">
-            📸 View School Photos →
-          </span>
-
-        </a>
-
-
-        <!-- FULL JOURNEY -->
-
-       <a href="school-story.html">
-
-          <span class="lang-mr">
-            📖 संपूर्ण प्रवास वाचा →
-          </span>
-
-          <span class="lang-en">
-            📖 Read the Full Journey →
-          </span>
-
-        </a>
-         
-<section class="home-video-section">
-<div class="story-section-title">
-
-    <span>🎥 SCHOOL JOURNEY</span>
-    <h2>१८८ मुलांपासून हजारो स्वप्नांपर्यंतचा संघर्ष</h2>
-    <p>प्रश्नचिन्ह शाळेचा प्रवास, विद्यार्थी, संघर्ष आणि परिवर्तनाची प्रेरणादायी कहाणी.</p>
-  </div>
-
-  <div class="home-video-grid">
-
-    <article class="home-video-card">
-      <iframe
-        src="https://www.youtube.com/embed/Klz1ZtE2g6Q"
-        title="Prashnachinh School Journey"
-        allowfullscreen>
-      </iframe>
-      <h3>प्रश्नचिन्ह शाळेचा प्रवास</h3>
-    </article>
-
-    <article class="home-video-card">
-      <iframe
-        src="https://www.youtube.com/embed/Dmzmy2BpRXE"
-        title="School Journey"
-        allowfullscreen>
-      </iframe>
-      <h3>शाळेचा संघर्ष आणि प्रवास</h3>
-    </article>
-
-    <article class="home-video-card">
-      <iframe
-        src="https://www.youtube.com/embed/PqKVBQaqEUK"
-        title="School Video"
-        allowfullscreen>
-      </iframe>
-      <h3>प्रश्नचिन्ह शाळा</h3>
-    </article>
-
-    <article class="home-video-card">
-      <iframe
-        src="https://www.youtube.com/embed/P2s_dQ3xD2c"
-        title="Prashnachinh School"
-        allowfullscreen>
-      </iframe>
-      <h3>आमची शाळा — आमचे विद्यार्थी</h3>
-    </article>
-
-  </div>
-
-  <div class="story-more-button">
-    <a href="school-story.html">
-      📖 संपूर्ण प्रवास वाचा →
-    </a>
-  </div>
-
-</section>
-
-        <!-- SCHOOL NEWS -->
-
-      </div>
-
-
-      <!-- =========================
-           MORE INFORMATION
-           ========================= -->
+        </div>
+      </section>
 
       <div class="story-step2-more">
-
         <strong>
-
-          <span class="lang-mr">
-            अधिक माहितीसाठी
-          </span>
-
-          <span class="lang-en">
-            More Information
-          </span>
-
+          <span class="lang-mr">अधिक माहितीसाठी</span>
+          <span class="lang-en">More Information</span>
         </strong>
-
         <br>
-
-        <span class="lang-mr">
-          शाळेचा संपूर्ण प्रवास, फोटो, व्हिडिओ आणि बातम्या
-          या संबंधित विभागांमध्ये पाहता येतील.
-        </span>
-
-        <span class="lang-en">
-          Explore the complete school journey, photographs,
-          videos and news through the relevant sections.
-        </span>
-
+        <span class="lang-mr">शाळेचा संपूर्ण प्रवास, फोटो, व्हिडिओ आणि बातम्या संबंधित विभागांमध्ये पाहता येतील.</span>
+        <span class="lang-en">Explore the complete school journey, photographs, videos and news through the relevant sections.</span>
       </div>
 
     </div>
 
+    <div class="story-step2-gallery">
+      <div class="story-step2-photos">
 
-    <!-- =========================
-         SCHOOL PHOTOS
-         ========================= -->
-
-   <div class="story-step2-photos">
-
-  <img src="journey-01.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास १"
-       loading="lazy">
-
-  <img src="journey-02.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास २"
-       loading="lazy">
-
-  <img src="journey-03.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास ३"
-       loading="lazy">
-
-  <img src="journey-04.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास ४"
-       loading="lazy">
-
-  <img src="journey-05.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास ५"
-       loading="lazy">
-
-  <img src="journey-06.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास ६"
-       loading="lazy">
-
-  <img src="journey-07.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास ७"
-       loading="lazy">
-
-  <img src="journey-08.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास ८"
-       loading="lazy">
-
-  <img src="journey-09.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास ९"
-       loading="lazy">
-
-  <img src="journey-10.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास १०"
-       loading="lazy">
-
-  <img src="journey-11.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास ११"
-       loading="lazy">
-
-  <img src="journey-12.jpg"
-       alt="प्रश्नचिन्ह शाळेचा प्रवास १२"
-       loading="lazy">
-
-</div>
-
-      <div class="story-step2-caption">
-
-        <span class="lang-mr">
-          प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या
-          प्रवासातील निवडक क्षण
-        </span>
-
-        <span class="lang-en">
-          Selected moments from the Prashnachinha
-          Adivasi Ashram School journey
-        </span>
+        <img src="school1.jpg" alt="प्रश्नचिन्ह आदिवासी आश्रम शाळा — शाळेचा प्रवास १" loading="lazy">
+        <img src="school2.jpg" alt="प्रश्नचिन्ह आदिवासी आश्रम शाळा — शाळेचा प्रवास २" loading="lazy">
+        <img src="school3.jpg" alt="प्रश्नचिन्ह आदिवासी आश्रम शाळा — शाळेचा प्रवास ३" loading="lazy">
+        <img src="school4.jpg" alt="प्रश्नचिन्ह आदिवासी आश्रम शाळा — शाळेचा प्रवास ४" loading="lazy">
+        <img src="school5.jpg" alt="प्रश्नचिन्ह आदिवासी आश्रम शाळा — शाळेचा प्रवास ५" loading="lazy">
+        <img src="school6.jpg" alt="प्रश्नचिन्ह आदिवासी आश्रम शाळा — शाळेचा प्रवास ६" loading="lazy">
 
       </div>
 
+      <div class="story-step2-caption">
+        <span class="lang-mr">प्रश्नचिन्ह आदिवासी आश्रम शाळेच्या प्रवासातील निवडक क्षण</span>
+        <span class="lang-en">Selected moments from the Prashnachinha Adivasi Ashram School journey</span>
+      </div>
     </div>
 
   </div>
-
 </section>
-
 <section class="premium-section" id="social-mission">
   <div class="premium-title">
     <small>OUR SOCIAL MISSION</small>
@@ -1193,4 +891,3 @@ content="https://afpss.org.in/logo.jpg">
 </script>
 </body>
 </html>
-```
