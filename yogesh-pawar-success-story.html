@@ -4,21 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>योगेश पवार | प्रेरणादायी यशोगाथा | AFPSS</title>
+<title>योगेश पवार | Yogesh Pawar | AFPSS Success Story</title>
 
 <meta name="description"
-content="प्रश्नचिन्ह आदिवासी आश्रमशाळेतील माजी विद्यार्थी योगेश पवार यांचा संघर्ष, शिक्षण, योगासनातील राज्यस्तरीय यश आणि सहाय्यक प्राध्यापक म्हणून प्रेरणादायी प्रवास.">
-
-<meta name="keywords"
-content="योगेश पवार, प्रश्नचिन्ह आदिवासी आश्रमशाळा, मतीन शंकरराव भोसले, AFPSS, फासेपारधी समाज, प्रेरणादायी यशोगाथा">
+content="योगेश पवार यांचा प्रेरणादायी जीवनप्रवास — प्रश्नचिन्ह आदिवासी आश्रमशाळेपासून 80% दहावी, 85% बारावी, राज्यस्तरीय योगासन आणि अर्थशास्त्र विषयाचे सहाय्यक प्राध्यापक होण्यापर्यंतचा प्रवास.">
 
 <style>
+
 :root{
   --green:#08754b;
-  --green-dark:#065f3e;
+  --dark:#064b34;
   --gold:#c8941e;
   --text:#304b45;
-  --soft:#f4f9f7;
+  --muted:#687a74;
+  --bg:#f5faf7;
   --white:#fff;
   --line:#dce9e3;
   --shadow:0 15px 40px rgba(8,75,55,.10);
@@ -36,9 +35,13 @@ html{
 
 body{
   font-family:Arial,"Noto Sans Devanagari",sans-serif;
-  background:#f7fbf9;
+  background:var(--bg);
   color:var(--text);
   line-height:1.8;
+}
+
+img{
+  max-width:100%;
 }
 
 a{
@@ -51,9 +54,24 @@ a{
   margin:auto;
 }
 
-/* HEADER */
+/* =========================
+   BILINGUAL
+========================= */
+
+.en{
+  display:block;
+  margin-top:5px;
+  color:#71817b;
+  font-size:.88em;
+  line-height:1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
 .site-header{
-  background:rgba(255,255,255,.97);
+  background:#fff;
   border-bottom:1px solid var(--line);
   position:sticky;
   top:0;
@@ -61,7 +79,7 @@ a{
 }
 
 .header-inner{
-  min-height:76px;
+  min-height:75px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -72,8 +90,6 @@ a{
   display:flex;
   align-items:center;
   gap:12px;
-  font-weight:700;
-  color:var(--green);
 }
 
 .brand img{
@@ -82,59 +98,71 @@ a{
   object-fit:contain;
 }
 
-.brand-text strong{
+.brand strong{
   display:block;
+  color:var(--green);
   font-size:20px;
 }
 
-.brand-text span{
+.brand span{
   display:block;
   font-size:11px;
-  color:#71817c;
+  color:#71817b;
 }
 
-.back-link{
+.back{
   color:var(--green);
-  font-weight:600;
+  font-weight:700;
+  font-size:14px;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 .hero{
-  padding:70px 0 55px;
+  padding:65px 0 55px;
   background:
-    radial-gradient(circle at top left,rgba(200,148,30,.10),transparent 35%),
-    linear-gradient(135deg,#f7fbf9,#ffffff);
+    radial-gradient(circle at top left,
+    rgba(200,148,30,.10),
+    transparent 32%),
+    linear-gradient(135deg,#f7fbf9,#fff);
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:300px 1fr;
+  grid-template-columns:220px 1fr;
   align-items:center;
-  gap:60px;
+  gap:45px;
 }
+
+/* योगेश पवार फोटो
+   Founder पेक्षा लहान */
 
 .hero-photo{
   display:flex;
   justify-content:center;
+  align-items:center;
 }
 
 .photo-frame{
-  width:250px;
-  height:315px;
-  padding:7px;
+  width:180px !important;
+  height:230px !important;
+  padding:5px;
   background:#fff;
   border:1px solid var(--line);
-  border-radius:24px;
+  border-radius:20px;
   box-shadow:var(--shadow);
   overflow:hidden;
 }
 
 .photo-frame img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+  display:block;
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
   object-position:center top;
-  border-radius:18px;
+  border-radius:15px;
 }
 
 .hero-content small{
@@ -144,34 +172,37 @@ a{
 }
 
 .hero-content h1{
-  margin:10px 0 8px;
   color:var(--green);
-  font-size:48px;
+  font-size:46px;
   line-height:1.2;
+  margin:10px 0;
 }
 
 .hero-content h2{
-  color:#243f39;
-  font-size:24px;
-  margin-bottom:4px;
+  color:#244039;
+  font-size:25px;
 }
 
 .role{
-  color:#6d7f79;
+  color:var(--muted);
   font-size:17px;
 }
 
 .hero-intro{
   margin-top:20px;
-  font-size:18px;
+  font-size:17px;
+  max-width:750px;
 }
 
-/* STATS */
+/* =========================
+   STATS
+========================= */
+
 .stats{
-  padding:30px 0;
   background:#fff;
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
+  padding:28px 0;
 }
 
 .stats-grid{
@@ -183,80 +214,93 @@ a{
 .stat{
   text-align:center;
   padding:18px;
-  background:var(--soft);
-  border-radius:16px;
+  background:var(--bg);
   border:1px solid var(--line);
+  border-radius:16px;
 }
 
 .stat strong{
   display:block;
   color:var(--green);
-  font-size:30px;
+  font-size:28px;
 }
 
 .stat span{
   font-size:14px;
 }
 
-/* COMMON SECTION */
+/* =========================
+   COMMON SECTION
+========================= */
+
 .section{
   padding:70px 0;
 }
 
-.section-title{
+.section-head{
   text-align:center;
-  margin-bottom:40px;
+  margin-bottom:38px;
 }
 
-.section-title small{
+.section-head small{
   color:var(--gold);
   font-weight:800;
   letter-spacing:2px;
 }
 
-.section-title h2{
+.section-head h2{
   color:var(--green);
   font-size:34px;
   margin-top:5px;
 }
 
-.section-title p{
-  max-width:760px;
+.section-head p{
+  max-width:800px;
   margin:8px auto 0;
-  color:#687973;
+  color:var(--muted);
 }
 
-/* STORY */
+/* =========================
+   LIFE STORY
+========================= */
+
 .story-card{
   background:#fff;
   border:1px solid var(--line);
   border-radius:24px;
-  padding:42px;
+  padding:40px;
   box-shadow:var(--shadow);
 }
 
 .story-card h3{
   color:var(--green);
-  font-size:27px;
-  margin-bottom:18px;
+  font-size:28px;
+  margin-bottom:20px;
 }
 
 .story-card p{
-  margin-bottom:17px;
+  margin-bottom:18px;
 }
 
 .highlight{
-  margin:30px 0;
-  padding:24px 28px;
-  background:linear-gradient(135deg,var(--green),var(--green-dark));
+  margin-top:30px;
+  padding:23px;
+  background:linear-gradient(135deg,var(--green),var(--dark));
   color:#fff;
   border-radius:18px;
-  font-size:20px;
-  font-weight:700;
   text-align:center;
+  font-size:19px;
+  font-weight:700;
 }
 
-/* ACHIEVEMENTS */
+.highlight .en{
+  color:#e5f1eb;
+}
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
 .achievements{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -265,9 +309,9 @@ a{
 
 .achievement{
   background:#fff;
-  padding:28px;
   border:1px solid var(--line);
   border-radius:20px;
+  padding:27px;
   box-shadow:var(--shadow);
 }
 
@@ -278,7 +322,6 @@ a{
 .achievement h3{
   color:var(--green);
   margin:8px 0;
-  font-size:21px;
 }
 
 .achievement strong{
@@ -286,35 +329,42 @@ a{
   font-size:28px;
 }
 
-/* DIRECTION */
+/* =========================
+   MATIN BHOSALE SIR
+========================= */
+
 .direction{
-  background:linear-gradient(135deg,var(--green-dark),var(--green));
+  background:linear-gradient(135deg,var(--dark),var(--green));
   color:#fff;
 }
 
-.direction .section-title h2,
-.direction .section-title p,
-.direction .section-title small{
+.direction .section-head small,
+.direction .section-head h2,
+.direction .section-head p{
   color:#fff;
 }
 
 .direction-card{
   max-width:900px;
   margin:auto;
-  padding:40px;
+  padding:38px;
+  text-align:center;
   background:rgba(255,255,255,.10);
   border:1px solid rgba(255,255,255,.25);
   border-radius:24px;
-  text-align:center;
 }
 
 .direction-card h3{
-  font-size:30px;
+  font-size:29px;
   margin-bottom:18px;
 }
 
 .direction-card p{
-  font-size:18px;
+  font-size:17px;
+}
+
+.direction-card .en{
+  color:#e1eee8;
 }
 
 .quote{
@@ -324,10 +374,17 @@ a{
   color:var(--green);
   border-radius:16px;
   font-weight:700;
-  font-size:20px;
+  font-size:19px;
 }
 
-/* NEWS */
+.quote .en{
+  color:#60756d;
+}
+
+/* =========================
+   3 NEWS
+========================= */
+
 .news-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -340,20 +397,17 @@ a{
   border-radius:20px;
   overflow:hidden;
   box-shadow:var(--shadow);
-  display:flex;
-  flex-direction:column;
 }
 
 .news-card img{
   width:100%;
   height:210px;
   object-fit:cover;
-  object-position:center;
+  display:block;
 }
 
 .news-content{
-  padding:24px;
-  flex:1;
+  padding:23px;
 }
 
 .source{
@@ -365,7 +419,7 @@ a{
 .news-content h3{
   color:var(--green);
   font-size:20px;
-  line-height:1.4;
+  line-height:1.45;
   margin:8px 0;
 }
 
@@ -373,65 +427,109 @@ a{
   font-size:15px;
 }
 
-.news-note{
+.note{
   margin-top:20px;
-  padding:15px;
-  border:1px dashed #b8cec5;
+  padding:14px;
+  border:1px dashed #b9cec5;
   border-radius:12px;
-  color:#667873;
+  color:var(--muted);
   font-size:13px;
 }
 
-/* FACEBOOK */
-.facebook{
+/* =========================
+   FACEBOOK PROFILE ONLY
+========================= */
+
+.facebook-section{
   background:#fff;
 }
 
-.facebook-card{
-  max-width:650px;
-  margin:auto;
+.social-grid{
+  display:grid;
+  justify-content:center;
+}
+
+.social-card{
+  width:min(600px,100%);
   background:#fff;
   border:1px solid var(--line);
-  border-radius:22px;
-  padding:32px;
+  border-radius:23px;
+  padding:35px;
   text-align:center;
   box-shadow:var(--shadow);
 }
 
-.facebook-card h3{
+.social-icon{
+  font-size:42px;
+  margin-bottom:8px;
+}
+
+.social-card h3{
   color:var(--green);
   font-size:25px;
 }
 
-.facebook-button{
+.social-card p{
+  color:var(--muted);
+}
+
+.fb-button{
   display:inline-block;
-  margin-top:18px;
-  padding:12px 25px;
-  background:#0877f9;
+  margin-top:20px;
+  padding:12px 26px;
+  background:#1877f2;
   color:#fff;
   border-radius:30px;
   font-weight:700;
 }
 
-/* FOOTER */
-footer{
-  background:#083c2c;
-  color:#dbece5;
+/* =========================
+   CLOSING
+========================= */
+
+.closing{
   text-align:center;
-  padding:28px 15px;
+}
+
+.closing h2{
+  color:var(--green);
+  font-size:34px;
+}
+
+.closing p{
+  max-width:850px;
+  margin:15px auto;
+}
+
+.closing strong{
+  color:var(--green);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#073d2c;
+  color:#dcebe5;
+  text-align:center;
+  padding:30px 15px;
 }
 
 footer strong{
   color:#fff;
 }
 
-/* MOBILE */
+/* =========================
+   TABLET
+========================= */
+
 @media(max-width:850px){
 
   .hero-grid{
     grid-template-columns:1fr;
-    text-align:center;
     gap:30px;
+    text-align:center;
   }
 
   .hero-photo{
@@ -442,34 +540,28 @@ footer strong{
     order:2;
   }
 
-  .hero-content h1{
-    font-size:34px;
-  }
-
-  .photo-frame{
-    width:210px;
-    height:270px;
-  }
-
   .stats-grid{
     grid-template-columns:repeat(2,1fr);
   }
 
-  .achievements,
-  .news-grid{
+  .achievements{
     grid-template-columns:1fr;
   }
 
-  .story-card{
-    padding:25px;
+  .news-grid{
+    grid-template-columns:1fr 1fr;
   }
 
-  .section{
-    padding:50px 0;
+  .hero-content h1{
+    font-size:36px;
   }
 }
 
-@media(max-width:500px){
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
 
   .header-inner{
     min-height:65px;
@@ -480,296 +572,656 @@ footer strong{
     height:40px;
   }
 
-  .brand-text strong{
+  .brand strong{
     font-size:17px;
   }
 
-  .back-link{
-    font-size:13px;
+  .back{
+    font-size:12px;
   }
 
-  .stats-grid{
-    grid-template-columns:1fr 1fr;
+  .hero{
+    padding:45px 0;
   }
 
-  .stat strong{
-    font-size:24px;
+  .hero-grid{
+    gap:25px;
+  }
+
+  .photo-frame{
+    width:165px !important;
+    height:210px !important;
   }
 
   .hero-content h1{
     font-size:29px;
   }
 
+  .hero-content h2{
+    font-size:21px;
+  }
+
+  .section{
+    padding:50px 0;
+  }
+
+  .section-head h2{
+    font-size:28px;
+  }
+
+  .story-card{
+    padding:24px;
+  }
+
   .story-card h3{
     font-size:23px;
+  }
+
+  .news-grid{
+    grid-template-columns:1fr;
   }
 
   .direction-card{
     padding:25px;
   }
+
+  .direction-card h3{
+    font-size:25px;
+  }
+
+  .social-card{
+    padding:27px 20px;
+  }
+
+  .en{
+    font-size:.86em;
+  }
 }
+
 </style>
 </head>
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header class="site-header">
+
   <div class="container header-inner">
 
     <a href="index.html" class="brand">
+
       <img src="logo.jpg" alt="AFPSS Logo">
-      <div class="brand-text">
+
+      <div>
         <strong>AFPSS</strong>
-        <span>Adivasi Fase Pardhi Sudhar Samiti</span>
+
+        <span>
+          Adivasi Fase Pardhi Sudhar Samiti
+        </span>
+
+        <span class="en">
+          आदिवासी फासे पारधी सुधार समिती
+        </span>
+
       </div>
+
     </a>
 
-    <a href="index.html#home" class="back-link">
+    <a href="index.html#home" class="back">
       ← मुख्यपृष्ठावर परत
+      <span class="en">Back to Home</span>
     </a>
 
   </div>
+
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
+
   <div class="container hero-grid">
 
     <div class="hero-photo">
+
       <div class="photo-frame">
-        <img src="yogesh-pawar.jpg"
-             alt="योगेश पवार">
+
+        <img
+          src="yogesh-pawar.jpg"
+          alt="योगेश पवार | Yogesh Pawar">
+
       </div>
+
     </div>
+
 
     <div class="hero-content">
 
-      <small>SUCCESS STORY</small>
+      <small>
+        SUCCESS STORY
+      </small>
 
-      <h1>एका विद्यार्थ्याची प्रेरणादायी वाटचाल</h1>
+      <span class="en">
+        प्रेरणादायी यशोगाथा
+      </span>
 
-      <h2>योगेश पवार</h2>
+      <h1>
+
+        एका विद्यार्थ्याची
+        प्रेरणादायी वाटचाल
+
+        <span class="en">
+          An Inspiring Student Journey
+        </span>
+
+      </h1>
+
+
+      <h2>
+
+        योगेश पवार
+
+        <span class="en">
+          Yogesh Pawar
+        </span>
+
+      </h2>
+
 
       <div class="role">
+
         अर्थशास्त्र विषयाचे सहाय्यक प्राध्यापक
+
+        <span class="en">
+          Assistant Professor of Economics
+        </span>
+
       </div>
 
+
       <p class="hero-intro">
-        परिस्थितीवर मात करून शिक्षणाच्या बळावर स्वतःची ओळख निर्माण
-        करणाऱ्या एका विद्यार्थ्याचा प्रेरणादायी जीवनप्रवास.
+
+        परिस्थितीवर मात करून शिक्षणाच्या बळावर
+        स्वतःची ओळख निर्माण करणाऱ्या एका विद्यार्थ्याचा
+        प्रेरणादायी जीवनप्रवास.
+
+        <span class="en">
+          An inspiring life journey of a student who overcame
+          difficult circumstances and built his identity through education.
+        </span>
+
       </p>
 
     </div>
 
   </div>
+
 </section>
 
 
-<!-- STATS -->
+<!-- =========================
+     STATS
+========================= -->
+
 <section class="stats">
+
   <div class="container stats-grid">
 
     <div class="stat">
       <strong>80%</strong>
-      <span>दहावी</span>
+      <span>
+        दहावी
+        <span class="en">10th Standard</span>
+      </span>
     </div>
+
 
     <div class="stat">
       <strong>85%</strong>
-      <span>बारावी</span>
+      <span>
+        बारावी
+        <span class="en">12th Standard</span>
+      </span>
     </div>
+
 
     <div class="stat">
       <strong>राज्यस्तर</strong>
-      <span>योगासनातील यश</span>
+      <span>
+        योगासनातील यश
+        <span class="en">State-Level Yoga Achievement</span>
+      </span>
     </div>
+
 
     <div class="stat">
       <strong>आज</strong>
-      <span>सहाय्यक प्राध्यापक</span>
+      <span>
+        सहाय्यक प्राध्यापक
+        <span class="en">Assistant Professor</span>
+      </span>
     </div>
 
   </div>
+
 </section>
 
 
-<!-- LIFE STORY -->
+<!-- =========================
+     LIFE JOURNEY
+========================= -->
+
 <section class="section">
+
   <div class="container">
 
-    <div class="section-title">
+    <div class="section-head">
+
       <small>LIFE JOURNEY</small>
-      <h2>योगेश पवार यांचा संपूर्ण जीवनप्रवास</h2>
+
+      <h2>
+
+        योगेश पवार यांचा संपूर्ण जीवनप्रवास
+
+        <span class="en">
+          Yogesh Pawar’s Complete Life Journey
+        </span>
+
+      </h2>
+
       <p>
-        संघर्षातून शिक्षणाकडे आणि शिक्षणातून यशाकडे झालेली प्रेरणादायी वाटचाल.
+
+        संघर्षातून शिक्षणाकडे आणि शिक्षणातून
+        यशाकडे झालेली प्रेरणादायी वाटचाल.
+
+        <span class="en">
+          An inspiring journey from struggle to education,
+          and from education to success.
+        </span>
+
       </p>
+
     </div>
+
 
     <div class="story-card">
 
-      <h3>प्रश्नचिन्ह आदिवासी आश्रमशाळा : माझ्या जीवनाला मिळालेली दिशा</h3>
+      <h3>
+
+        प्रश्नचिन्ह आदिवासी आश्रमशाळा :
+        माझ्या जीवनाला मिळालेली दिशा
+
+        <span class="en">
+          Prashnachinha Adivasi Ashram School:
+          The Direction My Life Received
+        </span>
+
+      </h3>
+
 
       <p>
+
         माझ्या जीवनप्रवासातील एक अत्यंत महत्त्वाचा टप्पा म्हणजे
         प्रश्नचिन्ह आदिवासी आश्रमशाळेत झालेले माझे शिक्षण.
         माझ्यासारख्या फासेपारधी समाजातील मुलासाठी ही शाळा केवळ
         शिक्षण घेण्याचे ठिकाण नव्हते, तर माझ्या आयुष्याला नवी दिशा
         देणारे एक महत्त्वाचे केंद्र होते.
+
+        <span class="en">
+          One of the most important turning points in my life was my
+          education at Prashnachinha Adivasi Ashram School.
+          For a child from the Fase Pardhi community like me,
+          the school was not merely a place to study; it became
+          an important centre that gave my life a new direction.
+        </span>
+
       </p>
 
+
       <p>
+
         मी आठवीमध्ये प्रश्नचिन्ह आदिवासी आश्रमशाळेत प्रवेश घेतला.
-        त्या काळात माझी कौटुंबिक आणि सामाजिक परिस्थिती अत्यंत प्रतिकूल होती.
-        घरची आर्थिक परिस्थिती हलाखीची होती. वडिलांसोबत शिकारीला जाणे
-        आणि कुटुंबाच्या उदरनिर्वाहासाठी संघर्ष करणे हा माझ्या बालपणाचा भाग होता.
+        त्या काळात माझी कौटुंबिक आणि सामाजिक परिस्थिती अत्यंत
+        प्रतिकूल होती. घरची आर्थिक परिस्थिती हलाखीची होती.
+        वडिलांसोबत शिकारीला जाणे आणि कुटुंबाच्या उदरनिर्वाहासाठी
+        संघर्ष करणे हा माझ्या बालपणाचा भाग होता.
+
+        <span class="en">
+          I joined Prashnachinha Adivasi Ashram School in the
+          eighth standard. At that time, my family and social
+          circumstances were extremely difficult.
+          Our financial condition was poor, and struggling
+          for the family’s livelihood was part of my childhood.
+        </span>
+
       </p>
 
+
       <p>
+
         माझ्या आयुष्यातील हा बदल घडवून आणण्यात
-        <strong>मतीन शंकरराव भोसले सरांची</strong>
-        भूमिका अत्यंत महत्त्वाची होती. फासेपारधी समाजातील मुलांच्या
-        परिस्थितीची त्यांना जाणीव होती. या मुलांमध्ये क्षमता आहे;
-        फक्त त्यांना शिक्षण, योग्य वातावरण आणि संधी मिळणे आवश्यक आहे,
-        असा त्यांचा ठाम विश्वास होता.
+        <strong>मतीन भोसले सरांची</strong>
+        भूमिका अत्यंत महत्त्वाची होती. फासेपारधी समाजातील
+        मुलांमध्ये क्षमता आहे; त्यांना शिक्षण, योग्य वातावरण
+        आणि संधी मिळणे आवश्यक आहे, असा त्यांचा ठाम विश्वास होता.
+
+        <span class="en">
+          <strong>Matin Bhosale Sir</strong> played an extremely
+          important role in bringing this change in my life.
+          He firmly believed that children from the Fase Pardhi
+          community have potential and need education,
+          a supportive environment and an opportunity.
+        </span>
+
       </p>
 
-      <p>
-        मतीन शंकरराव भोसले सरांनी मला प्रश्नचिन्ह आश्रमशाळेत आणले
-        आणि शिक्षणाच्या वातावरणात आणून उभे केले. शाळेतील शैक्षणिक
-        वातावरण, शिक्षकांचे मार्गदर्शन आणि मिळालेली शिस्त यामुळे
-        माझ्यात हळूहळू सकारात्मक बदल घडू लागला.
-      </p>
 
       <p>
-        एकेकाळी वडिलांसोबत शिकारीला जाणारा आणि परिस्थितीमुळे वेगळ्या
-        वातावरणात वाढलेला मी शिक्षणाच्या प्रवाहात आलो.
-        शिक्षकांच्या मार्गदर्शनामुळे माझ्या अंगातील क्षमता मला
-        स्वतःलाही जाणवू लागली.
+
+        मतीन भोसले सरांनी मला प्रश्नचिन्ह आश्रमशाळेत आणले
+        आणि शिक्षणाच्या वातावरणात आणून उभे केले.
+        शाळेतील शैक्षणिक वातावरण, शिक्षकांचे मार्गदर्शन
+        आणि मिळालेली शिस्त यामुळे माझ्यात हळूहळू
+        सकारात्मक बदल घडू लागला.
+
+        <span class="en">
+          Matin Bhosale Sir brought me to Prashnachinha
+          Ashram School and placed me in an educational
+          environment. The school’s academic atmosphere,
+          teachers’ guidance and discipline gradually
+          brought positive changes in me.
+        </span>
+
       </p>
 
-      <p>
-        प्रश्नचिन्ह शाळेच्या वातावरणात आल्यानंतर माझी योगासनातील
-        आवड जोपासली गेली. योग्य प्रशिक्षण आणि शैक्षणिक वातावरण
-        मिळाल्यामुळे मी क्रीडा क्षेत्रात पुढे जात राहिलो आणि
-        योगासनामध्ये राज्यस्तरापर्यंत पोहोचलो.
-      </p>
 
       <p>
-        माझ्या आयुष्यात पुन्हा एक मोठे संकट आले. दहावीच्या काळात
-        माझ्या कमरेचा गंभीर त्रास वाढला. कमरेच्या शस्त्रक्रियेमुळे
-        मला सुमारे सहा महिने बिछान्यावर राहावे लागले.
-        शरीर साथ देत नसतानाही मी शिक्षण सोडले नाही.
-        बिछान्यावर राहून अभ्यास केला आणि दहावीच्या परीक्षेत
-        <strong>८० टक्के गुण</strong> मिळवून यश संपादन केले.
+
+        प्रश्नचिन्ह शाळेच्या वातावरणात आल्यानंतर माझी
+        योगासनातील आवड जोपासली गेली. योग्य प्रशिक्षण आणि
+        शैक्षणिक वातावरण मिळाल्यामुळे मी क्रीडा क्षेत्रात
+        पुढे जात राहिलो आणि योगासनामध्ये राज्यस्तरापर्यंत पोहोचलो.
+
+        <span class="en">
+          After entering the environment of Prashnachinha School,
+          my interest in yoga was nurtured. With proper training
+          and an educational environment, I progressed in sports
+          and reached the state level in yoga.
+        </span>
+
       </p>
 
-      <p>
-        प्रश्नचिन्ह आश्रमशाळेतील शिक्षणानंतर माझ्या पुढील शिक्षणाचा
-        मार्गही मतीन शंकरराव भोसले सरांच्या मार्गदर्शनामुळे खुला झाला.
-        अकरावीच्या शिक्षणासाठी मला लोकबिरादरी प्रकल्प, हेमलकसा येथे
-        प्रवेश मिळाला.
-      </p>
 
       <p>
+
+        दहावीच्या काळात माझ्या कमरेचा गंभीर त्रास वाढला.
+        कमरेच्या शस्त्रक्रियेमुळे मला सुमारे सहा महिने
+        बिछान्यावर राहावे लागले. शरीर साथ देत नसतानाही
+        मी शिक्षण सोडले नाही. बिछान्यावर राहून अभ्यास केला
+        आणि दहावीच्या परीक्षेत <strong>८० टक्के गुण</strong>
+        मिळवले.
+
+        <span class="en">
+          During the tenth standard, my back problem became severe.
+          Because of back surgery, I had to remain bedridden for
+          about six months. Even then, I did not give up education.
+          I studied from bed and secured <strong>80% marks</strong>
+          in the tenth-standard examination.
+        </span>
+
+      </p>
+
+
+      <p>
+
+        प्रश्नचिन्ह आश्रमशाळेतील शिक्षणानंतर माझ्या पुढील
+        शिक्षणाचा मार्गही मतीन भोसले सरांच्या मार्गदर्शनामुळे
+        खुला झाला. अकरावीच्या शिक्षणासाठी मला लोकबिरादरी
+        प्रकल्प, हेमलकसा येथे प्रवेश मिळाला.
+
+        <span class="en">
+          After my education at Prashnachinha Ashram School,
+          my path to further education also opened through
+          the guidance of Matin Bhosale Sir. I was admitted
+          to Lok Biradari Prakalp, Hemalkasa, for my
+          eleventh-standard education.
+        </span>
+
+      </p>
+
+
+      <p>
+
         लोकबिरादरी प्रकल्पातील शिक्षण आणि शिक्षकांचे मार्गदर्शन
         यामुळे माझ्या व्यक्तिमत्त्वाला नवी दिशा मिळाली.
         बारावीच्या परीक्षेत मला <strong>८५ टक्के गुण</strong> मिळाले.
-        पुढे माझ्या उच्च शिक्षणाचा आणि स्पर्धा परीक्षांच्या तयारीचा
-        प्रवास सुरू झाला.
+        पुढे माझ्या उच्च शिक्षणाचा प्रवास सुरू झाला.
+
+        <span class="en">
+          Education at Lok Biradari Prakalp and the guidance
+          of teachers gave a new direction to my personality.
+          I secured <strong>85% marks</strong> in the twelfth-standard
+          examination and continued towards higher education.
+        </span>
+
       </p>
+
 
       <p>
-        आज मी अर्थशास्त्र विषयाचा <strong>सहाय्यक प्राध्यापक</strong>
-        म्हणून कार्यरत आहे. मागे वळून पाहताना मला जाणवते की,
-        माझ्या जीवनात प्रश्नचिन्ह आदिवासी आश्रमशाळेचा टप्पा आला नसता,
-        तर कदाचित माझ्या आयुष्याची दिशा वेगळी असती.
+
+        आज मी अर्थशास्त्र विषयाचा
+        <strong>सहाय्यक प्राध्यापक</strong>
+        म्हणून कार्यरत आहे.
+
+        <span class="en">
+          Today, I work as an
+          <strong>Assistant Professor of Economics.</strong>
+        </span>
+
       </p>
 
+
       <div class="highlight">
+
         “प्रश्नचिन्ह आदिवासी आश्रमशाळेने मला केवळ शिक्षण दिले नाही;
         तिने मला स्वप्न पाहायला शिकवले.”
+
+        <span class="en">
+          “Prashnachinha Adivasi Ashram School did not merely
+          educate me; it taught me to dream.”
+        </span>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 
-<!-- ACHIEVEMENTS -->
+<!-- =========================
+     ACHIEVEMENTS
+========================= -->
+
 <section class="section" style="background:#fff;">
+
   <div class="container">
 
-    <div class="section-title">
+    <div class="section-head">
+
       <small>ACHIEVEMENTS</small>
-      <h2>संघर्षातून मिळवलेले यश</h2>
+
+      <h2>
+
+        संघर्षातून मिळवलेले यश
+
+        <span class="en">
+          Achievements Through Struggle
+        </span>
+
+      </h2>
+
     </div>
+
 
     <div class="achievements">
 
+
       <div class="achievement">
+
         <div class="achievement-icon">🎓</div>
-        <h3>दहावीचे यश</h3>
+
+        <h3>
+          दहावीचे यश
+          <span class="en">10th Standard Achievement</span>
+        </h3>
+
         <strong>80%</strong>
+
         <p>
-          कमरेच्या शस्त्रक्रियेनंतरही शिक्षण न सोडता
-          दहावीच्या परीक्षेत उल्लेखनीय यश.
+          दहावीच्या परीक्षेत 80% गुण.
+          <span class="en">
+            Secured 80% marks in the 10th-standard examination.
+          </span>
         </p>
+
       </div>
 
+
       <div class="achievement">
+
         <div class="achievement-icon">🎓</div>
-        <h3>बारावीचे यश</h3>
+
+        <h3>
+          बारावीचे यश
+          <span class="en">12th Standard Achievement</span>
+        </h3>
+
         <strong>85%</strong>
+
         <p>
-          लोकबिरादरी प्रकल्प, हेमलकसा येथील शिक्षणातून
-          बारावीमध्ये उत्तम कामगिरी.
+          बारावीच्या परीक्षेत 85% गुण.
+          <span class="en">
+            Secured 85% marks in the 12th-standard examination.
+          </span>
         </p>
+
       </div>
 
+
       <div class="achievement">
+
         <div class="achievement-icon">🧘</div>
-        <h3>योगासनातील यश</h3>
+
+        <h3>
+          योगासनातील यश
+          <span class="en">Yoga Achievement</span>
+        </h3>
+
         <strong>राज्यस्तर</strong>
+
         <p>
-          प्रतिकूल परिस्थितीवर मात करून योगासनामध्ये
-          राज्यस्तरापर्यंत मजल.
+          योगासनामध्ये राज्यस्तरीय यश.
+          <span class="en">
+            Reached the state level in yoga.
+          </span>
         </p>
+
       </div>
+
 
     </div>
+
   </div>
+
 </section>
 
 
-<!-- MATIN DIRECTION -->
+<!-- =========================
+     MATIN BHOSALE SIR
+========================= -->
+
 <section class="section direction">
 
   <div class="container">
 
-    <div class="section-title">
+    <div class="section-head">
+
       <small>THE TURNING POINT</small>
-      <h2>मतीन शंकरराव भोसले सरांनी दिलेली दिशा</h2>
+
+      <h2>
+
+        मतीन भोसले सरांनी दिलेली दिशा
+
+        <span class="en">
+          The Direction Given by Matin Bhosale Sir
+        </span>
+
+      </h2>
+
       <p>
-        एका विद्यार्थ्याच्या क्षमतेवर विश्वास ठेवून त्याला
-        शिक्षणाची संधी देण्याचा महत्त्वपूर्ण टप्पा.
+
+        एका विद्यार्थ्याच्या क्षमतेवर विश्वास ठेवून
+        त्याला शिक्षणाची संधी देणारा महत्त्वपूर्ण टप्पा.
+
+        <span class="en">
+          A turning point created by believing in a student’s
+          potential and giving him an opportunity for education.
+        </span>
+
       </p>
+
     </div>
+
 
     <div class="direction-card">
 
-      <h3>“परिस्थितीने अडवले नाही; शिक्षणाने दिशा दिली.”</h3>
+      <h3>
+
+        “परिस्थितीने अडवले नाही; शिक्षणाने दिशा दिली.”
+
+        <span class="en">
+          “Circumstances did not stop him; education gave him direction.”
+        </span>
+
+      </h3>
+
 
       <p>
-        मतीन शंकरराव भोसले सरांनी योगेश पवार यांच्यातील
-        परिस्थिती पाहून दया केली नाही; त्यांनी त्यांच्या
-        क्षमतेवर विश्वास ठेवला आणि त्यांना शिक्षणाची संधी दिली.
+
+        मतीन भोसले सरांनी योगेश पवार यांच्या परिस्थितीपेक्षा
+        त्यांच्या क्षमतेवर विश्वास ठेवला आणि त्यांना
+        शिक्षणाची संधी दिली.
+
+        <span class="en">
+          Matin Bhosale Sir believed in Yogesh Pawar’s potential
+          rather than judging him by his circumstances and gave
+          him an opportunity for education.
+        </span>
+
       </p>
 
+
       <div class="quote">
+
         “ज्यांच्यावर समाजाचा विश्वास कमी झाला होता,
-        अशा मुलांच्या क्षमतेवर विश्वास ठेवून त्यांना पुढे
-        जाण्याची संधी देणे हीच खरी दिशा.”
+        अशा मुलांच्या क्षमतेवर विश्वास ठेवून त्यांना
+        पुढे जाण्याची संधी देणे हीच खरी दिशा.”
+
+        <span class="en">
+          “True direction is to believe in the potential of
+          children whom society has lost faith in and give
+          them an opportunity to move forward.”
+        </span>
+
       </div>
 
     </div>
@@ -779,40 +1231,90 @@ footer strong{
 </section>
 
 
-<!-- NEWS -->
+<!-- =========================
+     3 NEWS
+========================= -->
+
 <section class="section">
 
   <div class="container">
 
-    <div class="section-title">
-      <small>MEDIA & NEWS</small>
-      <h2>योगेश पवार यांच्या प्रवासाची दखल</h2>
+    <div class="section-head">
+
+      <small>MEDIA COVERAGE</small>
+
+      <h2>
+
+        योगेश पवार यांच्या प्रवासाची दखल
+
+        <span class="en">
+          Media Recognition of Yogesh Pawar’s Journey
+        </span>
+
+      </h2>
+
       <p>
-        त्यांच्या संघर्षमय आणि प्रेरणादायी प्रवासावरील निवडक बातम्या.
+
+        योगेश पवार यांच्या संघर्ष, शिक्षण आणि यशाची
+        दखल घेणाऱ्या निवडक बातम्या.
+
+        <span class="en">
+          Selected news reports highlighting Yogesh Pawar’s
+          struggle, education and success.
+        </span>
+
       </p>
+
     </div>
+
 
     <div class="news-grid">
 
+
       <!-- NEWS 01 -->
+
       <article class="news-card">
 
-        <img src="yogesh-news-01.jpg"
-             alt="लोकशाही मराठी न्यूज - योगेश पवार">
+        <img
+          src="yogesh-news-01.jpg"
+          alt="लोकशाही मराठी न्यूज - योगेश पवार"
+          loading="lazy">
 
         <div class="news-content">
 
           <div class="source">
-            लोकशाही मराठी न्यूज
+
+            📰 लोकशाही मराठी न्यूज
+
+            <span class="en">
+              Lokshahi Marathi News
+            </span>
+
           </div>
 
+
           <h3>
-            फासेपारधी समाजातील मुलांचे संघर्षातून यश
+
+            योगेश पवार यांच्या प्रेरणादायी
+            शैक्षणिक प्रवासाची बातमी
+
+            <span class="en">
+              News report on Yogesh Pawar’s inspiring educational journey
+            </span>
+
           </h3>
 
+
           <p>
-            योगेश पवार यांच्या प्रेरणादायी शैक्षणिक प्रवासाची
-            आणि संघर्षातून मिळवलेल्या यशाची बातमी.
+
+            योगेश पवार यांच्या संघर्षातून
+            शिक्षण आणि यशाकडे झालेल्या प्रवासाची बातमी.
+
+            <span class="en">
+              A report on Yogesh Pawar’s journey from
+              struggle to education and success.
+            </span>
+
           </p>
 
         </div>
@@ -821,24 +1323,50 @@ footer strong{
 
 
       <!-- NEWS 02 -->
+
       <article class="news-card">
 
-        <img src="yogesh-news-02.jpg"
-             alt="BBC Marathi - योगेश पवार">
+        <img
+          src="yogesh-news-02.jpg"
+          alt="BBC Marathi - योगेश पवार"
+          loading="lazy">
 
         <div class="news-content">
 
           <div class="source">
-            BBC Marathi
+
+            📰 BBC Marathi
+
+            <span class="en">
+              BBC Marathi
+            </span>
+
           </div>
 
+
           <h3>
-            संघर्षातून घडलेले प्रेरणादायी यश
+
+            योगेश पवार यांच्या संघर्षातून
+            घडलेले यश
+
+            <span class="en">
+              Success shaped through Yogesh Pawar’s struggle
+            </span>
+
           </h3>
 
+
           <p>
-            प्रतिकूल परिस्थितीवर मात करून शिक्षणाच्या बळावर
-            पुढे आलेल्या योगेश पवार यांच्या प्रवासाची दखल.
+
+            प्रतिकूल परिस्थितीवर मात करून
+            शिक्षणाच्या बळावर पुढे आलेल्या
+            योगेश पवार यांच्या प्रवासाची दखल.
+
+            <span class="en">
+              Recognition of Yogesh Pawar’s journey of
+              overcoming adversity through education.
+            </span>
+
           </p>
 
         </div>
@@ -847,37 +1375,69 @@ footer strong{
 
 
       <!-- NEWS 03 -->
+
       <article class="news-card">
 
-        <img src="yogesh-news-03.jpg"
-             alt="प्रश्नचिन्ह शाळा - योगेश पवार">
+        <img
+          src="yogesh-news-03.jpg"
+          alt="तिसरी संबंधित बातमी - प्रश्नचिन्ह शाळा"
+          loading="lazy">
 
         <div class="news-content">
 
           <div class="source">
-            तिसरी संबंधित बातमी
+
+            📰 तिसरी संबंधित बातमी
+
+            <span class="en">
+              Related News
+            </span>
+
           </div>
 
+
           <h3>
-            प्रश्नचिन्ह शाळेचा माजी विद्यार्थी योगेश पवार यांचा प्रवास
+
+            प्रश्नचिन्ह शाळा आणि
+            मतीन भोसले सरांच्या मार्गदर्शनातून घडलेला प्रवास
+
+            <span class="en">
+              A journey shaped by Prashnachinha School
+              and the guidance of Matin Bhosale Sir
+            </span>
+
           </h3>
 
+
           <p>
-            प्रश्नचिन्ह आदिवासी आश्रमशाळा आणि
-            मतीन शंकरराव भोसले सरांच्या मार्गदर्शनातून
-            घडलेला योगेश पवार यांचा प्रेरणादायी प्रवास.
+
+            प्रश्नचिन्ह शाळेच्या माध्यमातून
+            योगेश पवार यांच्या जीवनाला मिळालेली दिशा.
+
+            <span class="en">
+              The direction given to Yogesh Pawar’s life
+              through Prashnachinha School.
+            </span>
+
           </p>
 
         </div>
 
       </article>
 
+
     </div>
 
-    <div class="news-note">
-      बातम्यांमधील मजकूर/फोटो त्यांच्या संबंधित वृत्तमाध्यमांच्या
-      प्रकाशित सामग्रीवर आधारित आहे. मूळ article URL उपलब्ध असल्यास
-      तो स्वतंत्रपणे जोडता येईल.
+
+    <div class="note">
+
+      📰 वरील तीनही बातम्या स्वतंत्र माध्यमांशी संबंधित आहेत.
+
+      <span class="en">
+        The three news items above are associated with
+        independent media sources.
+      </span>
+
     </div>
 
   </div>
@@ -885,32 +1445,89 @@ footer strong{
 </section>
 
 
-<!-- FACEBOOK -->
-<section class="section facebook">
+<!-- =========================
+     FACEBOOK PROFILE ONLY
+========================= -->
+
+<section class="section facebook-section">
 
   <div class="container">
 
-    <div class="section-title">
+    <div class="section-head">
+
       <small>FACEBOOK</small>
-      <h2>योगेश पवार यांचे Facebook Profile</h2>
-    </div>
 
-    <div class="facebook-card">
+      <h2>
 
-      <h3>👤 Facebook Profile</h3>
+        योगेश पवार यांचे Facebook Profile
+
+        <span class="en">
+          Yogesh Pawar’s Facebook Profile
+        </span>
+
+      </h2>
 
       <p>
-        योगेश पवार यांचे अधिकृत Facebook Profile पाहण्यासाठी
-        खालील बटनावर क्लिक करा.
+
+        योगेश पवार यांचे अधिकृत Facebook Profile.
+
+        <span class="en">
+          Official Facebook Profile of Yogesh Pawar.
+        </span>
+
       </p>
 
-      <a
-        class="facebook-button"
-        href="https://www.facebook.com/yogesh.pawar.25533/"
-        target="_blank"
-        rel="noopener">
-        Profile पाहा →
-      </a>
+    </div>
+
+
+    <div class="social-grid">
+
+      <article class="social-card">
+
+        <div class="social-icon">
+          👤
+        </div>
+
+
+        <h3>
+
+          Facebook Profile
+
+          <span class="en">
+            Official Facebook Profile
+          </span>
+
+        </h3>
+
+
+        <p>
+
+          योगेश पवार यांचे अधिकृत Facebook Profile
+          पाहण्यासाठी खालील बटनावर क्लिक करा.
+
+          <span class="en">
+            Click the button below to visit Yogesh Pawar’s
+            official Facebook Profile.
+          </span>
+
+        </p>
+
+
+        <a
+          class="fb-button"
+          href="https://www.facebook.com/yogesh.pawar.25533/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Profile पाहा →
+
+          <span class="en">
+            View Profile →
+          </span>
+
+        </a>
+
+      </article>
 
     </div>
 
@@ -919,39 +1536,79 @@ footer strong{
 </section>
 
 
-<!-- FINAL MESSAGE -->
-<section class="section direction">
+<!-- =========================
+     FINAL MESSAGE
+========================= -->
+
+<section class="section closing">
 
   <div class="container">
 
-    <div class="direction-card">
+    <h2>
 
-      <h3>एका संधीने बदललेले आयुष्य</h3>
+      एका संधीने बदललेले आयुष्य
 
-      <p>
-        आज योगेश पवार हे अर्थशास्त्र विषयाचे सहाय्यक प्राध्यापक
-        म्हणून कार्यरत आहेत. त्यांच्या या प्रवासामागे कुटुंबाचा
-        संघर्ष, शिक्षकांचे मार्गदर्शन आणि प्रश्नचिन्ह आदिवासी
-        आश्रमशाळेने दिलेली संधी यांचा मोठा वाटा आहे.
-      </p>
+      <span class="en">
+        A Life Changed by One Opportunity
+      </span>
 
-      <div class="quote">
-        “शिक्षणाची संधी मिळाली, तर परिस्थितीवर मात करून
-        प्रत्येक मुलगा आपले स्वप्न पूर्ण करू शकतो.”
-      </div>
+    </h2>
 
-    </div>
+
+    <p>
+
+      योगेश पवार यांची ही वाटचाल प्रश्नचिन्ह आदिवासी
+      आश्रमशाळेने दिलेल्या संधीची आणि
+      <strong>मतीन भोसले सरांनी</strong>
+      ठेवलेल्या विश्वासाची प्रेरणादायी कहाणी आहे.
+
+      <span class="en">
+        Yogesh Pawar’s journey is an inspiring story of the
+        opportunity provided by Prashnachinha Adivasi Ashram School
+        and the faith placed in him by
+        <strong>Matin Bhosale Sir.</strong>
+      </span>
+
+    </p>
+
+
+    <a
+      class="back"
+      href="index.html#home">
+
+      ← मुख्यपृष्ठावर परत
+
+      <span class="en">
+        Back to Home
+      </span>
+
+    </a>
 
   </div>
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-  <strong>AFPSS | Adivasi Fase Pardhi Sudhar Samiti</strong>
-  <br>
-  प्रश्नचिन्ह आदिवासी आश्रमशाळा · Mangrul Chavala, Maharashtra
+
+  <strong>
+    AFPSS | Adivasi Fase Pardhi Sudhar Samiti
+  </strong>
+
+  <p>
+    प्रश्नचिन्ह आदिवासी आश्रमशाळा · Maharashtra
+  </p>
+
+  <p class="en">
+    Prashnachinha Adivasi Ashram School · Maharashtra
+  </p>
+
 </footer>
+
 
 </body>
 </html>
