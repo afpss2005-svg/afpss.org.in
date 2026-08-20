@@ -154,21 +154,67 @@ a{text-decoration:none}
 <div class="lang-en"><strong>AFPSS • Education • Dignity • Social Transformation</strong><br><a href="index.html">← Home Page</a></div>
 </div>
 </footer>
+
 <script>
-const mrBtn=document.getElementById("mrBtn");
-const enBtn=document.getElementById("enBtn");
-const mr=document.querySelectorAll(".lang-mr");
-const en=document.querySelectorAll(".lang-en");
-function setLanguage(language){
- if(language==="en"){
-  mr.forEach(x=>x.style.display="none"); en.forEach(x=>x.style.display="");
-  enBtn.classList.add("active"); mrBtn.classList.remove("active"); document.documentElement.lang="en";
- }else{
-  en.forEach(x=>x.style.display="none"); mr.forEach(x=>x.style.display="");
-  mrBtn.classList.add("active"); enBtn.classList.remove("active"); document.documentElement.lang="mr";
- }
+const mrBtn = document.getElementById("mrBtn");
+const enBtn = document.getElementById("enBtn");
+
+const mr = document.querySelectorAll(".lang-mr");
+const en = document.querySelectorAll(".lang-en");
+
+function setLanguage(language) {
+
+  if (language === "en") {
+
+    mr.forEach(x => {
+      x.style.display = "none";
+    });
+
+    en.forEach(x => {
+      x.style.display = "block";
+    });
+
+    enBtn.classList.add("active");
+    mrBtn.classList.remove("active");
+
+    document.documentElement.lang = "en";
+
+  } else {
+
+    en.forEach(x => {
+      x.style.display = "none";
+    });
+
+    mr.forEach(x => {
+      x.style.display = "block";
+    });
+
+    mrBtn.classList.add("active");
+    enBtn.classList.remove("active");
+
+    document.documentElement.lang = "mr";
+  }
 }
-mrBtn.onclick=()=>setLanguage("mr"); enBtn.onclick=()=>setLanguage("en"); setLanguage("mr");
+
+/* Marathi button */
+mrBtn.onclick = function () {
+  setLanguage("mr");
+};
+
+/* English button */
+enBtn.onclick = function () {
+  setLanguage("en");
+};
+
+/* URL मधील ?lang= तपासा */
+const params = new URLSearchParams(window.location.search);
+const languageFromURL = params.get("lang");
+
+if (languageFromURL === "en") {
+  setLanguage("en");
+} else {
+  setLanguage("mr");
+}
 </script>
 </body>
 </html>
