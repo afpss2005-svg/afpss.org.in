@@ -2,11 +2,8 @@
 <html lang="mr">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AFPSS | Media Recognition & YouTube</title>
 
@@ -19,970 +16,543 @@ content="AFPSS, Adivasi Fase Pardhi Sudhar Samiti, Prashnachinh School, Prashnac
 <meta name="author"
 content="Adivasi Fase Pardhi Sudhar Samiti">
 
-
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
 href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap"
 rel="stylesheet">
 
-
 <style>
 
-/* =========================================================
-   ROOT
-========================================================= */
-
 :root{
-
   --green:#075b3b;
   --green2:#0b7650;
   --green-dark:#043d2a;
-
   --red:#b91c1c;
-
   --gold:#d69e2e;
-
   --cream:#f7f4ed;
-
   --white:#ffffff;
-
   --ink:#24312d;
-
   --muted:#687870;
-
   --border:#e4ebe7;
-
 }
-
-
-/* =========================================================
-   RESET
-========================================================= */
 
 *{
-
   box-sizing:border-box;
-
   margin:0;
-
   padding:0;
-
 }
-
 
 html{
-
   scroll-behavior:smooth;
-
 }
 
-
 body{
-
   margin:0;
-
   font-family:
     Inter,
     "Noto Sans Devanagari",
     Arial,
     sans-serif;
-
   background:var(--cream);
-
   color:var(--ink);
-
   line-height:1.75;
-
 }
-
 
 a{
-
   text-decoration:none;
-
   color:inherit;
-
 }
-
 
 img{
-
   max-width:100%;
-
   display:block;
-
 }
 
-
-/* =========================================================
-   HEADER
-========================================================= */
+/* ================= HEADER ================= */
 
 .topbar{
-
   position:sticky;
-
   top:0;
-
   z-index:1000;
-
   background:#fff;
-
   border-bottom:1px solid #e5e5e5;
-
-  box-shadow:
-    0 3px 15px rgba(0,0,0,.06);
-
+  box-shadow:0 3px 15px rgba(0,0,0,.06);
 }
-
 
 .nav{
-
   width:min(1180px,94%);
-
   margin:auto;
-
   min-height:72px;
-
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
-
   gap:20px;
-
 }
-
 
 .brand{
-
   display:flex;
-
   align-items:center;
-
   gap:12px;
-
   font-weight:800;
-
   color:var(--green);
-
 }
-
 
 .brand img{
-
   width:52px;
-
   height:52px;
-
   object-fit:contain;
-
   border-radius:50%;
-
 }
-
 
 .brand-text strong{
-
   display:block;
-
   font-size:21px;
-
   line-height:1.2;
-
 }
-
 
 .brand-text span{
-
   display:block;
-
   font-size:11px;
-
   color:#748078;
-
 }
-
 
 .lang{
-
   display:flex;
-
   gap:8px;
-
 }
-
 
 .lang button{
-
   border:1px solid #d8e2dc;
-
   background:#fff;
-
   color:var(--green);
-
   padding:8px 16px;
-
   border-radius:25px;
-
   font-weight:800;
-
   cursor:pointer;
-
   font-size:14px;
-
 }
-
 
 .lang button.active{
-
   background:var(--green);
-
   color:#fff;
-
 }
 
+/* ================= LANGUAGE ================= */
 
-/* =========================================================
-   HERO
-========================================================= */
+/*
+  IMPORTANT:
+  English was previously hidden because JS used display=""
+  while CSS had .en{display:none}.
+  Now JavaScript explicitly sets block/inline.
+*/
+
+.en{
+  display:none;
+}
+
+.mr{
+  display:block;
+}
+
+/* ================= HERO ================= */
 
 .hero{
-
   background:
     linear-gradient(
       135deg,
       var(--green),
       var(--green-dark)
     );
-
   color:#fff;
-
   padding:75px 20px;
-
   text-align:center;
-
 }
-
 
 .hero-inner{
-
   width:min(950px,94%);
-
   margin:auto;
-
 }
-
 
 .hero-badge{
-
   display:inline-block;
-
   padding:8px 18px;
-
   border-radius:50px;
-
   background:rgba(255,255,255,.12);
-
   border:1px solid rgba(255,255,255,.2);
-
   font-size:12px;
-
   font-weight:900;
-
   letter-spacing:2px;
-
   margin-bottom:18px;
-
 }
-
 
 .hero h1{
-
-  font-size:
-    clamp(32px,5vw,52px);
-
+  font-size:clamp(32px,5vw,52px);
   line-height:1.2;
-
   margin-bottom:15px;
-
 }
-
 
 .hero h1 span{
-
   color:#f2c94c;
-
 }
-
 
 .hero p{
-
   max-width:760px;
-
   margin:0 auto;
-
   font-size:18px;
-
   opacity:.94;
-
 }
 
-
-/* =========================================================
-   COMMON
-========================================================= */
+/* ================= COMMON ================= */
 
 .container{
-
   width:min(1180px,94%);
-
   margin:auto;
-
 }
-
 
 .section{
-
   padding:65px 0;
-
 }
-
 
 .title{
-
   text-align:center;
-
   margin-bottom:35px;
-
 }
-
 
 .title small{
-
   display:block;
-
   color:var(--gold);
-
   font-weight:900;
-
   letter-spacing:2px;
-
   margin-bottom:8px;
-
 }
-
 
 .title h2{
-
   color:var(--green);
-
   font-size:34px;
-
   margin-bottom:8px;
-
 }
-
 
 .title p{
-
   color:var(--muted);
-
 }
 
-
-/* =========================================================
-   LANGUAGE
-========================================================= */
-
-.en{
-
-  display:none;
-
-}
-
-
-.mr{
-
-  display:block;
-
-}
-
-
-/* =========================================================
-   NEWS
-========================================================= */
+/* ================= NEWS ================= */
 
 .news{
-
   display:grid;
-
-  grid-template-columns:
-    repeat(2,1fr);
-
+  grid-template-columns:repeat(2,1fr);
   gap:24px;
-
 }
-
 
 .news-card{
-
   background:#fff;
-
   border-radius:18px;
-
   overflow:hidden;
-
-  box-shadow:
-    0 8px 25px rgba(0,0,0,.08);
-
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
   border:1px solid var(--border);
-
 }
-
 
 .news-card img{
-
   width:100%;
-
   height:330px;
-
   object-fit:contain;
-
   background:#f2f5f3;
-
   cursor:pointer;
-
 }
-
 
 .news-card-content{
-
   padding:20px;
-
 }
-
 
 .news-number{
-
   display:inline-block;
-
   background:var(--green);
-
   color:#fff;
-
   border-radius:20px;
-
   padding:3px 10px;
-
   font-size:12px;
-
   font-weight:800;
-
   margin-bottom:8px;
-
 }
-
 
 .news-card h3{
-
   color:var(--red);
-
   margin:0 0 8px;
-
   font-size:20px;
-
 }
-
 
 .news-card p{
-
   color:#65736d;
-
   margin:5px 0;
-
 }
 
-
-/* =========================================================
-   YOUTUBE
-========================================================= */
+/* ================= YOUTUBE ================= */
 
 .youtube{
-
   display:grid;
-
-  grid-template-columns:
-    repeat(2,1fr);
-
+  grid-template-columns:repeat(2,1fr);
   gap:24px;
-
 }
-
 
 .video{
-
   background:#fff;
-
   border-radius:18px;
-
   overflow:hidden;
-
-  box-shadow:
-    0 8px 25px rgba(0,0,0,.08);
-
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
   border:1px solid var(--border);
-
 }
-
 
 .video iframe{
-
   width:100%;
-
   aspect-ratio:16/9;
-
   border:0;
-
   display:block;
-
 }
-
 
 .video h3{
-
   margin:0;
-
   padding:15px 18px 5px;
-
   color:var(--green);
-
   font-size:18px;
-
 }
-
 
 .youtube-btn{
-
   display:inline-block;
-
   margin:8px 18px 20px;
-
   padding:10px 18px;
-
   border-radius:25px;
-
   background:var(--green);
-
   color:#fff;
-
   font-weight:800;
-
 }
 
-
-/* =========================================================
-   BUTTONS
-========================================================= */
+/* ================= BUTTONS ================= */
 
 .buttons{
-
   display:flex;
-
   justify-content:center;
-
   flex-wrap:wrap;
-
   gap:12px;
-
   margin-top:28px;
-
 }
-
 
 .btn{
-
   display:inline-block;
-
   padding:13px 25px;
-
   border-radius:30px;
-
   font-weight:800;
-
   background:#fff;
-
   color:var(--green);
-
   border:1px solid #e0e8e3;
-
   transition:.2s;
-
 }
-
 
 .btn:hover{
-
   transform:translateY(-2px);
-
 }
-
 
 .btn.gold{
-
   background:#f2c94c;
-
   color:#24312d;
-
   border:none;
-
 }
 
-
-/* =========================================================
-   CONTACT
-========================================================= */
+/* ================= CONTACT ================= */
 
 .contact{
-
   background:
     linear-gradient(
       135deg,
       var(--green),
       var(--green2)
     );
-
   color:#fff;
-
   border-radius:24px;
-
   padding:40px 30px;
-
   text-align:center;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.10);
-
+  box-shadow:0 10px 30px rgba(0,0,0,.10);
 }
-
 
 .contact h2{
-
   font-size:30px;
-
   margin-bottom:15px;
-
 }
-
 
 .contact p{
-
   margin:8px 0;
-
   font-size:16px;
-
 }
-
 
 .contact a{
-
   color:#fff;
-
   font-weight:700;
-
 }
-
 
 .contact .btn{
-
   background:#fff;
-
   color:var(--green);
-
   border:none;
-
 }
-
 
 .contact .btn:hover{
-
   background:#f2c94c;
-
   color:#24312d;
-
 }
 
-
-/* =========================================================
-   BACK
-========================================================= */
+/* ================= BACK ================= */
 
 .back{
-
   text-align:center;
-
   margin:10px 0 60px;
-
 }
-
 
 .back a{
-
   color:var(--green);
-
   font-weight:800;
-
 }
 
-
-/* =========================================================
-   FOOTER
-========================================================= */
+/* ================= FOOTER ================= */
 
 .footer{
-
   background:#064c35;
-
   color:#fff;
-
   text-align:center;
-
   padding:35px 20px;
-
 }
-
 
 .footer p{
-
   margin:5px;
-
 }
 
-
-/* =========================================================
-   MODAL
-========================================================= */
+/* ================= MODAL ================= */
 
 .modal{
-
   display:none;
-
   position:fixed;
-
   inset:0;
-
   z-index:2000;
-
   background:rgba(0,0,0,.92);
-
   align-items:center;
-
   justify-content:center;
-
   padding:20px;
-
 }
-
 
 .modal.open{
-
   display:flex;
-
 }
-
 
 .modal img{
-
   max-width:95vw;
-
   max-height:90vh;
-
   border-radius:12px;
-
   object-fit:contain;
-
 }
-
 
 .close{
-
   position:fixed;
-
   top:15px;
-
   right:25px;
-
   color:#fff;
-
   font-size:45px;
-
   cursor:pointer;
-
   z-index:2001;
-
 }
 
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:850px){
 
   .news{
-
     grid-template-columns:1fr;
-
   }
 
   .youtube{
-
     grid-template-columns:1fr;
-
   }
 
 }
 
-
 @media(max-width:600px){
 
   .nav{
-
     min-height:65px;
-
   }
-
 
   .brand img{
-
     width:45px;
-
     height:45px;
-
   }
-
 
   .brand-text strong{
-
     font-size:18px;
-
   }
-
 
   .brand-text span{
-
     font-size:9px;
-
   }
-
 
   .lang button{
-
     padding:7px 12px;
-
     font-size:13px;
-
   }
-
 
   .hero{
-
     padding:60px 16px;
-
   }
-
 
   .hero h1{
-
     font-size:34px;
-
   }
-
 
   .hero p{
-
     font-size:16px;
-
   }
-
 
   .container{
-
     width:92%;
-
   }
-
 
   .section{
-
     padding:45px 0;
-
   }
-
 
   .title h2{
-
     font-size:28px;
-
   }
-
 
   .news-card img{
-
     height:auto;
-
     max-height:430px;
-
   }
-
 
   .contact{
-
     padding:35px 20px;
-
   }
 
-
   .contact h2{
-
     font-size:25px;
-
   }
 
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
+<!-- ================= HEADER ================= -->
 
 <header class="topbar">
 
   <div class="nav">
 
-
-    <a href="index.html"
-       class="brand">
+    <a href="index.html" class="brand">
 
       <img
         src="logo.jpg"
-        alt="AFPSS Logo"
-      >
-
+        alt="AFPSS Logo">
 
       <div class="brand-text">
 
@@ -996,46 +566,36 @@ img{
 
     </a>
 
-
     <div class="lang">
 
       <button
         id="mrBtn"
-        type="button"
-      >
+        type="button">
         मराठी
       </button>
 
-
       <button
         id="enBtn"
-        type="button"
-      >
+        type="button">
         English
       </button>
 
     </div>
-
 
   </div>
 
 </header>
 
 
-
-<!-- =========================================================
-     HERO
-========================================================= -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
   <div class="hero-inner">
 
-
     <div class="hero-badge">
       NEWS • MEDIA • YOUTUBE
     </div>
-
 
     <!-- MARATHI -->
 
@@ -1045,7 +605,6 @@ img{
         माध्यमांतील <span>दखल</span>
       </h1>
 
-
       <p>
         प्रश्नचिन्ह आदिवासी आश्रमशाळेच्या
         शैक्षणिक, सामाजिक आणि परिवर्तनाच्या
@@ -1053,7 +612,6 @@ img{
       </p>
 
     </div>
-
 
     <!-- ENGLISH -->
 
@@ -1063,7 +621,6 @@ img{
         Media <span>Recognition</span>
       </h1>
 
-
       <p>
         Media coverage documenting the
         educational, social and transformative
@@ -1072,32 +629,25 @@ img{
 
     </div>
 
-
   </div>
 
 </section>
 
 
-
 <main class="container">
 
 
-<!-- =========================================================
-     NEWS
-========================================================= -->
+<!-- ================= NEWS ================= -->
 
 <section
   class="section"
-  id="news-media"
->
-
+  id="news-media">
 
   <div class="title">
 
     <small>
       NEWS & MEDIA ARCHIVE
     </small>
-
 
     <!-- MARATHI -->
 
@@ -1107,14 +657,12 @@ img{
         📰 संपूर्ण बातम्या व माध्यमांतील दखल
       </h2>
 
-
       <p>
         प्रश्नचिन्ह शाळेच्या कार्याची
         माध्यमांमधून झालेली दखल.
       </p>
 
     </div>
-
 
     <!-- ENGLISH -->
 
@@ -1124,7 +672,6 @@ img{
         📰 Complete News & Media Archive
       </h2>
 
-
       <p>
         Complete newspaper and media
         coverage of Prashnachinh School.
@@ -1132,33 +679,25 @@ img{
 
     </div>
 
-
   </div>
-
 
   <div
     class="news"
-    id="newsGrid"
-  ></div>
-
+    id="newsGrid">
+  </div>
 
 </section>
 
 
-
-<!-- =========================================================
-     YOUTUBE
-========================================================= -->
+<!-- ================= YOUTUBE ================= -->
 
 <section class="section">
-
 
   <div class="title">
 
     <small>
       YOUTUBE JOURNEY
     </small>
-
 
     <!-- MARATHI -->
 
@@ -1168,14 +707,12 @@ img{
         🎥 शाळेचा YouTube प्रवास
       </h2>
 
-
       <p>
         शाळा, विद्यार्थी, उपक्रम आणि
         सामाजिक कार्याशी संबंधित व्हिडिओ.
       </p>
 
     </div>
-
 
     <!-- ENGLISH -->
 
@@ -1185,7 +722,6 @@ img{
         🎥 Our School YouTube Journey
       </h2>
 
-
       <p>
         Videos related to the school,
         students, activities and social work.
@@ -1193,25 +729,22 @@ img{
 
     </div>
 
-
   </div>
 
 
   <div
     class="youtube"
-    id="youtubeGrid"
-  ></div>
+    id="youtubeGrid">
+  </div>
 
 
   <div class="buttons">
-
 
     <a
       class="btn gold"
       href="https://youtube.com/@prashnchinhaaadiwasiaashra8806"
       target="_blank"
-      rel="noopener noreferrer"
-    >
+      rel="noopener noreferrer">
 
       ▶️
 
@@ -1225,23 +758,16 @@ img{
 
     </a>
 
-
   </div>
-
 
 </section>
 
 
-
-<!-- =========================================================
-     CONTACT
-========================================================= -->
+<!-- ================= CONTACT ================= -->
 
 <section class="section">
 
-
   <div class="contact">
-
 
     <!-- MARATHI -->
 
@@ -1251,11 +777,9 @@ img{
         📞 प्रश्नचिन्ह शाळेशी संपर्क
       </h2>
 
-
       <p>
         आदिवासी फासे पारधी सुधार समिती
       </p>
-
 
       <p>
         मंगरूळ चव्हाळा,
@@ -1264,14 +788,12 @@ img{
         महाराष्ट्र
       </p>
 
-
       <p>
         📞
         <a href="tel:9096364529">
           9096364529
         </a>
       </p>
-
 
       <p>
         📞
@@ -1280,7 +802,6 @@ img{
         </a>
       </p>
 
-
       <p>
         ✉️
         <a href="mailto:afpss2005@gmail.com">
@@ -1288,35 +809,31 @@ img{
         </a>
       </p>
 
-
       <div class="buttons">
-
 
         <a
           class="btn"
           href="https://wa.me/919096364529"
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          💬 WhatsApp
-        </a>
+          rel="noopener noreferrer">
 
+          💬 WhatsApp
+
+        </a>
 
         <a
           class="btn"
           href="https://www.google.com/maps/search/?api=1&query=Mangrul+Chawhala+Nandgaon+Khandeshwar+Amravati+Maharashtra"
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          📍 Google Map
-        </a>
+          rel="noopener noreferrer">
 
+          📍 Google Map
+
+        </a>
 
       </div>
 
-
     </div>
-
 
 
     <!-- ENGLISH -->
@@ -1327,11 +844,9 @@ img{
         📞 Contact Prashnachinh School
       </h2>
 
-
       <p>
         Adivasi Fase Pardhi Sudhar Samiti
       </p>
-
 
       <p>
         Mangrul Chawhala,
@@ -1340,14 +855,12 @@ img{
         Maharashtra, India
       </p>
 
-
       <p>
         📞
         <a href="tel:9096364529">
           9096364529
         </a>
       </p>
-
 
       <p>
         📞
@@ -1356,7 +869,6 @@ img{
         </a>
       </p>
 
-
       <p>
         ✉️
         <a href="mailto:afpss2005@gmail.com">
@@ -1364,49 +876,40 @@ img{
         </a>
       </p>
 
-
       <div class="buttons">
-
 
         <a
           class="btn"
           href="https://wa.me/919096364529"
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          💬 WhatsApp
-        </a>
+          rel="noopener noreferrer">
 
+          💬 WhatsApp
+
+        </a>
 
         <a
           class="btn"
           href="https://www.google.com/maps/search/?api=1&query=Mangrul+Chawhala+Nandgaon+Khandeshwar+Amravati+Maharashtra"
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          📍 Google Map
-        </a>
+          rel="noopener noreferrer">
 
+          📍 Google Map
+
+        </a>
 
       </div>
 
-
     </div>
 
-
   </div>
-
 
 </section>
 
 
-
-<!-- =========================================================
-     BACK
-========================================================= -->
+<!-- ================= BACK ================= -->
 
 <div class="back">
-
 
   <a href="index.html">
 
@@ -1416,81 +919,60 @@ img{
       मुख्यपृष्ठावर परत जा
     </span>
 
-
     <span class="en">
       Back to Home
     </span>
 
   </a>
 
-
 </div>
-
 
 </main>
 
 
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer class="footer">
-
 
   <strong>
     AFPSS • Adivasi Fase Pardhi Sudhar Samiti
   </strong>
 
-
   <p class="mr">
     शिक्षणातून स्वाभिमान, संधीतून परिवर्तन.
   </p>
-
 
   <p class="en">
     Education, opportunity and transformation.
   </p>
 
-
   <p>
     © 2026 Adivasi Fase Pardhi Sudhar Samiti
   </p>
 
-
 </footer>
 
 
-
-<!-- =========================================================
-     IMAGE MODAL
-========================================================= -->
+<!-- ================= IMAGE MODAL ================= -->
 
 <div
   class="modal"
   id="modal"
-  onclick="closeImg()"
->
-
+  onclick="closeImg()">
 
   <span
     class="close"
-    onclick="closeImg()"
-  >
+    onclick="closeImg()">
     ×
   </span>
-
 
   <img
     id="modalImg"
     src=""
     alt="School / News image"
-    onclick="event.stopPropagation()"
-  >
-
+    onclick="event.stopPropagation()">
 
 </div>
-
 
 
 <script>
@@ -1501,42 +983,28 @@ img{
 
 function openImg(src){
 
-  document
-    .getElementById("modalImg")
-    .src = src;
+  document.getElementById("modalImg").src = src;
 
-
-  document
-    .getElementById("modal")
-    .classList
-    .add("open");
+  document.getElementById("modal").classList.add("open");
 
 }
-
 
 function closeImg(){
 
-  document
-    .getElementById("modal")
-    .classList
-    .remove("open");
+  document.getElementById("modal").classList.remove("open");
 
 }
-
 
 document.addEventListener(
   "keydown",
   function(e){
 
     if(e.key === "Escape"){
-
       closeImg();
-
     }
 
   }
 );
-
 
 
 /* =========================================================
@@ -1581,7 +1049,6 @@ const newsSpecial = {
 };
 
 
-
 /* =========================================================
    NEWS GRID
 ========================================================= */
@@ -1589,9 +1056,7 @@ const newsSpecial = {
 const newsGrid =
   document.getElementById("newsGrid");
 
-
 for(let n=1; n<=36; n++){
-
 
   const s =
     newsSpecial[n] ||
@@ -1624,17 +1089,14 @@ for(let n=1; n<=36; n++){
 
     <article class="news-card">
 
-
       <img
         src="news-${number}.jpg"
         alt="Prashnachinh Media News ${n}"
         onclick="openImg(this.src)"
-        loading="lazy"
-      >
+        loading="lazy">
 
 
       <div class="news-card-content">
-
 
         <span class="news-number">
           NEWS ${number}
@@ -1662,25 +1124,19 @@ for(let n=1; n<=36; n++){
 
 
         <p class="mr">
-
           <strong>
             📰 स्रोत: माध्यम वृत्त / Newspaper Archive
           </strong>
-
         </p>
 
 
         <p class="en">
-
           <strong>
             📰 Source: Media / Newspaper Archive
           </strong>
-
         </p>
 
-
       </div>
-
 
     </article>
 
@@ -1691,13 +1147,11 @@ for(let n=1; n<=36; n++){
 }
 
 
-
 /* =========================================================
    YOUTUBE VIDEOS
 ========================================================= */
 
 const videos = [
-
 
   [
     "Klz1ZtE2g6Q",
@@ -1705,13 +1159,11 @@ const videos = [
     "Prashnachinh School Journey"
   ],
 
-
   [
     "hkRQf4bt-CI",
     "प्रश्नचिन्ह शाळा",
     "Prashnachinh School"
   ],
-
 
   [
     "B73WNW-Hgjc",
@@ -1719,13 +1171,11 @@ const videos = [
     "School Struggle"
   ],
 
-
   [
     "pjGWGyX6U9I",
     "विद्यार्थ्यांचा प्रवास",
     "Students' Journey"
   ],
-
 
   [
     "WKfI9MHOITI",
@@ -1733,13 +1183,11 @@ const videos = [
     "School Activities"
   ],
 
-
   [
     "b1Jyp2Aat-M",
     "विद्यार्थ्यांचे जीवन",
     "Students' Life"
   ],
-
 
   [
     "tEDVQkloehE",
@@ -1747,13 +1195,11 @@ const videos = [
     "Educational Activities"
   ],
 
-
   [
     "dIDqojBD4tA",
     "शाळेतील विशेष क्षण",
     "Special Moments at School"
   ],
-
 
   [
     "qaK1HQ7hAs8",
@@ -1761,13 +1207,11 @@ const videos = [
     "Students' Development"
   ],
 
-
   [
     "TYbRmsXophY",
     "शाळेचा सामाजिक प्रवास",
     "School's Social Journey"
   ],
-
 
   [
     "n--CPW1_REw",
@@ -1775,20 +1219,17 @@ const videos = [
     "The Story of Prashnachinh School"
   ],
 
-
   [
     "v6pPH-9bGas",
     "शाळेतील विशेष कार्यक्रम",
     "Special School Programme"
   ],
 
-
   [
     "Dzmny2BpRxE",
     "शाळेचा प्रेरणादायी प्रवास",
     "The Inspiring School Journey"
   ],
-
 
   [
     "PqKVBQaqEUk",
@@ -1799,7 +1240,6 @@ const videos = [
 ];
 
 
-
 /* =========================================================
    YOUTUBE GRID
 ========================================================= */
@@ -1807,9 +1247,7 @@ const videos = [
 const youtubeGrid =
   document.getElementById("youtubeGrid");
 
-
 videos.forEach(function(v){
-
 
   youtubeGrid.insertAdjacentHTML(
 
@@ -1819,65 +1257,44 @@ videos.forEach(function(v){
 
     <article class="video">
 
-
       <iframe
-
         src="https://www.youtube.com/embed/${v[0]}"
-
         title="${v[2]}"
-
         loading="lazy"
-
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-
         referrerpolicy="strict-origin-when-cross-origin"
-
-        allowfullscreen
-
-      ></iframe>
+        allowfullscreen>
+      </iframe>
 
 
       <h3>
-
 
         <span class="mr">
           🎥 ${v[1]}
         </span>
 
-
         <span class="en">
           🎥 ${v[2]}
         </span>
-
 
       </h3>
 
 
       <a
-
         class="youtube-btn"
-
         href="https://www.youtube.com/watch?v=${v[0]}"
-
         target="_blank"
-
-        rel="noopener noreferrer"
-
-      >
-
+        rel="noopener noreferrer">
 
         <span class="mr">
           ▶️ YouTube वर व्हिडिओ पहा
         </span>
 
-
         <span class="en">
           ▶️ Watch on YouTube
         </span>
 
-
       </a>
-
 
     </article>
 
@@ -1888,86 +1305,81 @@ videos.forEach(function(v){
 });
 
 
-
 /* =========================================================
    LANGUAGE SYSTEM
+   FINAL FIX
 ========================================================= */
 
 const mrBtn =
   document.getElementById("mrBtn");
 
-
 const enBtn =
   document.getElementById("enBtn");
 
-
 const mr =
   document.querySelectorAll(".mr");
-
 
 const en =
   document.querySelectorAll(".en");
 
 
+/*
+  This function explicitly chooses the correct display
+  type instead of using display="".
+*/
+
+function showLanguage(elements){
+
+  elements.forEach(function(x){
+
+    if(x.tagName === "SPAN"){
+      x.style.display = "inline";
+    }else{
+      x.style.display = "block";
+    }
+
+  });
+
+}
+
+
+function hideLanguage(elements){
+
+  elements.forEach(function(x){
+    x.style.display = "none";
+  });
+
+}
+
 
 function setLanguage(language){
 
-
   if(language === "en"){
 
+    hideLanguage(mr);
 
-    mr.forEach(function(x){
-
-      x.style.display = "none";
-
-    });
-
-
-    en.forEach(function(x){
-
-      x.style.display = "";
-
-    });
-
+    showLanguage(en);
 
     enBtn.classList.add("active");
-
     mrBtn.classList.remove("active");
 
-
     document.documentElement.lang = "en";
-
 
     localStorage.setItem(
       "afpssLanguage",
       "en"
     );
 
-
   }else{
 
+    hideLanguage(en);
 
-    en.forEach(function(x){
-
-      x.style.display = "none";
-
-    });
-
-
-    mr.forEach(function(x){
-
-      x.style.display = "";
-
-    });
-
+    showLanguage(mr);
 
     mrBtn.classList.add("active");
-
     enBtn.classList.remove("active");
 
-
     document.documentElement.lang = "mr";
-
 
     localStorage.setItem(
       "afpssLanguage",
@@ -1979,7 +1391,6 @@ function setLanguage(language){
 }
 
 
-
 /* =========================================================
    LANGUAGE BUTTONS
 ========================================================= */
@@ -1988,17 +1399,14 @@ mrBtn.onclick = function(){
 
   setLanguage("mr");
 
-
   const url =
     new URL(window.location.href);
-
 
   url.searchParams.set(
     "lang",
     "mr"
   );
 
-
   window.history.replaceState(
     {},
     "",
@@ -2006,23 +1414,19 @@ mrBtn.onclick = function(){
   );
 
 };
-
 
 
 enBtn.onclick = function(){
 
   setLanguage("en");
 
-
   const url =
     new URL(window.location.href);
-
 
   url.searchParams.set(
     "lang",
     "en"
   );
-
 
   window.history.replaceState(
     {},
@@ -2031,7 +1435,6 @@ enBtn.onclick = function(){
   );
 
 };
-
 
 
 /* =========================================================
@@ -2044,30 +1447,24 @@ const params =
     window.location.search
   );
 
-
 const urlLanguage =
   params.get("lang");
-
 
 
 if(urlLanguage === "en"){
 
   setLanguage("en");
 
-
 }else if(urlLanguage === "mr"){
 
   setLanguage("mr");
 
-
 }else{
-
 
   const savedLanguage =
     localStorage.getItem(
       "afpssLanguage"
     ) || "mr";
-
 
   setLanguage(savedLanguage);
 
@@ -2075,7 +1472,5 @@ if(urlLanguage === "en"){
 
 </script>
 
-
 </body>
-
 </html>
