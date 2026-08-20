@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://afpss.org.in/sitemap.xml
