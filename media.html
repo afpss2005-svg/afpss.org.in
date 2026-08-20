@@ -1302,129 +1302,132 @@ videos.forEach(function(v){
 });
 
 
-/* =========================================================
-   LANGUAGE
-========================================================= */
+<script>
 
-const mrBtn =
-document.getElementById("mrBtn");
+/* ================= LANGUAGE SYSTEM ================= */
 
-const enBtn =
-document.getElementById("enBtn");
+const mr = document.querySelectorAll(".mr");
+const en = document.querySelectorAll(".en");
 
-const mr =
-document.querySelectorAll(".mr");
-
-const en =
-document.querySelectorAll(".en");
-
+const mrBtn = document.getElementById("mrBtn");
+const enBtn = document.getElementById("enBtn");
 
 function setLanguage(language){
 
+  /* MARATHI */
+  if(language === "mr"){
+
+    mr.forEach(function(x){
+      x.style.display = "";
+    });
+
+    en.forEach(function(x){
+      x.style.display = "none";
+    });
+
+    if(mrBtn){
+      mrBtn.classList.add("active");
+    }
+
+    if(enBtn){
+      enBtn.classList.remove("active");
+    }
+
+    document.documentElement.lang = "mr";
+
+    localStorage.setItem("afpssLanguage","mr");
+  }
+
+
+  /* ENGLISH */
   if(language === "en"){
 
     mr.forEach(function(x){
       x.style.display = "none";
     });
 
-
     en.forEach(function(x){
       x.style.display = "";
     });
 
+    if(enBtn){
+      enBtn.classList.add("active");
+    }
 
-    enBtn.classList.add("active");
-
-    mrBtn.classList.remove("active");
-
+    if(mrBtn){
+      mrBtn.classList.remove("active");
+    }
 
     document.documentElement.lang = "en";
 
-
-    localStorage.setItem(
-      "afpssLanguage",
-      "en"
-    );
-
+    localStorage.setItem("afpssLanguage","en");
   }
-
-  else{
-
-    en.forEach(function(x){
-      x.style.display = "none";
-    });
-
-
-    mr.forEach(function(x){
-      x.style.display = "";
-    });
-
-
-    mrBtn.classList.add("active");
-
-    enBtn.classList.remove("active");
-
-
-    document.documentElement.lang = "mr";
-
-
-    localStorage.setItem(
-      "afpssLanguage",
-      "mr"
-    );
-
-  }
-
 }
 
 
-/* =========================================================
-   LANGUAGE BUTTONS
-========================================================= */
+/* ================= LANGUAGE BUTTONS ================= */
 
-mrBtn.onclick = function(){
+if(mrBtn){
 
-  setLanguage("mr");
+  mrBtn.onclick = function(){
 
-};
+    setLanguage("mr");
+
+    const url = new URL(window.location.href);
+
+    url.searchParams.set("lang","mr");
+
+    window.history.replaceState({}, "", url);
+  };
+}
 
 
-enBtn.onclick = function(){
+if(enBtn){
+
+  enBtn.onclick = function(){
+
+    setLanguage("en");
+
+    const url = new URL(window.location.href);
+
+    url.searchParams.set("lang","en");
+
+    window.history.replaceState({}, "", url);
+  };
+}
+
+
+/* ================= URL LANGUAGE ================= */
+
+const params = new URLSearchParams(window.location.search);
+
+const urlLanguage = params.get("lang");
+
+
+/*
+   URL ला प्रथम प्राधान्य.
+   ?lang=en  = English
+   ?lang=mr  = Marathi
+*/
+
+if(urlLanguage === "en"){
 
   setLanguage("en");
 
-};
+}
 
+else if(urlLanguage === "mr"){
 
-/* =========================================================
-   URL LANGUAGE
-   media.html?lang=en
-   media.html?lang=mr
-========================================================= */
-
-const params =
-new URLSearchParams(
-  window.location.search
-);
-
-const urlLanguage =
-params.get("lang");
-
-
-if(
-  urlLanguage === "en" ||
-  urlLanguage === "mr"
-){
-
-  setLanguage(urlLanguage);
+  setLanguage("mr");
 
 }
 
 else{
 
-  setLanguage(
-    localStorage.getItem("afpssLanguage") || "mr"
-  );
+  const savedLanguage =
+    localStorage.getItem("afpssLanguage") || "mr";
+
+  setLanguage(savedLanguage);
 
 }
 
