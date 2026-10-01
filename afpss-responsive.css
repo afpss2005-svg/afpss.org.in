@@ -179,3 +179,25 @@ a,button{touch-action:manipulation}
     padding-bottom:20px !important;
   }
 }
+
+
+/* FINAL ALL-DEVICE GAP TUNING — compact but breathable */
+@media(min-width:1200px){
+  .premium-section,.premium-about,.success-section,.location-section{
+    padding-top:52px !important;
+    padding-bottom:52px !important;
+  }
+  .premium-title{
+    margin-bottom:28px !important;
+  }
+}
+
+@media(min-width:901px) and (max-width:1199px){
+  .premium-section,.premium-about,.success-section,.location-section{
+    padding-top:44px !important;
+    padding-bottom:44px !important;
+  }
+  .premium-title{
+    margin-bottom:24px !important;
+  }
+}
