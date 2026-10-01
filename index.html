@@ -27,6 +27,7 @@ href="https://afpss.org.in/">
 hreflang="x-default"
 href="https://afpss.org.in/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="image" href="hero-01.jpg" fetchpriority="high">
    <meta name="theme-color"
 content="#075b3b">
 
@@ -710,8 +711,8 @@ content="https://afpss.org.in/logo.jpg">
 <section class="premium-hero" id="home">
 <div class="hero-slider">
   <div class="hero-slide active" style="background-image:url('hero-01.jpg');"></div>
-  <div class="hero-slide" style="background-image:url('hero-02.jpg');"></div>
-  <div class="hero-slide" style="background-image:url('hero-03.jpg');"></div>
+  <div class="hero-slide" data-bg="hero-02.jpg"></div>
+  <div class="hero-slide" data-bg="hero-03.jpg"></div>
 </div>
 <div class="premium-hero-overlay"></div>
 <div class="premium-hero-content">
@@ -1118,11 +1119,26 @@ content="https://afpss.org.in/logo.jpg">
   const heroSlides = document.querySelectorAll(".hero-slide");
   let currentHeroSlide = 0;
 
+  function loadHeroSlide(index) {
+    const slide = heroSlides[index];
+    if (!slide) return;
+
+    const image = slide.getAttribute("data-bg");
+    if (image && !slide.style.backgroundImage) {
+      slide.style.backgroundImage = "url('" + image + "')";
+    }
+  }
+
   if (heroSlides.length > 1) {
+    loadHeroSlide(1);
+
     setInterval(() => {
       heroSlides[currentHeroSlide].classList.remove("active");
       currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+      loadHeroSlide(currentHeroSlide);
       heroSlides[currentHeroSlide].classList.add("active");
+
+      loadHeroSlide((currentHeroSlide + 1) % heroSlides.length);
     }, 3000);
   }
 
