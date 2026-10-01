@@ -11,8 +11,6 @@ content="Adivasi Fase Pardhi Sudhar Samiti">
 <meta name="robots"
 content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-<meta name="googlebot"
-content="index, follow">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="canonical"
 href="https://afpss.org.in/">
@@ -29,13 +27,7 @@ href="https://afpss.org.in/">
 hreflang="x-default"
 href="https://afpss.org.in/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-   <meta name="robots"
-content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-<meta name="googlebot"
-content="index, follow">
-
-<meta name="theme-color"
+   <meta name="theme-color"
 content="#075b3b">
 
 <!-- ORGANIZATION + WEBSITE SCHEMA -->
@@ -59,6 +51,22 @@ content="#075b3b">
       }
     },
     {
+      "@type": "School",
+      "@id": "https://afpss.org.in/#school",
+      "name": "Prashnachinh Adivasi Ashram School",
+      "alternateName": "प्रश्नचिन्ह आदिवासी आश्रम शाळा",
+      "url": "https://afpss.org.in/",
+      "parentOrganization": {
+        "@id": "https://afpss.org.in/#organization"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mangrul Chawala",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      }
+    },
+    {
       "@type": "WebSite",
       "@id": "https://afpss.org.in/#website",
       "url": "https://afpss.org.in/",
@@ -75,8 +83,6 @@ content="#075b3b">
   ]
 }
 </script>
-
-<!-- OPEN GRAPH -->
 
 <!-- OPEN GRAPH -->
 
@@ -123,6 +129,9 @@ content="https://afpss.org.in/logo.jpg">
 <link rel="stylesheet" href="style.css">
 
 <style>
+.skip-link{position:fixed;left:12px;top:12px;z-index:10000;padding:10px 16px;border-radius:8px;background:#fff;color:#075b3b;font-weight:800;text-decoration:none;transform:translateY(-150%);transition:transform .2s ease;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.skip-link:focus{transform:translateY(0)}
+:focus-visible{outline:3px solid #ffd45b;outline-offset:3px}
 .lang-mr + .lang-en{margin-left:8px;}
 
 .language-switcher{display:flex;align-items:center;gap:4px;padding:5px;border:1px solid rgba(255,255,255,.35);border-radius:30px;background:rgba(0,0,0,.25);backdrop-filter:blur(12px)}
@@ -677,6 +686,7 @@ content="https://afpss.org.in/logo.jpg">
 </head>    
 
    <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <header class="site-header">
 <div class="nav-container">
