@@ -71,6 +71,8 @@ button {
 }
 
 .nav-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
     min-height: 78px;
 
     display: flex;
