@@ -156,6 +156,67 @@ content="https://afpss.org.in/logo.jpg">
 .premium-title h2{color:#075b3b;font-size:42px;margin:12px 0}
 .premium-title p{color:#687870;line-height:1.7}
 .premium-impact{padding:90px 0;background:linear-gradient(135deg,#f3faf6,#fff)}
+
+.institutional-profile{
+    background:#ffffff;
+}
+
+.institutional-profile-grid{
+    width:min(1100px,92%);
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.institutional-profile-card{
+    min-height:180px;
+    padding:28px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:#f7fbf9;
+    border:1px solid #dfece5;
+    border-radius:22px;
+    box-shadow:0 12px 30px rgba(0,60,40,.06);
+}
+
+.institutional-profile-icon{
+    font-size:36px;
+    margin-bottom:12px;
+}
+
+.institutional-profile-card strong{
+    color:#075b3b;
+    font-size:17px;
+    font-weight:900;
+    margin-bottom:8px;
+}
+
+.institutional-profile-card span{
+    color:#687870;
+    font-size:13px;
+    line-height:1.6;
+}
+
+@media(max-width:900px){
+    .institutional-profile-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    .institutional-profile-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .institutional-profile-card{
+        min-height:150px;
+    }
+}
 .impact-grid,.activities-grid,.awards-grid,.media-preview,.documents-grid,.gallery-grid{width:min(1100px,92%);margin:auto;display:grid;gap:20px}
 .impact-grid{grid-template-columns:repeat(4,1fr)}
 .impact-card,.activity-box,.award-card,.document-card{background:#fff;border:1px solid #e1ece7;border-radius:22px;box-shadow:0 15px 40px rgba(0,60,40,.08)}
@@ -745,6 +806,53 @@ content="https://afpss.org.in/logo.jpg">
 <div class="impact-card"><div class="impact-icon">🏛️</div><strong>2005</strong><h3 class="lang-mr">संस्थेची स्थापना</h3><p class="lang-mr">सामाजिक कार्याचा प्रवास</p><h3 class="lang-en" style="display:none">Organisation Founded</h3><p class="lang-en" style="display:none">Beginning of Social Service</p></div>
 <div class="impact-card"><div class="impact-icon">🏫</div><strong>2011</strong><h3 class="lang-mr">आश्रमशाळेचा प्रवास</h3><p class="lang-mr">१८८ विद्यार्थ्यांपासून सुरुवात</p><h3 class="lang-en" style="display:none">Ashram School Journey</h3><p class="lang-en" style="display:none">Started with 188 children</p></div>
 <div class="impact-card"><div class="impact-icon">🏆</div><strong>50+</strong><h3 class="lang-mr">पुरस्कार</h3><p class="lang-mr">विविध स्तरांवरील सन्मान</p><h3 class="lang-en" style="display:none">Awards</h3><p class="lang-en" style="display:none">Recognition & Honours</p></div>
+</div>
+</section>
+
+<!-- =========================================================
+     STEP 3 — INTERNATIONAL INSTITUTIONAL PROFILE
+     ========================================================= -->
+<section class="premium-section institutional-profile" id="institutional-profile">
+<div class="premium-title">
+  <small>AFPSS • INDIA</small>
+  <div class="lang-mr">
+    <h2>एक संस्था • एक ध्येय • एक उज्ज्वल भविष्य</h2>
+    <p>महाराष्ट्र, भारतातून फासेपारधी समाजातील विद्यार्थ्यांच्या शिक्षण, निवासी संगोपन आणि सर्वांगीण विकासासाठी कार्य.</p>
+  </div>
+  <div class="lang-en" style="display:none">
+    <h2>One Institution • One Mission • A Brighter Future</h2>
+    <p>Based in Maharashtra, India, working for education, residential care and holistic development of children from the Fase Pardhi community.</p>
+  </div>
+</div>
+
+<div class="institutional-profile-grid">
+  <div class="institutional-profile-card">
+    <div class="institutional-profile-icon">🇮🇳</div>
+    <strong>Maharashtra, India</strong>
+    <span class="lang-mr">मंगरूळ चव्हाळा, अमरावती</span>
+    <span class="lang-en" style="display:none">Mangrul Chawala, Amravati</span>
+  </div>
+
+  <div class="institutional-profile-card">
+    <div class="institutional-profile-icon">🎓</div>
+    <strong>Education</strong>
+    <span class="lang-mr">गुणवत्तापूर्ण आणि सर्वांगीण शिक्षण</span>
+    <span class="lang-en" style="display:none">Quality and holistic education</span>
+  </div>
+
+  <div class="institutional-profile-card">
+    <div class="institutional-profile-icon">🏠</div>
+    <strong>Residential Care</strong>
+    <span class="lang-mr">सुरक्षित निवासी संगोपन आणि विद्यार्थी कल्याण</span>
+    <span class="lang-en" style="display:none">Safe residential care and student welfare</span>
+  </div>
+
+  <div class="institutional-profile-card">
+    <div class="institutional-profile-icon">🏆</div>
+    <strong>Sports & Social Mission</strong>
+    <span class="lang-mr">क्रीडा, संधी, स्वाभिमान आणि सामाजिक परिवर्तन</span>
+    <span class="lang-en" style="display:none">Sports, opportunity, dignity and social transformation</span>
+  </div>
 </div>
 </section>
 
