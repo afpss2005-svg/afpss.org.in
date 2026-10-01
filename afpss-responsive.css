@@ -128,3 +128,54 @@ a,button{touch-action:manipulation}
     line-height:1.65;
   }
 }
+
+
+/* FINAL MOBILE GAP TUNING — keep sections visually connected */
+@media(max-width:600px){
+  .section,.premium-section,.premium-about,.success-section,.location-section{
+    padding-top:24px !important;
+    padding-bottom:24px !important;
+  }
+
+  .premium-title{
+    margin-bottom:16px !important;
+  }
+
+  .premium-title small{
+    display:block;
+    margin-bottom:4px;
+  }
+
+  .premium-title h2{
+    margin-top:6px !important;
+    margin-bottom:10px !important;
+  }
+
+  .premium-title p{
+    margin-top:0 !important;
+    margin-bottom:12px !important;
+  }
+
+  .about-premium-grid,
+  .founder-premium-grid,
+  .success-grid,
+  .story-step2{
+    gap:18px !important;
+  }
+
+  .story-box{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+  }
+
+  .institutional-profile-grid{
+    gap:12px !important;
+  }
+}
+
+@media(max-width:380px){
+  .section,.premium-section,.premium-about,.success-section,.location-section{
+    padding-top:20px !important;
+    padding-bottom:20px !important;
+  }
+}
