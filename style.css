@@ -5696,3 +5696,19 @@ button {
         font-size:13px;
     }
 }
+
+
+/* =========================================================
+   MOBILE HERO — KEEP SUBJECT VISIBLE
+   ========================================================= */
+@media (max-width:768px){
+    .premium-hero .hero-language{
+        top:18px;
+        left:16px;
+        right:auto;
+    }
+
+    .premium-hero .hero-slide{
+        background-position:center 28%;
+    }
+}
