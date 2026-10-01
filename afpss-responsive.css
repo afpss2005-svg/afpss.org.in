@@ -94,3 +94,37 @@ a,button{touch-action:manipulation}
     width:calc(100% - 22px);
   }
 }
+
+/* Marathi / Maharashtra text wrapping — prevent mobile clipping */
+.lang-mr,.lang-en,
+.premium-title h2,.premium-title p,
+.institutional-profile-card strong,
+.institutional-profile-card span,
+.story-step2-copy h2,.story-step2-copy p,
+.about-premium-content h2,.about-premium-content p,
+.founder-content h2,.founder-content p,
+.success-content h2,.success-content p{
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+
+@media(max-width:600px){
+  .institutional-profile{
+    width:100%;
+    overflow:hidden;
+  }
+  .institutional-profile .premium-title{
+    width:calc(100% - 28px);
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .institutional-profile .premium-title h2{
+    font-size:30px;
+    line-height:1.25;
+  }
+  .institutional-profile .premium-title p{
+    font-size:15px;
+    line-height:1.65;
+  }
+}
