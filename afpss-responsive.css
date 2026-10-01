@@ -1,0 +1,96 @@
+/* AFPSS RESPONSIVE UX — Mobile • Tablet • Laptop • Desktop
+   Global spacing and readability improvements only.
+*/
+html{overflow-x:hidden;scroll-behavior:smooth}
+body{overflow-x:hidden}
+img,video,iframe{max-width:100%}
+a,button{touch-action:manipulation}
+
+/* Large desktop / computer */
+@media (min-width:1200px){
+  .container,.section-inner,.content,.contact,.documents-grid,.gallery-grid{
+    max-width:1200px;
+  }
+}
+
+/* Laptop / tablet */
+@media (max-width:1199px){
+  .section,.premium-section,.premium-about,.success-section,.location-section{
+    padding-top:64px;
+    padding-bottom:64px;
+  }
+}
+
+/* Tablet */
+@media (max-width:900px){
+  .container,.section-inner,.content{
+    width:min(94%,760px);
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .section,.premium-section,.premium-about,.success-section,.location-section{
+    padding-top:52px;
+    padding-bottom:52px;
+  }
+  .premium-title{margin-bottom:30px}
+}
+
+/* Mobile — remove excessive vertical whitespace */
+@media (max-width:600px){
+  .section,.premium-section,.premium-about,.success-section,.location-section{
+    padding-top:44px !important;
+    padding-bottom:44px !important;
+  }
+
+  .container,.section-inner,.content,.contact{
+    width:calc(100% - 28px);
+    max-width:none;
+  }
+
+  .heading,.premium-title{
+    margin-bottom:24px;
+  }
+
+  h1{line-height:1.15}
+  h2{line-height:1.22}
+  h3{line-height:1.3}
+
+  p{
+    line-height:1.65;
+  }
+
+  .grid,.cards,.content-grid,.contact-grid{
+    gap:18px;
+  }
+
+  .card,.content-card,.contact-card{
+    margin-bottom:0;
+  }
+
+  .btn,.button{
+    min-height:48px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  /* Prevent accidental horizontal overflow from long content */
+  pre,table{max-width:100%;overflow-x:auto}
+  .table-responsive{overflow-x:auto}
+
+  /* Keep floating controls clear of screen edges */
+  .whatsapp-float,.whatsapp-button{
+    max-width:64px;
+  }
+}
+
+/* Small phones */
+@media (max-width:380px){
+  .section,.premium-section,.premium-about,.success-section,.location-section{
+    padding-top:38px !important;
+    padding-bottom:38px !important;
+  }
+  .container,.section-inner,.content,.contact{
+    width:calc(100% - 22px);
+  }
+}
